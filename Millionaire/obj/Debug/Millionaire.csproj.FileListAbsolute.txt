@@ -1,4 +1,5 @@
 c:\users\david\documents\visual studio 2015\Projects\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
+<<<<<<< HEAD
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.exe
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.pdb
@@ -9,3 +10,15 @@ C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.c
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.exe
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\prasanja.txt
+=======
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\bin\Debug\Millionaire.exe
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\bin\Debug\Millionaire.pdb
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.csprojResolveAssemblyReference.cache
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.Home.resources
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.Properties.Resources.resources
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.View.resources
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.exe
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
+>>>>>>> home_screen
