@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MortalKombat.Properties
+namespace Millionaire.Properties
 {
 
 
