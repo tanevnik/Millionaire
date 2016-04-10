@@ -1,1 +1,2 @@
 c:\users\david\documents\visual studio 2015\Projects\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
