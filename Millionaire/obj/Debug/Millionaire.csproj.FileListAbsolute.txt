@@ -2,9 +2,9 @@ C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\prasanja.txt
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.exe
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.pdb
-C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Home.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Properties.Resources.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.View.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.exe
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.csprojResolveAssemblyReference.cache
