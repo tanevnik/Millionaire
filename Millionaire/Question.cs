@@ -9,18 +9,16 @@ namespace Millionaire
     class Question
     {
         public string question;
-        public string correctAns;
-        public string wrongAns1;
-        public string wrongAns2;
-        public string wrongAns3;
+        public string[] answer;
 
-        public Question(string q, string a, string w1, string w2, string w3)
+        public Question(string q, string a0, string a1, string a2, string a3)
         {
             question = q;
-            correctAns = a;
-            wrongAns1 = w1;
-            wrongAns2 = w2;
-            wrongAns3 = w3;
+            answer = new string[4];
+            answer[0] = a0;
+            answer[1] = a1;
+            answer[2] = a2;
+            answer[3] = a3;
         }
     }
 }

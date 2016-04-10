@@ -19,13 +19,38 @@ namespace Millionaire
             InitializeComponent();
             model = new Model();
 
-            //temporary (TODO: make answers on random positions)
-            Question q = model.getCurrentQuestion();
+            updateQuestion();
+        }
+
+        private void updateQuestion()
+        {
+            //takes the current question from model and displays it
+            Question q = model.currentQuestion;
             questionLabel.Text = q.question;
-            button1.Text = q.correctAns;
-            button2.Text = q.wrongAns1;
-            button3.Text = q.wrongAns2;
-            button4.Text = q.wrongAns3;
+            button1.Text = q.answer[0];
+            button2.Text = q.answer[1];
+            button3.Text = q.answer[2];
+            button4.Text = q.answer[3];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            model.tryAnswer(0);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            model.tryAnswer(1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            model.tryAnswer(2);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            model.tryAnswer(3);
         }
     }
 }
