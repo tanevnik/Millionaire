@@ -8,15 +8,19 @@ namespace Millionaire
 {
     class Question
     {
-        string question;
-        string correctAns;
-        string wrongAns1;
-        string wrongAns2;
-        string wrongAns3;
+        public string question;
+        public string correctAns;
+        public string wrongAns1;
+        public string wrongAns2;
+        public string wrongAns3;
 
-        public Question(string input)
+        public Question(string q, string a, string w1, string w2, string w3)
         {
-            //TODO: od daden input (zemen od bazata so prasanja) da se izparsira, i da se popolnat polinjata vo klasata.
+            question = q;
+            correctAns = a;
+            wrongAns1 = w1;
+            wrongAns2 = w2;
+            wrongAns3 = w3;
         }
     }
 }
