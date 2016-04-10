@@ -35,16 +35,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
             this.questionLabel = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-=======
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
->>>>>>> home_screen
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -105,7 +101,6 @@
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
-<<<<<<< HEAD
             // questionLabel
             // 
             this.questionLabel.Location = new System.Drawing.Point(58, 356);
@@ -150,13 +145,12 @@
             this.button8.TabIndex = 11;
             this.button8.Text = "aud";
             this.button8.UseVisualStyleBackColor = true;
-=======
+            //
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
->>>>>>> home_screen
             // 
             // View
             // 
@@ -190,15 +184,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-<<<<<<< HEAD
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-=======
         private System.Windows.Forms.ImageList imageList1;
->>>>>>> home_screen
     }
 }
 
