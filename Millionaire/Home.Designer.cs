@@ -33,9 +33,12 @@
             this.newGame_img = new System.Windows.Forms.PictureBox();
             this.info_img = new System.Windows.Forms.PictureBox();
             this.exit_img = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.newGame_lbl = new System.Windows.Forms.Label();
+            this.info_lbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.newGame_btn = new System.Windows.Forms.Button();
+            this.info_btn = new System.Windows.Forms.Button();
+            this.exit_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newGame_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.info_img)).BeginInit();
@@ -86,41 +89,74 @@
             this.exit_img.TabStop = false;
             this.exit_img.Click += new System.EventHandler(this.exit_img_Click);
             // 
-            // label2
+            // newGame_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(586, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "NEW GAME";
+            this.newGame_lbl.AutoSize = true;
+            this.newGame_lbl.Location = new System.Drawing.Point(584, 51);
+            this.newGame_lbl.Name = "newGame_lbl";
+            this.newGame_lbl.Size = new System.Drawing.Size(67, 13);
+            this.newGame_lbl.TabIndex = 5;
+            this.newGame_lbl.Text = "NEW GAME";
             // 
-            // label3
+            // info_lbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(598, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "INFO";
+            this.info_lbl.AutoSize = true;
+            this.info_lbl.Location = new System.Drawing.Point(599, 123);
+            this.info_lbl.Name = "info_lbl";
+            this.info_lbl.Size = new System.Drawing.Size(32, 13);
+            this.info_lbl.TabIndex = 6;
+            this.info_lbl.Text = "INFO";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(600, 409);
+            this.label4.Location = new System.Drawing.Point(600, 444);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "EXIT";
+            // 
+            // newGame_btn
+            // 
+            this.newGame_btn.Location = new System.Drawing.Point(686, 40);
+            this.newGame_btn.Name = "newGame_btn";
+            this.newGame_btn.Size = new System.Drawing.Size(75, 23);
+            this.newGame_btn.TabIndex = 8;
+            this.newGame_btn.Text = "Нова игра";
+            this.newGame_btn.UseVisualStyleBackColor = true;
+            this.newGame_btn.Click += new System.EventHandler(this.newGame_btn_Click);
+            // 
+            // info_btn
+            // 
+            this.info_btn.Location = new System.Drawing.Point(686, 123);
+            this.info_btn.Name = "info_btn";
+            this.info_btn.Size = new System.Drawing.Size(75, 23);
+            this.info_btn.TabIndex = 9;
+            this.info_btn.Text = "Инфо";
+            this.info_btn.UseVisualStyleBackColor = true;
+            this.info_btn.Click += new System.EventHandler(this.info_btn_Click);
+            // 
+            // exit_btn
+            // 
+            this.exit_btn.Location = new System.Drawing.Point(674, 433);
+            this.exit_btn.Name = "exit_btn";
+            this.exit_btn.Size = new System.Drawing.Size(75, 23);
+            this.exit_btn.TabIndex = 10;
+            this.exit_btn.Text = "Излези";
+            this.exit_btn.UseVisualStyleBackColor = true;
+            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.exit_btn);
+            this.Controls.Add(this.info_btn);
+            this.Controls.Add(this.newGame_btn);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.info_lbl);
+            this.Controls.Add(this.newGame_lbl);
             this.Controls.Add(this.exit_img);
             this.Controls.Add(this.info_img);
             this.Controls.Add(this.newGame_img);
@@ -144,8 +180,11 @@
         private System.Windows.Forms.PictureBox newGame_img;
         private System.Windows.Forms.PictureBox info_img;
         private System.Windows.Forms.PictureBox exit_img;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label newGame_lbl;
+        private System.Windows.Forms.Label info_lbl;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button newGame_btn;
+        private System.Windows.Forms.Button info_btn;
+        private System.Windows.Forms.Button exit_btn;
     }
 }

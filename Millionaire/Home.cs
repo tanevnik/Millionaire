@@ -17,19 +17,20 @@ namespace Millionaire
             InitializeComponent();
         }
 
-        private void newGame_img_Click(object sender, EventArgs e)
+        private void newGame_btn_Click(object sender, EventArgs e)
         {
             Hide();
             View view = new View();
             view.Show();
         }
 
-        private void info_img_Click(object sender, EventArgs e)
+        private void info_btn_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(string.Format("Кој сака да биде милионер ?\nИзработија:\nДавид Симеоновски\nНикола Танев"), "Кој сака да биде милионер ?", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
-        private void exit_img_Click(object sender, EventArgs e)
+        private void exit_btn_Click(object sender, EventArgs e)
         {
             Close();
         }
