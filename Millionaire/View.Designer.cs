@@ -34,10 +34,11 @@
             this.info_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.playPanel = new System.Windows.Forms.Panel();
+            this.serrender_btn = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.split_joker = new System.Windows.Forms.Button();
             this.questionLabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -45,7 +46,6 @@
             this.answer3 = new System.Windows.Forms.Button();
             this.answer2 = new System.Windows.Forms.Button();
             this.answer1 = new System.Windows.Forms.Button();
-            this.serrender_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -105,7 +105,7 @@
             this.playPanel.Controls.Add(this.button8);
             this.playPanel.Controls.Add(this.button7);
             this.playPanel.Controls.Add(this.button6);
-            this.playPanel.Controls.Add(this.button5);
+            this.playPanel.Controls.Add(this.split_joker);
             this.playPanel.Controls.Add(this.questionLabel);
             this.playPanel.Controls.Add(this.pictureBox3);
             this.playPanel.Controls.Add(this.pictureBox2);
@@ -119,6 +119,16 @@
             this.playPanel.Size = new System.Drawing.Size(759, 555);
             this.playPanel.TabIndex = 11;
             this.playPanel.Visible = false;
+            // 
+            // serrender_btn
+            // 
+            this.serrender_btn.Location = new System.Drawing.Point(532, 341);
+            this.serrender_btn.Name = "serrender_btn";
+            this.serrender_btn.Size = new System.Drawing.Size(216, 23);
+            this.serrender_btn.TabIndex = 23;
+            this.serrender_btn.Text = "Се откажувам";
+            this.serrender_btn.UseVisualStyleBackColor = true;
+            this.serrender_btn.Click += new System.EventHandler(this.serrender_btn_Click);
             // 
             // button8
             // 
@@ -147,14 +157,15 @@
             this.button6.Text = "switch";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // split_joker
             // 
-            this.button5.Location = new System.Drawing.Point(542, 45);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(46, 23);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "50/50";
-            this.button5.UseVisualStyleBackColor = true;
+            this.split_joker.Location = new System.Drawing.Point(542, 45);
+            this.split_joker.Name = "split_joker";
+            this.split_joker.Size = new System.Drawing.Size(46, 23);
+            this.split_joker.TabIndex = 19;
+            this.split_joker.Text = "50/50";
+            this.split_joker.UseVisualStyleBackColor = true;
+            this.split_joker.Click += new System.EventHandler(this.split_joker_Click);
             // 
             // questionLabel
             // 
@@ -221,16 +232,6 @@
             this.answer1.UseVisualStyleBackColor = true;
             this.answer1.Click += new System.EventHandler(this.answer1_Click);
             // 
-            // serrender_btn
-            // 
-            this.serrender_btn.Location = new System.Drawing.Point(532, 341);
-            this.serrender_btn.Name = "serrender_btn";
-            this.serrender_btn.Size = new System.Drawing.Size(216, 23);
-            this.serrender_btn.TabIndex = 23;
-            this.serrender_btn.Text = "Се откажувам";
-            this.serrender_btn.UseVisualStyleBackColor = true;
-            this.serrender_btn.Click += new System.EventHandler(this.serrender_btn_Click);
-            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,7 +265,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button split_joker;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;

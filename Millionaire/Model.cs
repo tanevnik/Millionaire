@@ -93,15 +93,11 @@ namespace Millionaire
             if(ans == correct)
             {
                 Console.Write("CORRECT!");
-                //TODO: implement correct answer behaivour
-                if(numberOfCorrectAnsweredQuestions == 5 || numberOfCorrectAnsweredQuestions == 10)
-                {
-                    level++;
-                }
+                level++;
                 questionID = generateQuestionID();
                 currentQuestion = getCurrentQuestion();
                 numberOfCorrectAnsweredQuestions++;
-                Console.WriteLine("correct questions: " + numberOfCorrectAnsweredQuestions + " lvl: " + level);
+
                 //TODO: trigger animation for questions transition
             }
             else

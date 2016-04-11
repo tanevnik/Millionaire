@@ -30,6 +30,12 @@ namespace Millionaire
         private void updateQuestion()
         {
             //takes the current question from model and displays it
+
+            answer1.Enabled = true;
+            answer2.Enabled = true;
+            answer3.Enabled = true;
+            answer4.Enabled = true;
+
             Question q = model.currentQuestion;
             questionLabel.Text = q.question;
             answer1.Text = q.answer[0];
@@ -56,7 +62,6 @@ namespace Millionaire
                 if (model.tryAnswer(0))
                 {
                     updateQuestion();
-                    Console.WriteLine("update ");
                 }
             }
         }
@@ -68,7 +73,6 @@ namespace Millionaire
                 if (model.tryAnswer(1))
                 {
                     updateQuestion();
-                    Console.WriteLine("update 2");
                 }
             }
         }
@@ -80,7 +84,6 @@ namespace Millionaire
                 if (model.tryAnswer(2))
                 {
                     updateQuestion();
-                    Console.WriteLine("update 3");
                 }
             }
         }
@@ -92,7 +95,6 @@ namespace Millionaire
                 if (model.tryAnswer(3))
                 {
                     updateQuestion();
-                    Console.WriteLine("update 4");
                 }
             }
         }
@@ -104,7 +106,48 @@ namespace Millionaire
 
         private void serrender_btn_Click(object sender, EventArgs e)
         {
+            //TODO: dysplay final score
             playPanel.Hide();
+            
+        }
+
+        private void split_joker_Click(object sender, EventArgs e)
+        {
+            int indexOfCorrectAnswer = model.correct;
+            Random random = new Random();
+
+            int wrongAnswers = 0;
+            int tmpIndex = 0;
+            while(wrongAnswers < 2)
+            {
+                tmpIndex = random.Next(4);
+                if(tmpIndex != model.correct)
+                {
+                    wrongAnswers++;
+                    disable2WrongAnswers(tmpIndex);
+                }
+            }
+            split_joker.Enabled = false;
+        }
+
+        private void disable2WrongAnswers(int index)
+        {
+            if (index == 0)
+            {
+                answer1.Enabled = false;
+            }
+            else if (index == 1)
+            {
+                answer2.Enabled = false;
+            }
+            else if (index == 2)
+            {
+                answer3.Enabled = false;
+            }
+            else if (index == 4)
+            {
+                answer4.Enabled = false;
+            }
         }
     }
 }
