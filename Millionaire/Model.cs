@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,10 +87,12 @@ namespace Millionaire
         //PUBLIC METHODS
         public void tryAnswer(int ans)
         {
+            
             if(ans == correct)
             {
                 Console.Write("CORRECT!");
                 //TODO: implement correct answer behaivour
+
             }
             else
             {

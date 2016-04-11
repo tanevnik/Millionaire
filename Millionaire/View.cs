@@ -51,22 +51,39 @@ namespace Millionaire
 
         private void answer1_Click(object sender, EventArgs e)
         {
-            model.tryAnswer(0);
+            if (finalAnswer(answer1.Text))
+            {
+                model.tryAnswer(0);
+            }
         }
 
         private void answer2_Click(object sender, EventArgs e)
         {
-            model.tryAnswer(1);
+            if (finalAnswer(answer2.Text))
+            {
+                model.tryAnswer(1);
+            }
         }
 
         private void answer3_Click(object sender, EventArgs e)
         {
-            model.tryAnswer(2);
+            if (finalAnswer(answer3.Text))
+            {
+                model.tryAnswer(2);
+            }
         }
 
         private void answer4_Click(object sender, EventArgs e)
         {
-            model.tryAnswer(3);
+            if (finalAnswer(answer4.Text))
+            {
+                model.tryAnswer(3);
+            }
+        }
+        
+        private bool finalAnswer(string answer)
+        {
+            return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор ?", answer),"Конечен одговор ?", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
     }
 }
