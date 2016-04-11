@@ -53,7 +53,11 @@ namespace Millionaire
         {
             if (finalAnswer(answer1.Text))
             {
-                model.tryAnswer(0);
+                if (model.tryAnswer(0))
+                {
+                    updateQuestion();
+                    Console.WriteLine("update ");
+                }
             }
         }
 
@@ -61,7 +65,11 @@ namespace Millionaire
         {
             if (finalAnswer(answer2.Text))
             {
-                model.tryAnswer(1);
+                if (model.tryAnswer(1))
+                {
+                    updateQuestion();
+                    Console.WriteLine("update 2");
+                }
             }
         }
 
@@ -69,7 +77,11 @@ namespace Millionaire
         {
             if (finalAnswer(answer3.Text))
             {
-                model.tryAnswer(2);
+                if (model.tryAnswer(2))
+                {
+                    updateQuestion();
+                    Console.WriteLine("update 3");
+                }
             }
         }
 
@@ -77,13 +89,22 @@ namespace Millionaire
         {
             if (finalAnswer(answer4.Text))
             {
-                model.tryAnswer(3);
+                if (model.tryAnswer(3))
+                {
+                    updateQuestion();
+                    Console.WriteLine("update 4");
+                }
             }
         }
         
         private bool finalAnswer(string answer)
         {
             return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор ?", answer),"Конечен одговор ?", MessageBoxButtons.YesNo) == DialogResult.Yes;
+        }
+
+        private void serrender_btn_Click(object sender, EventArgs e)
+        {
+            playPanel.Hide();
         }
     }
 }

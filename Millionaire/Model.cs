@@ -12,6 +12,7 @@ namespace Millionaire
         List<Question>[] database = new List<Question>[15]; //za sekoe nivo po edna lista so prasanja 
         int level; //int od 0 do 14, so sekoe tocno odgovoreno prasanje se zgolemuva
         int questionID; //ID na prasanjeto vo databazata
+        int numberOfCorrectAnsweredQuestions;
 
         public Question currentQuestion; //tekovnoto prasanje vo igrata
         public int correct; //int od 0 do 3 koe oznacuva na koja pozicija se naogja tocniot odgovor
@@ -20,6 +21,7 @@ namespace Millionaire
         {
             initializeDatabase();
             level = 0;
+            numberOfCorrectAnsweredQuestions = 0;
             questionID = generateQuestionID();
             currentQuestion = getCurrentQuestion();
         }
@@ -85,20 +87,32 @@ namespace Millionaire
         }
 
         //PUBLIC METHODS
-        public void tryAnswer(int ans)
+        public bool tryAnswer(int ans)
         {
-            
+            int tmpCorrect = correct;
             if(ans == correct)
             {
                 Console.Write("CORRECT!");
                 //TODO: implement correct answer behaivour
-
+                if(numberOfCorrectAnsweredQuestions == 5 || numberOfCorrectAnsweredQuestions == 10)
+                {
+                    level++;
+                }
+                questionID = generateQuestionID();
+                currentQuestion = getCurrentQuestion();
+                numberOfCorrectAnsweredQuestions++;
+                Console.WriteLine("correct questions: " + numberOfCorrectAnsweredQuestions + " lvl: " + level);
+                //TODO: trigger animation for questions transition
             }
             else
             {
                 Console.Write("WRONG!");
                 //TODO: implement wrong answer behaivour
             }
+
+            return ans == tmpCorrect;
         }
+
+        
     }
 }

@@ -45,6 +45,7 @@
             this.answer3 = new System.Windows.Forms.Button();
             this.answer2 = new System.Windows.Forms.Button();
             this.answer1 = new System.Windows.Forms.Button();
+            this.serrender_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -100,6 +101,7 @@
             // 
             // playPanel
             // 
+            this.playPanel.Controls.Add(this.serrender_btn);
             this.playPanel.Controls.Add(this.button8);
             this.playPanel.Controls.Add(this.button7);
             this.playPanel.Controls.Add(this.button6);
@@ -114,7 +116,7 @@
             this.playPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playPanel.Location = new System.Drawing.Point(0, 0);
             this.playPanel.Name = "playPanel";
-            this.playPanel.Size = new System.Drawing.Size(784, 561);
+            this.playPanel.Size = new System.Drawing.Size(759, 555);
             this.playPanel.TabIndex = 11;
             this.playPanel.Visible = false;
             // 
@@ -156,7 +158,7 @@
             // 
             // questionLabel
             // 
-            this.questionLabel.Location = new System.Drawing.Point(54, 352);
+            this.questionLabel.Location = new System.Drawing.Point(53, 367);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.Size = new System.Drawing.Size(633, 69);
             this.questionLabel.TabIndex = 18;
@@ -181,7 +183,7 @@
             // 
             // answer4
             // 
-            this.answer4.Location = new System.Drawing.Point(414, 488);
+            this.answer4.Location = new System.Drawing.Point(413, 503);
             this.answer4.Name = "answer4";
             this.answer4.Size = new System.Drawing.Size(273, 40);
             this.answer4.TabIndex = 15;
@@ -191,7 +193,7 @@
             // 
             // answer3
             // 
-            this.answer3.Location = new System.Drawing.Point(54, 488);
+            this.answer3.Location = new System.Drawing.Point(53, 503);
             this.answer3.Name = "answer3";
             this.answer3.Size = new System.Drawing.Size(273, 40);
             this.answer3.TabIndex = 14;
@@ -201,7 +203,7 @@
             // 
             // answer2
             // 
-            this.answer2.Location = new System.Drawing.Point(414, 442);
+            this.answer2.Location = new System.Drawing.Point(413, 457);
             this.answer2.Name = "answer2";
             this.answer2.Size = new System.Drawing.Size(273, 40);
             this.answer2.TabIndex = 13;
@@ -211,7 +213,7 @@
             // 
             // answer1
             // 
-            this.answer1.Location = new System.Drawing.Point(54, 442);
+            this.answer1.Location = new System.Drawing.Point(53, 457);
             this.answer1.Name = "answer1";
             this.answer1.Size = new System.Drawing.Size(273, 40);
             this.answer1.TabIndex = 12;
@@ -219,18 +221,28 @@
             this.answer1.UseVisualStyleBackColor = true;
             this.answer1.Click += new System.EventHandler(this.answer1_Click);
             // 
-            // Home
+            // serrender_btn
+            // 
+            this.serrender_btn.Location = new System.Drawing.Point(532, 341);
+            this.serrender_btn.Name = "serrender_btn";
+            this.serrender_btn.Size = new System.Drawing.Size(216, 23);
+            this.serrender_btn.TabIndex = 23;
+            this.serrender_btn.Text = "Се откажувам";
+            this.serrender_btn.UseVisualStyleBackColor = true;
+            this.serrender_btn.Click += new System.EventHandler(this.serrender_btn_Click);
+            // 
+            // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(759, 555);
             this.Controls.Add(this.playPanel);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.info_btn);
             this.Controls.Add(this.newGame_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo_img);
-            this.Name = "Home";
+            this.Name = "View";
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).EndInit();
             this.playPanel.ResumeLayout(false);
@@ -260,5 +272,6 @@
         private System.Windows.Forms.Button answer3;
         private System.Windows.Forms.Button answer2;
         private System.Windows.Forms.Button answer1;
+        private System.Windows.Forms.Button serrender_btn;
     }
 }
