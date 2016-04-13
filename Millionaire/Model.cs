@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Millionaire
 {
     class Model
     {
         List<Question>[] database = new List<Question>[15]; //za sekoe nivo po edna lista so prasanja 
-        int level; //int od 0 do 14, so sekoe tocno odgovoreno prasanje se zgolemuva
+        public int level; //int od 0 do 14, so sekoe tocno odgovoreno prasanje se zgolemuva
         int questionID; //ID na prasanjeto vo databazata
+        int[] money = {500, 1000, 2000, 3000, 5000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000, 2000000, 4000000};
 
         public Question currentQuestion; //tekovnoto prasanje vo igrata
         public int correct; //int od 0 do 3 koe oznacuva na koja pozicija se naogja tocniot odgovor
@@ -84,18 +82,49 @@ namespace Millionaire
         }
 
         //PUBLIC METHODS
-        public void tryAnswer(int ans)
+        public bool tryAnswer(int ans)
         {
+            int tmpCorrect = correct;
             if(ans == correct)
             {
                 Console.Write("CORRECT!");
-                //TODO: implement correct answer behaivour
+                level++;
+                questionID = generateQuestionID();
+                currentQuestion = getCurrentQuestion();
+
+                //TODO: trigger animation for questions transition
             }
             else
             {
                 Console.Write("WRONG!");
                 //TODO: implement wrong answer behaivour
             }
+
+            return ans == tmpCorrect;
         }
+
+        public int getMoney(bool lose)
+        {
+            //returns the earned money
+            if (lose)
+            {
+                if (level > 9)
+                {
+                    return money[9]; //zagarantirana suma za 10to prasanje
+                }
+                else if (level > 4)
+                {
+                    return money[4]; //zagarantirana suma za 5to prasanje
+                }
+                else return 0;
+            }
+            else
+            {
+                //se otkazal
+                if (level == 0) return 0; //se otkazal na 1vo prasanje
+                return money[level - 1];
+            }
+        }
+        
     }
 }

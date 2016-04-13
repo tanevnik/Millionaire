@@ -28,168 +28,263 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.logo_img = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.newGame_btn = new System.Windows.Forms.Button();
+            this.info_btn = new System.Windows.Forms.Button();
+            this.exit_btn = new System.Windows.Forms.Button();
+            this.playPanel = new System.Windows.Forms.Panel();
+            this.serrender_btn = new System.Windows.Forms.Button();
+            this.audience_joker = new System.Windows.Forms.Button();
+            this.phone_joker = new System.Windows.Forms.Button();
+            this.switch_joker = new System.Windows.Forms.Button();
+            this.split_joker = new System.Windows.Forms.Button();
             this.questionLabel = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.answer4 = new System.Windows.Forms.Button();
+            this.answer3 = new System.Windows.Forms.Button();
+            this.answer2 = new System.Windows.Forms.Button();
+            this.answer1 = new System.Windows.Forms.Button();
+            this.levelLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
+            this.playPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // logo_img
             // 
-            this.button1.Location = new System.Drawing.Point(58, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(273, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.logo_img.Location = new System.Drawing.Point(56, 35);
+            this.logo_img.Name = "logo_img";
+            this.logo_img.Size = new System.Drawing.Size(453, 344);
+            this.logo_img.TabIndex = 0;
+            this.logo_img.TabStop = false;
             // 
-            // button2
+            // label1
             // 
-            this.button2.Location = new System.Drawing.Point(418, 446);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(273, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(179, 123);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "LOGO";
             // 
-            // button3
+            // newGame_btn
             // 
-            this.button3.Location = new System.Drawing.Point(58, 492);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(273, 40);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.newGame_btn.Location = new System.Drawing.Point(582, 35);
+            this.newGame_btn.Name = "newGame_btn";
+            this.newGame_btn.Size = new System.Drawing.Size(144, 44);
+            this.newGame_btn.TabIndex = 8;
+            this.newGame_btn.Text = "Нова игра";
+            this.newGame_btn.UseVisualStyleBackColor = true;
+            this.newGame_btn.Click += new System.EventHandler(this.newGame_btn_Click);
             // 
-            // button4
+            // info_btn
             // 
-            this.button4.Location = new System.Drawing.Point(418, 492);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(273, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.info_btn.Location = new System.Drawing.Point(582, 113);
+            this.info_btn.Name = "info_btn";
+            this.info_btn.Size = new System.Drawing.Size(144, 44);
+            this.info_btn.TabIndex = 9;
+            this.info_btn.Text = "Инфо";
+            this.info_btn.UseVisualStyleBackColor = true;
+            this.info_btn.Click += new System.EventHandler(this.info_btn_Click);
             // 
-            // pictureBox2
+            // exit_btn
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(41, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(437, 303);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.exit_btn.Location = new System.Drawing.Point(582, 410);
+            this.exit_btn.Name = "exit_btn";
+            this.exit_btn.Size = new System.Drawing.Size(144, 47);
+            this.exit_btn.TabIndex = 10;
+            this.exit_btn.Text = "Излези";
+            this.exit_btn.UseVisualStyleBackColor = true;
+            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
-            // pictureBox3
+            // playPanel
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(536, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(216, 303);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
+            this.playPanel.Controls.Add(this.levelLabel);
+            this.playPanel.Controls.Add(this.serrender_btn);
+            this.playPanel.Controls.Add(this.audience_joker);
+            this.playPanel.Controls.Add(this.phone_joker);
+            this.playPanel.Controls.Add(this.switch_joker);
+            this.playPanel.Controls.Add(this.split_joker);
+            this.playPanel.Controls.Add(this.questionLabel);
+            this.playPanel.Controls.Add(this.pictureBox3);
+            this.playPanel.Controls.Add(this.pictureBox2);
+            this.playPanel.Controls.Add(this.answer4);
+            this.playPanel.Controls.Add(this.answer3);
+            this.playPanel.Controls.Add(this.answer2);
+            this.playPanel.Controls.Add(this.answer1);
+            this.playPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.playPanel.Location = new System.Drawing.Point(0, 0);
+            this.playPanel.Name = "playPanel";
+            this.playPanel.Size = new System.Drawing.Size(759, 555);
+            this.playPanel.TabIndex = 11;
+            this.playPanel.Visible = false;
+            // 
+            // serrender_btn
+            // 
+            this.serrender_btn.Location = new System.Drawing.Point(532, 341);
+            this.serrender_btn.Name = "serrender_btn";
+            this.serrender_btn.Size = new System.Drawing.Size(216, 23);
+            this.serrender_btn.TabIndex = 23;
+            this.serrender_btn.Text = "Се откажувам";
+            this.serrender_btn.UseVisualStyleBackColor = true;
+            this.serrender_btn.Click += new System.EventHandler(this.serrender_btn_Click);
+            // 
+            // audience_joker
+            // 
+            this.audience_joker.Location = new System.Drawing.Point(594, 45);
+            this.audience_joker.Name = "audience_joker";
+            this.audience_joker.Size = new System.Drawing.Size(46, 23);
+            this.audience_joker.TabIndex = 22;
+            this.audience_joker.Text = "aud";
+            this.audience_joker.UseVisualStyleBackColor = true;
+            // 
+            // phone_joker
+            // 
+            this.phone_joker.Location = new System.Drawing.Point(646, 45);
+            this.phone_joker.Name = "phone_joker";
+            this.phone_joker.Size = new System.Drawing.Size(46, 23);
+            this.phone_joker.TabIndex = 21;
+            this.phone_joker.Text = "phone";
+            this.phone_joker.UseVisualStyleBackColor = true;
+            // 
+            // switch_joker
+            // 
+            this.switch_joker.Location = new System.Drawing.Point(698, 45);
+            this.switch_joker.Name = "switch_joker";
+            this.switch_joker.Size = new System.Drawing.Size(46, 23);
+            this.switch_joker.TabIndex = 20;
+            this.switch_joker.Text = "switch";
+            this.switch_joker.UseVisualStyleBackColor = true;
+            // 
+            // split_joker
+            // 
+            this.split_joker.Location = new System.Drawing.Point(542, 45);
+            this.split_joker.Name = "split_joker";
+            this.split_joker.Size = new System.Drawing.Size(46, 23);
+            this.split_joker.TabIndex = 19;
+            this.split_joker.Text = "50/50";
+            this.split_joker.UseVisualStyleBackColor = true;
+            this.split_joker.Click += new System.EventHandler(this.split_joker_Click);
             // 
             // questionLabel
             // 
-            this.questionLabel.Location = new System.Drawing.Point(58, 356);
+            this.questionLabel.Location = new System.Drawing.Point(53, 367);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.Size = new System.Drawing.Size(633, 69);
-            this.questionLabel.TabIndex = 7;
+            this.questionLabel.TabIndex = 18;
             this.questionLabel.Text = "prasanje";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
+            // pictureBox3
             // 
-            this.button5.Location = new System.Drawing.Point(546, 49);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(46, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "50/50";
-            this.button5.UseVisualStyleBackColor = true;
+            this.pictureBox3.Location = new System.Drawing.Point(532, 32);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(216, 303);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
             // 
-            // button6
+            // pictureBox2
             // 
-            this.button6.Location = new System.Drawing.Point(702, 49);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(46, 23);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "switch";
-            this.button6.UseVisualStyleBackColor = true;
+            this.pictureBox2.Location = new System.Drawing.Point(37, 32);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(437, 303);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
-            // button7
+            // answer4
             // 
-            this.button7.Location = new System.Drawing.Point(650, 49);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(46, 23);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "phone";
-            this.button7.UseVisualStyleBackColor = true;
+            this.answer4.Location = new System.Drawing.Point(413, 503);
+            this.answer4.Name = "answer4";
+            this.answer4.Size = new System.Drawing.Size(273, 40);
+            this.answer4.TabIndex = 15;
+            this.answer4.Text = "button4";
+            this.answer4.UseVisualStyleBackColor = true;
+            this.answer4.Click += new System.EventHandler(this.answer4_Click);
             // 
-            // button8
+            // answer3
             // 
-            this.button8.Location = new System.Drawing.Point(598, 49);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(46, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "aud";
-            this.button8.UseVisualStyleBackColor = true;
-            //
-            // imageList1
+            this.answer3.Location = new System.Drawing.Point(53, 503);
+            this.answer3.Name = "answer3";
+            this.answer3.Size = new System.Drawing.Size(273, 40);
+            this.answer3.TabIndex = 14;
+            this.answer3.Text = "button3";
+            this.answer3.UseVisualStyleBackColor = true;
+            this.answer3.Click += new System.EventHandler(this.answer3_Click);
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // answer2
+            // 
+            this.answer2.Location = new System.Drawing.Point(413, 457);
+            this.answer2.Name = "answer2";
+            this.answer2.Size = new System.Drawing.Size(273, 40);
+            this.answer2.TabIndex = 13;
+            this.answer2.Text = "button2";
+            this.answer2.UseVisualStyleBackColor = true;
+            this.answer2.Click += new System.EventHandler(this.answer2_Click);
+            // 
+            // answer1
+            // 
+            this.answer1.Location = new System.Drawing.Point(53, 457);
+            this.answer1.Name = "answer1";
+            this.answer1.Size = new System.Drawing.Size(273, 40);
+            this.answer1.TabIndex = 12;
+            this.answer1.Text = "button1";
+            this.answer1.UseVisualStyleBackColor = true;
+            this.answer1.Click += new System.EventHandler(this.answer1_Click);
+            // 
+            // levelLabel
+            // 
+            this.levelLabel.Location = new System.Drawing.Point(332, 488);
+            this.levelLabel.Name = "levelLabel";
+            this.levelLabel.Size = new System.Drawing.Size(75, 23);
+            this.levelLabel.TabIndex = 24;
+            this.levelLabel.Text = "level";
+            this.levelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.questionLabel);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(759, 555);
+            this.Controls.Add(this.playPanel);
+            this.Controls.Add(this.exit_btn);
+            this.Controls.Add(this.info_btn);
+            this.Controls.Add(this.newGame_btn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.logo_img);
             this.Name = "View";
-            this.Text = "Koj saka da bide milioner";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Text = "Home";
+            ((System.ComponentModel.ISupportInitialize)(this.logo_img)).EndInit();
+            this.playPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox logo_img;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button newGame_btn;
+        private System.Windows.Forms.Button info_btn;
+        private System.Windows.Forms.Button exit_btn;
+        private System.Windows.Forms.Panel playPanel;
+        private System.Windows.Forms.Button audience_joker;
+        private System.Windows.Forms.Button phone_joker;
+        private System.Windows.Forms.Button switch_joker;
+        private System.Windows.Forms.Button split_joker;
         private System.Windows.Forms.Label questionLabel;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button answer4;
+        private System.Windows.Forms.Button answer3;
+        private System.Windows.Forms.Button answer2;
+        private System.Windows.Forms.Button answer1;
+        private System.Windows.Forms.Button serrender_btn;
+        private System.Windows.Forms.Label levelLabel;
     }
 }
-
