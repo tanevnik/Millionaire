@@ -168,5 +168,16 @@ namespace Millionaire
             else if (index == 2) answer3.Enabled = false;
             else if (index == 3) answer4.Enabled = false;
         }
+
+        private void switch_joker_Click(object sender, EventArgs e)
+        {
+            //change current question with new one
+            model.questionID = model.generateQuestionID();
+            model.currentQuestion = model.getCurrentQuestion();
+            updateQuestion();
+
+            //disable the joker for next questions
+            switch_joker.Enabled = false;
+        }
     }
 }

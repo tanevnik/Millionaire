@@ -7,7 +7,7 @@ namespace Millionaire
     {
         List<Question>[] database = new List<Question>[15]; //za sekoe nivo po edna lista so prasanja 
         public int level; //int od 0 do 14, so sekoe tocno odgovoreno prasanje se zgolemuva
-        int questionID; //ID na prasanjeto vo databazata
+        public int questionID; //ID na prasanjeto vo databazata
         int[] money = {500, 1000, 2000, 3000, 5000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000, 2000000, 4000000};
 
         public Question currentQuestion; //tekovnoto prasanje vo igrata
@@ -47,7 +47,7 @@ namespace Millionaire
             }
         }
 
-        private int generateQuestionID()
+        public int generateQuestionID()
         {
             //generates a random question ID for the current level from the database
             //returns the ID of that question
@@ -55,7 +55,7 @@ namespace Millionaire
             return r.Next(database[level].Count);
         }
 
-        private Question getCurrentQuestion()
+        public Question getCurrentQuestion()
         {
             //returns the current question with random placements of answers
             Question q = database[level][questionID];

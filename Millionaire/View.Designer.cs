@@ -34,6 +34,7 @@
             this.info_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.playPanel = new System.Windows.Forms.Panel();
+            this.levelLabel = new System.Windows.Forms.Label();
             this.serrender_btn = new System.Windows.Forms.Button();
             this.audience_joker = new System.Windows.Forms.Button();
             this.phone_joker = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.answer3 = new System.Windows.Forms.Button();
             this.answer2 = new System.Windows.Forms.Button();
             this.answer1 = new System.Windows.Forms.Button();
-            this.levelLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -122,6 +122,15 @@
             this.playPanel.TabIndex = 11;
             this.playPanel.Visible = false;
             // 
+            // levelLabel
+            // 
+            this.levelLabel.Location = new System.Drawing.Point(332, 488);
+            this.levelLabel.Name = "levelLabel";
+            this.levelLabel.Size = new System.Drawing.Size(75, 23);
+            this.levelLabel.TabIndex = 24;
+            this.levelLabel.Text = "level";
+            this.levelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // serrender_btn
             // 
             this.serrender_btn.Location = new System.Drawing.Point(532, 341);
@@ -158,6 +167,7 @@
             this.switch_joker.TabIndex = 20;
             this.switch_joker.Text = "switch";
             this.switch_joker.UseVisualStyleBackColor = true;
+            this.switch_joker.Click += new System.EventHandler(this.switch_joker_Click);
             // 
             // split_joker
             // 
@@ -233,15 +243,6 @@
             this.answer1.Text = "button1";
             this.answer1.UseVisualStyleBackColor = true;
             this.answer1.Click += new System.EventHandler(this.answer1_Click);
-            // 
-            // levelLabel
-            // 
-            this.levelLabel.Location = new System.Drawing.Point(332, 488);
-            this.levelLabel.Name = "levelLabel";
-            this.levelLabel.Size = new System.Drawing.Size(75, 23);
-            this.levelLabel.TabIndex = 24;
-            this.levelLabel.Text = "level";
-            this.levelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // View
             // 
