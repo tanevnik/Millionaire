@@ -10,6 +10,7 @@ namespace Millionaire
         public View()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void newGame_btn_Click(object sender, EventArgs e)
@@ -132,6 +133,11 @@ namespace Millionaire
             return MessageBox.Show(string.Format("Одговорот „{0}“ е грешен! Точниот одговор е „{1}“.\n\nВие освоивте {2} денари.\n\nНова игра?", answer, correct, model.getMoney(true)), "Грешен одговор", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
+        private bool serrenderAnswerMessage(string correct)
+        {
+            return MessageBox.Show(string.Format("Точниот одговор на прашањето е {0}.\n\nВие освоивте {1} денари.\n\nНова игра ?", correct, model.getMoney(false)), "Се откажавте !", MessageBoxButtons.YesNo) == DialogResult.Yes;
+        }
+
         private bool finalAnswer(string answer)
         {
             return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор ?", answer),"Конечен одговор ?", MessageBoxButtons.YesNo) == DialogResult.Yes;
@@ -139,9 +145,25 @@ namespace Millionaire
 
         private void surrender_btn_Click(object sender, EventArgs e)
         {
-            //TODO: display final score
-            playPanel.Hide();
-            
+            if(MessageBox.Show("Дали навистина сакате да се откажете ?", 
+                "Се откажувате ?", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+
+                //TODO: display final score
+                if (serrenderAnswerMessage(model.currentQuestion.answer[model.correct]))
+                {
+                    //playere wants new game
+                    newGame();
+                }
+                else
+                {
+                    //player doesn't want new game
+                    playPanel.Hide();
+                }
+            }
+
         }
 
         private void fifty_joker_Click(object sender, EventArgs e)
