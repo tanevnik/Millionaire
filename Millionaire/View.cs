@@ -21,31 +21,43 @@ namespace Millionaire
         {
             playPanel.Show();
             model = new Model();
-            updateQuestion();
+            updateView();
 
             //reset the used jokers from previous game
-            split_joker.Enabled = true;
+            fifty_joker.Enabled = true;
             audience_joker.Enabled = true;
             phone_joker.Enabled = true;
             switch_joker.Enabled = true;
         }
 
-        private void updateQuestion()
+        private void updateView()
         {
-            //takes the current question from model and displays it
-
-            answer1.Enabled = true;
-            answer2.Enabled = true;
-            answer3.Enabled = true;
-            answer4.Enabled = true;
-
+            //updates all elements in the view.
+            
             //update question
             Question q = model.currentQuestion;
+            answer1.Enabled = answer2.Enabled = answer3.Enabled = answer4.Enabled = true;
             questionLabel.Text = q.question;
             answer1.Text = q.answer[0];
             answer2.Text = q.answer[1];
             answer3.Text = q.answer[2];
             answer4.Text = q.answer[3];
+
+            //update jokers
+            if (model.fifty_spent) fifty_joker.Enabled = false;
+            if (model.audience_spent) audience_joker.Enabled = false;
+            if (model.phone_spent) phone_joker.Enabled = false;
+            if (model.switch_spent) switch_joker.Enabled = false;
+
+            //check for joker 50-50
+            if (model.fifty_active)
+            {
+                //joker 50-50 is active
+                if (model.fifty_wrong1 == 0 || model.fifty_wrong2 == 0) answer1.Enabled = false;
+                if (model.fifty_wrong1 == 1 || model.fifty_wrong2 == 1) answer2.Enabled = false;
+                if (model.fifty_wrong1 == 2 || model.fifty_wrong2 == 2) answer3.Enabled = false;
+                if (model.fifty_wrong1 == 3 || model.fifty_wrong2 == 3) answer4.Enabled = false;
+            }
 
             //update level
             levelLabel.Text = "" + (model.level + 1);
@@ -94,7 +106,7 @@ namespace Millionaire
                 if (model.tryAnswer(index))
                 {
                     //correct answer
-                    updateQuestion();
+                    updateView();
                 }
                 else
                 {
@@ -125,59 +137,35 @@ namespace Millionaire
             return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор ?", answer),"Конечен одговор ?", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
-        private void serrender_btn_Click(object sender, EventArgs e)
+        private void surrender_btn_Click(object sender, EventArgs e)
         {
             //TODO: display final score
             playPanel.Hide();
             
         }
 
-        private void split_joker_Click(object sender, EventArgs e)
+        private void fifty_joker_Click(object sender, EventArgs e)
         {
-            //disables 2 wrong answers by random
-            int indexOfCorrectAnswer = model.correct;
-            Random random = new Random();
-
-            //disable the first wrong answer
-            int first = random.Next(3);
-            if (first >= indexOfCorrectAnswer) first++;
-            disableAnswer(first);
-
-            //disable the second wrong answer
-            int second = random.Next(2);
-            if(second >= indexOfCorrectAnswer)
-            {
-                second++;
-                if (second >= first) second++;
-            }
-            else if(second >= first)
-            {
-                second++;
-                if (second >= indexOfCorrectAnswer) second++;
-            }
-            disableAnswer(second);
-
-            //disable the joker for next questions
-            split_joker.Enabled = false;
+            model.joker_fifty();
+            updateView();
         }
 
-        private void disableAnswer(int index)
+        private void audience_joker_Click(object sender, EventArgs e)
         {
-            if (index == 0) answer1.Enabled = false;
-            else if (index == 1) answer2.Enabled = false;
-            else if (index == 2) answer3.Enabled = false;
-            else if (index == 3) answer4.Enabled = false;
+            model.joker_audience();
+            updateView();
+        }
+
+        private void phone_joker_Click(object sender, EventArgs e)
+        {
+            model.joker_phone();
+            updateView();
         }
 
         private void switch_joker_Click(object sender, EventArgs e)
         {
-            //change current question with new one
-            model.questionID = model.generateQuestionID();
-            model.currentQuestion = model.getCurrentQuestion();
-            updateQuestion();
-
-            //disable the joker for next questions
-            switch_joker.Enabled = false;
+            model.joker_switch();
+            updateView();
         }
     }
 }

@@ -12,14 +12,26 @@ namespace Millionaire
 
         public Question currentQuestion; //tekovnoto prasanje vo igrata
         public int correct; //int od 0 do 3 koe oznacuva na koja pozicija se naogja tocniot odgovor
-        
+
+        //informacii za jokerite
+        public bool fifty_spent;
+        public bool audience_spent;
+        public bool phone_spent;
+        public bool switch_spent;
+
+        //informacii za jokerot 50-50
+        public bool fifty_active; //oznacuva dali jokerot 50-50 e aktiviran na tekovnoto prasanje
+        public int fifty_wrong1; //eden gresen odgovor koj se otstranuva so jokerot 50-50
+        public int fifty_wrong2; //drug gresen odgovor koj se otstranuva so jokerot 50-50
+
         public Model()
         {
             initializeDatabase();
             level = 0;
-            questionID = generateQuestionID();
-            currentQuestion = getCurrentQuestion();
-        }
+            generateNewQuestion();
+            fifty_spent =  audience_spent = phone_spent = switch_spent = false;
+            fifty_active = false;
+    }
 
         private void initializeDatabase()
         {
@@ -47,21 +59,19 @@ namespace Millionaire
             }
         }
 
-        public int generateQuestionID()
+        public void generateNewQuestion()
         {
-            //generates a random question ID for the current level from the database
-            //returns the ID of that question
+            //generates a new question for the current level
+            fifty_active = false;
             Random r = new Random();
-            return r.Next(database[level].Count);
-        }
 
-        public Question getCurrentQuestion()
-        {
-            //returns the current question with random placements of answers
+            //generate a random question ID for the current level from the database
+            questionID = r.Next(database[level].Count);
+
+            //get the question from the database
             Question q = database[level][questionID];
 
-            //random ordering
-            Random r = new Random();
+            //get random ordering
             List<string> oldOrder = new List<string>();
             List<string> newOrder = new List<string>();
             foreach (string s in q.answer) oldOrder.Add(s);
@@ -78,7 +88,7 @@ namespace Millionaire
                 oldOrder.RemoveAt(tmpRandom);
             }
 
-            return new Question(q.question, newOrder[0], newOrder[1], newOrder[2], newOrder[3]);
+            currentQuestion = new Question(q.question, newOrder[0], newOrder[1], newOrder[2], newOrder[3]);
         }
 
         //PUBLIC METHODS
@@ -89,8 +99,7 @@ namespace Millionaire
             {
                 Console.Write("CORRECT!");
                 level++;
-                questionID = generateQuestionID();
-                currentQuestion = getCurrentQuestion();
+                generateNewQuestion();
 
                 //TODO: trigger animation for questions transition
             }
@@ -125,6 +134,62 @@ namespace Millionaire
                 return money[level - 1];
             }
         }
-        
+
+        //JOKERS
+        public void joker_fifty()
+        {
+            //disables 2 wrong answers by random
+            Random random = new Random();
+            fifty_active = true;
+
+            //disable the first wrong answer
+            fifty_wrong1 = random.Next(3);
+            if (fifty_wrong1 >= correct) fifty_wrong1++;
+
+            //disable the second wrong answer
+            fifty_wrong2 = random.Next(2);
+            if (fifty_wrong2 >= correct)
+            {
+                fifty_wrong2++;
+                if (fifty_wrong2 >= fifty_wrong1) fifty_wrong2++;
+            }
+            else if (fifty_wrong2 >= fifty_wrong1)
+            {
+                fifty_wrong2++;
+                if (fifty_wrong2 >= correct) fifty_wrong2++;
+            }
+
+            //disable the joker for next questions
+            fifty_spent = true;
+        }
+
+        public void joker_audience()
+        {
+            //TODO: implement joker audience
+
+            //disable the joker for next questions
+            audience_spent = true;
+        }
+
+        public void joker_phone()
+        {
+            //TODO: implement joker phone
+
+            //disable the joker for next questions
+            phone_spent = true;
+        }
+
+        public void joker_switch()
+        {
+            //generate a new question with different ID from the current one
+            int currentID = questionID;
+            while(currentID == questionID)
+            {
+                generateNewQuestion();
+            }
+
+            //disable the joker for next questions
+            switch_spent = true;
+        }
     }
 }

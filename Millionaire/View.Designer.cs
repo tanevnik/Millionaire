@@ -35,11 +35,11 @@
             this.exit_btn = new System.Windows.Forms.Button();
             this.playPanel = new System.Windows.Forms.Panel();
             this.levelLabel = new System.Windows.Forms.Label();
-            this.serrender_btn = new System.Windows.Forms.Button();
+            this.surrender_btn = new System.Windows.Forms.Button();
             this.audience_joker = new System.Windows.Forms.Button();
             this.phone_joker = new System.Windows.Forms.Button();
             this.switch_joker = new System.Windows.Forms.Button();
-            this.split_joker = new System.Windows.Forms.Button();
+            this.fifty_joker = new System.Windows.Forms.Button();
             this.questionLabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -103,11 +103,11 @@
             // playPanel
             // 
             this.playPanel.Controls.Add(this.levelLabel);
-            this.playPanel.Controls.Add(this.serrender_btn);
+            this.playPanel.Controls.Add(this.surrender_btn);
             this.playPanel.Controls.Add(this.audience_joker);
             this.playPanel.Controls.Add(this.phone_joker);
             this.playPanel.Controls.Add(this.switch_joker);
-            this.playPanel.Controls.Add(this.split_joker);
+            this.playPanel.Controls.Add(this.fifty_joker);
             this.playPanel.Controls.Add(this.questionLabel);
             this.playPanel.Controls.Add(this.pictureBox3);
             this.playPanel.Controls.Add(this.pictureBox2);
@@ -131,15 +131,15 @@
             this.levelLabel.Text = "level";
             this.levelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // serrender_btn
+            // surrender_btn
             // 
-            this.serrender_btn.Location = new System.Drawing.Point(532, 341);
-            this.serrender_btn.Name = "serrender_btn";
-            this.serrender_btn.Size = new System.Drawing.Size(216, 23);
-            this.serrender_btn.TabIndex = 23;
-            this.serrender_btn.Text = "Се откажувам";
-            this.serrender_btn.UseVisualStyleBackColor = true;
-            this.serrender_btn.Click += new System.EventHandler(this.serrender_btn_Click);
+            this.surrender_btn.Location = new System.Drawing.Point(532, 341);
+            this.surrender_btn.Name = "surrender_btn";
+            this.surrender_btn.Size = new System.Drawing.Size(216, 23);
+            this.surrender_btn.TabIndex = 23;
+            this.surrender_btn.Text = "Се откажувам";
+            this.surrender_btn.UseVisualStyleBackColor = true;
+            this.surrender_btn.Click += new System.EventHandler(this.surrender_btn_Click);
             // 
             // audience_joker
             // 
@@ -149,6 +149,7 @@
             this.audience_joker.TabIndex = 22;
             this.audience_joker.Text = "aud";
             this.audience_joker.UseVisualStyleBackColor = true;
+            this.audience_joker.Click += new System.EventHandler(this.audience_joker_Click);
             // 
             // phone_joker
             // 
@@ -158,6 +159,7 @@
             this.phone_joker.TabIndex = 21;
             this.phone_joker.Text = "phone";
             this.phone_joker.UseVisualStyleBackColor = true;
+            this.phone_joker.Click += new System.EventHandler(this.phone_joker_Click);
             // 
             // switch_joker
             // 
@@ -169,15 +171,15 @@
             this.switch_joker.UseVisualStyleBackColor = true;
             this.switch_joker.Click += new System.EventHandler(this.switch_joker_Click);
             // 
-            // split_joker
+            // fifty_joker
             // 
-            this.split_joker.Location = new System.Drawing.Point(542, 45);
-            this.split_joker.Name = "split_joker";
-            this.split_joker.Size = new System.Drawing.Size(46, 23);
-            this.split_joker.TabIndex = 19;
-            this.split_joker.Text = "50/50";
-            this.split_joker.UseVisualStyleBackColor = true;
-            this.split_joker.Click += new System.EventHandler(this.split_joker_Click);
+            this.fifty_joker.Location = new System.Drawing.Point(542, 45);
+            this.fifty_joker.Name = "fifty_joker";
+            this.fifty_joker.Size = new System.Drawing.Size(46, 23);
+            this.fifty_joker.TabIndex = 19;
+            this.fifty_joker.Text = "50/50";
+            this.fifty_joker.UseVisualStyleBackColor = true;
+            this.fifty_joker.Click += new System.EventHandler(this.fifty_joker_Click);
             // 
             // questionLabel
             // 
@@ -277,7 +279,7 @@
         private System.Windows.Forms.Button audience_joker;
         private System.Windows.Forms.Button phone_joker;
         private System.Windows.Forms.Button switch_joker;
-        private System.Windows.Forms.Button split_joker;
+        private System.Windows.Forms.Button fifty_joker;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -285,7 +287,7 @@
         private System.Windows.Forms.Button answer3;
         private System.Windows.Forms.Button answer2;
         private System.Windows.Forms.Button answer1;
-        private System.Windows.Forms.Button serrender_btn;
+        private System.Windows.Forms.Button surrender_btn;
         private System.Windows.Forms.Label levelLabel;
     }
 }
