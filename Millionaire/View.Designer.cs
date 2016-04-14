@@ -47,6 +47,7 @@
             this.answer3 = new System.Windows.Forms.Button();
             this.answer2 = new System.Windows.Forms.Button();
             this.answer1 = new System.Windows.Forms.Button();
+            this.focusLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -102,6 +103,7 @@
             // 
             // playPanel
             // 
+            this.playPanel.Controls.Add(this.focusLabel);
             this.playPanel.Controls.Add(this.levelLabel);
             this.playPanel.Controls.Add(this.surrender_btn);
             this.playPanel.Controls.Add(this.audience_joker);
@@ -246,6 +248,14 @@
             this.answer1.UseVisualStyleBackColor = true;
             this.answer1.Click += new System.EventHandler(this.answer1_Click);
             // 
+            // focusLabel
+            // 
+            this.focusLabel.AutoSize = true;
+            this.focusLabel.Location = new System.Drawing.Point(735, 517);
+            this.focusLabel.Name = "focusLabel";
+            this.focusLabel.Size = new System.Drawing.Size(0, 13);
+            this.focusLabel.TabIndex = 25;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +271,7 @@
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).EndInit();
             this.playPanel.ResumeLayout(false);
+            this.playPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -289,5 +300,6 @@
         private System.Windows.Forms.Button answer1;
         private System.Windows.Forms.Button surrender_btn;
         private System.Windows.Forms.Label levelLabel;
+        private System.Windows.Forms.Label focusLabel;
     }
 }

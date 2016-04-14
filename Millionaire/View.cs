@@ -77,26 +77,39 @@ namespace Millionaire
         private void answer1_Click(object sender, EventArgs e)
         {
             tryAnswer(0);
+
+            //removing focus of button
+            focusLabel.Focus();
         }
 
         private void answer2_Click(object sender, EventArgs e)
         {
             tryAnswer(1);
+
+            //removing focus of button
+            focusLabel.Focus();
+
         }
 
         private void answer3_Click(object sender, EventArgs e)
         {
             tryAnswer(2);
+
+            //removing focus of button
+            focusLabel.Focus();
         }
 
         private void answer4_Click(object sender, EventArgs e)
         {
             tryAnswer(3);
+
+            //removing focus of button
+            focusLabel.Focus();
         }
 
         public void tryAnswer(int index)
         {
-            String answer = "";
+            string answer = "";
             if (index == 0) answer = answer1.Text;
             else if (index == 1) answer = answer2.Text;
             else if (index == 2) answer = answer3.Text;
@@ -135,7 +148,10 @@ namespace Millionaire
 
         private bool serrenderAnswerMessage(string correct)
         {
-            return MessageBox.Show(string.Format("Точниот одговор на прашањето е {0}.\n\nВие освоивте {1} денари.\n\nНова игра ?", correct, model.getMoney(false)), "Се откажавте !", MessageBoxButtons.YesNo) == DialogResult.Yes;
+            return MessageBox.Show(
+                string.Format("Точниот одговор на прашањето е „{0}“.\n\nВие освоивте {1} денари.\n\nНова игра ?", correct, model.getMoney(false)), 
+                "Се откажавте !", 
+                MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private bool finalAnswer(string answer)
@@ -169,24 +185,41 @@ namespace Millionaire
         private void fifty_joker_Click(object sender, EventArgs e)
         {
             model.joker_fifty();
+
+            //removing focus
+            focusLabel.Focus();
+
             updateView();
+
         }
 
         private void audience_joker_Click(object sender, EventArgs e)
         {
             model.joker_audience();
+
+            //removing focus
+            focusLabel.Focus();
+
             updateView();
         }
 
         private void phone_joker_Click(object sender, EventArgs e)
         {
             model.joker_phone();
+
+            //removing focus
+            focusLabel.Focus();
+
             updateView();
         }
 
         private void switch_joker_Click(object sender, EventArgs e)
         {
             model.joker_switch();
+
+            //removing focus
+            focusLabel.Focus();
+
             updateView();
         }
     }
