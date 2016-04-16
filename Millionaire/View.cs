@@ -34,15 +34,15 @@ namespace Millionaire
         private void updateView()
         {
             //updates all elements in the view.
-            
+
             //update question
+            answer0.Enabled = answer1.Enabled = answer2.Enabled = answer3.Enabled = true;
             Question q = model.currentQuestion;
-            answer1.Enabled = answer2.Enabled = answer3.Enabled = answer4.Enabled = true;
             questionLabel.Text = q.question;
-            answer1.Text = q.answer[0];
-            answer2.Text = q.answer[1];
-            answer3.Text = q.answer[2];
-            answer4.Text = q.answer[3];
+            answerText0.Text = q.answer[0];
+            answerText1.Text = q.answer[1];
+            answerText2.Text = q.answer[2];
+            answerText3.Text = q.answer[3];
 
             //update jokers
             if (model.fifty_spent) fifty_joker.Enabled = false;
@@ -54,10 +54,10 @@ namespace Millionaire
             if (model.fifty_active)
             {
                 //joker 50-50 is active
-                if (model.fifty_wrong1 == 0 || model.fifty_wrong2 == 0) answer1.Enabled = false;
-                if (model.fifty_wrong1 == 1 || model.fifty_wrong2 == 1) answer2.Enabled = false;
-                if (model.fifty_wrong1 == 2 || model.fifty_wrong2 == 2) answer3.Enabled = false;
-                if (model.fifty_wrong1 == 3 || model.fifty_wrong2 == 3) answer4.Enabled = false;
+                if (model.fifty_wrong1 == 0 || model.fifty_wrong2 == 0) answer0.Enabled = false;
+                if (model.fifty_wrong1 == 1 || model.fifty_wrong2 == 1) answer1.Enabled = false;
+                if (model.fifty_wrong1 == 2 || model.fifty_wrong2 == 2) answer2.Enabled = false;
+                if (model.fifty_wrong1 == 3 || model.fifty_wrong2 == 3) answer3.Enabled = false;
             }
 
             //update level
@@ -74,7 +74,7 @@ namespace Millionaire
             Close();
         }
 
-        private void answer1_Click(object sender, EventArgs e)
+        private void answer0_Click(object sender, EventArgs e)
         {
             tryAnswer(0);
 
@@ -82,7 +82,7 @@ namespace Millionaire
             focusLabel.Focus();
         }
 
-        private void answer2_Click(object sender, EventArgs e)
+        private void answer1_Click(object sender, EventArgs e)
         {
             tryAnswer(1);
 
@@ -91,7 +91,7 @@ namespace Millionaire
 
         }
 
-        private void answer3_Click(object sender, EventArgs e)
+        private void answer2_Click(object sender, EventArgs e)
         {
             tryAnswer(2);
 
@@ -99,7 +99,7 @@ namespace Millionaire
             focusLabel.Focus();
         }
 
-        private void answer4_Click(object sender, EventArgs e)
+        private void answer3_Click(object sender, EventArgs e)
         {
             tryAnswer(3);
 
@@ -110,10 +110,10 @@ namespace Millionaire
         public void tryAnswer(int index)
         {
             string answer = "";
-            if (index == 0) answer = answer1.Text;
-            else if (index == 1) answer = answer2.Text;
-            else if (index == 2) answer = answer3.Text;
-            else if (index == 3) answer = answer4.Text;
+            if (index == 0) answer = answerText0.Text;
+            else if (index == 1) answer = answerText1.Text;
+            else if (index == 2) answer = answerText2.Text;
+            else if (index == 3) answer = answerText3.Text;
 
             if (finalAnswer(answer))
             {
