@@ -195,7 +195,10 @@ namespace Millionaire
 
         private void audience_joker_Click(object sender, EventArgs e)
         {
-            model.joker_audience();
+            int[] votes = model.joker_audience();
+
+            Audience view = new Audience(votes);
+            view.ShowDialog();
 
             //removing focus
             focusLabel.Focus();

@@ -163,12 +163,54 @@ namespace Millionaire
             fifty_spent = true;
         }
 
-        public void joker_audience()
+        public int[] joker_audience()
         {
-            //TODO: implement joker audience
+            int[] percents = { 0, 0, 0, 0 }; //initial state
+
+            if (fifty_active)
+            {
+                //only two answers remaining
+                int[] certain = { 80, 80, 75, 75, 70, 70, 65, 60, 55, 50, 40, 35, 30, 25, 20 }; //percent of the audience that knows the answer for each level
+                percents[correct] = certain[level]; //putting the certain people from the audience
+
+                //calculating all the uncertain people's answers randomly
+                Random r = new Random();
+                for (int counter = certain[level]; counter < 100; counter++)
+                {
+                    int randomVote = r.Next(2);
+                    if (randomVote >= fifty_wrong1)
+                    {
+                        randomVote++;
+                        if (randomVote >= fifty_wrong2) randomVote++;
+                    }
+                    else if (randomVote >= fifty_wrong2)
+                    {
+                        randomVote++;
+                        if (randomVote >= fifty_wrong1) randomVote++;
+                    }
+                    percents[randomVote]++;
+                }
+            }
+            else
+            {
+
+                int[] certain = { 70, 60, 55, 50, 40, 30, 25, 20, 15, 13, 11, 9, 7, 5, 5 }; //percent of the audience that knows the answer for each level
+
+                percents[correct] = certain[level]; //putting the certain people from the audience
+
+                //calculating all the uncertain people's answers randomly
+                Random r = new Random();
+                for (int counter = certain[level]; counter < 100; counter++)
+                {
+                    int randomVote = r.Next(4);
+                    percents[randomVote]++;
+                }
+            }
 
             //disable the joker for next questions
             audience_spent = true;
+
+            return percents;
         }
 
         public void joker_phone()
