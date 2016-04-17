@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Millionaire
@@ -74,17 +75,55 @@ namespace Millionaire
             Close();
         }
 
+        //change backround of left answers (А and B) depends on onOff parameter
+        private void onClickLeft(Panel backgorund, Label text, bool onOff)
+        {
+            if (onOff)
+            {
+                backgorund.BackgroundImage = Properties.Resources.leftAnswerSelect;
+                text.ForeColor = Color.Black;
+            }
+            else
+            {
+                backgorund.BackgroundImage = Properties.Resources.leftAnswer;
+                text.ForeColor = Color.Orange;
+            }
+            
+        }
+
+        //change background of right answers (Б and Г)  depends on onOff parameter
+        private void onClickRight(Panel backgorund, Label text, bool onOff)
+        {
+            if (onOff)
+            {
+                backgorund.BackgroundImage = Properties.Resources.rightAnswerSelect;
+                text.ForeColor = Color.Black;
+            }
+            else
+            {
+                backgorund.BackgroundImage = Properties.Resources.rightAnswer;
+                text.ForeColor = Color.Orange;
+            }
+
+        }
+
         private void answer0_Click(object sender, EventArgs e)
         {
+            onClickLeft(panel1, label2, true);
             tryAnswer(0);
+            onClickLeft(panel1, label2, false);
 
             //removing focus of button
             focusLabel.Focus();
         }
 
+
         private void answer1_Click(object sender, EventArgs e)
         {
+            onClickRight(answer1, label7, true);
             tryAnswer(1);
+            onClickRight(answer1, label7, false);
+
 
             //removing focus of button
             focusLabel.Focus();
@@ -93,7 +132,9 @@ namespace Millionaire
 
         private void answer2_Click(object sender, EventArgs e)
         {
+            onClickLeft(panel5, label3, true);
             tryAnswer(2);
+            onClickLeft(panel5, label3, false);
 
             //removing focus of button
             focusLabel.Focus();
@@ -101,7 +142,9 @@ namespace Millionaire
 
         private void answer3_Click(object sender, EventArgs e)
         {
+            onClickRight(answer3, label5, true);
             tryAnswer(3);
+            onClickRight(answer3, label5, false);
 
             //removing focus of button
             focusLabel.Focus();
@@ -225,5 +268,7 @@ namespace Millionaire
 
             updateView();
         }
+
+        
     }
 }
