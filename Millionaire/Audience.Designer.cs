@@ -33,7 +33,6 @@
             this.labelB = new System.Windows.Forms.Label();
             this.labelV = new System.Windows.Forms.Label();
             this.labelG = new System.Windows.Forms.Label();
-            this.close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +42,10 @@
             this.bar2 = new System.Windows.Forms.Panel();
             this.bar1 = new System.Windows.Forms.Panel();
             this.bar0 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelA
@@ -93,16 +95,6 @@
             this.labelG.TabIndex = 3;
             this.labelG.Text = "Г";
             this.labelG.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // close
-            // 
-            this.close.Location = new System.Drawing.Point(13, 223);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(160, 23);
-            this.close.TabIndex = 4;
-            this.close.Text = "Затвори";
-            this.close.UseVisualStyleBackColor = true;
-            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // panel1
             // 
@@ -200,17 +192,40 @@
             this.bar0.Size = new System.Drawing.Size(30, 150);
             this.bar0.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(-2, 218);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 30);
+            this.panel2.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(11, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Затвори";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.close_Click);
+            // 
             // Audience
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(190, 254);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.close);
             this.Name = "Audience";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Publika";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -221,7 +236,6 @@
         private System.Windows.Forms.Label labelB;
         private System.Windows.Forms.Label labelV;
         private System.Windows.Forms.Label labelG;
-        private System.Windows.Forms.Button close;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel bar3;
         private System.Windows.Forms.Panel bar2;
@@ -231,5 +245,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label0;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
     }
 }
