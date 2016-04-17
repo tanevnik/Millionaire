@@ -20,3 +20,14 @@ C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire
 C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Audience.resources
 C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.Audience.resources
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\bin\Debug\prasanja.txt
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\bin\Debug\Millionaire.exe
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\bin\Debug\Millionaire.pdb
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.csprojResolveAssemblyReference.cache
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.Audience.resources
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.View.resources
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.Properties.Resources.resources
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.exe
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.pdb

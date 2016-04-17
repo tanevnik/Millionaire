@@ -75,43 +75,41 @@ namespace Millionaire
             Close();
         }
 
-        //change backround of left answers (А and B) depends on onOff parameter
-        private void onClickLeft(Panel backgorund, Label text, bool onOff)
+        //change backround of selected answers depends on onOff parameter
+        private void changeBackground(Panel backgorund, Label text, bool onOff, bool isLeft)
         {
             if (onOff)
             {
-                backgorund.BackgroundImage = Properties.Resources.leftAnswerSelect;
+                if (isLeft)
+                {
+                    backgorund.BackgroundImage = Properties.Resources.leftAnswerSelect;
+                }
+                else
+                {
+                    backgorund.BackgroundImage = Properties.Resources.rightAnswerSelect;
+                }
                 text.ForeColor = Color.Black;
             }
             else
             {
-                backgorund.BackgroundImage = Properties.Resources.leftAnswer;
+                if (isLeft)
+                {
+                    backgorund.BackgroundImage = Properties.Resources.leftAnswer;
+                }
+                else
+                {
+                    backgorund.BackgroundImage = Properties.Resources.rightAnswer;
+                }
                 text.ForeColor = Color.Orange;
             }
             
         }
 
-        //change background of right answers (Б and Г)  depends on onOff parameter
-        private void onClickRight(Panel backgorund, Label text, bool onOff)
-        {
-            if (onOff)
-            {
-                backgorund.BackgroundImage = Properties.Resources.rightAnswerSelect;
-                text.ForeColor = Color.Black;
-            }
-            else
-            {
-                backgorund.BackgroundImage = Properties.Resources.rightAnswer;
-                text.ForeColor = Color.Orange;
-            }
-
-        }
-
         private void answer0_Click(object sender, EventArgs e)
         {
-            onClickLeft(panel1, label2, true);
+            changeBackground(panel1, label2, true, true);
             tryAnswer(0);
-            onClickLeft(panel1, label2, false);
+            changeBackground(panel1, label2, false, true);
 
             //removing focus of button
             focusLabel.Focus();
@@ -120,9 +118,9 @@ namespace Millionaire
 
         private void answer1_Click(object sender, EventArgs e)
         {
-            onClickRight(answer1, label7, true);
+            changeBackground(answer1, label7, true, false);
             tryAnswer(1);
-            onClickRight(answer1, label7, false);
+            changeBackground(answer1, label7, false, false);
 
 
             //removing focus of button
@@ -132,9 +130,9 @@ namespace Millionaire
 
         private void answer2_Click(object sender, EventArgs e)
         {
-            onClickLeft(panel5, label3, true);
+            changeBackground(panel5, label3, true, true);
             tryAnswer(2);
-            onClickLeft(panel5, label3, false);
+            changeBackground(panel5, label3, false, false);
 
             //removing focus of button
             focusLabel.Focus();
@@ -142,9 +140,9 @@ namespace Millionaire
 
         private void answer3_Click(object sender, EventArgs e)
         {
-            onClickRight(answer3, label5, true);
+            changeBackground(answer3, label5, true, false);
             tryAnswer(3);
-            onClickRight(answer3, label5, false);
+            changeBackground(answer3, label5, false, false);
 
             //removing focus of button
             focusLabel.Focus();
