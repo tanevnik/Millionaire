@@ -37,11 +37,17 @@
             this.playPanel = new System.Windows.Forms.Panel();
             this.levelLabel = new System.Windows.Forms.Label();
             this.answer1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.answerText1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.answer2 = new System.Windows.Forms.Panel();
             this.answerText2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.answer3 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.answerText3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.answer0 = new System.Windows.Forms.Panel();
             this.answerText0 = new System.Windows.Forms.Label();
@@ -56,25 +62,19 @@
             this.fifty_joker = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.answerText1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.answerText3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
             this.answer1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.answer2.SuspendLayout();
             this.answer3.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.answer0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // logo_img
@@ -144,13 +144,13 @@
             this.playPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playPanel.Location = new System.Drawing.Point(0, 0);
             this.playPanel.Name = "playPanel";
-            this.playPanel.Size = new System.Drawing.Size(759, 555);
+            this.playPanel.Size = new System.Drawing.Size(759, 618);
             this.playPanel.TabIndex = 11;
             this.playPanel.Visible = false;
             // 
             // levelLabel
             // 
-            this.levelLabel.Location = new System.Drawing.Point(364, 487);
+            this.levelLabel.Location = new System.Drawing.Point(364, 558);
             this.levelLabel.Name = "levelLabel";
             this.levelLabel.Size = new System.Drawing.Size(32, 23);
             this.levelLabel.TabIndex = 24;
@@ -162,17 +162,52 @@
             this.answer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("answer1.BackgroundImage")));
             this.answer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.answer1.Controls.Add(this.panel2);
-            this.answer1.Location = new System.Drawing.Point(379, 452);
+            this.answer1.Location = new System.Drawing.Point(379, 523);
             this.answer1.Name = "answer1";
             this.answer1.Size = new System.Drawing.Size(380, 44);
             this.answer1.TabIndex = 28;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.answerText1);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(12, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(316, 44);
+            this.panel2.TabIndex = 2;
+            this.panel2.Click += new System.EventHandler(this.answer1_Click);
+            // 
+            // answerText1
+            // 
+            this.answerText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.answerText1.ForeColor = System.Drawing.Color.White;
+            this.answerText1.Location = new System.Drawing.Point(54, -1);
+            this.answerText1.Name = "answerText1";
+            this.answerText1.Size = new System.Drawing.Size(237, 44);
+            this.answerText1.TabIndex = 1;
+            this.answerText1.Text = "odgovor 1";
+            this.answerText1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.answerText1.Click += new System.EventHandler(this.answer1_Click);
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
+            this.label7.Location = new System.Drawing.Point(28, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 44);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Б:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Click += new System.EventHandler(this.answer1_Click);
             // 
             // panel5
             // 
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Controls.Add(this.answer2);
-            this.panel5.Location = new System.Drawing.Point(0, 502);
+            this.panel5.Location = new System.Drawing.Point(0, 573);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(380, 44);
             this.panel5.TabIndex = 28;
@@ -217,17 +252,52 @@
             this.answer3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("answer3.BackgroundImage")));
             this.answer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.answer3.Controls.Add(this.panel3);
-            this.answer3.Location = new System.Drawing.Point(380, 502);
+            this.answer3.Location = new System.Drawing.Point(380, 573);
             this.answer3.Name = "answer3";
             this.answer3.Size = new System.Drawing.Size(380, 44);
             this.answer3.TabIndex = 30;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.answerText3);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(11, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(316, 44);
+            this.panel3.TabIndex = 3;
+            this.panel3.Click += new System.EventHandler(this.answer3_Click);
+            // 
+            // answerText3
+            // 
+            this.answerText3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.answerText3.ForeColor = System.Drawing.Color.White;
+            this.answerText3.Location = new System.Drawing.Point(54, -1);
+            this.answerText3.Name = "answerText3";
+            this.answerText3.Size = new System.Drawing.Size(237, 44);
+            this.answerText3.TabIndex = 1;
+            this.answerText3.Text = "odgovor 3";
+            this.answerText3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.answerText3.Click += new System.EventHandler(this.answer3_Click);
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
+            this.label5.Location = new System.Drawing.Point(28, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 44);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Г:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Click += new System.EventHandler(this.answer3_Click);
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.answer0);
-            this.panel1.Location = new System.Drawing.Point(0, 452);
+            this.panel1.Location = new System.Drawing.Point(0, 523);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(380, 44);
             this.panel1.TabIndex = 27;
@@ -270,8 +340,9 @@
             // questionLabel
             // 
             this.questionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.White;
-            this.questionLabel.Location = new System.Drawing.Point(72, 371);
+            this.questionLabel.Location = new System.Drawing.Point(72, 442);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.Size = new System.Drawing.Size(610, 66);
             this.questionLabel.TabIndex = 18;
@@ -282,7 +353,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 362);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 433);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(759, 84);
             this.pictureBox1.TabIndex = 26;
@@ -298,7 +369,7 @@
             // 
             // surrender_btn
             // 
-            this.surrender_btn.Location = new System.Drawing.Point(532, 323);
+            this.surrender_btn.Location = new System.Drawing.Point(532, 395);
             this.surrender_btn.Name = "surrender_btn";
             this.surrender_btn.Size = new System.Drawing.Size(216, 23);
             this.surrender_btn.TabIndex = 23;
@@ -308,7 +379,7 @@
             // 
             // audience_joker
             // 
-            this.audience_joker.Location = new System.Drawing.Point(594, 45);
+            this.audience_joker.Location = new System.Drawing.Point(585, 28);
             this.audience_joker.Name = "audience_joker";
             this.audience_joker.Size = new System.Drawing.Size(46, 23);
             this.audience_joker.TabIndex = 22;
@@ -318,7 +389,7 @@
             // 
             // phone_joker
             // 
-            this.phone_joker.Location = new System.Drawing.Point(646, 45);
+            this.phone_joker.Location = new System.Drawing.Point(637, 28);
             this.phone_joker.Name = "phone_joker";
             this.phone_joker.Size = new System.Drawing.Size(46, 23);
             this.phone_joker.TabIndex = 21;
@@ -328,7 +399,7 @@
             // 
             // switch_joker
             // 
-            this.switch_joker.Location = new System.Drawing.Point(698, 45);
+            this.switch_joker.Location = new System.Drawing.Point(689, 28);
             this.switch_joker.Name = "switch_joker";
             this.switch_joker.Size = new System.Drawing.Size(46, 23);
             this.switch_joker.TabIndex = 20;
@@ -338,7 +409,7 @@
             // 
             // fifty_joker
             // 
-            this.fifty_joker.Location = new System.Drawing.Point(542, 45);
+            this.fifty_joker.Location = new System.Drawing.Point(533, 28);
             this.fifty_joker.Name = "fifty_joker";
             this.fifty_joker.Size = new System.Drawing.Size(46, 23);
             this.fifty_joker.TabIndex = 19;
@@ -348,95 +419,25 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(532, 32);
+            this.pictureBox3.Location = new System.Drawing.Point(532, 57);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(216, 285);
+            this.pictureBox3.Size = new System.Drawing.Size(216, 332);
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(37, 32);
+            this.pictureBox2.Location = new System.Drawing.Point(75, 77);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(437, 303);
+            this.pictureBox2.Size = new System.Drawing.Size(374, 274);
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.answerText1);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(12, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(316, 44);
-            this.panel2.TabIndex = 2;
-            this.panel2.Click += new System.EventHandler(this.answer1_Click);
-            // 
-            // answerText1
-            // 
-            this.answerText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.answerText1.ForeColor = System.Drawing.Color.White;
-            this.answerText1.Location = new System.Drawing.Point(54, -1);
-            this.answerText1.Name = "answerText1";
-            this.answerText1.Size = new System.Drawing.Size(237, 44);
-            this.answerText1.TabIndex = 1;
-            this.answerText1.Text = "odgovor 1";
-            this.answerText1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.answerText1.Click += new System.EventHandler(this.answer1_Click);
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.label7.Location = new System.Drawing.Point(28, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 44);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Б:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Click += new System.EventHandler(this.answer1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.answerText3);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(11, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 44);
-            this.panel3.TabIndex = 3;
-            this.panel3.Click += new System.EventHandler(this.answer3_Click);
-            // 
-            // answerText3
-            // 
-            this.answerText3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.answerText3.ForeColor = System.Drawing.Color.White;
-            this.answerText3.Location = new System.Drawing.Point(54, -1);
-            this.answerText3.Name = "answerText3";
-            this.answerText3.Size = new System.Drawing.Size(237, 44);
-            this.answerText3.TabIndex = 1;
-            this.answerText3.Text = "odgovor 3";
-            this.answerText3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.answerText3.Click += new System.EventHandler(this.answer3_Click);
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.label5.Location = new System.Drawing.Point(28, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 44);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Г:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Click += new System.EventHandler(this.answer3_Click);
             // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 555);
+            this.ClientSize = new System.Drawing.Size(759, 618);
             this.Controls.Add(this.playPanel);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.info_btn);
@@ -449,16 +450,16 @@
             this.playPanel.ResumeLayout(false);
             this.playPanel.PerformLayout();
             this.answer1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.answer2.ResumeLayout(false);
             this.answer3.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.answer0.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

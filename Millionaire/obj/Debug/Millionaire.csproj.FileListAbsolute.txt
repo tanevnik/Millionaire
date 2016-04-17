@@ -19,3 +19,4 @@ C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire
 C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.exe
 C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Audience.resources
+C:\Users\Nikola\Desktop\Millionair\Millionaire\Millionaire\obj\Debug\Millionaire.Audience.resources
