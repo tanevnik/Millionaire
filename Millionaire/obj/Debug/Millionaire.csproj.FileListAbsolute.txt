@@ -31,3 +31,4 @@ C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.Properties
 C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
 C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.exe
 C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
+C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.CorrectAnswerMessageForm.resources

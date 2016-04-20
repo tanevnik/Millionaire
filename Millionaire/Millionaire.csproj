@@ -52,6 +52,12 @@
     <Compile Include="Audience.Designer.cs">
       <DependentUpon>Audience.cs</DependentUpon>
     </Compile>
+    <Compile Include="CorrectAnswerMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorrectAnswerMessageForm.Designer.cs">
+      <DependentUpon>CorrectAnswerMessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Audience.resx">
       <DependentUpon>Audience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorrectAnswerMessageForm.resx">
+      <DependentUpon>CorrectAnswerMessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>

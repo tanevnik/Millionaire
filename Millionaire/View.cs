@@ -193,6 +193,13 @@ namespace Millionaire
             focusLabel.Focus();
         }
 
+        private void showCorrectAnswereMessage(int price, int level)
+        {
+            CorrectAnswerMessageForm form = new CorrectAnswerMessageForm();
+            form.showMessage(price, level);
+            form.ShowDialog();
+        }
+
         public void tryAnswer(int index)
         {
             string answer = model.currentQuestion.answer[index];
@@ -202,6 +209,7 @@ namespace Millionaire
                 if (model.tryAnswer(index))
                 {
                     //correct answer
+                    showCorrectAnswereMessage(model.getMoney(false), model.level);
                     updateView();
                 }
                 else
@@ -307,7 +315,5 @@ namespace Millionaire
 
             updateView();
         }
-
-        
     }
 }
