@@ -121,11 +121,17 @@
   <data name="leftAnswer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\leftAnswer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="leftAnswerDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\leftAnswerDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="leftAnswerSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\leftAnswerSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rightAnswer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\rightAnswer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rightAnswerDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\rightAnswerDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rightAnswerSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\rightAnswerSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

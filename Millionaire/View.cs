@@ -37,13 +37,13 @@ namespace Millionaire
             //updates all elements in the view.
 
             //update question
-            answer0.Enabled = answer1.Enabled = answer2.Enabled = answer3.Enabled = true;
+            enableAllButtons();
             Question q = model.currentQuestion;
             questionLabel.Text = q.question;
-            answerText0.Text = q.answer[0];
-            answerText1.Text = q.answer[1];
-            answerText2.Text = q.answer[2];
-            answerText3.Text = q.answer[3];
+            answerTextA.Text = q.answer[0];
+            answerTextB.Text = q.answer[1];
+            answerTextV.Text = q.answer[2];
+            answerTextG.Text = q.answer[3];
 
             //update jokers
             if (model.fifty_spent) fifty_joker.Enabled = false;
@@ -55,14 +55,59 @@ namespace Millionaire
             if (model.fifty_active)
             {
                 //joker 50-50 is active
-                if (model.fifty_wrong1 == 0 || model.fifty_wrong2 == 0) answer0.Enabled = false;
-                if (model.fifty_wrong1 == 1 || model.fifty_wrong2 == 1) answer1.Enabled = false;
-                if (model.fifty_wrong1 == 2 || model.fifty_wrong2 == 2) answer2.Enabled = false;
-                if (model.fifty_wrong1 == 3 || model.fifty_wrong2 == 3) answer3.Enabled = false;
+                for(int i = 0; i<4; i++)
+                {
+                    //disable answers
+                    if (model.fifty_wrong1 == i || model.fifty_wrong2 == i) disableButton(i);
+                }
             }
 
             //update level
             levelLabel.Text = "" + (model.level + 1);
+        }
+
+        private void disableButton(int index)
+        {
+            //disables the button with the given index (from 0 to 3 inclusive)
+            switch (index)
+            {
+                case 0:
+                    panelA.Enabled = false;
+                    panelA.BackgroundImage = Properties.Resources.leftAnswerDisabled;
+                    labelA.Text = "";
+                    answerTextA.Text = "";
+                    break;
+                case 1:
+                    panelB.Enabled = false;
+                    panelB.BackgroundImage = Properties.Resources.rightAnswerDisabled;
+                    labelB.Text = "";
+                    answerTextB.Text = "";
+                    break;
+                case 2:
+                    panelV.Enabled = false;
+                    panelV.BackgroundImage = Properties.Resources.leftAnswerDisabled;
+                    labelV.Text = "";
+                    answerTextV.Text = "";
+                    break;
+                case 3:
+                    panelG.Enabled = false;
+                    panelG.BackgroundImage = Properties.Resources.rightAnswerDisabled;
+                    labelG.Text = "";
+                    answerTextG.Text = "";
+                    break;
+            }
+        }
+
+        private void enableAllButtons()
+        {
+            //enables all answers
+            panelA.Enabled = panelB.Enabled = panelV.Enabled = panelG.Enabled = true;
+            panelA.BackgroundImage = panelV.BackgroundImage = Properties.Resources.leftAnswer;
+            panelB.BackgroundImage = panelG.BackgroundImage = Properties.Resources.rightAnswer;
+            labelA.Text = "А:";
+            labelB.Text = "Б:";
+            labelV.Text = "В:";
+            labelG.Text = "Г:";
         }
 
         private void info_btn_Click(object sender, EventArgs e)
@@ -88,7 +133,7 @@ namespace Millionaire
                 {
                     backgorund.BackgroundImage = Properties.Resources.rightAnswerSelect;
                 }
-                text.ForeColor = Color.Black;
+                text.ForeColor = Color.White;
             }
             else
             {
@@ -100,16 +145,16 @@ namespace Millionaire
                 {
                     backgorund.BackgroundImage = Properties.Resources.rightAnswer;
                 }
-                text.ForeColor = Color.Orange;
+                text.ForeColor = Color.FromArgb(248, 155, 28); //orange;
             }
             
         }
 
         private void answer0_Click(object sender, EventArgs e)
         {
-            changeBackground(panel1, label2, true, true);
+            changeBackground(panelA, labelA, true, true);
             tryAnswer(0);
-            changeBackground(panel1, label2, false, true);
+            changeBackground(panelA, labelA, false, true);
 
             //removing focus of button
             focusLabel.Focus();
@@ -118,9 +163,9 @@ namespace Millionaire
 
         private void answer1_Click(object sender, EventArgs e)
         {
-            changeBackground(answer1, label7, true, false);
+            changeBackground(panelB, labelB, true, false);
             tryAnswer(1);
-            changeBackground(answer1, label7, false, false);
+            changeBackground(panelB, labelB, false, false);
 
 
             //removing focus of button
@@ -130,9 +175,9 @@ namespace Millionaire
 
         private void answer2_Click(object sender, EventArgs e)
         {
-            changeBackground(panel5, label3, true, true);
+            changeBackground(panelV, labelV, true, true);
             tryAnswer(2);
-            changeBackground(panel5, label3, false, false);
+            changeBackground(panelV, labelV, false, true);
 
             //removing focus of button
             focusLabel.Focus();
@@ -140,9 +185,9 @@ namespace Millionaire
 
         private void answer3_Click(object sender, EventArgs e)
         {
-            changeBackground(answer3, label5, true, false);
+            changeBackground(panelG, labelG, true, false);
             tryAnswer(3);
-            changeBackground(answer3, label5, false, false);
+            changeBackground(panelG, labelG, false, false);
 
             //removing focus of button
             focusLabel.Focus();
@@ -150,11 +195,7 @@ namespace Millionaire
 
         public void tryAnswer(int index)
         {
-            string answer = "";
-            if (index == 0) answer = answerText0.Text;
-            else if (index == 1) answer = answerText1.Text;
-            else if (index == 2) answer = answerText2.Text;
-            else if (index == 3) answer = answerText3.Text;
+            string answer = model.currentQuestion.answer[index];
 
             if (finalAnswer(answer))
             {

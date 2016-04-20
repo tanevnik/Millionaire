@@ -73,6 +73,16 @@ namespace Millionaire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leftAnswerDisabled {
+            get {
+                object obj = ResourceManager.GetObject("leftAnswerDisabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap leftAnswerSelect {
             get {
                 object obj = ResourceManager.GetObject("leftAnswerSelect", resourceCulture);
@@ -86,6 +96,16 @@ namespace Millionaire.Properties {
         internal static System.Drawing.Bitmap rightAnswer {
             get {
                 object obj = ResourceManager.GetObject("rightAnswer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rightAnswerDisabled {
+            get {
+                object obj = ResourceManager.GetObject("rightAnswerDisabled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

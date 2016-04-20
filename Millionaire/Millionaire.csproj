@@ -52,6 +52,9 @@
     <Compile Include="Audience.Designer.cs">
       <DependentUpon>Audience.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +97,7 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="leftAnswer.png" />
+    <None Include="leftAnswerDisabled.png" />
     <Content Include="leftAnswerSelect.png" />
     <Content Include="prasanja.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -103,6 +107,8 @@
     <None Include="Resources\leftAnswerSelect.png" />
     <None Include="Resources\rightAnswerSelect.png" />
     <None Include="rightAnswer.png" />
+    <None Include="Resources\leftAnswerDisabled.bmp" />
+    <None Include="rightAnswerDisabled.png" />
     <Content Include="rightAnswerSelect.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
