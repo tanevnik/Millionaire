@@ -32,3 +32,4 @@ C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.Gen
 C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.exe
 C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
 C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.CorrectAnswerMessageForm.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.CorrectAnswerMessageForm.resources

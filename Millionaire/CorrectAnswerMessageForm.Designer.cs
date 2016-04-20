@@ -70,7 +70,7 @@
             // 
             // closeTimer
             // 
-            this.closeTimer.Interval = 3000;
+            this.closeTimer.Interval = 1500;
             this.closeTimer.Tick += new System.EventHandler(this.closeTimer_Tick);
             // 
             // panel1

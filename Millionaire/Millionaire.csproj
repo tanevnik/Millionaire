@@ -107,6 +107,7 @@
   <ItemGroup>
     <None Include="leftAnswer.png" />
     <None Include="leftAnswerDisabled.png" />
+    <None Include="leftAnswerCorrect.png" />
     <Content Include="leftAnswerSelect.png" />
     <Content Include="prasanja.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -118,6 +119,7 @@
     <None Include="rightAnswer.png" />
     <None Include="Resources\leftAnswerDisabled.bmp" />
     <None Include="rightAnswerDisabled.png" />
+    <None Include="rightAnswerCorrect.png" />
     <Content Include="rightAnswerSelect.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

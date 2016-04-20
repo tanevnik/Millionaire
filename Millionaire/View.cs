@@ -8,6 +8,10 @@ namespace Millionaire
     {
         private Model model;
 
+        //animation variables
+        private int timerTicks;
+        private int correctIndex;
+
         public View()
         {
             InitializeComponent();
@@ -120,41 +124,56 @@ namespace Millionaire
             Close();
         }
 
-        //change backround of selected answers depends on onOff parameter
-        private void changeBackground(Panel backgorund, Label text, bool onOff, bool isLeft)
+        //change backround of answer to normal (unselected)
+        private void changeBackgroundNormal(Panel backgorund, Label letter, Label answerText, bool isLeft)
         {
-            if (onOff)
+            if (isLeft)
             {
-                if (isLeft)
-                {
-                    backgorund.BackgroundImage = Properties.Resources.leftAnswerSelect;
-                }
-                else
-                {
-                    backgorund.BackgroundImage = Properties.Resources.rightAnswerSelect;
-                }
-                text.ForeColor = Color.White;
+                backgorund.BackgroundImage = Properties.Resources.leftAnswer;
             }
             else
             {
-                if (isLeft)
-                {
-                    backgorund.BackgroundImage = Properties.Resources.leftAnswer;
-                }
-                else
-                {
-                    backgorund.BackgroundImage = Properties.Resources.rightAnswer;
-                }
-                text.ForeColor = Color.FromArgb(248, 155, 28); //orange;
+                backgorund.BackgroundImage = Properties.Resources.rightAnswer;
             }
-            
+            letter.ForeColor = Color.FromArgb(248, 155, 28); //orange;
+            answerText.ForeColor = Color.White;
+        }
+
+        //change backround of answer to selected
+        private void changeBackgroundSelected(Panel backgorund, Label letter, Label answerText, bool isLeft)
+        {
+            if (isLeft)
+            {
+                backgorund.BackgroundImage = Properties.Resources.leftAnswerSelect;
+            }
+            else
+            {
+                backgorund.BackgroundImage = Properties.Resources.rightAnswerSelect;
+            }
+            letter.ForeColor = Color.White;
+            answerText.ForeColor = Color.Black;
+        }
+
+        //change backround of answer to correct
+        private void changeBackgroundCorrect(Panel backgorund, Label letter, Label answerText, bool isLeft)
+        {
+            if (isLeft)
+            {
+                backgorund.BackgroundImage = Properties.Resources.leftAnswerCorrect;
+            }
+            else
+            {
+                backgorund.BackgroundImage = Properties.Resources.rightAnswerCorrect;
+            }
+            letter.ForeColor = Color.White;
+            answerText.ForeColor = Color.Black;
         }
 
         private void answer0_Click(object sender, EventArgs e)
         {
-            changeBackground(panelA, labelA, true, true);
+            changeBackgroundSelected(panelA, labelA, answerTextA, true);
             tryAnswer(0);
-            changeBackground(panelA, labelA, false, true);
+            changeBackgroundNormal(panelA, labelA, answerTextA, true);
 
             //removing focus of button
             focusLabel.Focus();
@@ -163,9 +182,9 @@ namespace Millionaire
 
         private void answer1_Click(object sender, EventArgs e)
         {
-            changeBackground(panelB, labelB, true, false);
+            changeBackgroundSelected(panelB, labelB, answerTextB, false);
             tryAnswer(1);
-            changeBackground(panelB, labelB, false, false);
+            changeBackgroundNormal(panelB, labelB, answerTextB, false);
 
 
             //removing focus of button
@@ -175,9 +194,9 @@ namespace Millionaire
 
         private void answer2_Click(object sender, EventArgs e)
         {
-            changeBackground(panelV, labelV, true, true);
+            changeBackgroundSelected(panelV, labelV, answerTextV, true);
             tryAnswer(2);
-            changeBackground(panelV, labelV, false, true);
+            changeBackgroundNormal(panelV, labelV, answerTextV, true);
 
             //removing focus of button
             focusLabel.Focus();
@@ -185,9 +204,9 @@ namespace Millionaire
 
         private void answer3_Click(object sender, EventArgs e)
         {
-            changeBackground(panelG, labelG, true, false);
+            changeBackgroundSelected(panelG, labelG, answerTextG, false);
             tryAnswer(3);
-            changeBackground(panelG, labelG, false, false);
+            changeBackgroundNormal(panelG, labelG, answerTextG, false);
 
             //removing focus of button
             focusLabel.Focus();
@@ -200,6 +219,58 @@ namespace Millionaire
             form.ShowDialog();
         }
 
+        private void animateCorrect(int index)
+        {
+            correctIndex = index;
+            timerTicks = 9; //needs to be set to odd number
+            correctAnimationTimer.Start(); //starts the animation
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            //animates the correct answer with green and orange background flickering
+            if(timerTicks % 2 == 1)
+            {
+                //green flicker
+                switch (correctIndex)
+                {
+                    case 0:
+                        changeBackgroundCorrect(panelA, labelA, answerTextA, true);
+                        break;
+                    case 1:
+                        changeBackgroundCorrect(panelB, labelB, answerTextB, false);
+                        break;
+                    case 2:
+                        changeBackgroundCorrect(panelV, labelV, answerTextV, true);
+                        break;
+                    case 3:
+                        changeBackgroundCorrect(panelG, labelG, answerTextG, false);
+                        break;
+                }
+            }
+            else
+            {
+                //orange flicker
+                switch (correctIndex)
+                {
+                    case 0:
+                        changeBackgroundSelected(panelA, labelA, answerTextA, true);
+                        break;
+                    case 1:
+                        changeBackgroundSelected(panelB, labelB, answerTextB, false);
+                        break;
+                    case 2:
+                        changeBackgroundSelected(panelV, labelV, answerTextV, true);
+                        break;
+                    case 3:
+                        changeBackgroundSelected(panelG, labelG, answerTextG, false);
+                        break;
+                }
+            }
+            timerTicks--;
+            if (timerTicks == 0) correctAnimationTimer.Stop();
+        }
+
         public void tryAnswer(int index)
         {
             string answer = model.currentQuestion.answer[index];
@@ -209,6 +280,7 @@ namespace Millionaire
                 if (model.tryAnswer(index))
                 {
                     //correct answer
+                    animateCorrect(index);
                     showCorrectAnswereMessage(model.getMoney(false), model.level);
                     updateView();
                 }

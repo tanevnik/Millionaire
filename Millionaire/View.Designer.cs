@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
-            this.logo_img = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.newGame_btn = new System.Windows.Forms.Button();
             this.info_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
+            this.correctAnimationTimer = new System.Windows.Forms.Timer(this.components);
+            this.logo_img = new System.Windows.Forms.PictureBox();
             this.playPanel = new Millionaire.DoubleBufferedPanel();
             this.levelLabel = new System.Windows.Forms.Label();
             this.panelB = new Millionaire.DoubleBufferedPanel();
@@ -77,14 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // logo_img
-            // 
-            this.logo_img.Location = new System.Drawing.Point(56, 35);
-            this.logo_img.Name = "logo_img";
-            this.logo_img.Size = new System.Drawing.Size(453, 344);
-            this.logo_img.TabIndex = 0;
-            this.logo_img.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -123,6 +117,18 @@
             this.exit_btn.Text = "Излези";
             this.exit_btn.UseVisualStyleBackColor = true;
             this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
+            // 
+            // correctAnimationTimer
+            // 
+            this.correctAnimationTimer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // logo_img
+            // 
+            this.logo_img.Location = new System.Drawing.Point(56, 35);
+            this.logo_img.Name = "logo_img";
+            this.logo_img.Size = new System.Drawing.Size(453, 344);
+            this.logo_img.TabIndex = 0;
+            this.logo_img.TabStop = false;
             // 
             // playPanel
             // 
@@ -500,5 +506,6 @@
         private DoubleBufferedPanel panelV;
         private DoubleBufferedPanel panelG;
         private DoubleBufferedPanel panelA;
+        private System.Windows.Forms.Timer correctAnimationTimer;
     }
 }
