@@ -56,6 +56,7 @@
             this.messageLabel.Size = new System.Drawing.Size(246, 25);
             this.messageLabel.TabIndex = 2;
             this.messageLabel.Text = "Освоивте Х сума на пари";
+            this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // closeButton
             // 
@@ -93,7 +94,6 @@
             this.MinimizeBox = false;
             this.Name = "CorrectAnswerMessageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CorrectAnswerMessageForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
