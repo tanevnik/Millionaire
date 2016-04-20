@@ -100,13 +100,10 @@ namespace Millionaire
                 Console.Write("CORRECT!");
                 level++;
                 generateNewQuestion();
-
-                //TODO: trigger animation for questions transition
             }
             else
             {
                 Console.Write("WRONG!");
-                //TODO: implement wrong answer behaivour
             }
 
             return ans == tmpCorrect;

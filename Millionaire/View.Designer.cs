@@ -34,7 +34,7 @@
             this.newGame_btn = new System.Windows.Forms.Button();
             this.info_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
-            this.correctAnimationTimer = new System.Windows.Forms.Timer(this.components);
+            this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.logo_img = new System.Windows.Forms.PictureBox();
             this.playPanel = new Millionaire.DoubleBufferedPanel();
             this.levelLabel = new System.Windows.Forms.Label();
@@ -118,9 +118,9 @@
             this.exit_btn.UseVisualStyleBackColor = true;
             this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
-            // correctAnimationTimer
+            // animationTimer
             // 
-            this.correctAnimationTimer.Tick += new System.EventHandler(this.timer_Tick);
+            this.animationTimer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // logo_img
             // 
@@ -506,6 +506,6 @@
         private DoubleBufferedPanel panelV;
         private DoubleBufferedPanel panelG;
         private DoubleBufferedPanel panelA;
-        private System.Windows.Forms.Timer correctAnimationTimer;
+        private System.Windows.Forms.Timer animationTimer;
     }
 }

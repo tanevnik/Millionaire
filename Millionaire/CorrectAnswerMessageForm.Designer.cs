@@ -90,6 +90,7 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CorrectAnswerMessageForm";

@@ -11,6 +11,7 @@ namespace Millionaire
         //animation variables
         private int timerTicks;
         private int correctIndex;
+        private bool correctAnswer;
 
         public View()
         {
@@ -76,28 +77,28 @@ namespace Millionaire
             switch (index)
             {
                 case 0:
-                    panelA.Enabled = false;
                     panelA.BackgroundImage = Properties.Resources.leftAnswerDisabled;
                     labelA.Text = "";
                     answerTextA.Text = "";
+                    panelA.Enabled = false;
                     break;
                 case 1:
-                    panelB.Enabled = false;
                     panelB.BackgroundImage = Properties.Resources.rightAnswerDisabled;
                     labelB.Text = "";
                     answerTextB.Text = "";
+                    panelB.Enabled = false;
                     break;
                 case 2:
-                    panelV.Enabled = false;
                     panelV.BackgroundImage = Properties.Resources.leftAnswerDisabled;
                     labelV.Text = "";
                     answerTextV.Text = "";
+                    panelV.Enabled = false;
                     break;
                 case 3:
-                    panelG.Enabled = false;
                     panelG.BackgroundImage = Properties.Resources.rightAnswerDisabled;
                     labelG.Text = "";
                     answerTextG.Text = "";
+                    panelG.Enabled = false;
                     break;
             }
         }
@@ -139,6 +140,26 @@ namespace Millionaire
             answerText.ForeColor = Color.White;
         }
 
+        private void changeBackgroundNormal(int index)
+        {
+            //helper method
+            switch (index)
+            {
+                case 0:
+                    changeBackgroundNormal(panelA, labelA, answerTextA, true);
+                    break;
+                case 1:
+                    changeBackgroundNormal(panelB, labelB, answerTextB, false);
+                    break;
+                case 2:
+                    changeBackgroundNormal(panelV, labelV, answerTextV, true);
+                    break;
+                case 3:
+                    changeBackgroundNormal(panelG, labelG, answerTextG, false);
+                    break;
+            }
+        }
+
         //change backround of answer to selected
         private void changeBackgroundSelected(Panel backgorund, Label letter, Label answerText, bool isLeft)
         {
@@ -152,6 +173,26 @@ namespace Millionaire
             }
             letter.ForeColor = Color.White;
             answerText.ForeColor = Color.Black;
+        }
+
+        private void changeBackgroundSelected(int index)
+        {
+            //helper method
+            switch (index)
+            {
+                case 0:
+                    changeBackgroundSelected(panelA, labelA, answerTextA, true);
+                    break;
+                case 1:
+                    changeBackgroundSelected(panelB, labelB, answerTextB, false);
+                    break;
+                case 2:
+                    changeBackgroundSelected(panelV, labelV, answerTextV, true);
+                    break;
+                case 3:
+                    changeBackgroundSelected(panelG, labelG, answerTextG, false);
+                    break;
+            }
         }
 
         //change backround of answer to correct
@@ -169,11 +210,29 @@ namespace Millionaire
             answerText.ForeColor = Color.Black;
         }
 
+        private void changeBackgroundCorrect(int index)
+        {
+            //helper method
+            switch (index)
+            {
+                case 0:
+                    changeBackgroundCorrect(panelA, labelA, answerTextA, true);
+                    break;
+                case 1:
+                    changeBackgroundCorrect(panelB, labelB, answerTextB, false);
+                    break;
+                case 2:
+                    changeBackgroundCorrect(panelV, labelV, answerTextV, true);
+                    break;
+                case 3:
+                    changeBackgroundCorrect(panelG, labelG, answerTextG, false);
+                    break;
+            }
+        }
+
         private void answer0_Click(object sender, EventArgs e)
         {
-            changeBackgroundSelected(panelA, labelA, answerTextA, true);
             tryAnswer(0);
-            changeBackgroundNormal(panelA, labelA, answerTextA, true);
 
             //removing focus of button
             focusLabel.Focus();
@@ -182,10 +241,7 @@ namespace Millionaire
 
         private void answer1_Click(object sender, EventArgs e)
         {
-            changeBackgroundSelected(panelB, labelB, answerTextB, false);
             tryAnswer(1);
-            changeBackgroundNormal(panelB, labelB, answerTextB, false);
-
 
             //removing focus of button
             focusLabel.Focus();
@@ -194,9 +250,7 @@ namespace Millionaire
 
         private void answer2_Click(object sender, EventArgs e)
         {
-            changeBackgroundSelected(panelV, labelV, answerTextV, true);
             tryAnswer(2);
-            changeBackgroundNormal(panelV, labelV, answerTextV, true);
 
             //removing focus of button
             focusLabel.Focus();
@@ -204,9 +258,7 @@ namespace Millionaire
 
         private void answer3_Click(object sender, EventArgs e)
         {
-            changeBackgroundSelected(panelG, labelG, answerTextG, false);
             tryAnswer(3);
-            changeBackgroundNormal(panelG, labelG, answerTextG, false);
 
             //removing focus of button
             focusLabel.Focus();
@@ -222,57 +274,41 @@ namespace Millionaire
         private void animateCorrect(int index)
         {
             correctIndex = index;
+            correctAnswer = true;
             timerTicks = 9; //needs to be set to odd number
-            correctAnimationTimer.Start(); //starts the animation
+            animationTimer.Start(); //starts the animation
+        }
+
+        private void animateWrong(int index)
+        {
+            correctIndex = index;
+            correctAnswer = false;
+            timerTicks = 5; //needs to be set to odd number
+            animationTimer.Start(); //starts the animation
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            //animates the correct answer with green and orange background flickering
+            //animates the correct answer with green flickering
             if(timerTicks % 2 == 1)
             {
                 //green flicker
-                switch (correctIndex)
-                {
-                    case 0:
-                        changeBackgroundCorrect(panelA, labelA, answerTextA, true);
-                        break;
-                    case 1:
-                        changeBackgroundCorrect(panelB, labelB, answerTextB, false);
-                        break;
-                    case 2:
-                        changeBackgroundCorrect(panelV, labelV, answerTextV, true);
-                        break;
-                    case 3:
-                        changeBackgroundCorrect(panelG, labelG, answerTextG, false);
-                        break;
-                }
+                changeBackgroundCorrect(correctIndex);
             }
             else
             {
-                //orange flicker
-                switch (correctIndex)
-                {
-                    case 0:
-                        changeBackgroundSelected(panelA, labelA, answerTextA, true);
-                        break;
-                    case 1:
-                        changeBackgroundSelected(panelB, labelB, answerTextB, false);
-                        break;
-                    case 2:
-                        changeBackgroundSelected(panelV, labelV, answerTextV, true);
-                        break;
-                    case 3:
-                        changeBackgroundSelected(panelG, labelG, answerTextG, false);
-                        break;
-                }
+                //default color flicker
+                if(correctAnswer) changeBackgroundSelected(correctIndex);
+                else changeBackgroundNormal(correctIndex);       
             }
+
             timerTicks--;
-            if (timerTicks == 0) correctAnimationTimer.Stop();
+            if (timerTicks == 0) animationTimer.Stop();
         }
 
         public void tryAnswer(int index)
         {
+            changeBackgroundSelected(index);
             string answer = model.currentQuestion.answer[index];
 
             if (finalAnswer(answer))
@@ -287,20 +323,24 @@ namespace Millionaire
                 else
                 {
                     //wrong answer
+                    animateWrong(model.correct);
+
+                    bool newGameBool = false;
                     if (wrongAnswerMessage(answer, model.currentQuestion.answer[model.correct]))
                     {
                         //player wants new game
-                        newGame();
-                    }
-                    else
-                    {
-                        //player doesn't want new game
-                        playPanel.Hide();
+                        newGameBool = true;
+                        
                     }
 
-                    //TODO animations
+                    //reset the correct button first
+                    changeBackgroundNormal(model.correct);
+                    
+                    if(newGameBool) newGame();
+                    else playPanel.Hide();
                 }
             }
+            changeBackgroundNormal(index);
         }
 
         private bool wrongAnswerMessage(string answer, string correct)
