@@ -24,8 +24,19 @@ namespace Millionaire
             newGame();
         }
 
+        private void info_btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Format("Кој сака да биде милионер ?\nИзработија:\nДавид Симеоновски\nНикола Танев"), "Кој сака да биде милионер ?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void exit_btn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void newGame()
         {
+            //Starts a new game
             playPanel.Show();
             model = new Model();
             updateView();
@@ -71,36 +82,41 @@ namespace Millionaire
             levelLabel.Text = "" + (model.level + 1);
         }
 
+        private Label getLetterLabel(int index)
+        {
+            //returns the letter label for the given index
+            if(index == 0) return labelA;
+            else if(index == 1) return labelB;
+            else if(index == 2) return labelV;
+            else return labelG;
+        }
+
+        private Label getAnswerTextLabel(int index)
+        {
+            //returns the answerText label for the given index
+            if (index == 0) return answerTextA;
+            else if (index == 1) return answerTextB;
+            else if (index == 2) return answerTextV;
+            else return answerTextG;
+        }
+
+        private Panel getPanel(int index)
+        {
+            //returns the button panel for the given index
+            if (index == 0) return panelA;
+            else if (index == 1) return panelB;
+            else if (index == 2) return panelV;
+            else return panelG;
+        }
+
         private void disableButton(int index)
         {
             //disables the button with the given index (from 0 to 3 inclusive)
-            switch (index)
-            {
-                case 0:
-                    panelA.BackgroundImage = Properties.Resources.leftAnswerDisabled;
-                    labelA.Text = "";
-                    answerTextA.Text = "";
-                    panelA.Enabled = false;
-                    break;
-                case 1:
-                    panelB.BackgroundImage = Properties.Resources.rightAnswerDisabled;
-                    labelB.Text = "";
-                    answerTextB.Text = "";
-                    panelB.Enabled = false;
-                    break;
-                case 2:
-                    panelV.BackgroundImage = Properties.Resources.leftAnswerDisabled;
-                    labelV.Text = "";
-                    answerTextV.Text = "";
-                    panelV.Enabled = false;
-                    break;
-                case 3:
-                    panelG.BackgroundImage = Properties.Resources.rightAnswerDisabled;
-                    labelG.Text = "";
-                    answerTextG.Text = "";
-                    panelG.Enabled = false;
-                    break;
-            }
+            if(index == 0 || index == 2) getPanel(index).BackgroundImage = Properties.Resources.leftAnswerDisabled;
+            else getPanel(index).BackgroundImage = Properties.Resources.rightAnswerDisabled;
+            getLetterLabel(index).Text = "";
+            getAnswerTextLabel(index).Text = "";
+            getPanel(index).Enabled = false;
         }
 
         private void enableAllButtons()
@@ -115,153 +131,51 @@ namespace Millionaire
             labelG.Text = "Г:";
         }
 
-        private void info_btn_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(string.Format("Кој сака да биде милионер ?\nИзработија:\nДавид Симеоновски\nНикола Танев"), "Кој сака да биде милионер ?", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void exit_btn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        //change backround of answer to normal (unselected)
-        private void changeBackgroundNormal(Panel backgorund, Label letter, Label answerText, bool isLeft)
-        {
-            if (isLeft)
-            {
-                backgorund.BackgroundImage = Properties.Resources.leftAnswer;
-            }
-            else
-            {
-                backgorund.BackgroundImage = Properties.Resources.rightAnswer;
-            }
-            letter.ForeColor = Color.FromArgb(248, 155, 28); //orange;
-            answerText.ForeColor = Color.White;
-        }
-
         private void changeBackgroundNormal(int index)
         {
-            //helper method
-            switch (index)
-            {
-                case 0:
-                    changeBackgroundNormal(panelA, labelA, answerTextA, true);
-                    break;
-                case 1:
-                    changeBackgroundNormal(panelB, labelB, answerTextB, false);
-                    break;
-                case 2:
-                    changeBackgroundNormal(panelV, labelV, answerTextV, true);
-                    break;
-                case 3:
-                    changeBackgroundNormal(panelG, labelG, answerTextG, false);
-                    break;
-            }
-        }
-
-        //change backround of answer to selected
-        private void changeBackgroundSelected(Panel backgorund, Label letter, Label answerText, bool isLeft)
-        {
-            if (isLeft)
-            {
-                backgorund.BackgroundImage = Properties.Resources.leftAnswerSelect;
-            }
-            else
-            {
-                backgorund.BackgroundImage = Properties.Resources.rightAnswerSelect;
-            }
-            letter.ForeColor = Color.White;
-            answerText.ForeColor = Color.Black;
+            //change backround of answer to normal (unselected)
+            if (index == 0 || index == 2) getPanel(index).BackgroundImage = Properties.Resources.leftAnswer;
+            else getPanel(index).BackgroundImage = Properties.Resources.rightAnswer;
+            getLetterLabel(index).ForeColor = Color.FromArgb(248, 155, 28); //orange;
+            getAnswerTextLabel(index).ForeColor = Color.White;
         }
 
         private void changeBackgroundSelected(int index)
         {
-            //helper method
-            switch (index)
-            {
-                case 0:
-                    changeBackgroundSelected(panelA, labelA, answerTextA, true);
-                    break;
-                case 1:
-                    changeBackgroundSelected(panelB, labelB, answerTextB, false);
-                    break;
-                case 2:
-                    changeBackgroundSelected(panelV, labelV, answerTextV, true);
-                    break;
-                case 3:
-                    changeBackgroundSelected(panelG, labelG, answerTextG, false);
-                    break;
-            }
-        }
-
-        //change backround of answer to correct
-        private void changeBackgroundCorrect(Panel backgorund, Label letter, Label answerText, bool isLeft)
-        {
-            if (isLeft)
-            {
-                backgorund.BackgroundImage = Properties.Resources.leftAnswerCorrect;
-            }
-            else
-            {
-                backgorund.BackgroundImage = Properties.Resources.rightAnswerCorrect;
-            }
-            letter.ForeColor = Color.White;
-            answerText.ForeColor = Color.Black;
+            //change backround of answer to selected
+            if (index == 0 || index == 2) getPanel(index).BackgroundImage = Properties.Resources.leftAnswerSelect;
+            else getPanel(index).BackgroundImage = Properties.Resources.rightAnswerSelect;
+            getLetterLabel(index).ForeColor = Color.White;
+            getAnswerTextLabel(index).ForeColor = Color.Black;
         }
 
         private void changeBackgroundCorrect(int index)
         {
-            //helper method
-            switch (index)
-            {
-                case 0:
-                    changeBackgroundCorrect(panelA, labelA, answerTextA, true);
-                    break;
-                case 1:
-                    changeBackgroundCorrect(panelB, labelB, answerTextB, false);
-                    break;
-                case 2:
-                    changeBackgroundCorrect(panelV, labelV, answerTextV, true);
-                    break;
-                case 3:
-                    changeBackgroundCorrect(panelG, labelG, answerTextG, false);
-                    break;
-            }
+            //change backround of answer to correct
+            if (index == 0 || index == 2) getPanel(index).BackgroundImage = Properties.Resources.leftAnswerCorrect;
+            else getPanel(index).BackgroundImage = Properties.Resources.rightAnswerCorrect;
+            getLetterLabel(index).ForeColor = Color.White;
+            getAnswerTextLabel(index).ForeColor = Color.Black;
         }
 
         private void answer0_Click(object sender, EventArgs e)
         {
             tryAnswer(0);
-
-            //removing focus of button
-            focusLabel.Focus();
         }
-
 
         private void answer1_Click(object sender, EventArgs e)
         {
             tryAnswer(1);
-
-            //removing focus of button
-            focusLabel.Focus();
-
         }
 
         private void answer2_Click(object sender, EventArgs e)
         {
             tryAnswer(2);
-
-            //removing focus of button
-            focusLabel.Focus();
         }
 
         private void answer3_Click(object sender, EventArgs e)
         {
             tryAnswer(3);
-
-            //removing focus of button
-            focusLabel.Focus();
         }
 
         private void showCorrectAnswereMessage(int price, int level)
@@ -392,7 +306,6 @@ namespace Millionaire
             focusLabel.Focus();
 
             updateView();
-
         }
 
         private void audience_joker_Click(object sender, EventArgs e)
