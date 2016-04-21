@@ -190,7 +190,6 @@ namespace Millionaire
             }
             else
             {
-
                 int[] certain = { 70, 60, 55, 50, 40, 30, 25, 20, 15, 13, 11, 9, 7, 5, 5 }; //percent of the audience that knows the answer for each level
 
                 percents[correct] = certain[level]; //putting the certain people from the audience
@@ -210,12 +209,54 @@ namespace Millionaire
             return percents;
         }
 
-        public void joker_phone()
+        public int[] joker_phone()
         {
-            //TODO: implement joker phone
+            Random r = new Random();
+            int variation = (r.Next(3) - 1) * 10; //this gets random value from {-10, 0, 10}
+            int[] ret = new int[2];
+            if (fifty_active)
+            {
+                //if 50-50 is active, the friend is more certain
+                int[] certain = { 90, 90, 90, 90, 90, 80, 70, 60, 60, 60, 60, 60, 60, 60, 60 }; //certainty of friend
+                int[] prob = { 100, 100, 100, 100, 100, 100, 90, 80, 70, 60, 60, 60, 60, 60, 50 }; //probability of right answer
+                if(r.Next(100) < prob[level])
+                {
+                    //correct answer
+                    ret[0] = correct;
+                    ret[1] = certain[level] + variation;
+                }
+                else
+                {
+                    //wrong answer
+                    int wrong = r.Next(3);
+                    if (wrong <= correct) wrong++;
+                    ret[0] = wrong;
+                    ret[1] = certain[level] + variation;
+                }
+            }
+            else {
+                int[] certain = { 90, 90, 90, 90, 80, 70, 60, 50, 40, 30, 30, 20, 20, 20, 20 }; //certainty of friend
+                int[] prob = { 100, 100, 100, 100, 100, 100, 90, 80, 70, 60, 50, 40, 30, 20, 20 }; //probability of right answer
+                if (r.Next(100) < prob[level])
+                {
+                    //correct answer
+                    ret[0] = correct;
+                    ret[1] = certain[level] + variation;
+                }
+                else
+                {
+                    //wrong answer
+                    int wrong = r.Next(3);
+                    if (wrong <= correct) wrong++;
+                    ret[0] = wrong;
+                    ret[1] = certain[level] + variation;
+                }
+            }
 
             //disable the joker for next questions
             phone_spent = true;
+
+            return ret;
         }
 
         public void joker_switch()

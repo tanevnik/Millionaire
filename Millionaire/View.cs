@@ -323,7 +323,10 @@ namespace Millionaire
 
         private void phone_joker_Click(object sender, EventArgs e)
         {
-            model.joker_phone();
+            int[] phone = model.joker_phone();
+
+            Phone view = new Phone(phone[0], model.currentQuestion.answer[phone[0]], phone[1]);
+            view.ShowDialog();
 
             //removing focus
             focusLabel.Focus();
