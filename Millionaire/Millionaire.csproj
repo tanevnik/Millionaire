@@ -117,6 +117,10 @@
     <None Include="leftAnswer.png" />
     <None Include="leftAnswerDisabled.png" />
     <None Include="leftAnswerCorrect.png" />
+    <None Include="background.jpg" />
+    <None Include="5050.png" />
+    <None Include="5050inuse.png" />
+    <None Include="5050used.png" />
     <Content Include="leftAnswerSelect.png" />
     <Content Include="prasanja.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

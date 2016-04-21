@@ -37,12 +37,13 @@ namespace Millionaire
         private void newGame()
         {
             //Starts a new game
-            playPanel.Show();
             model = new Model();
             updateView();
+            playPanel.Show();
 
             //reset the used jokers from previous game
             fifty_joker.Enabled = true;
+            fifty_joker.BackgroundImage = Properties.Resources._5050;
             audience_joker.Enabled = true;
             phone_joker.Enabled = true;
             switch_joker.Enabled = true;
@@ -301,10 +302,8 @@ namespace Millionaire
         private void fifty_joker_Click(object sender, EventArgs e)
         {
             model.joker_fifty();
-
-            //removing focus
-            focusLabel.Focus();
-
+            fifty_joker.BackgroundImage = Properties.Resources._5050inuse;
+            timer5050.Start();
             updateView();
         }
 
@@ -342,6 +341,12 @@ namespace Millionaire
             focusLabel.Focus();
 
             updateView();
+        }
+
+        private void timer5050_Tick(object sender, EventArgs e)
+        {
+            fifty_joker.BackgroundImage = Properties.Resources._5050used;
+            timer5050.Stop();
         }
     }
 }
