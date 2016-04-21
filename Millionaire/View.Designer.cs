@@ -38,14 +38,78 @@
             this.logo_img = new System.Windows.Forms.PictureBox();
             this.playPanel = new Millionaire.DoubleBufferedPanel();
             this.levelLabel = new System.Windows.Forms.Label();
-            this.panelB = new Millionaire.DoubleBufferedPanel();
-            this.answer1 = new Millionaire.DoubleBufferedPanel();
-            this.answerTextB = new System.Windows.Forms.Label();
-            this.labelB = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel2 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel10 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel10 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel29 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel30 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel11 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel11 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel32 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel33 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel12 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel12 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel35 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel36 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel14 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel14 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel38 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel39 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel13 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel13 = new System.Windows.Forms.Label();
+            this.moneyPanel5 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel5 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel16 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel17 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel0 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLabel0 = new System.Windows.Forms.Label();
+            this.moneyLevelLabel0 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel13 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel14 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel6 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel6 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel19 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel20 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel1 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLabel1 = new System.Windows.Forms.Label();
+            this.moneyLevelLabel1 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel10 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel11 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel7 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel7 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel22 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel23 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel2 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLabel2 = new System.Windows.Forms.Label();
+            this.moneyLevelLabel2 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel7 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel8 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel9 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel9 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel25 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel26 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel8 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLevelLabel8 = new System.Windows.Forms.Label();
+            this.moneyPanel4 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLabel4 = new System.Windows.Forms.Label();
+            this.moneyLevelLabel4 = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel4 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel5 = new Millionaire.DoubleBufferedPanel();
+            this.moneyPanel3 = new Millionaire.DoubleBufferedPanel();
+            this.moneyLabel3 = new System.Windows.Forms.Label();
+            this.moneyLevelLabel3 = new System.Windows.Forms.Label();
+            this.fifty_joker = new System.Windows.Forms.Button();
+            this.switch_joker = new System.Windows.Forms.Button();
+            this.phone_joker = new System.Windows.Forms.Button();
+            this.audience_joker = new System.Windows.Forms.Button();
             this.panelV = new Millionaire.DoubleBufferedPanel();
             this.answer2 = new Millionaire.DoubleBufferedPanel();
             this.answerTextV = new System.Windows.Forms.Label();
             this.labelV = new System.Windows.Forms.Label();
+            this.panelB = new Millionaire.DoubleBufferedPanel();
+            this.answer1 = new Millionaire.DoubleBufferedPanel();
+            this.answerTextB = new System.Windows.Forms.Label();
+            this.labelB = new System.Windows.Forms.Label();
             this.panelG = new Millionaire.DoubleBufferedPanel();
             this.answer3 = new Millionaire.DoubleBufferedPanel();
             this.answerTextG = new System.Windows.Forms.Label();
@@ -58,24 +122,44 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.focusLabel = new System.Windows.Forms.Label();
             this.surrender_btn = new System.Windows.Forms.Button();
-            this.audience_joker = new System.Windows.Forms.Button();
-            this.phone_joker = new System.Windows.Forms.Button();
-            this.switch_joker = new System.Windows.Forms.Button();
-            this.fifty_joker = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.moneyLabel5 = new System.Windows.Forms.Label();
+            this.moneyLabel6 = new System.Windows.Forms.Label();
+            this.moneyLabel7 = new System.Windows.Forms.Label();
+            this.moneyLabel9 = new System.Windows.Forms.Label();
+            this.moneyLabel8 = new System.Windows.Forms.Label();
+            this.moneyLabel10 = new System.Windows.Forms.Label();
+            this.moneyLabel11 = new System.Windows.Forms.Label();
+            this.moneyLabel12 = new System.Windows.Forms.Label();
+            this.moneyLabel13 = new System.Windows.Forms.Label();
+            this.moneyLabel14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
-            this.panelB.SuspendLayout();
-            this.answer1.SuspendLayout();
+            this.doubleBufferedPanel2.SuspendLayout();
+            this.moneyPanel10.SuspendLayout();
+            this.moneyPanel11.SuspendLayout();
+            this.moneyPanel12.SuspendLayout();
+            this.moneyPanel14.SuspendLayout();
+            this.moneyPanel13.SuspendLayout();
+            this.moneyPanel5.SuspendLayout();
+            this.moneyPanel0.SuspendLayout();
+            this.moneyPanel6.SuspendLayout();
+            this.moneyPanel1.SuspendLayout();
+            this.moneyPanel7.SuspendLayout();
+            this.moneyPanel2.SuspendLayout();
+            this.moneyPanel9.SuspendLayout();
+            this.moneyPanel8.SuspendLayout();
+            this.moneyPanel4.SuspendLayout();
+            this.moneyPanel3.SuspendLayout();
             this.panelV.SuspendLayout();
             this.answer2.SuspendLayout();
+            this.panelB.SuspendLayout();
+            this.answer1.SuspendLayout();
             this.panelG.SuspendLayout();
             this.answer3.SuspendLayout();
             this.panelA.SuspendLayout();
             this.answer0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,89 +217,636 @@
             // playPanel
             // 
             this.playPanel.Controls.Add(this.levelLabel);
-            this.playPanel.Controls.Add(this.panelB);
+            this.playPanel.Controls.Add(this.doubleBufferedPanel2);
             this.playPanel.Controls.Add(this.panelV);
+            this.playPanel.Controls.Add(this.panelB);
             this.playPanel.Controls.Add(this.panelG);
             this.playPanel.Controls.Add(this.panelA);
             this.playPanel.Controls.Add(this.questionLabel);
             this.playPanel.Controls.Add(this.pictureBox1);
             this.playPanel.Controls.Add(this.focusLabel);
             this.playPanel.Controls.Add(this.surrender_btn);
-            this.playPanel.Controls.Add(this.audience_joker);
-            this.playPanel.Controls.Add(this.phone_joker);
-            this.playPanel.Controls.Add(this.switch_joker);
-            this.playPanel.Controls.Add(this.fifty_joker);
-            this.playPanel.Controls.Add(this.pictureBox3);
             this.playPanel.Controls.Add(this.pictureBox2);
             this.playPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playPanel.Location = new System.Drawing.Point(0, 0);
             this.playPanel.Name = "playPanel";
-            this.playPanel.Size = new System.Drawing.Size(759, 618);
+            this.playPanel.Size = new System.Drawing.Size(784, 561);
             this.playPanel.TabIndex = 11;
             this.playPanel.Visible = false;
             // 
             // levelLabel
             // 
-            this.levelLabel.Location = new System.Drawing.Point(363, 545);
+            this.levelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.levelLabel.Location = new System.Drawing.Point(376, 493);
             this.levelLabel.Name = "levelLabel";
-            this.levelLabel.Size = new System.Drawing.Size(32, 23);
+            this.levelLabel.Size = new System.Drawing.Size(32, 25);
             this.levelLabel.TabIndex = 39;
             this.levelLabel.Text = "level";
             this.levelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelB
+            // doubleBufferedPanel2
             // 
-            this.panelB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelB.BackgroundImage")));
-            this.panelB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelB.Controls.Add(this.answer1);
-            this.panelB.Location = new System.Drawing.Point(378, 510);
-            this.panelB.Name = "panelB";
-            this.panelB.Size = new System.Drawing.Size(380, 44);
-            this.panelB.TabIndex = 43;
+            this.doubleBufferedPanel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel10);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel11);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel12);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel14);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel13);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel5);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel0);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel6);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel1);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel7);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel2);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel9);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel8);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel4);
+            this.doubleBufferedPanel2.Controls.Add(this.moneyPanel3);
+            this.doubleBufferedPanel2.Controls.Add(this.fifty_joker);
+            this.doubleBufferedPanel2.Controls.Add(this.switch_joker);
+            this.doubleBufferedPanel2.Controls.Add(this.phone_joker);
+            this.doubleBufferedPanel2.Controls.Add(this.audience_joker);
+            this.doubleBufferedPanel2.Location = new System.Drawing.Point(524, 0);
+            this.doubleBufferedPanel2.Name = "doubleBufferedPanel2";
+            this.doubleBufferedPanel2.Size = new System.Drawing.Size(260, 318);
+            this.doubleBufferedPanel2.TabIndex = 47;
             // 
-            // answer1
+            // moneyPanel10
             // 
-            this.answer1.BackColor = System.Drawing.Color.Transparent;
-            this.answer1.Controls.Add(this.answerTextB);
-            this.answer1.Controls.Add(this.labelB);
-            this.answer1.Location = new System.Drawing.Point(12, 0);
-            this.answer1.Name = "answer1";
-            this.answer1.Size = new System.Drawing.Size(316, 44);
-            this.answer1.TabIndex = 2;
-            this.answer1.Click += new System.EventHandler(this.answer1_Click);
+            this.moneyPanel10.Controls.Add(this.moneyLabel10);
+            this.moneyPanel10.Controls.Add(this.moneyLevelLabel10);
+            this.moneyPanel10.Controls.Add(this.doubleBufferedPanel29);
+            this.moneyPanel10.Controls.Add(this.doubleBufferedPanel30);
+            this.moneyPanel10.Location = new System.Drawing.Point(0, 120);
+            this.moneyPanel10.Name = "moneyPanel10";
+            this.moneyPanel10.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel10.TabIndex = 52;
             // 
-            // answerTextB
+            // moneyLevelLabel10
             // 
-            this.answerTextB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.answerTextB.ForeColor = System.Drawing.Color.White;
-            this.answerTextB.Location = new System.Drawing.Point(54, -1);
-            this.answerTextB.Name = "answerTextB";
-            this.answerTextB.Size = new System.Drawing.Size(237, 44);
-            this.answerTextB.TabIndex = 1;
-            this.answerTextB.Text = "odgovor 1";
-            this.answerTextB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.answerTextB.Click += new System.EventHandler(this.answer1_Click);
+            this.moneyLevelLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel10.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel10.Name = "moneyLevelLabel10";
+            this.moneyLevelLabel10.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel10.TabIndex = 47;
+            this.moneyLevelLabel10.Text = "11";
+            this.moneyLevelLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelB
+            // doubleBufferedPanel29
             // 
-            this.labelB.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.labelB.Location = new System.Drawing.Point(28, 0);
-            this.labelB.Name = "labelB";
-            this.labelB.Size = new System.Drawing.Size(30, 44);
-            this.labelB.TabIndex = 0;
-            this.labelB.Text = "Б:";
-            this.labelB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelB.Click += new System.EventHandler(this.answer1_Click);
+            this.doubleBufferedPanel29.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel29.Name = "doubleBufferedPanel29";
+            this.doubleBufferedPanel29.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel29.TabIndex = 41;
+            // 
+            // doubleBufferedPanel30
+            // 
+            this.doubleBufferedPanel30.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel30.Name = "doubleBufferedPanel30";
+            this.doubleBufferedPanel30.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel30.TabIndex = 40;
+            // 
+            // moneyPanel11
+            // 
+            this.moneyPanel11.Controls.Add(this.moneyLabel11);
+            this.moneyPanel11.Controls.Add(this.moneyLevelLabel11);
+            this.moneyPanel11.Controls.Add(this.doubleBufferedPanel32);
+            this.moneyPanel11.Controls.Add(this.doubleBufferedPanel33);
+            this.moneyPanel11.Location = new System.Drawing.Point(0, 102);
+            this.moneyPanel11.Name = "moneyPanel11";
+            this.moneyPanel11.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel11.TabIndex = 51;
+            // 
+            // moneyLevelLabel11
+            // 
+            this.moneyLevelLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel11.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel11.Name = "moneyLevelLabel11";
+            this.moneyLevelLabel11.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel11.TabIndex = 47;
+            this.moneyLevelLabel11.Text = "12";
+            this.moneyLevelLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel32
+            // 
+            this.doubleBufferedPanel32.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel32.Name = "doubleBufferedPanel32";
+            this.doubleBufferedPanel32.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel32.TabIndex = 41;
+            // 
+            // doubleBufferedPanel33
+            // 
+            this.doubleBufferedPanel33.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel33.Name = "doubleBufferedPanel33";
+            this.doubleBufferedPanel33.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel33.TabIndex = 40;
+            // 
+            // moneyPanel12
+            // 
+            this.moneyPanel12.Controls.Add(this.moneyLabel12);
+            this.moneyPanel12.Controls.Add(this.moneyLevelLabel12);
+            this.moneyPanel12.Controls.Add(this.doubleBufferedPanel35);
+            this.moneyPanel12.Controls.Add(this.doubleBufferedPanel36);
+            this.moneyPanel12.Location = new System.Drawing.Point(0, 84);
+            this.moneyPanel12.Name = "moneyPanel12";
+            this.moneyPanel12.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel12.TabIndex = 50;
+            // 
+            // moneyLevelLabel12
+            // 
+            this.moneyLevelLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel12.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel12.Name = "moneyLevelLabel12";
+            this.moneyLevelLabel12.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel12.TabIndex = 47;
+            this.moneyLevelLabel12.Text = "13";
+            this.moneyLevelLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel35
+            // 
+            this.doubleBufferedPanel35.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel35.Name = "doubleBufferedPanel35";
+            this.doubleBufferedPanel35.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel35.TabIndex = 41;
+            // 
+            // doubleBufferedPanel36
+            // 
+            this.doubleBufferedPanel36.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel36.Name = "doubleBufferedPanel36";
+            this.doubleBufferedPanel36.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel36.TabIndex = 40;
+            // 
+            // moneyPanel14
+            // 
+            this.moneyPanel14.Controls.Add(this.moneyLabel14);
+            this.moneyPanel14.Controls.Add(this.moneyLevelLabel14);
+            this.moneyPanel14.Controls.Add(this.doubleBufferedPanel38);
+            this.moneyPanel14.Controls.Add(this.doubleBufferedPanel39);
+            this.moneyPanel14.Location = new System.Drawing.Point(0, 48);
+            this.moneyPanel14.Name = "moneyPanel14";
+            this.moneyPanel14.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel14.TabIndex = 49;
+            // 
+            // moneyLevelLabel14
+            // 
+            this.moneyLevelLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel14.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel14.Name = "moneyLevelLabel14";
+            this.moneyLevelLabel14.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel14.TabIndex = 47;
+            this.moneyLevelLabel14.Text = "15";
+            this.moneyLevelLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel38
+            // 
+            this.doubleBufferedPanel38.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel38.Name = "doubleBufferedPanel38";
+            this.doubleBufferedPanel38.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel38.TabIndex = 41;
+            // 
+            // doubleBufferedPanel39
+            // 
+            this.doubleBufferedPanel39.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel39.Name = "doubleBufferedPanel39";
+            this.doubleBufferedPanel39.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel39.TabIndex = 40;
+            // 
+            // moneyPanel13
+            // 
+            this.moneyPanel13.Controls.Add(this.moneyLabel13);
+            this.moneyPanel13.Controls.Add(this.moneyLevelLabel13);
+            this.moneyPanel13.Location = new System.Drawing.Point(0, 66);
+            this.moneyPanel13.Name = "moneyPanel13";
+            this.moneyPanel13.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel13.TabIndex = 48;
+            // 
+            // moneyLevelLabel13
+            // 
+            this.moneyLevelLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel13.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel13.Name = "moneyLevelLabel13";
+            this.moneyLevelLabel13.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel13.TabIndex = 47;
+            this.moneyLevelLabel13.Text = "14";
+            this.moneyLevelLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // moneyPanel5
+            // 
+            this.moneyPanel5.Controls.Add(this.moneyLabel5);
+            this.moneyPanel5.Controls.Add(this.moneyLevelLabel5);
+            this.moneyPanel5.Controls.Add(this.doubleBufferedPanel16);
+            this.moneyPanel5.Controls.Add(this.doubleBufferedPanel17);
+            this.moneyPanel5.Location = new System.Drawing.Point(0, 210);
+            this.moneyPanel5.Name = "moneyPanel5";
+            this.moneyPanel5.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel5.TabIndex = 47;
+            // 
+            // moneyLevelLabel5
+            // 
+            this.moneyLevelLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel5.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel5.Name = "moneyLevelLabel5";
+            this.moneyLevelLabel5.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel5.TabIndex = 46;
+            this.moneyLevelLabel5.Text = "6";
+            this.moneyLevelLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel16
+            // 
+            this.doubleBufferedPanel16.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel16.Name = "doubleBufferedPanel16";
+            this.doubleBufferedPanel16.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel16.TabIndex = 41;
+            // 
+            // doubleBufferedPanel17
+            // 
+            this.doubleBufferedPanel17.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel17.Name = "doubleBufferedPanel17";
+            this.doubleBufferedPanel17.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel17.TabIndex = 40;
+            // 
+            // moneyPanel0
+            // 
+            this.moneyPanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
+            this.moneyPanel0.Controls.Add(this.moneyLabel0);
+            this.moneyPanel0.Controls.Add(this.moneyLevelLabel0);
+            this.moneyPanel0.Controls.Add(this.doubleBufferedPanel13);
+            this.moneyPanel0.Controls.Add(this.doubleBufferedPanel14);
+            this.moneyPanel0.Location = new System.Drawing.Point(0, 300);
+            this.moneyPanel0.Name = "moneyPanel0";
+            this.moneyPanel0.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel0.TabIndex = 42;
+            // 
+            // moneyLabel0
+            // 
+            this.moneyLabel0.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel0.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel0.Name = "moneyLabel0";
+            this.moneyLabel0.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel0.TabIndex = 43;
+            this.moneyLabel0.Text = "500";
+            this.moneyLabel0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLevelLabel0
+            // 
+            this.moneyLevelLabel0.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel0.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel0.Name = "moneyLevelLabel0";
+            this.moneyLevelLabel0.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel0.TabIndex = 42;
+            this.moneyLevelLabel0.Text = "1";
+            this.moneyLevelLabel0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel13
+            // 
+            this.doubleBufferedPanel13.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel13.Name = "doubleBufferedPanel13";
+            this.doubleBufferedPanel13.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel13.TabIndex = 41;
+            // 
+            // doubleBufferedPanel14
+            // 
+            this.doubleBufferedPanel14.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel14.Name = "doubleBufferedPanel14";
+            this.doubleBufferedPanel14.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel14.TabIndex = 40;
+            // 
+            // moneyPanel6
+            // 
+            this.moneyPanel6.Controls.Add(this.moneyLabel6);
+            this.moneyPanel6.Controls.Add(this.moneyLevelLabel6);
+            this.moneyPanel6.Controls.Add(this.doubleBufferedPanel19);
+            this.moneyPanel6.Controls.Add(this.doubleBufferedPanel20);
+            this.moneyPanel6.Location = new System.Drawing.Point(0, 192);
+            this.moneyPanel6.Name = "moneyPanel6";
+            this.moneyPanel6.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel6.TabIndex = 46;
+            // 
+            // moneyLevelLabel6
+            // 
+            this.moneyLevelLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel6.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel6.Name = "moneyLevelLabel6";
+            this.moneyLevelLabel6.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel6.TabIndex = 46;
+            this.moneyLevelLabel6.Text = "7";
+            this.moneyLevelLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel19
+            // 
+            this.doubleBufferedPanel19.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel19.Name = "doubleBufferedPanel19";
+            this.doubleBufferedPanel19.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel19.TabIndex = 41;
+            // 
+            // doubleBufferedPanel20
+            // 
+            this.doubleBufferedPanel20.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel20.Name = "doubleBufferedPanel20";
+            this.doubleBufferedPanel20.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel20.TabIndex = 40;
+            // 
+            // moneyPanel1
+            // 
+            this.moneyPanel1.Controls.Add(this.moneyLabel1);
+            this.moneyPanel1.Controls.Add(this.moneyLevelLabel1);
+            this.moneyPanel1.Controls.Add(this.doubleBufferedPanel10);
+            this.moneyPanel1.Controls.Add(this.doubleBufferedPanel11);
+            this.moneyPanel1.Location = new System.Drawing.Point(0, 282);
+            this.moneyPanel1.Name = "moneyPanel1";
+            this.moneyPanel1.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel1.TabIndex = 41;
+            // 
+            // moneyLabel1
+            // 
+            this.moneyLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel1.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel1.Name = "moneyLabel1";
+            this.moneyLabel1.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel1.TabIndex = 44;
+            this.moneyLabel1.Text = "1000";
+            this.moneyLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLevelLabel1
+            // 
+            this.moneyLevelLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel1.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel1.Name = "moneyLevelLabel1";
+            this.moneyLevelLabel1.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel1.TabIndex = 43;
+            this.moneyLevelLabel1.Text = "2";
+            this.moneyLevelLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel10
+            // 
+            this.doubleBufferedPanel10.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel10.Name = "doubleBufferedPanel10";
+            this.doubleBufferedPanel10.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel10.TabIndex = 41;
+            // 
+            // doubleBufferedPanel11
+            // 
+            this.doubleBufferedPanel11.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel11.Name = "doubleBufferedPanel11";
+            this.doubleBufferedPanel11.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel11.TabIndex = 40;
+            // 
+            // moneyPanel7
+            // 
+            this.moneyPanel7.Controls.Add(this.moneyLabel7);
+            this.moneyPanel7.Controls.Add(this.moneyLevelLabel7);
+            this.moneyPanel7.Controls.Add(this.doubleBufferedPanel22);
+            this.moneyPanel7.Controls.Add(this.doubleBufferedPanel23);
+            this.moneyPanel7.Location = new System.Drawing.Point(0, 174);
+            this.moneyPanel7.Name = "moneyPanel7";
+            this.moneyPanel7.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel7.TabIndex = 45;
+            // 
+            // moneyLevelLabel7
+            // 
+            this.moneyLevelLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel7.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel7.Name = "moneyLevelLabel7";
+            this.moneyLevelLabel7.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel7.TabIndex = 46;
+            this.moneyLevelLabel7.Text = "8";
+            this.moneyLevelLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel22
+            // 
+            this.doubleBufferedPanel22.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel22.Name = "doubleBufferedPanel22";
+            this.doubleBufferedPanel22.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel22.TabIndex = 41;
+            // 
+            // doubleBufferedPanel23
+            // 
+            this.doubleBufferedPanel23.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel23.Name = "doubleBufferedPanel23";
+            this.doubleBufferedPanel23.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel23.TabIndex = 40;
+            // 
+            // moneyPanel2
+            // 
+            this.moneyPanel2.Controls.Add(this.moneyLabel2);
+            this.moneyPanel2.Controls.Add(this.moneyLevelLabel2);
+            this.moneyPanel2.Controls.Add(this.doubleBufferedPanel7);
+            this.moneyPanel2.Controls.Add(this.doubleBufferedPanel8);
+            this.moneyPanel2.Location = new System.Drawing.Point(0, 264);
+            this.moneyPanel2.Name = "moneyPanel2";
+            this.moneyPanel2.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel2.TabIndex = 40;
+            // 
+            // moneyLabel2
+            // 
+            this.moneyLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel2.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel2.Name = "moneyLabel2";
+            this.moneyLabel2.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel2.TabIndex = 45;
+            this.moneyLabel2.Text = "2000";
+            this.moneyLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLevelLabel2
+            // 
+            this.moneyLevelLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel2.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel2.Name = "moneyLevelLabel2";
+            this.moneyLevelLabel2.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel2.TabIndex = 44;
+            this.moneyLevelLabel2.Text = "3";
+            this.moneyLevelLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel7
+            // 
+            this.doubleBufferedPanel7.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel7.Name = "doubleBufferedPanel7";
+            this.doubleBufferedPanel7.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel7.TabIndex = 41;
+            // 
+            // doubleBufferedPanel8
+            // 
+            this.doubleBufferedPanel8.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel8.Name = "doubleBufferedPanel8";
+            this.doubleBufferedPanel8.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel8.TabIndex = 40;
+            // 
+            // moneyPanel9
+            // 
+            this.moneyPanel9.Controls.Add(this.moneyLabel9);
+            this.moneyPanel9.Controls.Add(this.moneyLevelLabel9);
+            this.moneyPanel9.Controls.Add(this.doubleBufferedPanel25);
+            this.moneyPanel9.Controls.Add(this.doubleBufferedPanel26);
+            this.moneyPanel9.Location = new System.Drawing.Point(0, 138);
+            this.moneyPanel9.Name = "moneyPanel9";
+            this.moneyPanel9.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel9.TabIndex = 44;
+            // 
+            // moneyLevelLabel9
+            // 
+            this.moneyLevelLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel9.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel9.Name = "moneyLevelLabel9";
+            this.moneyLevelLabel9.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel9.TabIndex = 46;
+            this.moneyLevelLabel9.Text = "10";
+            this.moneyLevelLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel25
+            // 
+            this.doubleBufferedPanel25.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel25.Name = "doubleBufferedPanel25";
+            this.doubleBufferedPanel25.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel25.TabIndex = 41;
+            // 
+            // doubleBufferedPanel26
+            // 
+            this.doubleBufferedPanel26.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel26.Name = "doubleBufferedPanel26";
+            this.doubleBufferedPanel26.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel26.TabIndex = 40;
+            // 
+            // moneyPanel8
+            // 
+            this.moneyPanel8.Controls.Add(this.moneyLabel8);
+            this.moneyPanel8.Controls.Add(this.moneyLevelLabel8);
+            this.moneyPanel8.Location = new System.Drawing.Point(0, 156);
+            this.moneyPanel8.Name = "moneyPanel8";
+            this.moneyPanel8.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel8.TabIndex = 43;
+            // 
+            // moneyLevelLabel8
+            // 
+            this.moneyLevelLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel8.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel8.Name = "moneyLevelLabel8";
+            this.moneyLevelLabel8.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel8.TabIndex = 46;
+            this.moneyLevelLabel8.Text = "9";
+            this.moneyLevelLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // moneyPanel4
+            // 
+            this.moneyPanel4.Controls.Add(this.moneyLabel4);
+            this.moneyPanel4.Controls.Add(this.moneyLevelLabel4);
+            this.moneyPanel4.Controls.Add(this.doubleBufferedPanel4);
+            this.moneyPanel4.Controls.Add(this.doubleBufferedPanel5);
+            this.moneyPanel4.Location = new System.Drawing.Point(0, 228);
+            this.moneyPanel4.Name = "moneyPanel4";
+            this.moneyPanel4.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel4.TabIndex = 39;
+            // 
+            // moneyLabel4
+            // 
+            this.moneyLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel4.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel4.Name = "moneyLabel4";
+            this.moneyLabel4.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel4.TabIndex = 46;
+            this.moneyLabel4.Text = "5000";
+            this.moneyLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLevelLabel4
+            // 
+            this.moneyLevelLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel4.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel4.Name = "moneyLevelLabel4";
+            this.moneyLevelLabel4.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel4.TabIndex = 45;
+            this.moneyLevelLabel4.Text = "5";
+            this.moneyLevelLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // doubleBufferedPanel4
+            // 
+            this.doubleBufferedPanel4.Location = new System.Drawing.Point(0, 51);
+            this.doubleBufferedPanel4.Name = "doubleBufferedPanel4";
+            this.doubleBufferedPanel4.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel4.TabIndex = 41;
+            // 
+            // doubleBufferedPanel5
+            // 
+            this.doubleBufferedPanel5.Location = new System.Drawing.Point(0, 71);
+            this.doubleBufferedPanel5.Name = "doubleBufferedPanel5";
+            this.doubleBufferedPanel5.Size = new System.Drawing.Size(100, 20);
+            this.doubleBufferedPanel5.TabIndex = 40;
+            // 
+            // moneyPanel3
+            // 
+            this.moneyPanel3.Controls.Add(this.moneyLabel3);
+            this.moneyPanel3.Controls.Add(this.moneyLevelLabel3);
+            this.moneyPanel3.Location = new System.Drawing.Point(0, 246);
+            this.moneyPanel3.Name = "moneyPanel3";
+            this.moneyPanel3.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel3.TabIndex = 38;
+            // 
+            // moneyLabel3
+            // 
+            this.moneyLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel3.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel3.Name = "moneyLabel3";
+            this.moneyLabel3.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel3.TabIndex = 45;
+            this.moneyLabel3.Text = "3000";
+            this.moneyLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLevelLabel3
+            // 
+            this.moneyLevelLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel3.Location = new System.Drawing.Point(46, 0);
+            this.moneyLevelLabel3.Name = "moneyLevelLabel3";
+            this.moneyLevelLabel3.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel3.TabIndex = 44;
+            this.moneyLevelLabel3.Text = "4";
+            this.moneyLevelLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // fifty_joker
+            // 
+            this.fifty_joker.Location = new System.Drawing.Point(32, 8);
+            this.fifty_joker.Name = "fifty_joker";
+            this.fifty_joker.Size = new System.Drawing.Size(46, 23);
+            this.fifty_joker.TabIndex = 34;
+            this.fifty_joker.Text = "50/50";
+            this.fifty_joker.UseVisualStyleBackColor = true;
+            this.fifty_joker.Click += new System.EventHandler(this.fifty_joker_Click);
+            // 
+            // switch_joker
+            // 
+            this.switch_joker.Location = new System.Drawing.Point(188, 8);
+            this.switch_joker.Name = "switch_joker";
+            this.switch_joker.Size = new System.Drawing.Size(46, 23);
+            this.switch_joker.TabIndex = 35;
+            this.switch_joker.Text = "switch";
+            this.switch_joker.UseVisualStyleBackColor = true;
+            this.switch_joker.Click += new System.EventHandler(this.switch_joker_Click);
+            // 
+            // phone_joker
+            // 
+            this.phone_joker.Location = new System.Drawing.Point(136, 8);
+            this.phone_joker.Name = "phone_joker";
+            this.phone_joker.Size = new System.Drawing.Size(46, 23);
+            this.phone_joker.TabIndex = 36;
+            this.phone_joker.Text = "phone";
+            this.phone_joker.UseVisualStyleBackColor = true;
+            this.phone_joker.Click += new System.EventHandler(this.phone_joker_Click);
+            // 
+            // audience_joker
+            // 
+            this.audience_joker.Location = new System.Drawing.Point(84, 8);
+            this.audience_joker.Name = "audience_joker";
+            this.audience_joker.Size = new System.Drawing.Size(46, 23);
+            this.audience_joker.TabIndex = 37;
+            this.audience_joker.Text = "aud";
+            this.audience_joker.UseVisualStyleBackColor = true;
+            this.audience_joker.Click += new System.EventHandler(this.audience_joker_Click);
             // 
             // panelV
             // 
             this.panelV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelV.BackgroundImage")));
             this.panelV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelV.Controls.Add(this.answer2);
-            this.panelV.Location = new System.Drawing.Point(-1, 560);
+            this.panelV.Location = new System.Drawing.Point(0, 509);
             this.panelV.Name = "panelV";
-            this.panelV.Size = new System.Drawing.Size(380, 44);
+            this.panelV.Size = new System.Drawing.Size(395, 47);
             this.panelV.TabIndex = 44;
             // 
             // answer2
@@ -223,9 +854,9 @@
             this.answer2.BackColor = System.Drawing.Color.Transparent;
             this.answer2.Controls.Add(this.answerTextV);
             this.answer2.Controls.Add(this.labelV);
-            this.answer2.Location = new System.Drawing.Point(50, 0);
+            this.answer2.Location = new System.Drawing.Point(54, 0);
             this.answer2.Name = "answer2";
-            this.answer2.Size = new System.Drawing.Size(318, 44);
+            this.answer2.Size = new System.Drawing.Size(327, 47);
             this.answer2.TabIndex = 0;
             this.answer2.Click += new System.EventHandler(this.answer2_Click);
             // 
@@ -233,9 +864,9 @@
             // 
             this.answerTextV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextV.ForeColor = System.Drawing.Color.White;
-            this.answerTextV.Location = new System.Drawing.Point(57, -1);
+            this.answerTextV.Location = new System.Drawing.Point(57, 0);
             this.answerTextV.Name = "answerTextV";
-            this.answerTextV.Size = new System.Drawing.Size(237, 44);
+            this.answerTextV.Size = new System.Drawing.Size(237, 42);
             this.answerTextV.TabIndex = 2;
             this.answerTextV.Text = "odgovor 2";
             this.answerTextV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,14 +884,59 @@
             this.labelV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelV.Click += new System.EventHandler(this.answer2_Click);
             // 
+            // panelB
+            // 
+            this.panelB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelB.BackgroundImage")));
+            this.panelB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelB.Controls.Add(this.answer1);
+            this.panelB.Location = new System.Drawing.Point(390, 457);
+            this.panelB.Name = "panelB";
+            this.panelB.Size = new System.Drawing.Size(394, 47);
+            this.panelB.TabIndex = 43;
+            // 
+            // answer1
+            // 
+            this.answer1.BackColor = System.Drawing.Color.Transparent;
+            this.answer1.Controls.Add(this.answerTextB);
+            this.answer1.Controls.Add(this.labelB);
+            this.answer1.Location = new System.Drawing.Point(12, 0);
+            this.answer1.Name = "answer1";
+            this.answer1.Size = new System.Drawing.Size(327, 47);
+            this.answer1.TabIndex = 2;
+            this.answer1.Click += new System.EventHandler(this.answer1_Click);
+            // 
+            // answerTextB
+            // 
+            this.answerTextB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.answerTextB.ForeColor = System.Drawing.Color.White;
+            this.answerTextB.Location = new System.Drawing.Point(54, 0);
+            this.answerTextB.Name = "answerTextB";
+            this.answerTextB.Size = new System.Drawing.Size(237, 42);
+            this.answerTextB.TabIndex = 1;
+            this.answerTextB.Text = "odgovor 1";
+            this.answerTextB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.answerTextB.Click += new System.EventHandler(this.answer1_Click);
+            // 
+            // labelB
+            // 
+            this.labelB.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
+            this.labelB.Location = new System.Drawing.Point(30, 0);
+            this.labelB.Name = "labelB";
+            this.labelB.Size = new System.Drawing.Size(30, 44);
+            this.labelB.TabIndex = 0;
+            this.labelB.Text = "Б:";
+            this.labelB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelB.Click += new System.EventHandler(this.answer1_Click);
+            // 
             // panelG
             // 
             this.panelG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelG.BackgroundImage")));
             this.panelG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelG.Controls.Add(this.answer3);
-            this.panelG.Location = new System.Drawing.Point(379, 560);
+            this.panelG.Location = new System.Drawing.Point(390, 509);
             this.panelG.Name = "panelG";
-            this.panelG.Size = new System.Drawing.Size(380, 44);
+            this.panelG.Size = new System.Drawing.Size(394, 47);
             this.panelG.TabIndex = 45;
             // 
             // answer3
@@ -268,9 +944,9 @@
             this.answer3.BackColor = System.Drawing.Color.Transparent;
             this.answer3.Controls.Add(this.answerTextG);
             this.answer3.Controls.Add(this.labelG);
-            this.answer3.Location = new System.Drawing.Point(11, 0);
+            this.answer3.Location = new System.Drawing.Point(12, 0);
             this.answer3.Name = "answer3";
-            this.answer3.Size = new System.Drawing.Size(316, 44);
+            this.answer3.Size = new System.Drawing.Size(327, 47);
             this.answer3.TabIndex = 3;
             this.answer3.Click += new System.EventHandler(this.answer3_Click);
             // 
@@ -278,9 +954,9 @@
             // 
             this.answerTextG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextG.ForeColor = System.Drawing.Color.White;
-            this.answerTextG.Location = new System.Drawing.Point(54, -1);
+            this.answerTextG.Location = new System.Drawing.Point(54, 0);
             this.answerTextG.Name = "answerTextG";
-            this.answerTextG.Size = new System.Drawing.Size(237, 44);
+            this.answerTextG.Size = new System.Drawing.Size(237, 42);
             this.answerTextG.TabIndex = 1;
             this.answerTextG.Text = "odgovor 3";
             this.answerTextG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,7 +966,7 @@
             // 
             this.labelG.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.labelG.Location = new System.Drawing.Point(28, 0);
+            this.labelG.Location = new System.Drawing.Point(30, 0);
             this.labelG.Name = "labelG";
             this.labelG.Size = new System.Drawing.Size(30, 44);
             this.labelG.TabIndex = 0;
@@ -303,9 +979,9 @@
             this.panelA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelA.BackgroundImage")));
             this.panelA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelA.Controls.Add(this.answer0);
-            this.panelA.Location = new System.Drawing.Point(-1, 510);
+            this.panelA.Location = new System.Drawing.Point(0, 457);
             this.panelA.Name = "panelA";
-            this.panelA.Size = new System.Drawing.Size(380, 44);
+            this.panelA.Size = new System.Drawing.Size(395, 47);
             this.panelA.TabIndex = 42;
             // 
             // answer0
@@ -313,9 +989,9 @@
             this.answer0.BackColor = System.Drawing.Color.Transparent;
             this.answer0.Controls.Add(this.answerTextA);
             this.answer0.Controls.Add(this.labelA);
-            this.answer0.Location = new System.Drawing.Point(50, 0);
+            this.answer0.Location = new System.Drawing.Point(54, 0);
             this.answer0.Name = "answer0";
-            this.answer0.Size = new System.Drawing.Size(318, 44);
+            this.answer0.Size = new System.Drawing.Size(327, 47);
             this.answer0.TabIndex = 0;
             this.answer0.Click += new System.EventHandler(this.answer0_Click);
             // 
@@ -323,9 +999,9 @@
             // 
             this.answerTextA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextA.ForeColor = System.Drawing.Color.White;
-            this.answerTextA.Location = new System.Drawing.Point(57, -1);
+            this.answerTextA.Location = new System.Drawing.Point(57, 0);
             this.answerTextA.Name = "answerTextA";
-            this.answerTextA.Size = new System.Drawing.Size(237, 44);
+            this.answerTextA.Size = new System.Drawing.Size(237, 42);
             this.answerTextA.TabIndex = 1;
             this.answerTextA.Text = "odgovor 0";
             this.answerTextA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,9 +1024,9 @@
             this.questionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.White;
-            this.questionLabel.Location = new System.Drawing.Point(71, 429);
+            this.questionLabel.Location = new System.Drawing.Point(75, 377);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(610, 66);
+            this.questionLabel.Size = new System.Drawing.Size(634, 66);
             this.questionLabel.TabIndex = 33;
             this.questionLabel.Text = "prasanje";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -359,77 +1035,29 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 420);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 368);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(759, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(785, 83);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
             // focusLabel
             // 
             this.focusLabel.AutoSize = true;
-            this.focusLabel.Location = new System.Drawing.Point(734, 499);
+            this.focusLabel.Location = new System.Drawing.Point(734, 466);
             this.focusLabel.Name = "focusLabel";
             this.focusLabel.Size = new System.Drawing.Size(0, 13);
             this.focusLabel.TabIndex = 40;
             // 
             // surrender_btn
             // 
-            this.surrender_btn.Location = new System.Drawing.Point(531, 382);
+            this.surrender_btn.Location = new System.Drawing.Point(543, 335);
             this.surrender_btn.Name = "surrender_btn";
-            this.surrender_btn.Size = new System.Drawing.Size(216, 23);
+            this.surrender_btn.Size = new System.Drawing.Size(215, 23);
             this.surrender_btn.TabIndex = 38;
             this.surrender_btn.Text = "Се откажувам";
             this.surrender_btn.UseVisualStyleBackColor = true;
             this.surrender_btn.Click += new System.EventHandler(this.surrender_btn_Click);
-            // 
-            // audience_joker
-            // 
-            this.audience_joker.Location = new System.Drawing.Point(584, 15);
-            this.audience_joker.Name = "audience_joker";
-            this.audience_joker.Size = new System.Drawing.Size(46, 23);
-            this.audience_joker.TabIndex = 37;
-            this.audience_joker.Text = "aud";
-            this.audience_joker.UseVisualStyleBackColor = true;
-            this.audience_joker.Click += new System.EventHandler(this.audience_joker_Click);
-            // 
-            // phone_joker
-            // 
-            this.phone_joker.Location = new System.Drawing.Point(636, 15);
-            this.phone_joker.Name = "phone_joker";
-            this.phone_joker.Size = new System.Drawing.Size(46, 23);
-            this.phone_joker.TabIndex = 36;
-            this.phone_joker.Text = "phone";
-            this.phone_joker.UseVisualStyleBackColor = true;
-            this.phone_joker.Click += new System.EventHandler(this.phone_joker_Click);
-            // 
-            // switch_joker
-            // 
-            this.switch_joker.Location = new System.Drawing.Point(688, 15);
-            this.switch_joker.Name = "switch_joker";
-            this.switch_joker.Size = new System.Drawing.Size(46, 23);
-            this.switch_joker.TabIndex = 35;
-            this.switch_joker.Text = "switch";
-            this.switch_joker.UseVisualStyleBackColor = true;
-            this.switch_joker.Click += new System.EventHandler(this.switch_joker_Click);
-            // 
-            // fifty_joker
-            // 
-            this.fifty_joker.Location = new System.Drawing.Point(532, 15);
-            this.fifty_joker.Name = "fifty_joker";
-            this.fifty_joker.Size = new System.Drawing.Size(46, 23);
-            this.fifty_joker.TabIndex = 34;
-            this.fifty_joker.Text = "50/50";
-            this.fifty_joker.UseVisualStyleBackColor = true;
-            this.fifty_joker.Click += new System.EventHandler(this.fifty_joker_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(531, 44);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(216, 332);
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -439,11 +1067,111 @@
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
             // 
+            // moneyLabel5
+            // 
+            this.moneyLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel5.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel5.Name = "moneyLabel5";
+            this.moneyLabel5.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel5.TabIndex = 47;
+            this.moneyLabel5.Text = "8000";
+            this.moneyLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel6
+            // 
+            this.moneyLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel6.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel6.Name = "moneyLabel6";
+            this.moneyLabel6.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel6.TabIndex = 47;
+            this.moneyLabel6.Text = "16000";
+            this.moneyLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel7
+            // 
+            this.moneyLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel7.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel7.Name = "moneyLabel7";
+            this.moneyLabel7.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel7.TabIndex = 47;
+            this.moneyLabel7.Text = "32000";
+            this.moneyLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel9
+            // 
+            this.moneyLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel9.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel9.Name = "moneyLabel9";
+            this.moneyLabel9.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel9.TabIndex = 47;
+            this.moneyLabel9.Text = "125000";
+            this.moneyLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel8
+            // 
+            this.moneyLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel8.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel8.Name = "moneyLabel8";
+            this.moneyLabel8.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel8.TabIndex = 47;
+            this.moneyLabel8.Text = "64000";
+            this.moneyLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel10
+            // 
+            this.moneyLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel10.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel10.Name = "moneyLabel10";
+            this.moneyLabel10.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel10.TabIndex = 48;
+            this.moneyLabel10.Text = "250000";
+            this.moneyLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel11
+            // 
+            this.moneyLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel11.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel11.Name = "moneyLabel11";
+            this.moneyLabel11.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel11.TabIndex = 48;
+            this.moneyLabel11.Text = "500000";
+            this.moneyLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel12
+            // 
+            this.moneyLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel12.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel12.Name = "moneyLabel12";
+            this.moneyLabel12.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel12.TabIndex = 48;
+            this.moneyLabel12.Text = "1000000";
+            this.moneyLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel13
+            // 
+            this.moneyLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel13.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel13.Name = "moneyLabel13";
+            this.moneyLabel13.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel13.TabIndex = 48;
+            this.moneyLabel13.Text = "2000000";
+            this.moneyLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // moneyLabel14
+            // 
+            this.moneyLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel14.Location = new System.Drawing.Point(79, 0);
+            this.moneyLabel14.Name = "moneyLabel14";
+            this.moneyLabel14.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel14.TabIndex = 48;
+            this.moneyLabel14.Text = "4 МИЛИОНИ";
+            this.moneyLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 618);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.playPanel);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.info_btn);
@@ -455,16 +1183,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).EndInit();
             this.playPanel.ResumeLayout(false);
             this.playPanel.PerformLayout();
-            this.panelB.ResumeLayout(false);
-            this.answer1.ResumeLayout(false);
+            this.doubleBufferedPanel2.ResumeLayout(false);
+            this.moneyPanel10.ResumeLayout(false);
+            this.moneyPanel11.ResumeLayout(false);
+            this.moneyPanel12.ResumeLayout(false);
+            this.moneyPanel14.ResumeLayout(false);
+            this.moneyPanel13.ResumeLayout(false);
+            this.moneyPanel5.ResumeLayout(false);
+            this.moneyPanel0.ResumeLayout(false);
+            this.moneyPanel6.ResumeLayout(false);
+            this.moneyPanel1.ResumeLayout(false);
+            this.moneyPanel7.ResumeLayout(false);
+            this.moneyPanel2.ResumeLayout(false);
+            this.moneyPanel9.ResumeLayout(false);
+            this.moneyPanel8.ResumeLayout(false);
+            this.moneyPanel4.ResumeLayout(false);
+            this.moneyPanel3.ResumeLayout(false);
             this.panelV.ResumeLayout(false);
             this.answer2.ResumeLayout(false);
+            this.panelB.ResumeLayout(false);
+            this.answer1.ResumeLayout(false);
             this.panelG.ResumeLayout(false);
             this.answer3.ResumeLayout(false);
             this.panelA.ResumeLayout(false);
             this.answer0.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -500,12 +1243,81 @@
         private System.Windows.Forms.Button phone_joker;
         private System.Windows.Forms.Button switch_joker;
         private System.Windows.Forms.Button fifty_joker;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private DoubleBufferedPanel panelB;
         private DoubleBufferedPanel panelV;
         private DoubleBufferedPanel panelG;
         private DoubleBufferedPanel panelA;
         private System.Windows.Forms.Timer animationTimer;
+        private DoubleBufferedPanel doubleBufferedPanel2;
+        private DoubleBufferedPanel moneyPanel10;
+        private DoubleBufferedPanel doubleBufferedPanel29;
+        private DoubleBufferedPanel doubleBufferedPanel30;
+        private DoubleBufferedPanel moneyPanel11;
+        private DoubleBufferedPanel doubleBufferedPanel32;
+        private DoubleBufferedPanel doubleBufferedPanel33;
+        private DoubleBufferedPanel moneyPanel12;
+        private DoubleBufferedPanel doubleBufferedPanel35;
+        private DoubleBufferedPanel doubleBufferedPanel36;
+        private DoubleBufferedPanel moneyPanel14;
+        private DoubleBufferedPanel doubleBufferedPanel38;
+        private DoubleBufferedPanel doubleBufferedPanel39;
+        private DoubleBufferedPanel moneyPanel13;
+        private DoubleBufferedPanel moneyPanel5;
+        private DoubleBufferedPanel doubleBufferedPanel16;
+        private DoubleBufferedPanel doubleBufferedPanel17;
+        private DoubleBufferedPanel moneyPanel0;
+        private DoubleBufferedPanel doubleBufferedPanel13;
+        private DoubleBufferedPanel doubleBufferedPanel14;
+        private DoubleBufferedPanel moneyPanel6;
+        private DoubleBufferedPanel doubleBufferedPanel19;
+        private DoubleBufferedPanel doubleBufferedPanel20;
+        private DoubleBufferedPanel moneyPanel1;
+        private DoubleBufferedPanel doubleBufferedPanel10;
+        private DoubleBufferedPanel doubleBufferedPanel11;
+        private DoubleBufferedPanel moneyPanel7;
+        private DoubleBufferedPanel doubleBufferedPanel22;
+        private DoubleBufferedPanel doubleBufferedPanel23;
+        private DoubleBufferedPanel moneyPanel2;
+        private DoubleBufferedPanel doubleBufferedPanel7;
+        private DoubleBufferedPanel doubleBufferedPanel8;
+        private DoubleBufferedPanel moneyPanel9;
+        private DoubleBufferedPanel doubleBufferedPanel25;
+        private DoubleBufferedPanel doubleBufferedPanel26;
+        private DoubleBufferedPanel moneyPanel8;
+        private DoubleBufferedPanel moneyPanel4;
+        private DoubleBufferedPanel doubleBufferedPanel4;
+        private DoubleBufferedPanel doubleBufferedPanel5;
+        private DoubleBufferedPanel moneyPanel3;
+        private System.Windows.Forms.Label moneyLevelLabel0;
+        private System.Windows.Forms.Label moneyLevelLabel1;
+        private System.Windows.Forms.Label moneyLevelLabel2;
+        private System.Windows.Forms.Label moneyLevelLabel4;
+        private System.Windows.Forms.Label moneyLevelLabel3;
+        private System.Windows.Forms.Label moneyLevelLabel5;
+        private System.Windows.Forms.Label moneyLevelLabel6;
+        private System.Windows.Forms.Label moneyLevelLabel7;
+        private System.Windows.Forms.Label moneyLevelLabel9;
+        private System.Windows.Forms.Label moneyLevelLabel8;
+        private System.Windows.Forms.Label moneyLevelLabel10;
+        private System.Windows.Forms.Label moneyLevelLabel11;
+        private System.Windows.Forms.Label moneyLevelLabel12;
+        private System.Windows.Forms.Label moneyLevelLabel14;
+        private System.Windows.Forms.Label moneyLevelLabel13;
+        private System.Windows.Forms.Label moneyLabel0;
+        private System.Windows.Forms.Label moneyLabel1;
+        private System.Windows.Forms.Label moneyLabel2;
+        private System.Windows.Forms.Label moneyLabel4;
+        private System.Windows.Forms.Label moneyLabel3;
+        private System.Windows.Forms.Label moneyLabel5;
+        private System.Windows.Forms.Label moneyLabel6;
+        private System.Windows.Forms.Label moneyLabel7;
+        private System.Windows.Forms.Label moneyLabel9;
+        private System.Windows.Forms.Label moneyLabel8;
+        private System.Windows.Forms.Label moneyLabel10;
+        private System.Windows.Forms.Label moneyLabel11;
+        private System.Windows.Forms.Label moneyLabel12;
+        private System.Windows.Forms.Label moneyLabel14;
+        private System.Windows.Forms.Label moneyLabel13;
     }
 }
