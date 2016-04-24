@@ -114,6 +114,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="switchused.png" />
+    <None Include="switchinuse.png" />
+    <None Include="switch.png" />
     <None Include="leftAnswer.png" />
     <None Include="leftAnswerDisabled.png" />
     <None Include="leftAnswerCorrect.png" />
@@ -121,7 +124,13 @@
     <None Include="5050.png" />
     <None Include="5050inuse.png" />
     <None Include="5050used.png" />
+    <None Include="audienceused.png" />
+    <None Include="audience.png" />
+    <None Include="audienceinuse.png" />
     <Content Include="leftAnswerSelect.png" />
+    <None Include="phone.png" />
+    <None Include="phoneinuse.png" />
+    <None Include="phoneused.png" />
     <Content Include="prasanja.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

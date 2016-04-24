@@ -45,8 +45,11 @@ namespace Millionaire
             fifty_joker.Enabled = true;
             fifty_joker.BackgroundImage = Properties.Resources._5050;
             audience_joker.Enabled = true;
+            audience_joker.BackgroundImage = Properties.Resources.audience;
             phone_joker.Enabled = true;
+            phone_joker.BackgroundImage = Properties.Resources.phone;
             switch_joker.Enabled = true;
+            switch_joker.BackgroundImage = Properties.Resources._switch;
         }
 
         private void updateView()
@@ -301,45 +304,40 @@ namespace Millionaire
 
         private void fifty_joker_Click(object sender, EventArgs e)
         {
-            model.joker_fifty();
             fifty_joker.BackgroundImage = Properties.Resources._5050inuse;
             timer5050.Start();
+            model.joker_fifty();
             updateView();
         }
 
         private void audience_joker_Click(object sender, EventArgs e)
         {
+            audience_joker.BackgroundImage = Properties.Resources.audienceinuse;
+            timerAudience.Start();
+
             int[] votes = model.joker_audience();
 
             Audience view = new Audience(votes);
             view.ShowDialog();
-
-            //removing focus
-            focusLabel.Focus();
-
             updateView();
         }
 
         private void phone_joker_Click(object sender, EventArgs e)
         {
-            int[] phone = model.joker_phone();
+            phone_joker.BackgroundImage = Properties.Resources.phoneinuse;            
+            timerPhone.Start();
 
+            int[] phone = model.joker_phone();
             Phone view = new Phone(phone[0], model.currentQuestion.answer[phone[0]], phone[1]);
             view.ShowDialog();
-
-            //removing focus
-            focusLabel.Focus();
-
             updateView();
         }
 
         private void switch_joker_Click(object sender, EventArgs e)
         {
+            switch_joker.BackgroundImage = Properties.Resources.switchinuse;
+            timerSwitch.Start();
             model.joker_switch();
-
-            //removing focus
-            focusLabel.Focus();
-
             updateView();
         }
 
@@ -347,6 +345,24 @@ namespace Millionaire
         {
             fifty_joker.BackgroundImage = Properties.Resources._5050used;
             timer5050.Stop();
+        }
+
+        private void timerPhone_Tick(object sender, EventArgs e)
+        {
+            phone_joker.BackgroundImage = Properties.Resources.phoneused;
+            timerPhone.Stop();
+        }
+
+        private void timerAudience_Tick(object sender, EventArgs e)
+        {
+            audience_joker.BackgroundImage = Properties.Resources.audienceused;
+            timerAudience.Stop();
+        }
+
+        private void timerSwitch_Tick(object sender, EventArgs e)
+        {
+            switch_joker.BackgroundImage = Properties.Resources.switchused;
+            timerSwitch.Stop();
         }
     }
 }

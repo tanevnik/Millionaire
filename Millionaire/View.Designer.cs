@@ -35,11 +35,17 @@
             this.info_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
-            this.logo_img = new System.Windows.Forms.PictureBox();
             this.timer5050 = new System.Windows.Forms.Timer(this.components);
+            this.timerPhone = new System.Windows.Forms.Timer(this.components);
+            this.timerAudience = new System.Windows.Forms.Timer(this.components);
+            this.timerSwitch = new System.Windows.Forms.Timer(this.components);
+            this.logo_img = new System.Windows.Forms.PictureBox();
             this.playPanel = new Millionaire.DoubleBufferedPanel();
             this.levelLabel = new System.Windows.Forms.Label();
             this.doubleBufferedPanel2 = new Millionaire.DoubleBufferedPanel();
+            this.switch_joker = new Millionaire.DoubleBufferedPanel();
+            this.audience_joker = new Millionaire.DoubleBufferedPanel();
+            this.phone_joker = new Millionaire.DoubleBufferedPanel();
             this.fifty_joker = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel10 = new Millionaire.DoubleBufferedPanel();
             this.moneyLabel10 = new System.Windows.Forms.Label();
@@ -110,9 +116,6 @@
             this.moneyPanel3 = new Millionaire.DoubleBufferedPanel();
             this.moneyLabel3 = new System.Windows.Forms.Label();
             this.moneyLevelLabel3 = new System.Windows.Forms.Label();
-            this.switch_joker = new System.Windows.Forms.Button();
-            this.phone_joker = new System.Windows.Forms.Button();
-            this.audience_joker = new System.Windows.Forms.Button();
             this.panelV = new Millionaire.DoubleBufferedPanel();
             this.answer2 = new Millionaire.DoubleBufferedPanel();
             this.answerTextV = new System.Windows.Forms.Label();
@@ -207,6 +210,22 @@
             // 
             this.animationTimer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // timer5050
+            // 
+            this.timer5050.Tick += new System.EventHandler(this.timer5050_Tick);
+            // 
+            // timerPhone
+            // 
+            this.timerPhone.Tick += new System.EventHandler(this.timerPhone_Tick);
+            // 
+            // timerAudience
+            // 
+            this.timerAudience.Tick += new System.EventHandler(this.timerAudience_Tick);
+            // 
+            // timerSwitch
+            // 
+            this.timerSwitch.Tick += new System.EventHandler(this.timerSwitch_Tick);
+            // 
             // logo_img
             // 
             this.logo_img.Location = new System.Drawing.Point(56, 35);
@@ -214,11 +233,6 @@
             this.logo_img.Size = new System.Drawing.Size(453, 344);
             this.logo_img.TabIndex = 0;
             this.logo_img.TabStop = false;
-            // 
-            // timer5050
-            // 
-            this.timer5050.Interval = 50;
-            this.timer5050.Tick += new System.EventHandler(this.timer5050_Tick);
             // 
             // playPanel
             // 
@@ -256,6 +270,9 @@
             // doubleBufferedPanel2
             // 
             this.doubleBufferedPanel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.doubleBufferedPanel2.Controls.Add(this.switch_joker);
+            this.doubleBufferedPanel2.Controls.Add(this.audience_joker);
+            this.doubleBufferedPanel2.Controls.Add(this.phone_joker);
             this.doubleBufferedPanel2.Controls.Add(this.fifty_joker);
             this.doubleBufferedPanel2.Controls.Add(this.moneyPanel10);
             this.doubleBufferedPanel2.Controls.Add(this.moneyPanel11);
@@ -272,19 +289,46 @@
             this.doubleBufferedPanel2.Controls.Add(this.moneyPanel8);
             this.doubleBufferedPanel2.Controls.Add(this.moneyPanel4);
             this.doubleBufferedPanel2.Controls.Add(this.moneyPanel3);
-            this.doubleBufferedPanel2.Controls.Add(this.switch_joker);
-            this.doubleBufferedPanel2.Controls.Add(this.phone_joker);
-            this.doubleBufferedPanel2.Controls.Add(this.audience_joker);
-            this.doubleBufferedPanel2.Location = new System.Drawing.Point(524, 0);
+            this.doubleBufferedPanel2.Location = new System.Drawing.Point(534, 0);
             this.doubleBufferedPanel2.Name = "doubleBufferedPanel2";
-            this.doubleBufferedPanel2.Size = new System.Drawing.Size(260, 318);
+            this.doubleBufferedPanel2.Size = new System.Drawing.Size(250, 318);
             this.doubleBufferedPanel2.TabIndex = 47;
+            // 
+            // switch_joker
+            // 
+            this.switch_joker.BackgroundImage = global::Millionaire.Properties.Resources._switch;
+            this.switch_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.switch_joker.Location = new System.Drawing.Point(187, 4);
+            this.switch_joker.Name = "switch_joker";
+            this.switch_joker.Size = new System.Drawing.Size(59, 39);
+            this.switch_joker.TabIndex = 55;
+            this.switch_joker.Click += new System.EventHandler(this.switch_joker_Click);
+            // 
+            // audience_joker
+            // 
+            this.audience_joker.BackgroundImage = global::Millionaire.Properties.Resources.audience;
+            this.audience_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.audience_joker.Location = new System.Drawing.Point(65, 4);
+            this.audience_joker.Name = "audience_joker";
+            this.audience_joker.Size = new System.Drawing.Size(59, 39);
+            this.audience_joker.TabIndex = 54;
+            this.audience_joker.Click += new System.EventHandler(this.audience_joker_Click);
+            // 
+            // phone_joker
+            // 
+            this.phone_joker.BackgroundImage = global::Millionaire.Properties.Resources.phone;
+            this.phone_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.phone_joker.Location = new System.Drawing.Point(126, 4);
+            this.phone_joker.Name = "phone_joker";
+            this.phone_joker.Size = new System.Drawing.Size(59, 39);
+            this.phone_joker.TabIndex = 54;
+            this.phone_joker.Click += new System.EventHandler(this.phone_joker_Click);
             // 
             // fifty_joker
             // 
             this.fifty_joker.BackgroundImage = global::Millionaire.Properties.Resources._5050;
             this.fifty_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.fifty_joker.Location = new System.Drawing.Point(6, 4);
+            this.fifty_joker.Location = new System.Drawing.Point(4, 4);
             this.fifty_joker.Name = "fifty_joker";
             this.fifty_joker.Size = new System.Drawing.Size(59, 39);
             this.fifty_joker.TabIndex = 53;
@@ -298,7 +342,7 @@
             this.moneyPanel10.Controls.Add(this.doubleBufferedPanel30);
             this.moneyPanel10.Location = new System.Drawing.Point(0, 120);
             this.moneyPanel10.Name = "moneyPanel10";
-            this.moneyPanel10.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel10.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel10.TabIndex = 52;
             // 
             // moneyLabel10
@@ -343,7 +387,7 @@
             this.moneyPanel11.Controls.Add(this.doubleBufferedPanel33);
             this.moneyPanel11.Location = new System.Drawing.Point(0, 102);
             this.moneyPanel11.Name = "moneyPanel11";
-            this.moneyPanel11.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel11.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel11.TabIndex = 51;
             // 
             // moneyLabel11
@@ -388,7 +432,7 @@
             this.moneyPanel12.Controls.Add(this.doubleBufferedPanel36);
             this.moneyPanel12.Location = new System.Drawing.Point(0, 84);
             this.moneyPanel12.Name = "moneyPanel12";
-            this.moneyPanel12.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel12.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel12.TabIndex = 50;
             // 
             // moneyLabel12
@@ -433,7 +477,7 @@
             this.moneyPanel14.Controls.Add(this.doubleBufferedPanel39);
             this.moneyPanel14.Location = new System.Drawing.Point(0, 48);
             this.moneyPanel14.Name = "moneyPanel14";
-            this.moneyPanel14.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel14.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel14.TabIndex = 49;
             // 
             // moneyLabel14
@@ -476,7 +520,7 @@
             this.moneyPanel13.Controls.Add(this.moneyLevelLabel13);
             this.moneyPanel13.Location = new System.Drawing.Point(0, 66);
             this.moneyPanel13.Name = "moneyPanel13";
-            this.moneyPanel13.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel13.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel13.TabIndex = 48;
             // 
             // moneyLabel13
@@ -507,7 +551,7 @@
             this.moneyPanel5.Controls.Add(this.doubleBufferedPanel17);
             this.moneyPanel5.Location = new System.Drawing.Point(0, 210);
             this.moneyPanel5.Name = "moneyPanel5";
-            this.moneyPanel5.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel5.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel5.TabIndex = 47;
             // 
             // moneyLabel5
@@ -553,7 +597,7 @@
             this.moneyPanel0.Controls.Add(this.doubleBufferedPanel14);
             this.moneyPanel0.Location = new System.Drawing.Point(0, 300);
             this.moneyPanel0.Name = "moneyPanel0";
-            this.moneyPanel0.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel0.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel0.TabIndex = 42;
             // 
             // moneyLabel0
@@ -598,7 +642,7 @@
             this.moneyPanel6.Controls.Add(this.doubleBufferedPanel20);
             this.moneyPanel6.Location = new System.Drawing.Point(0, 192);
             this.moneyPanel6.Name = "moneyPanel6";
-            this.moneyPanel6.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel6.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel6.TabIndex = 46;
             // 
             // moneyLabel6
@@ -643,7 +687,7 @@
             this.moneyPanel1.Controls.Add(this.doubleBufferedPanel11);
             this.moneyPanel1.Location = new System.Drawing.Point(0, 282);
             this.moneyPanel1.Name = "moneyPanel1";
-            this.moneyPanel1.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel1.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel1.TabIndex = 41;
             // 
             // moneyLabel1
@@ -688,7 +732,7 @@
             this.moneyPanel7.Controls.Add(this.doubleBufferedPanel23);
             this.moneyPanel7.Location = new System.Drawing.Point(0, 174);
             this.moneyPanel7.Name = "moneyPanel7";
-            this.moneyPanel7.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel7.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel7.TabIndex = 45;
             // 
             // moneyLabel7
@@ -733,7 +777,7 @@
             this.moneyPanel2.Controls.Add(this.doubleBufferedPanel8);
             this.moneyPanel2.Location = new System.Drawing.Point(0, 264);
             this.moneyPanel2.Name = "moneyPanel2";
-            this.moneyPanel2.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel2.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel2.TabIndex = 40;
             // 
             // moneyLabel2
@@ -778,7 +822,7 @@
             this.moneyPanel9.Controls.Add(this.doubleBufferedPanel26);
             this.moneyPanel9.Location = new System.Drawing.Point(0, 138);
             this.moneyPanel9.Name = "moneyPanel9";
-            this.moneyPanel9.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel9.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel9.TabIndex = 44;
             // 
             // moneyLabel9
@@ -821,7 +865,7 @@
             this.moneyPanel8.Controls.Add(this.moneyLevelLabel8);
             this.moneyPanel8.Location = new System.Drawing.Point(0, 156);
             this.moneyPanel8.Name = "moneyPanel8";
-            this.moneyPanel8.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel8.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel8.TabIndex = 43;
             // 
             // moneyLabel8
@@ -852,7 +896,7 @@
             this.moneyPanel4.Controls.Add(this.doubleBufferedPanel5);
             this.moneyPanel4.Location = new System.Drawing.Point(0, 228);
             this.moneyPanel4.Name = "moneyPanel4";
-            this.moneyPanel4.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel4.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel4.TabIndex = 39;
             // 
             // moneyLabel4
@@ -895,7 +939,7 @@
             this.moneyPanel3.Controls.Add(this.moneyLevelLabel3);
             this.moneyPanel3.Location = new System.Drawing.Point(0, 246);
             this.moneyPanel3.Name = "moneyPanel3";
-            this.moneyPanel3.Size = new System.Drawing.Size(260, 18);
+            this.moneyPanel3.Size = new System.Drawing.Size(250, 18);
             this.moneyPanel3.TabIndex = 38;
             // 
             // moneyLabel3
@@ -917,36 +961,6 @@
             this.moneyLevelLabel3.TabIndex = 44;
             this.moneyLevelLabel3.Text = "4";
             this.moneyLevelLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // switch_joker
-            // 
-            this.switch_joker.Location = new System.Drawing.Point(188, 8);
-            this.switch_joker.Name = "switch_joker";
-            this.switch_joker.Size = new System.Drawing.Size(46, 23);
-            this.switch_joker.TabIndex = 35;
-            this.switch_joker.Text = "switch";
-            this.switch_joker.UseVisualStyleBackColor = true;
-            this.switch_joker.Click += new System.EventHandler(this.switch_joker_Click);
-            // 
-            // phone_joker
-            // 
-            this.phone_joker.Location = new System.Drawing.Point(136, 8);
-            this.phone_joker.Name = "phone_joker";
-            this.phone_joker.Size = new System.Drawing.Size(46, 23);
-            this.phone_joker.TabIndex = 36;
-            this.phone_joker.Text = "phone";
-            this.phone_joker.UseVisualStyleBackColor = true;
-            this.phone_joker.Click += new System.EventHandler(this.phone_joker_Click);
-            // 
-            // audience_joker
-            // 
-            this.audience_joker.Location = new System.Drawing.Point(84, 8);
-            this.audience_joker.Name = "audience_joker";
-            this.audience_joker.Size = new System.Drawing.Size(46, 23);
-            this.audience_joker.TabIndex = 37;
-            this.audience_joker.Text = "aud";
-            this.audience_joker.UseVisualStyleBackColor = true;
-            this.audience_joker.Click += new System.EventHandler(this.audience_joker_Click);
             // 
             // panelV
             // 
@@ -1255,9 +1269,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label focusLabel;
         private System.Windows.Forms.Button surrender_btn;
-        private System.Windows.Forms.Button audience_joker;
-        private System.Windows.Forms.Button phone_joker;
-        private System.Windows.Forms.Button switch_joker;
         private System.Windows.Forms.PictureBox pictureBox2;
         private DoubleBufferedPanel panelB;
         private DoubleBufferedPanel panelV;
@@ -1336,5 +1347,11 @@
         private System.Windows.Forms.Label moneyLabel13;
         private DoubleBufferedPanel fifty_joker;
         private System.Windows.Forms.Timer timer5050;
+        private DoubleBufferedPanel phone_joker;
+        private System.Windows.Forms.Timer timerPhone;
+        private DoubleBufferedPanel audience_joker;
+        private System.Windows.Forms.Timer timerAudience;
+        private DoubleBufferedPanel switch_joker;
+        private System.Windows.Forms.Timer timerSwitch;
     }
 }
