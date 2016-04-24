@@ -8,6 +8,10 @@ namespace Millionaire
     {
         private Model model;
 
+        //studio images
+        Bitmap[] images = { Properties.Resources.studio1, Properties.Resources.studio2, Properties.Resources.studio3 };
+        int currentImage;
+
         //animation variables
         private int timerTicks;
         private int correctIndex;
@@ -17,6 +21,9 @@ namespace Millionaire
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+
+            Random r = new Random();
+            pictureBox.BackgroundImage = images[r.Next(images.Length)];
         }
 
         private void newGame_btn_Click(object sender, EventArgs e)
@@ -40,6 +47,7 @@ namespace Millionaire
             model = new Model();
             updateView();
             playPanel.Show();
+            imageTimer.Enabled = true;
 
             //reset the used jokers from previous game
             fifty_joker.Enabled = true;
@@ -363,6 +371,16 @@ namespace Millionaire
         {
             switch_joker.BackgroundImage = Properties.Resources.switchused;
             timerSwitch.Stop();
+        }
+
+        private void imageTimer_Tick(object sender, EventArgs e)
+        {
+            //changes the current image
+            Random r = new Random();
+            int rand = r.Next(images.Length - 1);
+            if (rand >= currentImage) rand++;
+            currentImage = rand;
+            pictureBox.BackgroundImage = images[rand];
         }
     }
 }

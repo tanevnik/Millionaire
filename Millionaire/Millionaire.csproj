@@ -114,6 +114,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="studio3.png" />
+    <None Include="studio2.png" />
+    <None Include="studio1.png" />
     <None Include="switchused.png" />
     <None Include="switchinuse.png" />
     <None Include="switch.png" />
