@@ -7,6 +7,7 @@ namespace Millionaire
     public partial class View : Form
     {
         private Model model;
+        private Panel[] moneyPanels;
 
         //studio images
         Bitmap[] images = { Properties.Resources.studio1, Properties.Resources.studio2, Properties.Resources.studio3 };
@@ -24,6 +25,23 @@ namespace Millionaire
 
             Random r = new Random();
             pictureBox.BackgroundImage = images[r.Next(images.Length)];
+
+            moneyPanels = new Panel[15];
+            moneyPanels[0] = moneyPanel0;
+            moneyPanels[1] = moneyPanel1;
+            moneyPanels[2] = moneyPanel2;
+            moneyPanels[3] = moneyPanel3;
+            moneyPanels[4] = moneyPanel4;
+            moneyPanels[5] = moneyPanel5;
+            moneyPanels[6] = moneyPanel6;
+            moneyPanels[7] = moneyPanel7;
+            moneyPanels[8] = moneyPanel8;
+            moneyPanels[9] = moneyPanel9;
+            moneyPanels[10] = moneyPanel10;
+            moneyPanels[11] = moneyPanel11;
+            moneyPanels[12] = moneyPanel12;
+            moneyPanels[13] = moneyPanel13;
+            moneyPanels[14] = moneyPanel14;
         }
 
         private void newGame_btn_Click(object sender, EventArgs e)
@@ -245,6 +263,8 @@ namespace Millionaire
                     animateCorrect(index);
                     showCorrectAnswereMessage(model.getMoney(false), model.level);
                     updateView();
+
+                    moveMoneyPanleUp();
                 }
                 else
                 {
@@ -267,6 +287,12 @@ namespace Millionaire
                 }
             }
             changeBackgroundNormal(index);
+        }
+
+        private void moveMoneyPanleUp()
+        {
+            moneyPanels[model.level].BackColor = Color.Orange;
+            moneyPanels[model.level - 1].BackColor = Color.DimGray;
         }
 
         private bool wrongAnswerMessage(string answer, string correct)
@@ -381,6 +407,6 @@ namespace Millionaire
             if (rand >= currentImage) rand++;
             currentImage = rand;
             pictureBox.BackgroundImage = images[rand];
-        }
+        }      
     }
 }

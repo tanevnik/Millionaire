@@ -32,7 +32,7 @@ namespace Millionaire
         {
             if(level == 5 || level == 10)
             {
-                messageLabel.Text = string.Format("Загарантирана сума од {0} денари !", price);
+                messageLabel.Text = string.Format("Освоивте загарантирана сума од {0} денари !", price);
             }
             else
             {

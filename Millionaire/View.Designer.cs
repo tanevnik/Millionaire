@@ -346,6 +346,7 @@
             this.moneyPanel10.Controls.Add(this.moneyLevelLabel10);
             this.moneyPanel10.Controls.Add(this.doubleBufferedPanel29);
             this.moneyPanel10.Controls.Add(this.doubleBufferedPanel30);
+            this.moneyPanel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel10.Location = new System.Drawing.Point(0, 120);
             this.moneyPanel10.Name = "moneyPanel10";
             this.moneyPanel10.Size = new System.Drawing.Size(236, 18);
@@ -358,7 +359,7 @@
             this.moneyLabel10.Name = "moneyLabel10";
             this.moneyLabel10.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel10.TabIndex = 48;
-            this.moneyLabel10.Text = "250000";
+            this.moneyLabel10.Text = "250.000";
             this.moneyLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel10
@@ -366,7 +367,7 @@
             this.moneyLevelLabel10.BackColor = System.Drawing.Color.Transparent;
             this.moneyLevelLabel10.Location = new System.Drawing.Point(46, 0);
             this.moneyLevelLabel10.Name = "moneyLevelLabel10";
-            this.moneyLevelLabel10.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel10.Size = new System.Drawing.Size(23, 18);
             this.moneyLevelLabel10.TabIndex = 47;
             this.moneyLevelLabel10.Text = "11";
             this.moneyLevelLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -391,6 +392,7 @@
             this.moneyPanel11.Controls.Add(this.moneyLevelLabel11);
             this.moneyPanel11.Controls.Add(this.doubleBufferedPanel32);
             this.moneyPanel11.Controls.Add(this.doubleBufferedPanel33);
+            this.moneyPanel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel11.Location = new System.Drawing.Point(0, 102);
             this.moneyPanel11.Name = "moneyPanel11";
             this.moneyPanel11.Size = new System.Drawing.Size(236, 18);
@@ -403,7 +405,7 @@
             this.moneyLabel11.Name = "moneyLabel11";
             this.moneyLabel11.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel11.TabIndex = 48;
-            this.moneyLabel11.Text = "500000";
+            this.moneyLabel11.Text = "500.000";
             this.moneyLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel11
@@ -411,7 +413,7 @@
             this.moneyLevelLabel11.BackColor = System.Drawing.Color.Transparent;
             this.moneyLevelLabel11.Location = new System.Drawing.Point(46, 0);
             this.moneyLevelLabel11.Name = "moneyLevelLabel11";
-            this.moneyLevelLabel11.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel11.Size = new System.Drawing.Size(23, 18);
             this.moneyLevelLabel11.TabIndex = 47;
             this.moneyLevelLabel11.Text = "12";
             this.moneyLevelLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -436,6 +438,7 @@
             this.moneyPanel12.Controls.Add(this.moneyLevelLabel12);
             this.moneyPanel12.Controls.Add(this.doubleBufferedPanel35);
             this.moneyPanel12.Controls.Add(this.doubleBufferedPanel36);
+            this.moneyPanel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel12.Location = new System.Drawing.Point(0, 84);
             this.moneyPanel12.Name = "moneyPanel12";
             this.moneyPanel12.Size = new System.Drawing.Size(236, 18);
@@ -448,7 +451,7 @@
             this.moneyLabel12.Name = "moneyLabel12";
             this.moneyLabel12.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel12.TabIndex = 48;
-            this.moneyLabel12.Text = "1000000";
+            this.moneyLabel12.Text = "1.000.000";
             this.moneyLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel12
@@ -456,7 +459,7 @@
             this.moneyLevelLabel12.BackColor = System.Drawing.Color.Transparent;
             this.moneyLevelLabel12.Location = new System.Drawing.Point(46, 0);
             this.moneyLevelLabel12.Name = "moneyLevelLabel12";
-            this.moneyLevelLabel12.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel12.Size = new System.Drawing.Size(23, 18);
             this.moneyLevelLabel12.TabIndex = 47;
             this.moneyLevelLabel12.Text = "13";
             this.moneyLevelLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -481,6 +484,8 @@
             this.moneyPanel14.Controls.Add(this.moneyLevelLabel14);
             this.moneyPanel14.Controls.Add(this.doubleBufferedPanel38);
             this.moneyPanel14.Controls.Add(this.doubleBufferedPanel39);
+            this.moneyPanel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyPanel14.ForeColor = System.Drawing.SystemColors.Control;
             this.moneyPanel14.Location = new System.Drawing.Point(0, 48);
             this.moneyPanel14.Name = "moneyPanel14";
             this.moneyPanel14.Size = new System.Drawing.Size(236, 18);
@@ -491,7 +496,7 @@
             this.moneyLabel14.BackColor = System.Drawing.Color.Transparent;
             this.moneyLabel14.Location = new System.Drawing.Point(79, 0);
             this.moneyLabel14.Name = "moneyLabel14";
-            this.moneyLabel14.Size = new System.Drawing.Size(80, 18);
+            this.moneyLabel14.Size = new System.Drawing.Size(95, 18);
             this.moneyLabel14.TabIndex = 48;
             this.moneyLabel14.Text = "4 МИЛИОНИ";
             this.moneyLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -501,7 +506,7 @@
             this.moneyLevelLabel14.BackColor = System.Drawing.Color.Transparent;
             this.moneyLevelLabel14.Location = new System.Drawing.Point(46, 0);
             this.moneyLevelLabel14.Name = "moneyLevelLabel14";
-            this.moneyLevelLabel14.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel14.Size = new System.Drawing.Size(23, 18);
             this.moneyLevelLabel14.TabIndex = 47;
             this.moneyLevelLabel14.Text = "15";
             this.moneyLevelLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -524,6 +529,7 @@
             // 
             this.moneyPanel13.Controls.Add(this.moneyLabel13);
             this.moneyPanel13.Controls.Add(this.moneyLevelLabel13);
+            this.moneyPanel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel13.Location = new System.Drawing.Point(0, 66);
             this.moneyPanel13.Name = "moneyPanel13";
             this.moneyPanel13.Size = new System.Drawing.Size(236, 18);
@@ -536,7 +542,7 @@
             this.moneyLabel13.Name = "moneyLabel13";
             this.moneyLabel13.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel13.TabIndex = 48;
-            this.moneyLabel13.Text = "2000000";
+            this.moneyLabel13.Text = "2.000.000";
             this.moneyLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel13
@@ -544,7 +550,7 @@
             this.moneyLevelLabel13.BackColor = System.Drawing.Color.Transparent;
             this.moneyLevelLabel13.Location = new System.Drawing.Point(46, 0);
             this.moneyLevelLabel13.Name = "moneyLevelLabel13";
-            this.moneyLevelLabel13.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel13.Size = new System.Drawing.Size(23, 18);
             this.moneyLevelLabel13.TabIndex = 47;
             this.moneyLevelLabel13.Text = "14";
             this.moneyLevelLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -555,6 +561,7 @@
             this.moneyPanel5.Controls.Add(this.moneyLevelLabel5);
             this.moneyPanel5.Controls.Add(this.doubleBufferedPanel16);
             this.moneyPanel5.Controls.Add(this.doubleBufferedPanel17);
+            this.moneyPanel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel5.Location = new System.Drawing.Point(0, 210);
             this.moneyPanel5.Name = "moneyPanel5";
             this.moneyPanel5.Size = new System.Drawing.Size(236, 18);
@@ -567,7 +574,7 @@
             this.moneyLabel5.Name = "moneyLabel5";
             this.moneyLabel5.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel5.TabIndex = 47;
-            this.moneyLabel5.Text = "8000";
+            this.moneyLabel5.Text = "8.000";
             this.moneyLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel5
@@ -601,6 +608,7 @@
             this.moneyPanel0.Controls.Add(this.moneyLevelLabel0);
             this.moneyPanel0.Controls.Add(this.doubleBufferedPanel13);
             this.moneyPanel0.Controls.Add(this.doubleBufferedPanel14);
+            this.moneyPanel0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel0.Location = new System.Drawing.Point(0, 300);
             this.moneyPanel0.Name = "moneyPanel0";
             this.moneyPanel0.Size = new System.Drawing.Size(236, 18);
@@ -646,6 +654,7 @@
             this.moneyPanel6.Controls.Add(this.moneyLevelLabel6);
             this.moneyPanel6.Controls.Add(this.doubleBufferedPanel19);
             this.moneyPanel6.Controls.Add(this.doubleBufferedPanel20);
+            this.moneyPanel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel6.Location = new System.Drawing.Point(0, 192);
             this.moneyPanel6.Name = "moneyPanel6";
             this.moneyPanel6.Size = new System.Drawing.Size(236, 18);
@@ -658,7 +667,7 @@
             this.moneyLabel6.Name = "moneyLabel6";
             this.moneyLabel6.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel6.TabIndex = 47;
-            this.moneyLabel6.Text = "16000";
+            this.moneyLabel6.Text = "16.000";
             this.moneyLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel6
@@ -687,10 +696,13 @@
             // 
             // moneyPanel1
             // 
+            this.moneyPanel1.BackColor = System.Drawing.Color.DimGray;
             this.moneyPanel1.Controls.Add(this.moneyLabel1);
             this.moneyPanel1.Controls.Add(this.moneyLevelLabel1);
             this.moneyPanel1.Controls.Add(this.doubleBufferedPanel10);
             this.moneyPanel1.Controls.Add(this.doubleBufferedPanel11);
+            this.moneyPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.moneyPanel1.Location = new System.Drawing.Point(0, 282);
             this.moneyPanel1.Name = "moneyPanel1";
             this.moneyPanel1.Size = new System.Drawing.Size(236, 18);
@@ -703,7 +715,7 @@
             this.moneyLabel1.Name = "moneyLabel1";
             this.moneyLabel1.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel1.TabIndex = 44;
-            this.moneyLabel1.Text = "1000";
+            this.moneyLabel1.Text = "1.000";
             this.moneyLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel1
@@ -736,6 +748,7 @@
             this.moneyPanel7.Controls.Add(this.moneyLevelLabel7);
             this.moneyPanel7.Controls.Add(this.doubleBufferedPanel22);
             this.moneyPanel7.Controls.Add(this.doubleBufferedPanel23);
+            this.moneyPanel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel7.Location = new System.Drawing.Point(0, 174);
             this.moneyPanel7.Name = "moneyPanel7";
             this.moneyPanel7.Size = new System.Drawing.Size(236, 18);
@@ -748,7 +761,7 @@
             this.moneyLabel7.Name = "moneyLabel7";
             this.moneyLabel7.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel7.TabIndex = 47;
-            this.moneyLabel7.Text = "32000";
+            this.moneyLabel7.Text = "32.000";
             this.moneyLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel7
@@ -781,6 +794,7 @@
             this.moneyPanel2.Controls.Add(this.moneyLevelLabel2);
             this.moneyPanel2.Controls.Add(this.doubleBufferedPanel7);
             this.moneyPanel2.Controls.Add(this.doubleBufferedPanel8);
+            this.moneyPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel2.Location = new System.Drawing.Point(0, 264);
             this.moneyPanel2.Name = "moneyPanel2";
             this.moneyPanel2.Size = new System.Drawing.Size(236, 18);
@@ -793,7 +807,7 @@
             this.moneyLabel2.Name = "moneyLabel2";
             this.moneyLabel2.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel2.TabIndex = 45;
-            this.moneyLabel2.Text = "2000";
+            this.moneyLabel2.Text = "2.000";
             this.moneyLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel2
@@ -826,6 +840,8 @@
             this.moneyPanel9.Controls.Add(this.moneyLevelLabel9);
             this.moneyPanel9.Controls.Add(this.doubleBufferedPanel25);
             this.moneyPanel9.Controls.Add(this.doubleBufferedPanel26);
+            this.moneyPanel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyPanel9.ForeColor = System.Drawing.SystemColors.Control;
             this.moneyPanel9.Location = new System.Drawing.Point(0, 138);
             this.moneyPanel9.Name = "moneyPanel9";
             this.moneyPanel9.Size = new System.Drawing.Size(236, 18);
@@ -838,7 +854,7 @@
             this.moneyLabel9.Name = "moneyLabel9";
             this.moneyLabel9.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel9.TabIndex = 47;
-            this.moneyLabel9.Text = "125000";
+            this.moneyLabel9.Text = "125.000";
             this.moneyLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel9
@@ -846,7 +862,7 @@
             this.moneyLevelLabel9.BackColor = System.Drawing.Color.Transparent;
             this.moneyLevelLabel9.Location = new System.Drawing.Point(46, 0);
             this.moneyLevelLabel9.Name = "moneyLevelLabel9";
-            this.moneyLevelLabel9.Size = new System.Drawing.Size(20, 18);
+            this.moneyLevelLabel9.Size = new System.Drawing.Size(23, 18);
             this.moneyLevelLabel9.TabIndex = 46;
             this.moneyLevelLabel9.Text = "10";
             this.moneyLevelLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -869,6 +885,7 @@
             // 
             this.moneyPanel8.Controls.Add(this.moneyLabel8);
             this.moneyPanel8.Controls.Add(this.moneyLevelLabel8);
+            this.moneyPanel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel8.Location = new System.Drawing.Point(0, 156);
             this.moneyPanel8.Name = "moneyPanel8";
             this.moneyPanel8.Size = new System.Drawing.Size(236, 18);
@@ -881,7 +898,7 @@
             this.moneyLabel8.Name = "moneyLabel8";
             this.moneyLabel8.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel8.TabIndex = 47;
-            this.moneyLabel8.Text = "64000";
+            this.moneyLabel8.Text = "64.000";
             this.moneyLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel8
@@ -900,6 +917,8 @@
             this.moneyPanel4.Controls.Add(this.moneyLevelLabel4);
             this.moneyPanel4.Controls.Add(this.doubleBufferedPanel4);
             this.moneyPanel4.Controls.Add(this.doubleBufferedPanel5);
+            this.moneyPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyPanel4.ForeColor = System.Drawing.SystemColors.Control;
             this.moneyPanel4.Location = new System.Drawing.Point(0, 228);
             this.moneyPanel4.Name = "moneyPanel4";
             this.moneyPanel4.Size = new System.Drawing.Size(236, 18);
@@ -912,7 +931,7 @@
             this.moneyLabel4.Name = "moneyLabel4";
             this.moneyLabel4.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel4.TabIndex = 46;
-            this.moneyLabel4.Text = "5000";
+            this.moneyLabel4.Text = "5.000";
             this.moneyLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel4
@@ -943,6 +962,7 @@
             // 
             this.moneyPanel3.Controls.Add(this.moneyLabel3);
             this.moneyPanel3.Controls.Add(this.moneyLevelLabel3);
+            this.moneyPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moneyPanel3.Location = new System.Drawing.Point(0, 246);
             this.moneyPanel3.Name = "moneyPanel3";
             this.moneyPanel3.Size = new System.Drawing.Size(236, 18);
@@ -955,7 +975,7 @@
             this.moneyLabel3.Name = "moneyLabel3";
             this.moneyLabel3.Size = new System.Drawing.Size(80, 18);
             this.moneyLabel3.TabIndex = 45;
-            this.moneyLabel3.Text = "3000";
+            this.moneyLabel3.Text = "3.000";
             this.moneyLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // moneyLevelLabel3
