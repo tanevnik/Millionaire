@@ -7,7 +7,10 @@ namespace Millionaire
     public partial class View : Form
     {
         private Model model;
+
         private Panel[] moneyPanels;
+        private Label[] moneyLevelLabels;
+        private Label[] moneyLabels;
 
         //studio images
         Bitmap[] images = { Properties.Resources.studio1, Properties.Resources.studio2, Properties.Resources.studio3 };
@@ -42,6 +45,40 @@ namespace Millionaire
             moneyPanels[12] = moneyPanel12;
             moneyPanels[13] = moneyPanel13;
             moneyPanels[14] = moneyPanel14;
+
+            moneyLevelLabels = new Label[15];
+            moneyLevelLabels[0] = moneyLevelLabel0;
+            moneyLevelLabels[1] = moneyLevelLabel1;
+            moneyLevelLabels[2] = moneyLevelLabel2;
+            moneyLevelLabels[3] = moneyLevelLabel3;
+            moneyLevelLabels[4] = moneyLevelLabel4;
+            moneyLevelLabels[5] = moneyLevelLabel5;
+            moneyLevelLabels[6] = moneyLevelLabel6;
+            moneyLevelLabels[7] = moneyLevelLabel7;
+            moneyLevelLabels[8] = moneyLevelLabel8;
+            moneyLevelLabels[9] = moneyLevelLabel9;
+            moneyLevelLabels[10] = moneyLevelLabel10;
+            moneyLevelLabels[11] = moneyLevelLabel11;
+            moneyLevelLabels[12] = moneyLevelLabel12;
+            moneyLevelLabels[13] = moneyLevelLabel13;
+            moneyLevelLabels[14] = moneyLevelLabel14;
+
+            moneyLabels = new Label[15];
+            moneyLabels[0] = moneyLabel0;
+            moneyLabels[1] = moneyLabel1;
+            moneyLabels[2] = moneyLabel2;
+            moneyLabels[3] = moneyLabel3;
+            moneyLabels[4] = moneyLabel4;
+            moneyLabels[5] = moneyLabel5;
+            moneyLabels[6] = moneyLabel6;
+            moneyLabels[7] = moneyLabel7;
+            moneyLabels[8] = moneyLabel8;
+            moneyLabels[9] = moneyLabel9;
+            moneyLabels[10] = moneyLabel10;
+            moneyLabels[11] = moneyLabel11;
+            moneyLabels[12] = moneyLabel12;
+            moneyLabels[13] = moneyLabel13;
+            moneyLabels[14] = moneyLabel14;
         }
 
         private void newGame_btn_Click(object sender, EventArgs e)
@@ -96,6 +133,27 @@ namespace Millionaire
             if (model.audience_spent) audience_joker.Enabled = false;
             if (model.phone_spent) phone_joker.Enabled = false;
             if (model.switch_spent) switch_joker.Enabled = false;
+
+            //update money panel
+            for(int i = 0; i<15; i++)
+            {
+                moneyPanels[i].BackColor = Color.Transparent;
+                moneyLevelLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
+                moneyLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
+            }
+            moneyLevelLabels[4].ForeColor = Color.White;
+            moneyLabels[4].ForeColor = Color.White;
+            moneyLevelLabels[9].ForeColor = Color.White;
+            moneyLabels[9].ForeColor = Color.White;
+            moneyLevelLabels[14].ForeColor = Color.White;
+            moneyLabels[14].ForeColor = Color.White;
+
+            moneyPanels[model.level].BackColor = Color.FromArgb(248, 155, 28);
+            if ((model.level + 1) % 5 != 0) // checks if the current level is 5, 10 or 15
+            {
+                moneyLevelLabels[model.level].ForeColor = Color.Black;
+                moneyLabels[model.level].ForeColor = Color.Black;
+            }
 
             //check for joker 50-50
             if (model.fifty_active)
@@ -263,8 +321,6 @@ namespace Millionaire
                     animateCorrect(index);
                     showCorrectAnswereMessage(model.getMoney(false), model.level);
                     updateView();
-
-                    moveMoneyPanleUp();
                 }
                 else
                 {
@@ -287,12 +343,6 @@ namespace Millionaire
                 }
             }
             changeBackgroundNormal(index);
-        }
-
-        private void moveMoneyPanleUp()
-        {
-            moneyPanels[model.level].BackColor = Color.Orange;
-            moneyPanels[model.level - 1].BackColor = Color.DimGray;
         }
 
         private bool wrongAnswerMessage(string answer, string correct)

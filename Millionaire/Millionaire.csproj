@@ -114,38 +114,35 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="studio3.png" />
-    <None Include="studio2.png" />
-    <None Include="studio1.png" />
-    <None Include="switchused.png" />
-    <None Include="switchinuse.png" />
-    <None Include="switch.png" />
-    <None Include="leftAnswer.png" />
-    <None Include="leftAnswerDisabled.png" />
-    <None Include="leftAnswerCorrect.png" />
-    <None Include="background.jpg" />
-    <None Include="5050.png" />
-    <None Include="5050inuse.png" />
-    <None Include="5050used.png" />
-    <None Include="audienceused.png" />
-    <None Include="audience.png" />
-    <None Include="audienceinuse.png" />
-    <Content Include="leftAnswerSelect.png" />
-    <None Include="phone.png" />
-    <None Include="phoneinuse.png" />
-    <None Include="phoneused.png" />
+    <None Include="Resources\studio3.png" />
+    <None Include="Resources\studio2.png" />
+    <None Include="Resources\studio1.png" />
+    <None Include="Resources\switchused.png" />
+    <None Include="Resources\switchinuse.png" />
+    <None Include="Resources\switch.png" />
+    <None Include="Resources\leftAnswer.png" />
+    <None Include="Resources\leftAnswerDisabled.png" />
+    <None Include="Resources\leftAnswerCorrect.png" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\5050.png" />
+    <None Include="Resources\5050inuse.png" />
+    <None Include="Resources\5050used.png" />
+    <None Include="Resources\audienceused.png" />
+    <None Include="Resources\audience.png" />
+    <None Include="Resources\audienceinuse.png" />
+    <Content Include="Resources\aud_back.png" />
+    <Content Include="Resources\leftAnswerSelect.png" />
+    <None Include="Resources\phone.png" />
+    <None Include="Resources\phoneinuse.png" />
+    <None Include="Resources\phoneused.png" />
     <Content Include="prasanja.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="question_backg.png" />
-    <None Include="Resources\Image1.png" />
-    <None Include="Resources\leftAnswerSelect.png" />
-    <None Include="Resources\rightAnswerSelect.png" />
-    <None Include="rightAnswer.png" />
-    <None Include="Resources\leftAnswerDisabled.bmp" />
-    <None Include="rightAnswerDisabled.png" />
-    <None Include="rightAnswerCorrect.png" />
-    <Content Include="rightAnswerSelect.png" />
+    <Content Include="Resources\question_backg.png" />
+    <None Include="Resources\rightAnswer.png" />
+    <None Include="Resources\rightAnswerDisabled.png" />
+    <None Include="Resources\rightAnswerCorrect.png" />
+    <Content Include="Resources\rightAnswerSelect.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
