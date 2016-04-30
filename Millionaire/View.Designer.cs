@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
-            this.label1 = new System.Windows.Forms.Label();
             this.newGame_btn = new System.Windows.Forms.Button();
             this.info_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.playPanel = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel3 = new Millionaire.DoubleBufferedPanel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.moneyPanelBorder = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel2 = new Millionaire.DoubleBufferedPanel();
             this.switch_joker = new Millionaire.DoubleBufferedPanel();
             this.audience_joker = new Millionaire.DoubleBufferedPanel();
@@ -118,7 +118,6 @@
             this.moneyPanel3 = new Millionaire.DoubleBufferedPanel();
             this.moneyLabel3 = new System.Windows.Forms.Label();
             this.moneyLevelLabel3 = new System.Windows.Forms.Label();
-            this.moneyPanelBorder = new Millionaire.DoubleBufferedPanel();
             this.levelLabel = new System.Windows.Forms.Label();
             this.panelV = new Millionaire.DoubleBufferedPanel();
             this.answer2 = new Millionaire.DoubleBufferedPanel();
@@ -144,6 +143,7 @@
             this.playPanel.SuspendLayout();
             this.doubleBufferedPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.moneyPanelBorder.SuspendLayout();
             this.doubleBufferedPanel2.SuspendLayout();
             this.moneyPanel10.SuspendLayout();
             this.moneyPanel11.SuspendLayout();
@@ -160,7 +160,6 @@
             this.moneyPanel8.SuspendLayout();
             this.moneyPanel4.SuspendLayout();
             this.moneyPanel3.SuspendLayout();
-            this.moneyPanelBorder.SuspendLayout();
             this.panelV.SuspendLayout();
             this.answer2.SuspendLayout();
             this.panelB.SuspendLayout();
@@ -172,20 +171,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(179, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LOGO";
-            // 
             // newGame_btn
             // 
-            this.newGame_btn.Location = new System.Drawing.Point(582, 35);
+            this.newGame_btn.Location = new System.Drawing.Point(229, 340);
             this.newGame_btn.Name = "newGame_btn";
-            this.newGame_btn.Size = new System.Drawing.Size(144, 44);
+            this.newGame_btn.Size = new System.Drawing.Size(300, 44);
             this.newGame_btn.TabIndex = 8;
             this.newGame_btn.Text = "Нова игра";
             this.newGame_btn.UseVisualStyleBackColor = true;
@@ -193,9 +183,9 @@
             // 
             // info_btn
             // 
-            this.info_btn.Location = new System.Drawing.Point(582, 113);
+            this.info_btn.Location = new System.Drawing.Point(229, 412);
             this.info_btn.Name = "info_btn";
-            this.info_btn.Size = new System.Drawing.Size(144, 44);
+            this.info_btn.Size = new System.Drawing.Size(300, 44);
             this.info_btn.TabIndex = 9;
             this.info_btn.Text = "Инфо";
             this.info_btn.UseVisualStyleBackColor = true;
@@ -203,9 +193,9 @@
             // 
             // exit_btn
             // 
-            this.exit_btn.Location = new System.Drawing.Point(582, 410);
+            this.exit_btn.Location = new System.Drawing.Point(229, 485);
             this.exit_btn.Name = "exit_btn";
-            this.exit_btn.Size = new System.Drawing.Size(144, 47);
+            this.exit_btn.Size = new System.Drawing.Size(300, 47);
             this.exit_btn.TabIndex = 10;
             this.exit_btn.Text = "Излези";
             this.exit_btn.UseVisualStyleBackColor = true;
@@ -238,9 +228,12 @@
             // 
             // logo_img
             // 
-            this.logo_img.Location = new System.Drawing.Point(56, 35);
+            this.logo_img.BackColor = System.Drawing.Color.Transparent;
+            this.logo_img.BackgroundImage = global::Millionaire.Properties.Resources.logo;
+            this.logo_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo_img.Location = new System.Drawing.Point(229, 27);
             this.logo_img.Name = "logo_img";
-            this.logo_img.Size = new System.Drawing.Size(453, 344);
+            this.logo_img.Size = new System.Drawing.Size(300, 300);
             this.logo_img.TabIndex = 0;
             this.logo_img.TabStop = false;
             // 
@@ -285,6 +278,15 @@
             this.pictureBox.Size = new System.Drawing.Size(500, 330);
             this.pictureBox.TabIndex = 31;
             this.pictureBox.TabStop = false;
+            // 
+            // moneyPanelBorder
+            // 
+            this.moneyPanelBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.moneyPanelBorder.Controls.Add(this.doubleBufferedPanel2);
+            this.moneyPanelBorder.Location = new System.Drawing.Point(546, 0);
+            this.moneyPanelBorder.Name = "moneyPanelBorder";
+            this.moneyPanelBorder.Size = new System.Drawing.Size(239, 322);
+            this.moneyPanelBorder.TabIndex = 48;
             // 
             // doubleBufferedPanel2
             // 
@@ -1023,15 +1025,6 @@
             this.moneyLevelLabel3.Text = "4";
             this.moneyLevelLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // moneyPanelBorder
-            // 
-            this.moneyPanelBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.moneyPanelBorder.Controls.Add(this.doubleBufferedPanel2);
-            this.moneyPanelBorder.Location = new System.Drawing.Point(546, 0);
-            this.moneyPanelBorder.Name = "moneyPanelBorder";
-            this.moneyPanelBorder.Size = new System.Drawing.Size(239, 322);
-            this.moneyPanelBorder.TabIndex = 48;
-            // 
             // levelLabel
             // 
             this.levelLabel.BackColor = System.Drawing.Color.Transparent;
@@ -1271,12 +1264,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Millionaire.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.playPanel);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.info_btn);
             this.Controls.Add(this.newGame_btn);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.logo_img);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1287,6 +1280,7 @@
             this.playPanel.PerformLayout();
             this.doubleBufferedPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.moneyPanelBorder.ResumeLayout(false);
             this.doubleBufferedPanel2.ResumeLayout(false);
             this.moneyPanel10.ResumeLayout(false);
             this.moneyPanel11.ResumeLayout(false);
@@ -1303,7 +1297,6 @@
             this.moneyPanel8.ResumeLayout(false);
             this.moneyPanel4.ResumeLayout(false);
             this.moneyPanel3.ResumeLayout(false);
-            this.moneyPanelBorder.ResumeLayout(false);
             this.panelV.ResumeLayout(false);
             this.answer2.ResumeLayout(false);
             this.panelB.ResumeLayout(false);
@@ -1314,14 +1307,12 @@
             this.answer0.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox logo_img;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button newGame_btn;
         private System.Windows.Forms.Button info_btn;
         private System.Windows.Forms.Button exit_btn;

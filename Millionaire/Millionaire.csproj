@@ -138,6 +138,7 @@
     <Content Include="prasanja.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\logo.png" />
     <Content Include="Resources\question_backg.png" />
     <None Include="Resources\rightAnswer.png" />
     <None Include="Resources\rightAnswerDisabled.png" />
