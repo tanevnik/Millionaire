@@ -41,6 +41,9 @@
             this.imageTimer = new System.Windows.Forms.Timer(this.components);
             this.logo_img = new System.Windows.Forms.PictureBox();
             this.playPanel = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
+            this.doubleBufferedPanel6 = new Millionaire.DoubleBufferedPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel3 = new Millionaire.DoubleBufferedPanel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.moneyPanelBorder = new Millionaire.DoubleBufferedPanel();
@@ -120,27 +123,24 @@
             this.moneyLevelLabel3 = new System.Windows.Forms.Label();
             this.levelLabel = new System.Windows.Forms.Label();
             this.panelV = new Millionaire.DoubleBufferedPanel();
-            this.answer2 = new Millionaire.DoubleBufferedPanel();
             this.answerTextV = new System.Windows.Forms.Label();
             this.labelV = new System.Windows.Forms.Label();
             this.panelB = new Millionaire.DoubleBufferedPanel();
-            this.answer1 = new Millionaire.DoubleBufferedPanel();
             this.answerTextB = new System.Windows.Forms.Label();
             this.labelB = new System.Windows.Forms.Label();
             this.panelG = new Millionaire.DoubleBufferedPanel();
-            this.answer3 = new Millionaire.DoubleBufferedPanel();
             this.answerTextG = new System.Windows.Forms.Label();
             this.labelG = new System.Windows.Forms.Label();
             this.panelA = new Millionaire.DoubleBufferedPanel();
-            this.answer0 = new Millionaire.DoubleBufferedPanel();
             this.answerTextA = new System.Windows.Forms.Label();
             this.labelA = new System.Windows.Forms.Label();
             this.questionLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.focusLabel = new System.Windows.Forms.Label();
-            this.surrender_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
+            this.doubleBufferedPanel1.SuspendLayout();
+            this.doubleBufferedPanel6.SuspendLayout();
             this.doubleBufferedPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.moneyPanelBorder.SuspendLayout();
@@ -161,13 +161,9 @@
             this.moneyPanel4.SuspendLayout();
             this.moneyPanel3.SuspendLayout();
             this.panelV.SuspendLayout();
-            this.answer2.SuspendLayout();
             this.panelB.SuspendLayout();
-            this.answer1.SuspendLayout();
             this.panelG.SuspendLayout();
-            this.answer3.SuspendLayout();
             this.panelA.SuspendLayout();
-            this.answer0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,7 +224,7 @@
             // 
             // logo_img
             // 
-            this.logo_img.BackColor = System.Drawing.Color.Transparent;
+            this.logo_img.BackColor = System.Drawing.Color.Black;
             this.logo_img.BackgroundImage = global::Millionaire.Properties.Resources.logo;
             this.logo_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logo_img.Location = new System.Drawing.Point(229, 27);
@@ -242,6 +238,7 @@
             this.playPanel.BackColor = System.Drawing.Color.White;
             this.playPanel.BackgroundImage = global::Millionaire.Properties.Resources.background;
             this.playPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.playPanel.Controls.Add(this.doubleBufferedPanel1);
             this.playPanel.Controls.Add(this.doubleBufferedPanel3);
             this.playPanel.Controls.Add(this.moneyPanelBorder);
             this.playPanel.Controls.Add(this.levelLabel);
@@ -252,7 +249,6 @@
             this.playPanel.Controls.Add(this.questionLabel);
             this.playPanel.Controls.Add(this.pictureBox1);
             this.playPanel.Controls.Add(this.focusLabel);
-            this.playPanel.Controls.Add(this.surrender_btn);
             this.playPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playPanel.Location = new System.Drawing.Point(0, 0);
             this.playPanel.Name = "playPanel";
@@ -260,9 +256,39 @@
             this.playPanel.TabIndex = 11;
             this.playPanel.Visible = false;
             // 
+            // doubleBufferedPanel1
+            // 
+            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.doubleBufferedPanel1.Controls.Add(this.doubleBufferedPanel6);
+            this.doubleBufferedPanel1.Location = new System.Drawing.Point(546, 324);
+            this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
+            this.doubleBufferedPanel1.Size = new System.Drawing.Size(238, 28);
+            this.doubleBufferedPanel1.TabIndex = 50;
+            this.doubleBufferedPanel1.Click += new System.EventHandler(this.surrender_btn_Click);
+            // 
+            // doubleBufferedPanel6
+            // 
+            this.doubleBufferedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.doubleBufferedPanel6.Controls.Add(this.label1);
+            this.doubleBufferedPanel6.Location = new System.Drawing.Point(3, 3);
+            this.doubleBufferedPanel6.Name = "doubleBufferedPanel6";
+            this.doubleBufferedPanel6.Size = new System.Drawing.Size(232, 22);
+            this.doubleBufferedPanel6.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Се откажувам";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.surrender_btn_Click);
+            // 
             // doubleBufferedPanel3
             // 
-            this.doubleBufferedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.doubleBufferedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
             this.doubleBufferedPanel3.Controls.Add(this.pictureBox);
             this.doubleBufferedPanel3.Location = new System.Drawing.Point(19, 14);
             this.doubleBufferedPanel3.Name = "doubleBufferedPanel3";
@@ -281,9 +307,9 @@
             // 
             // moneyPanelBorder
             // 
-            this.moneyPanelBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.moneyPanelBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
             this.moneyPanelBorder.Controls.Add(this.doubleBufferedPanel2);
-            this.moneyPanelBorder.Location = new System.Drawing.Point(546, 0);
+            this.moneyPanelBorder.Location = new System.Drawing.Point(546, -4);
             this.moneyPanelBorder.Name = "moneyPanelBorder";
             this.moneyPanelBorder.Size = new System.Drawing.Size(239, 322);
             this.moneyPanelBorder.TabIndex = 48;
@@ -319,7 +345,7 @@
             // 
             this.switch_joker.BackgroundImage = global::Millionaire.Properties.Resources._switch;
             this.switch_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.switch_joker.Location = new System.Drawing.Point(177, 8);
+            this.switch_joker.Location = new System.Drawing.Point(177, 10);
             this.switch_joker.Name = "switch_joker";
             this.switch_joker.Size = new System.Drawing.Size(55, 35);
             this.switch_joker.TabIndex = 55;
@@ -329,7 +355,7 @@
             // 
             this.audience_joker.BackgroundImage = global::Millionaire.Properties.Resources.audience;
             this.audience_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.audience_joker.Location = new System.Drawing.Point(61, 8);
+            this.audience_joker.Location = new System.Drawing.Point(61, 10);
             this.audience_joker.Name = "audience_joker";
             this.audience_joker.Size = new System.Drawing.Size(55, 35);
             this.audience_joker.TabIndex = 54;
@@ -339,7 +365,7 @@
             // 
             this.phone_joker.BackgroundImage = global::Millionaire.Properties.Resources.phone;
             this.phone_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.phone_joker.Location = new System.Drawing.Point(119, 8);
+            this.phone_joker.Location = new System.Drawing.Point(119, 10);
             this.phone_joker.Name = "phone_joker";
             this.phone_joker.Size = new System.Drawing.Size(55, 35);
             this.phone_joker.TabIndex = 54;
@@ -349,7 +375,7 @@
             // 
             this.fifty_joker.BackgroundImage = global::Millionaire.Properties.Resources._5050;
             this.fifty_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.fifty_joker.Location = new System.Drawing.Point(3, 8);
+            this.fifty_joker.Location = new System.Drawing.Point(3, 10);
             this.fifty_joker.Name = "fifty_joker";
             this.fifty_joker.Size = new System.Drawing.Size(55, 35);
             this.fifty_joker.TabIndex = 53;
@@ -369,7 +395,7 @@
             // 
             // moneyLabel10
             // 
-            this.moneyLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel10.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel10.Name = "moneyLabel10";
@@ -380,7 +406,7 @@
             // 
             // moneyLevelLabel10
             // 
-            this.moneyLevelLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel10.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel10.Name = "moneyLevelLabel10";
@@ -417,7 +443,7 @@
             // 
             // moneyLabel11
             // 
-            this.moneyLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel11.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel11.Name = "moneyLabel11";
@@ -428,7 +454,7 @@
             // 
             // moneyLevelLabel11
             // 
-            this.moneyLevelLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel11.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel11.Name = "moneyLevelLabel11";
@@ -465,7 +491,7 @@
             // 
             // moneyLabel12
             // 
-            this.moneyLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel12.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel12.Name = "moneyLabel12";
@@ -476,7 +502,7 @@
             // 
             // moneyLevelLabel12
             // 
-            this.moneyLevelLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel12.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel12.Name = "moneyLevelLabel12";
@@ -514,7 +540,7 @@
             // 
             // moneyLabel14
             // 
-            this.moneyLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel14.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel14.Name = "moneyLabel14";
             this.moneyLabel14.Size = new System.Drawing.Size(95, 18);
@@ -524,7 +550,7 @@
             // 
             // moneyLevelLabel14
             // 
-            this.moneyLevelLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel14.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel14.Name = "moneyLevelLabel14";
             this.moneyLevelLabel14.Size = new System.Drawing.Size(23, 18);
@@ -558,7 +584,7 @@
             // 
             // moneyLabel13
             // 
-            this.moneyLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel13.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel13.Name = "moneyLabel13";
@@ -569,7 +595,7 @@
             // 
             // moneyLevelLabel13
             // 
-            this.moneyLevelLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel13.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel13.Name = "moneyLevelLabel13";
@@ -592,7 +618,7 @@
             // 
             // moneyLabel5
             // 
-            this.moneyLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel5.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel5.Name = "moneyLabel5";
@@ -603,7 +629,7 @@
             // 
             // moneyLevelLabel5
             // 
-            this.moneyLevelLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel5.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel5.Name = "moneyLevelLabel5";
@@ -628,7 +654,7 @@
             // 
             // moneyPanel0
             // 
-            this.moneyPanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
+            this.moneyPanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyPanel0.Controls.Add(this.moneyLabel0);
             this.moneyPanel0.Controls.Add(this.moneyLevelLabel0);
             this.moneyPanel0.Controls.Add(this.doubleBufferedPanel13);
@@ -641,7 +667,8 @@
             // 
             // moneyLabel0
             // 
-            this.moneyLabel0.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.moneyLabel0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel0.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel0.Name = "moneyLabel0";
             this.moneyLabel0.Size = new System.Drawing.Size(80, 18);
@@ -651,7 +678,8 @@
             // 
             // moneyLevelLabel0
             // 
-            this.moneyLevelLabel0.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.moneyLevelLabel0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel0.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel0.Name = "moneyLevelLabel0";
             this.moneyLevelLabel0.Size = new System.Drawing.Size(20, 18);
@@ -687,7 +715,7 @@
             // 
             // moneyLabel6
             // 
-            this.moneyLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel6.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel6.Name = "moneyLabel6";
@@ -698,7 +726,7 @@
             // 
             // moneyLevelLabel6
             // 
-            this.moneyLevelLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel6.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel6.Name = "moneyLevelLabel6";
@@ -723,7 +751,7 @@
             // 
             // moneyPanel1
             // 
-            this.moneyPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.moneyPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyPanel1.Controls.Add(this.moneyLabel1);
             this.moneyPanel1.Controls.Add(this.moneyLevelLabel1);
             this.moneyPanel1.Controls.Add(this.doubleBufferedPanel10);
@@ -737,7 +765,7 @@
             // 
             // moneyLabel1
             // 
-            this.moneyLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel1.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel1.Name = "moneyLabel1";
@@ -748,7 +776,7 @@
             // 
             // moneyLevelLabel1
             // 
-            this.moneyLevelLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel1.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel1.Name = "moneyLevelLabel1";
@@ -785,7 +813,7 @@
             // 
             // moneyLabel7
             // 
-            this.moneyLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel7.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel7.Name = "moneyLabel7";
@@ -796,7 +824,7 @@
             // 
             // moneyLevelLabel7
             // 
-            this.moneyLevelLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel7.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel7.Name = "moneyLevelLabel7";
@@ -833,7 +861,7 @@
             // 
             // moneyLabel2
             // 
-            this.moneyLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel2.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel2.Name = "moneyLabel2";
@@ -844,7 +872,7 @@
             // 
             // moneyLevelLabel2
             // 
-            this.moneyLevelLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel2.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel2.Name = "moneyLevelLabel2";
@@ -882,7 +910,7 @@
             // 
             // moneyLabel9
             // 
-            this.moneyLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel9.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel9.Name = "moneyLabel9";
             this.moneyLabel9.Size = new System.Drawing.Size(80, 18);
@@ -892,7 +920,7 @@
             // 
             // moneyLevelLabel9
             // 
-            this.moneyLevelLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel9.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel9.Name = "moneyLevelLabel9";
             this.moneyLevelLabel9.Size = new System.Drawing.Size(23, 18);
@@ -926,7 +954,7 @@
             // 
             // moneyLabel8
             // 
-            this.moneyLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel8.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel8.Name = "moneyLabel8";
@@ -937,7 +965,7 @@
             // 
             // moneyLevelLabel8
             // 
-            this.moneyLevelLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel8.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel8.Name = "moneyLevelLabel8";
@@ -961,7 +989,7 @@
             // 
             // moneyLabel4
             // 
-            this.moneyLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel4.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel4.Name = "moneyLabel4";
             this.moneyLabel4.Size = new System.Drawing.Size(80, 18);
@@ -971,7 +999,7 @@
             // 
             // moneyLevelLabel4
             // 
-            this.moneyLevelLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel4.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel4.Name = "moneyLevelLabel4";
             this.moneyLevelLabel4.Size = new System.Drawing.Size(20, 18);
@@ -1005,7 +1033,7 @@
             // 
             // moneyLabel3
             // 
-            this.moneyLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLabel3.Location = new System.Drawing.Point(90, 0);
             this.moneyLabel3.Name = "moneyLabel3";
@@ -1016,7 +1044,7 @@
             // 
             // moneyLevelLabel3
             // 
-            this.moneyLevelLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.moneyLevelLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.moneyLevelLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
             this.moneyLevelLabel3.Location = new System.Drawing.Point(57, 0);
             this.moneyLevelLabel3.Name = "moneyLevelLabel3";
@@ -1028,11 +1056,13 @@
             // levelLabel
             // 
             this.levelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.levelLabel.Location = new System.Drawing.Point(378, 491);
+            this.levelLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.levelLabel.ForeColor = System.Drawing.Color.White;
+            this.levelLabel.Location = new System.Drawing.Point(377, 491);
             this.levelLabel.Name = "levelLabel";
             this.levelLabel.Size = new System.Drawing.Size(32, 25);
             this.levelLabel.TabIndex = 39;
-            this.levelLabel.Text = "level";
+            this.levelLabel.Text = "1";
             this.levelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelV
@@ -1040,30 +1070,22 @@
             this.panelV.BackColor = System.Drawing.Color.Transparent;
             this.panelV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelV.BackgroundImage")));
             this.panelV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelV.Controls.Add(this.answer2);
+            this.panelV.Controls.Add(this.answerTextV);
+            this.panelV.Controls.Add(this.labelV);
             this.panelV.Location = new System.Drawing.Point(0, 508);
             this.panelV.Name = "panelV";
             this.panelV.Size = new System.Drawing.Size(395, 44);
             this.panelV.TabIndex = 44;
-            // 
-            // answer2
-            // 
-            this.answer2.BackColor = System.Drawing.Color.Transparent;
-            this.answer2.Controls.Add(this.answerTextV);
-            this.answer2.Controls.Add(this.labelV);
-            this.answer2.Location = new System.Drawing.Point(54, 0);
-            this.answer2.Name = "answer2";
-            this.answer2.Size = new System.Drawing.Size(327, 44);
-            this.answer2.TabIndex = 0;
-            this.answer2.Click += new System.EventHandler(this.answer2_Click);
+            this.panelV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelV_MouseClick);
             // 
             // answerTextV
             // 
+            this.answerTextV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextV.ForeColor = System.Drawing.Color.White;
-            this.answerTextV.Location = new System.Drawing.Point(57, 0);
+            this.answerTextV.Location = new System.Drawing.Point(111, 10);
             this.answerTextV.Name = "answerTextV";
-            this.answerTextV.Size = new System.Drawing.Size(237, 42);
+            this.answerTextV.Size = new System.Drawing.Size(248, 22);
             this.answerTextV.TabIndex = 2;
             this.answerTextV.Text = "odgovor 2";
             this.answerTextV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1071,11 +1093,12 @@
             // 
             // labelV
             // 
+            this.labelV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.labelV.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.labelV.Location = new System.Drawing.Point(32, 0);
+            this.labelV.Location = new System.Drawing.Point(86, 10);
             this.labelV.Name = "labelV";
-            this.labelV.Size = new System.Drawing.Size(30, 44);
+            this.labelV.Size = new System.Drawing.Size(30, 24);
             this.labelV.TabIndex = 1;
             this.labelV.Text = "В:";
             this.labelV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1086,30 +1109,22 @@
             this.panelB.BackColor = System.Drawing.Color.Transparent;
             this.panelB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelB.BackgroundImage")));
             this.panelB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelB.Controls.Add(this.answer1);
+            this.panelB.Controls.Add(this.answerTextB);
+            this.panelB.Controls.Add(this.labelB);
             this.panelB.Location = new System.Drawing.Point(390, 455);
             this.panelB.Name = "panelB";
             this.panelB.Size = new System.Drawing.Size(394, 44);
             this.panelB.TabIndex = 43;
-            // 
-            // answer1
-            // 
-            this.answer1.BackColor = System.Drawing.Color.Transparent;
-            this.answer1.Controls.Add(this.answerTextB);
-            this.answer1.Controls.Add(this.labelB);
-            this.answer1.Location = new System.Drawing.Point(12, 0);
-            this.answer1.Name = "answer1";
-            this.answer1.Size = new System.Drawing.Size(327, 44);
-            this.answer1.TabIndex = 2;
-            this.answer1.Click += new System.EventHandler(this.answer1_Click);
+            this.panelB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelB_MouseClick);
             // 
             // answerTextB
             // 
+            this.answerTextB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextB.ForeColor = System.Drawing.Color.White;
-            this.answerTextB.Location = new System.Drawing.Point(54, 0);
+            this.answerTextB.Location = new System.Drawing.Point(66, 10);
             this.answerTextB.Name = "answerTextB";
-            this.answerTextB.Size = new System.Drawing.Size(237, 42);
+            this.answerTextB.Size = new System.Drawing.Size(248, 22);
             this.answerTextB.TabIndex = 1;
             this.answerTextB.Text = "odgovor 1";
             this.answerTextB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1117,11 +1132,12 @@
             // 
             // labelB
             // 
+            this.labelB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.labelB.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.labelB.Location = new System.Drawing.Point(30, 0);
+            this.labelB.Location = new System.Drawing.Point(42, 10);
             this.labelB.Name = "labelB";
-            this.labelB.Size = new System.Drawing.Size(30, 44);
+            this.labelB.Size = new System.Drawing.Size(30, 24);
             this.labelB.TabIndex = 0;
             this.labelB.Text = "Б:";
             this.labelB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1132,30 +1148,22 @@
             this.panelG.BackColor = System.Drawing.Color.Transparent;
             this.panelG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelG.BackgroundImage")));
             this.panelG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelG.Controls.Add(this.answer3);
+            this.panelG.Controls.Add(this.answerTextG);
+            this.panelG.Controls.Add(this.labelG);
             this.panelG.Location = new System.Drawing.Point(390, 508);
             this.panelG.Name = "panelG";
             this.panelG.Size = new System.Drawing.Size(394, 44);
             this.panelG.TabIndex = 45;
-            // 
-            // answer3
-            // 
-            this.answer3.BackColor = System.Drawing.Color.Transparent;
-            this.answer3.Controls.Add(this.answerTextG);
-            this.answer3.Controls.Add(this.labelG);
-            this.answer3.Location = new System.Drawing.Point(12, 0);
-            this.answer3.Name = "answer3";
-            this.answer3.Size = new System.Drawing.Size(327, 44);
-            this.answer3.TabIndex = 3;
-            this.answer3.Click += new System.EventHandler(this.answer3_Click);
+            this.panelG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelG_MouseClick);
             // 
             // answerTextG
             // 
+            this.answerTextG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextG.ForeColor = System.Drawing.Color.White;
-            this.answerTextG.Location = new System.Drawing.Point(54, 0);
+            this.answerTextG.Location = new System.Drawing.Point(66, 10);
             this.answerTextG.Name = "answerTextG";
-            this.answerTextG.Size = new System.Drawing.Size(237, 42);
+            this.answerTextG.Size = new System.Drawing.Size(248, 22);
             this.answerTextG.TabIndex = 1;
             this.answerTextG.Text = "odgovor 3";
             this.answerTextG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1163,11 +1171,12 @@
             // 
             // labelG
             // 
+            this.labelG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.labelG.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.labelG.Location = new System.Drawing.Point(30, 0);
+            this.labelG.Location = new System.Drawing.Point(42, 10);
             this.labelG.Name = "labelG";
-            this.labelG.Size = new System.Drawing.Size(30, 44);
+            this.labelG.Size = new System.Drawing.Size(30, 24);
             this.labelG.TabIndex = 0;
             this.labelG.Text = "Г:";
             this.labelG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1178,30 +1187,22 @@
             this.panelA.BackColor = System.Drawing.Color.Transparent;
             this.panelA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelA.BackgroundImage")));
             this.panelA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelA.Controls.Add(this.answer0);
+            this.panelA.Controls.Add(this.answerTextA);
+            this.panelA.Controls.Add(this.labelA);
             this.panelA.Location = new System.Drawing.Point(0, 455);
             this.panelA.Name = "panelA";
             this.panelA.Size = new System.Drawing.Size(395, 44);
             this.panelA.TabIndex = 42;
-            // 
-            // answer0
-            // 
-            this.answer0.BackColor = System.Drawing.Color.Transparent;
-            this.answer0.Controls.Add(this.answerTextA);
-            this.answer0.Controls.Add(this.labelA);
-            this.answer0.Location = new System.Drawing.Point(54, 0);
-            this.answer0.Name = "answer0";
-            this.answer0.Size = new System.Drawing.Size(327, 44);
-            this.answer0.TabIndex = 0;
-            this.answer0.Click += new System.EventHandler(this.answer0_Click);
+            this.panelA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelA_MouseClick);
             // 
             // answerTextA
             // 
+            this.answerTextA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextA.ForeColor = System.Drawing.Color.White;
-            this.answerTextA.Location = new System.Drawing.Point(57, 0);
+            this.answerTextA.Location = new System.Drawing.Point(111, 10);
             this.answerTextA.Name = "answerTextA";
-            this.answerTextA.Size = new System.Drawing.Size(237, 42);
+            this.answerTextA.Size = new System.Drawing.Size(248, 22);
             this.answerTextA.TabIndex = 1;
             this.answerTextA.Text = "odgovor 0";
             this.answerTextA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1209,11 +1210,12 @@
             // 
             // labelA
             // 
+            this.labelA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.labelA.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(155)))), ((int)(((byte)(28)))));
-            this.labelA.Location = new System.Drawing.Point(32, 0);
+            this.labelA.Location = new System.Drawing.Point(86, 10);
             this.labelA.Name = "labelA";
-            this.labelA.Size = new System.Drawing.Size(30, 44);
+            this.labelA.Size = new System.Drawing.Size(30, 24);
             this.labelA.TabIndex = 0;
             this.labelA.Text = "А:";
             this.labelA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1224,7 +1226,7 @@
             this.questionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.White;
-            this.questionLabel.Location = new System.Drawing.Point(75, 374);
+            this.questionLabel.Location = new System.Drawing.Point(75, 372);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.Size = new System.Drawing.Size(634, 66);
             this.questionLabel.TabIndex = 33;
@@ -1236,7 +1238,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 365);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 363);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(785, 83);
             this.pictureBox1.TabIndex = 41;
@@ -1250,21 +1252,12 @@
             this.focusLabel.Size = new System.Drawing.Size(0, 13);
             this.focusLabel.TabIndex = 40;
             // 
-            // surrender_btn
-            // 
-            this.surrender_btn.Location = new System.Drawing.Point(558, 332);
-            this.surrender_btn.Name = "surrender_btn";
-            this.surrender_btn.Size = new System.Drawing.Size(215, 23);
-            this.surrender_btn.TabIndex = 38;
-            this.surrender_btn.Text = "Се откажувам";
-            this.surrender_btn.UseVisualStyleBackColor = true;
-            this.surrender_btn.Click += new System.EventHandler(this.surrender_btn_Click);
-            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Millionaire.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.playPanel);
             this.Controls.Add(this.exit_btn);
@@ -1273,11 +1266,14 @@
             this.Controls.Add(this.logo_img);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "View";
             this.Text = "Кој сака да биде милионер";
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).EndInit();
             this.playPanel.ResumeLayout(false);
             this.playPanel.PerformLayout();
+            this.doubleBufferedPanel1.ResumeLayout(false);
+            this.doubleBufferedPanel6.ResumeLayout(false);
             this.doubleBufferedPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.moneyPanelBorder.ResumeLayout(false);
@@ -1298,13 +1294,9 @@
             this.moneyPanel4.ResumeLayout(false);
             this.moneyPanel3.ResumeLayout(false);
             this.panelV.ResumeLayout(false);
-            this.answer2.ResumeLayout(false);
             this.panelB.ResumeLayout(false);
-            this.answer1.ResumeLayout(false);
             this.panelG.ResumeLayout(false);
-            this.answer3.ResumeLayout(false);
             this.panelA.ResumeLayout(false);
-            this.answer0.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1318,22 +1310,15 @@
         private System.Windows.Forms.Button exit_btn;
         private DoubleBufferedPanel playPanel;
         private System.Windows.Forms.Label levelLabel;
-        private DoubleBufferedPanel answer1;
         private System.Windows.Forms.Label answerTextB;
         private System.Windows.Forms.Label labelB;
-        private DoubleBufferedPanel answer2;
         private System.Windows.Forms.Label answerTextV;
         private System.Windows.Forms.Label labelV;
-        private DoubleBufferedPanel answer3;
         private System.Windows.Forms.Label answerTextG;
         private System.Windows.Forms.Label labelG;
-        private DoubleBufferedPanel answer0;
-        private System.Windows.Forms.Label answerTextA;
-        private System.Windows.Forms.Label labelA;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label focusLabel;
-        private System.Windows.Forms.Button surrender_btn;
         private System.Windows.Forms.PictureBox pictureBox;
         private DoubleBufferedPanel panelB;
         private DoubleBufferedPanel panelV;
@@ -1421,5 +1406,10 @@
         private System.Windows.Forms.Timer imageTimer;
         private DoubleBufferedPanel moneyPanelBorder;
         private DoubleBufferedPanel doubleBufferedPanel3;
+        private DoubleBufferedPanel doubleBufferedPanel1;
+        private DoubleBufferedPanel doubleBufferedPanel6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label answerTextA;
+        private System.Windows.Forms.Label labelA;
     }
 }

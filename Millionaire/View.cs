@@ -135,25 +135,7 @@ namespace Millionaire
             if (model.switch_spent) switch_joker.Enabled = false;
 
             //update money panel
-            for(int i = 0; i<15; i++)
-            {
-                moneyPanels[i].BackColor = Color.Transparent;
-                moneyLevelLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
-                moneyLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
-            }
-            moneyLevelLabels[4].ForeColor = Color.White;
-            moneyLabels[4].ForeColor = Color.White;
-            moneyLevelLabels[9].ForeColor = Color.White;
-            moneyLabels[9].ForeColor = Color.White;
-            moneyLevelLabels[14].ForeColor = Color.White;
-            moneyLabels[14].ForeColor = Color.White;
-
-            moneyPanels[model.level].BackColor = Color.FromArgb(248, 155, 28);
-            if ((model.level + 1) % 5 != 0) // checks if the current level is 5, 10 or 15
-            {
-                moneyLevelLabels[model.level].ForeColor = Color.Black;
-                moneyLabels[model.level].ForeColor = Color.Black;
-            }
+            updateMoneyPanel();
 
             //check for joker 50-50
             if (model.fifty_active)
@@ -168,6 +150,34 @@ namespace Millionaire
 
             //update level
             levelLabel.Text = "" + (model.level + 1);
+        }
+
+        private void updateMoneyPanel()
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                //reset all fields to default
+                moneyPanels[i].BackColor = Color.FromArgb(35, 31, 32);
+                moneyLabels[i].BackColor = Color.FromArgb(35, 31, 32);
+                moneyLevelLabels[i].BackColor = Color.FromArgb(35, 31, 32);
+                moneyLevelLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
+                moneyLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
+            }
+            moneyLevelLabels[4].ForeColor = Color.White;
+            moneyLabels[4].ForeColor = Color.White;
+            moneyLevelLabels[9].ForeColor = Color.White;
+            moneyLabels[9].ForeColor = Color.White;
+            moneyLevelLabels[14].ForeColor = Color.White;
+            moneyLabels[14].ForeColor = Color.White;
+
+            moneyPanels[model.level].BackColor = Color.FromArgb(248, 155, 28);
+            moneyLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
+            moneyLevelLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
+            if ((model.level + 1) % 5 != 0) // checks if the current level is 5, 10 or 15
+            {
+                moneyLevelLabels[model.level].ForeColor = Color.Black;
+                moneyLabels[model.level].ForeColor = Color.Black;
+            }
         }
 
         private Label getLetterLabel(int index)
@@ -224,7 +234,9 @@ namespace Millionaire
             //change backround of answer to normal (unselected)
             if (index == 0 || index == 2) getPanel(index).BackgroundImage = Properties.Resources.leftAnswer;
             else getPanel(index).BackgroundImage = Properties.Resources.rightAnswer;
+            getLetterLabel(index).BackColor = Color.FromArgb(35, 31, 32);
             getLetterLabel(index).ForeColor = Color.FromArgb(248, 155, 28); //orange;
+            getAnswerTextLabel(index).BackColor = Color.FromArgb(35, 31, 32);
             getAnswerTextLabel(index).ForeColor = Color.White;
         }
 
@@ -233,7 +245,9 @@ namespace Millionaire
             //change backround of answer to selected
             if (index == 0 || index == 2) getPanel(index).BackgroundImage = Properties.Resources.leftAnswerSelect;
             else getPanel(index).BackgroundImage = Properties.Resources.rightAnswerSelect;
+            getLetterLabel(index).BackColor = Color.FromArgb(248, 155, 28);
             getLetterLabel(index).ForeColor = Color.White;
+            getAnswerTextLabel(index).BackColor = Color.FromArgb(248, 155, 28);
             getAnswerTextLabel(index).ForeColor = Color.Black;
         }
 
@@ -242,7 +256,9 @@ namespace Millionaire
             //change backround of answer to correct
             if (index == 0 || index == 2) getPanel(index).BackgroundImage = Properties.Resources.leftAnswerCorrect;
             else getPanel(index).BackgroundImage = Properties.Resources.rightAnswerCorrect;
+            getLetterLabel(index).BackColor = Color.FromArgb(83, 187, 97);
             getLetterLabel(index).ForeColor = Color.White;
+            getAnswerTextLabel(index).BackColor = Color.FromArgb(83, 187, 97);
             getAnswerTextLabel(index).ForeColor = Color.Black;
         }
 
@@ -457,6 +473,26 @@ namespace Millionaire
             if (rand >= currentImage) rand++;
             currentImage = rand;
             pictureBox.BackgroundImage = images[rand];
-        }      
+        }
+
+        private void panelA_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 55 && e.X <= 379) tryAnswer(0);
+        }
+
+        private void panelB_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 14 && e.X <= 337) tryAnswer(1);
+        }
+
+        private void panelV_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 55 && e.X <= 379) tryAnswer(2);
+        }
+
+        private void panelG_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 14 && e.X <= 337) tryAnswer(3);
+        }
     }
 }
