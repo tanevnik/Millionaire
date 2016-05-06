@@ -99,7 +99,7 @@ namespace Millionaire
             {
                 Console.Write("CORRECT!");
                 level++;
-                generateNewQuestion();
+                if(level < 15) generateNewQuestion();
             }
             else
             {

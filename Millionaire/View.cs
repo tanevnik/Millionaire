@@ -346,10 +346,30 @@ namespace Millionaire
             {
                 if (model.tryAnswer(index))
                 {
-                    //correct answer
                     animateCorrect(index);
-                    showCorrectAnswereMessage(model.getMoney(false), model.level);
-                    updateView();
+                    //correct answer
+                    if (model.level < 15)
+                    {
+                        showCorrectAnswereMessage(model.getMoney(false), model.level);
+                        updateView();
+                    }
+                    else
+                    {
+                        //win the game
+                        bool newGameBool = false;
+                        if (winGameMessage())
+                        {
+                            //player wants new game
+                            newGameBool = true;
+
+                        }
+
+                        //reset the correct button first
+                        changeBackgroundNormal(model.correct);
+
+                        if (newGameBool) newGame();
+                        else playPanel.Hide();
+                    }
                 }
                 else
                 {
@@ -377,6 +397,11 @@ namespace Millionaire
         private bool wrongAnswerMessage(string answer, string correct)
         {
             return MessageBox.Show(string.Format("Одговорот „{0}“ е грешен! Точниот одговор е „{1}“.\n\nВие освоивте {2} денари.\n\nНова игра?", answer, correct, model.getMoney(true)), "Грешен одговор", MessageBoxButtons.YesNo) == DialogResult.Yes;
+        }
+
+        private bool winGameMessage()
+        {
+            return MessageBox.Show("Вие одговоривте точно 15 прашања, и освовте 4 милиони денари!\n\nНова игра?", "ЧЕСТИТКИ!", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private bool serrenderAnswerMessage(string correct)
