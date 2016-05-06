@@ -133,11 +133,11 @@
             this.questionLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.focusLabel = new System.Windows.Forms.Label();
-            this.doubleBufferedPanel12 = new Millionaire.DoubleBufferedPanel();
+            this.exitButtonBackg = new Millionaire.DoubleBufferedPanel();
             this.exitLabel = new System.Windows.Forms.Label();
-            this.doubleBufferedPanel9 = new Millionaire.DoubleBufferedPanel();
+            this.infoButtonBackg = new Millionaire.DoubleBufferedPanel();
             this.infoLabel = new System.Windows.Forms.Label();
-            this.doubleBufferedPanel6 = new Millionaire.DoubleBufferedPanel();
+            this.newGameButtonBackg = new Millionaire.DoubleBufferedPanel();
             this.newGameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
@@ -166,9 +166,9 @@
             this.panelG.SuspendLayout();
             this.panelA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.doubleBufferedPanel12.SuspendLayout();
-            this.doubleBufferedPanel9.SuspendLayout();
-            this.doubleBufferedPanel6.SuspendLayout();
+            this.exitButtonBackg.SuspendLayout();
+            this.infoButtonBackg.SuspendLayout();
+            this.newGameButtonBackg.SuspendLayout();
             this.SuspendLayout();
             // 
             // animationTimer
@@ -199,9 +199,9 @@
             // logo_img
             // 
             this.logo_img.BackColor = System.Drawing.Color.Transparent;
-            this.logo_img.BackgroundImage = global::Millionaire.Properties.Resources.logo;
+            this.logo_img.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo_img.BackgroundImage")));
             this.logo_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo_img.Location = new System.Drawing.Point(229, 27);
+            this.logo_img.Location = new System.Drawing.Point(242, 27);
             this.logo_img.Name = "logo_img";
             this.logo_img.Size = new System.Drawing.Size(300, 300);
             this.logo_img.TabIndex = 0;
@@ -210,7 +210,7 @@
             // playPanel
             // 
             this.playPanel.BackColor = System.Drawing.Color.White;
-            this.playPanel.BackgroundImage = global::Millionaire.Properties.Resources.background;
+            this.playPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playPanel.BackgroundImage")));
             this.playPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.playPanel.Controls.Add(this.doubleBufferedPanel1);
             this.playPanel.Controls.Add(this.doubleBufferedPanel3);
@@ -263,7 +263,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.BackgroundImage = global::Millionaire.Properties.Resources.studio1;
+            this.pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.BackgroundImage")));
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox.Location = new System.Drawing.Point(4, 4);
             this.pictureBox.Name = "pictureBox";
@@ -309,7 +309,7 @@
             // 
             // switch_joker
             // 
-            this.switch_joker.BackgroundImage = global::Millionaire.Properties.Resources._switch;
+            this.switch_joker.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("switch_joker.BackgroundImage")));
             this.switch_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.switch_joker.Location = new System.Drawing.Point(177, 10);
             this.switch_joker.Name = "switch_joker";
@@ -319,7 +319,7 @@
             // 
             // audience_joker
             // 
-            this.audience_joker.BackgroundImage = global::Millionaire.Properties.Resources.audience;
+            this.audience_joker.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("audience_joker.BackgroundImage")));
             this.audience_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.audience_joker.Location = new System.Drawing.Point(61, 10);
             this.audience_joker.Name = "audience_joker";
@@ -329,7 +329,7 @@
             // 
             // phone_joker
             // 
-            this.phone_joker.BackgroundImage = global::Millionaire.Properties.Resources.phone;
+            this.phone_joker.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("phone_joker.BackgroundImage")));
             this.phone_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.phone_joker.Location = new System.Drawing.Point(119, 10);
             this.phone_joker.Name = "phone_joker";
@@ -339,7 +339,7 @@
             // 
             // fifty_joker
             // 
-            this.fifty_joker.BackgroundImage = global::Millionaire.Properties.Resources._5050;
+            this.fifty_joker.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fifty_joker.BackgroundImage")));
             this.fifty_joker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.fifty_joker.Location = new System.Drawing.Point(3, 10);
             this.fifty_joker.Name = "fifty_joker";
@@ -1218,21 +1218,22 @@
             this.focusLabel.Size = new System.Drawing.Size(0, 13);
             this.focusLabel.TabIndex = 40;
             // 
-            // doubleBufferedPanel12
+            // exitButtonBackg
             // 
-            this.doubleBufferedPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
-            this.doubleBufferedPanel12.Controls.Add(this.exitLabel);
-            this.doubleBufferedPanel12.Location = new System.Drawing.Point(229, 486);
-            this.doubleBufferedPanel12.Name = "doubleBufferedPanel12";
-            this.doubleBufferedPanel12.Size = new System.Drawing.Size(300, 44);
-            this.doubleBufferedPanel12.TabIndex = 15;
-            this.doubleBufferedPanel12.Click += new System.EventHandler(this.exit_btn_Click);
-            this.doubleBufferedPanel12.MouseEnter += new System.EventHandler(this.doubleBufferedPanel12_MouseEnter);
-            this.doubleBufferedPanel12.MouseLeave += new System.EventHandler(this.doubleBufferedPanel12_MouseLeave);
+            this.exitButtonBackg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.exitButtonBackg.Controls.Add(this.exitLabel);
+            this.exitButtonBackg.Location = new System.Drawing.Point(242, 486);
+            this.exitButtonBackg.Name = "exitButtonBackg";
+            this.exitButtonBackg.Size = new System.Drawing.Size(300, 44);
+            this.exitButtonBackg.TabIndex = 15;
+            this.exitButtonBackg.Click += new System.EventHandler(this.exit_btn_Click);
+            this.exitButtonBackg.MouseEnter += new System.EventHandler(this.exitButtonBackg_MouseEnter);
+            this.exitButtonBackg.MouseLeave += new System.EventHandler(this.exitButtonBackg_MouseLeave);
             // 
             // exitLabel
             // 
             this.exitLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.exitLabel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.exitLabel.ForeColor = System.Drawing.Color.White;
             this.exitLabel.Location = new System.Drawing.Point(3, 3);
             this.exitLabel.Name = "exitLabel";
@@ -1244,21 +1245,22 @@
             this.exitLabel.MouseEnter += new System.EventHandler(this.exitLabel_MouseEnter);
             this.exitLabel.MouseLeave += new System.EventHandler(this.exitLabel_MouseLeave);
             // 
-            // doubleBufferedPanel9
+            // infoButtonBackg
             // 
-            this.doubleBufferedPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
-            this.doubleBufferedPanel9.Controls.Add(this.infoLabel);
-            this.doubleBufferedPanel9.Location = new System.Drawing.Point(229, 413);
-            this.doubleBufferedPanel9.Name = "doubleBufferedPanel9";
-            this.doubleBufferedPanel9.Size = new System.Drawing.Size(300, 44);
-            this.doubleBufferedPanel9.TabIndex = 14;
-            this.doubleBufferedPanel9.Click += new System.EventHandler(this.info_btn_Click);
-            this.doubleBufferedPanel9.MouseEnter += new System.EventHandler(this.doubleBufferedPanel9_MouseEnter);
-            this.doubleBufferedPanel9.MouseLeave += new System.EventHandler(this.doubleBufferedPanel9_MouseLeave);
+            this.infoButtonBackg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.infoButtonBackg.Controls.Add(this.infoLabel);
+            this.infoButtonBackg.Location = new System.Drawing.Point(242, 413);
+            this.infoButtonBackg.Name = "infoButtonBackg";
+            this.infoButtonBackg.Size = new System.Drawing.Size(300, 44);
+            this.infoButtonBackg.TabIndex = 14;
+            this.infoButtonBackg.Click += new System.EventHandler(this.info_btn_Click);
+            this.infoButtonBackg.MouseEnter += new System.EventHandler(this.infoButtonBackg_MouseEnter);
+            this.infoButtonBackg.MouseLeave += new System.EventHandler(this.infoButtonBackg_MouseLeave);
             // 
             // infoLabel
             // 
             this.infoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.infoLabel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.infoLabel.ForeColor = System.Drawing.Color.White;
             this.infoLabel.Location = new System.Drawing.Point(3, 3);
             this.infoLabel.Name = "infoLabel";
@@ -1270,21 +1272,22 @@
             this.infoLabel.MouseEnter += new System.EventHandler(this.infoLabel_MouseEnter);
             this.infoLabel.MouseLeave += new System.EventHandler(this.infoLabel_MouseLeave);
             // 
-            // doubleBufferedPanel6
+            // newGameButtonBackg
             // 
-            this.doubleBufferedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
-            this.doubleBufferedPanel6.Controls.Add(this.newGameLabel);
-            this.doubleBufferedPanel6.Location = new System.Drawing.Point(229, 346);
-            this.doubleBufferedPanel6.Name = "doubleBufferedPanel6";
-            this.doubleBufferedPanel6.Size = new System.Drawing.Size(300, 44);
-            this.doubleBufferedPanel6.TabIndex = 12;
-            this.doubleBufferedPanel6.Click += new System.EventHandler(this.newGame_btn_Click);
-            this.doubleBufferedPanel6.MouseEnter += new System.EventHandler(this.doubleBufferedPanel6_MouseEnter);
-            this.doubleBufferedPanel6.MouseLeave += new System.EventHandler(this.doubleBufferedPanel6_MouseLeave);
+            this.newGameButtonBackg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.newGameButtonBackg.Controls.Add(this.newGameLabel);
+            this.newGameButtonBackg.Location = new System.Drawing.Point(242, 346);
+            this.newGameButtonBackg.Name = "newGameButtonBackg";
+            this.newGameButtonBackg.Size = new System.Drawing.Size(300, 44);
+            this.newGameButtonBackg.TabIndex = 12;
+            this.newGameButtonBackg.Click += new System.EventHandler(this.newGame_btn_Click);
+            this.newGameButtonBackg.MouseEnter += new System.EventHandler(this.newGameButtonBackg_MouseEnter);
+            this.newGameButtonBackg.MouseLeave += new System.EventHandler(this.newGameButtonBackg_MouseLeave);
             // 
             // newGameLabel
             // 
             this.newGameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.newGameLabel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.newGameLabel.ForeColor = System.Drawing.Color.White;
             this.newGameLabel.Location = new System.Drawing.Point(3, 3);
             this.newGameLabel.Name = "newGameLabel";
@@ -1300,13 +1303,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Millionaire.Properties.Resources.background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.playPanel);
-            this.Controls.Add(this.doubleBufferedPanel12);
-            this.Controls.Add(this.doubleBufferedPanel9);
-            this.Controls.Add(this.doubleBufferedPanel6);
+            this.Controls.Add(this.exitButtonBackg);
+            this.Controls.Add(this.infoButtonBackg);
+            this.Controls.Add(this.newGameButtonBackg);
             this.Controls.Add(this.logo_img);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1341,9 +1344,9 @@
             this.panelG.ResumeLayout(false);
             this.panelA.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.doubleBufferedPanel12.ResumeLayout(false);
-            this.doubleBufferedPanel9.ResumeLayout(false);
-            this.doubleBufferedPanel6.ResumeLayout(false);
+            this.exitButtonBackg.ResumeLayout(false);
+            this.infoButtonBackg.ResumeLayout(false);
+            this.newGameButtonBackg.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1453,11 +1456,11 @@
         private System.Windows.Forms.Label surrender_label;
         private System.Windows.Forms.Label answerTextA;
         private System.Windows.Forms.Label labelA;
-        private DoubleBufferedPanel doubleBufferedPanel6;
+        private DoubleBufferedPanel newGameButtonBackg;
         private System.Windows.Forms.Label newGameLabel;
-        private DoubleBufferedPanel doubleBufferedPanel9;
+        private DoubleBufferedPanel infoButtonBackg;
         private System.Windows.Forms.Label infoLabel;
-        private DoubleBufferedPanel doubleBufferedPanel12;
+        private DoubleBufferedPanel exitButtonBackg;
         private System.Windows.Forms.Label exitLabel;
     }
 }

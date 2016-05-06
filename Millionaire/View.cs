@@ -522,76 +522,78 @@ namespace Millionaire
         }
 
         //HOVER ANIMATIONS ON MAIN MENU
-        private void hover_animation_on(Label l)
+        private void hover_animation_on(Label l, Panel p)
         {
             l.BackColor = Color.FromArgb(248, 155, 28);
+            p.BackColor = Color.FromArgb(169, 100, 5);
             l.ForeColor = Color.Black;
         }
 
-        private void hover_animation_off(Label l)
+        private void hover_animation_off(Label l, Panel p)
         {
             l.BackColor = Color.FromArgb(35, 31, 32);
+            p.BackColor = Color.FromArgb(100, 133, 195);
             l.ForeColor = Color.White;
         }
 
-        private void doubleBufferedPanel6_MouseEnter(object sender, EventArgs e)
+        private void newGameButtonBackg_MouseEnter(object sender, EventArgs e)
         {
-            hover_animation_on(newGameLabel);
+            hover_animation_on(newGameLabel, newGameButtonBackg);
         }
 
-        private void doubleBufferedPanel6_MouseLeave(object sender, EventArgs e)
+        private void newGameButtonBackg_MouseLeave(object sender, EventArgs e)
         {
-            hover_animation_off(newGameLabel);
+            hover_animation_off(newGameLabel, newGameButtonBackg);
         }
 
         private void newGameLabel_MouseEnter(object sender, EventArgs e)
         {
-            hover_animation_on(newGameLabel);
+            hover_animation_on(newGameLabel, newGameButtonBackg);
         }
 
         private void newGameLabel_MouseLeave(object sender, EventArgs e)
         {
-            hover_animation_off(newGameLabel);
+            hover_animation_off(newGameLabel, newGameButtonBackg);
         }
 
-        private void doubleBufferedPanel9_MouseEnter(object sender, EventArgs e)
+        private void infoButtonBackg_MouseEnter(object sender, EventArgs e)
         {
-            hover_animation_on(infoLabel);
+            hover_animation_on(infoLabel, infoButtonBackg);
         }
 
-        private void doubleBufferedPanel9_MouseLeave(object sender, EventArgs e)
+        private void infoButtonBackg_MouseLeave(object sender, EventArgs e)
         {
-            hover_animation_off(infoLabel);
+            hover_animation_off(infoLabel, infoButtonBackg);
         }
 
         private void infoLabel_MouseEnter(object sender, EventArgs e)
         {
-            hover_animation_on(infoLabel);
+            hover_animation_on(infoLabel, infoButtonBackg);
         }
 
         private void infoLabel_MouseLeave(object sender, EventArgs e)
         {
-            hover_animation_off(infoLabel);
+            hover_animation_off(infoLabel, infoButtonBackg);
         }
 
-        private void doubleBufferedPanel12_MouseEnter(object sender, EventArgs e)
+        private void exitButtonBackg_MouseEnter(object sender, EventArgs e)
         {
-            hover_animation_on(exitLabel);
+            hover_animation_on(exitLabel, exitButtonBackg);
         }
 
-        private void doubleBufferedPanel12_MouseLeave(object sender, EventArgs e)
+        private void exitButtonBackg_MouseLeave(object sender, EventArgs e)
         {
-            hover_animation_off(exitLabel);
+            hover_animation_off(exitLabel, exitButtonBackg);
         }
 
         private void exitLabel_MouseEnter(object sender, EventArgs e)
         {
-            hover_animation_on(exitLabel);
+            hover_animation_on(exitLabel, exitButtonBackg);
         }
 
         private void exitLabel_MouseLeave(object sender, EventArgs e)
         {
-            hover_animation_off(exitLabel);
+            hover_animation_off(exitLabel, exitButtonBackg);
         }
     }
 }
