@@ -17,15 +17,10 @@ namespace Millionaire
             InitializeComponent();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void closeTimer_Tick(object sender, EventArgs e)
         {
-            closeButton.PerformClick();
             closeTimer.Stop();
+            Close();
         }
 
         public void showMessage(int price, int level)

@@ -88,20 +88,7 @@ namespace Millionaire
 
         private void info_btn_Click(object sender, EventArgs e)
         {
-            //animate button
-            infoLabel.BackColor = Color.FromArgb(248, 155, 28);
-            Timer t = new Timer();
-            t.Interval = 200;
-            t.Tick += Info_Tick;
-            t.Enabled = true;
-
             MessageBox.Show(string.Format("Кој сака да биде милионер ?\nИзработија:\nДавид Симеоновски\nНикола Танев"), "Кој сака да биде милионер ?", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void Info_Tick(object sender, EventArgs e)
-        {
-            infoLabel.BackColor = Color.FromArgb(35, 31, 32);
-            ((Timer)sender).Dispose();
         }
 
         private void exit_btn_Click(object sender, EventArgs e)
@@ -419,14 +406,6 @@ namespace Millionaire
 
         private void surrender_btn_Click(object sender, EventArgs e)
         {
-            //animate button
-            surrender_label.BackColor = Color.FromArgb(248, 155, 28);
-            Timer t = new Timer();
-            t.Interval = 200;
-            t.Tick += Surrender_Tick;
-            t.Enabled = true;
-
-
             if(MessageBox.Show("Дали навистина сакате да се откажете ?", 
                 "Се откажувате ?", 
                 MessageBoxButtons.YesNo, 
@@ -445,12 +424,6 @@ namespace Millionaire
                 }
             }
 
-        }
-
-        private void Surrender_Tick(object sender, EventArgs e)
-        {
-            surrender_label.BackColor = Color.FromArgb(35, 31, 32);
-            ((Timer)sender).Dispose();
         }
 
         private void fifty_joker_Click(object sender, EventArgs e)
@@ -549,16 +522,16 @@ namespace Millionaire
         //HOVER ANIMATIONS ON MAIN MENU
         private void hover_animation_on(Label l, Panel p)
         {
-            l.BackColor = Color.FromArgb(248, 155, 28);
-            p.BackColor = Color.FromArgb(169, 100, 5);
-            l.ForeColor = Color.Black;
+            l.BackColor = Color.FromArgb(45, 41, 42);
+            p.BackColor = Color.FromArgb(120, 153, 215);
+            //l.ForeColor = Color.Black;
         }
 
         private void hover_animation_off(Label l, Panel p)
         {
             l.BackColor = Color.FromArgb(35, 31, 32);
             p.BackColor = Color.FromArgb(100, 133, 195);
-            l.ForeColor = Color.White;
+            //l.ForeColor = Color.White;
         }
 
         private void newGameButtonBackg_MouseEnter(object sender, EventArgs e)
@@ -619,6 +592,26 @@ namespace Millionaire
         private void exitLabel_MouseLeave(object sender, EventArgs e)
         {
             hover_animation_off(exitLabel, exitButtonBackg);
+        }
+
+        private void doubleBufferedPanel1_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(surrender_label, doubleBufferedPanel1);
+        }
+
+        private void doubleBufferedPanel1_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(surrender_label, doubleBufferedPanel1);
+        }
+
+        private void surrender_label_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(surrender_label, doubleBufferedPanel1);
+        }
+
+        private void surrender_label_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(surrender_label, doubleBufferedPanel1);
         }
     }
 }

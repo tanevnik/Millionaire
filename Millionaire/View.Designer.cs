@@ -239,6 +239,8 @@
             this.doubleBufferedPanel1.Size = new System.Drawing.Size(238, 28);
             this.doubleBufferedPanel1.TabIndex = 50;
             this.doubleBufferedPanel1.Click += new System.EventHandler(this.surrender_btn_Click);
+            this.doubleBufferedPanel1.MouseEnter += new System.EventHandler(this.doubleBufferedPanel1_MouseEnter);
+            this.doubleBufferedPanel1.MouseLeave += new System.EventHandler(this.doubleBufferedPanel1_MouseLeave);
             // 
             // surrender_label
             // 
@@ -251,6 +253,8 @@
             this.surrender_label.Text = "Се откажувам";
             this.surrender_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.surrender_label.Click += new System.EventHandler(this.surrender_btn_Click);
+            this.surrender_label.MouseEnter += new System.EventHandler(this.surrender_label_MouseEnter);
+            this.surrender_label.MouseLeave += new System.EventHandler(this.surrender_label_MouseLeave);
             // 
             // doubleBufferedPanel3
             // 
