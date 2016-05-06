@@ -88,7 +88,20 @@ namespace Millionaire
 
         private void info_btn_Click(object sender, EventArgs e)
         {
+            //animate button
+            infoLabel.BackColor = Color.FromArgb(248, 155, 28);
+            Timer t = new Timer();
+            t.Interval = 200;
+            t.Tick += Info_Tick;
+            t.Enabled = true;
+
             MessageBox.Show(string.Format("Кој сака да биде милионер ?\nИзработија:\nДавид Симеоновски\nНикола Танев"), "Кој сака да биде милионер ?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Info_Tick(object sender, EventArgs e)
+        {
+            infoLabel.BackColor = Color.FromArgb(35, 31, 32);
+            ((Timer)sender).Dispose();
         }
 
         private void exit_btn_Click(object sender, EventArgs e)
@@ -381,13 +394,20 @@ namespace Millionaire
 
         private void surrender_btn_Click(object sender, EventArgs e)
         {
+            //animate button
+            surrender_label.BackColor = Color.FromArgb(248, 155, 28);
+            Timer t = new Timer();
+            t.Interval = 200;
+            t.Tick += Surrender_Tick;
+            t.Enabled = true;
+
+
             if(MessageBox.Show("Дали навистина сакате да се откажете ?", 
                 "Се откажувате ?", 
                 MessageBoxButtons.YesNo, 
                 MessageBoxIcon.Information) == DialogResult.Yes)
             {
 
-                //TODO: display final score
                 if (serrenderAnswerMessage(model.currentQuestion.answer[model.correct]))
                 {
                     //playere wants new game
@@ -400,6 +420,12 @@ namespace Millionaire
                 }
             }
 
+        }
+
+        private void Surrender_Tick(object sender, EventArgs e)
+        {
+            surrender_label.BackColor = Color.FromArgb(35, 31, 32);
+            ((Timer)sender).Dispose();
         }
 
         private void fifty_joker_Click(object sender, EventArgs e)
@@ -493,6 +519,79 @@ namespace Millionaire
         private void panelG_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.X >= 14 && e.X <= 337) tryAnswer(3);
+        }
+
+        //HOVER ANIMATIONS ON MAIN MENU
+        private void hover_animation_on(Label l)
+        {
+            l.BackColor = Color.FromArgb(248, 155, 28);
+            l.ForeColor = Color.Black;
+        }
+
+        private void hover_animation_off(Label l)
+        {
+            l.BackColor = Color.FromArgb(35, 31, 32);
+            l.ForeColor = Color.White;
+        }
+
+        private void doubleBufferedPanel6_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(newGameLabel);
+        }
+
+        private void doubleBufferedPanel6_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(newGameLabel);
+        }
+
+        private void newGameLabel_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(newGameLabel);
+        }
+
+        private void newGameLabel_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(newGameLabel);
+        }
+
+        private void doubleBufferedPanel9_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(infoLabel);
+        }
+
+        private void doubleBufferedPanel9_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(infoLabel);
+        }
+
+        private void infoLabel_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(infoLabel);
+        }
+
+        private void infoLabel_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(infoLabel);
+        }
+
+        private void doubleBufferedPanel12_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(exitLabel);
+        }
+
+        private void doubleBufferedPanel12_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(exitLabel);
+        }
+
+        private void exitLabel_MouseEnter(object sender, EventArgs e)
+        {
+            hover_animation_on(exitLabel);
+        }
+
+        private void exitLabel_MouseLeave(object sender, EventArgs e)
+        {
+            hover_animation_off(exitLabel);
         }
     }
 }

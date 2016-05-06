@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
-            this.newGame_btn = new System.Windows.Forms.Button();
-            this.info_btn = new System.Windows.Forms.Button();
-            this.exit_btn = new System.Windows.Forms.Button();
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.timer5050 = new System.Windows.Forms.Timer(this.components);
             this.timerPhone = new System.Windows.Forms.Timer(this.components);
@@ -42,8 +39,7 @@
             this.logo_img = new System.Windows.Forms.PictureBox();
             this.playPanel = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
-            this.doubleBufferedPanel6 = new Millionaire.DoubleBufferedPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.surrender_label = new System.Windows.Forms.Label();
             this.doubleBufferedPanel3 = new Millionaire.DoubleBufferedPanel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.moneyPanelBorder = new Millionaire.DoubleBufferedPanel();
@@ -137,10 +133,15 @@
             this.questionLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.focusLabel = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel12 = new Millionaire.DoubleBufferedPanel();
+            this.exitLabel = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel9 = new Millionaire.DoubleBufferedPanel();
+            this.infoLabel = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel6 = new Millionaire.DoubleBufferedPanel();
+            this.newGameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
             this.doubleBufferedPanel1.SuspendLayout();
-            this.doubleBufferedPanel6.SuspendLayout();
             this.doubleBufferedPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.moneyPanelBorder.SuspendLayout();
@@ -165,37 +166,10 @@
             this.panelG.SuspendLayout();
             this.panelA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.doubleBufferedPanel12.SuspendLayout();
+            this.doubleBufferedPanel9.SuspendLayout();
+            this.doubleBufferedPanel6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // newGame_btn
-            // 
-            this.newGame_btn.Location = new System.Drawing.Point(229, 340);
-            this.newGame_btn.Name = "newGame_btn";
-            this.newGame_btn.Size = new System.Drawing.Size(300, 44);
-            this.newGame_btn.TabIndex = 8;
-            this.newGame_btn.Text = "Нова игра";
-            this.newGame_btn.UseVisualStyleBackColor = true;
-            this.newGame_btn.Click += new System.EventHandler(this.newGame_btn_Click);
-            // 
-            // info_btn
-            // 
-            this.info_btn.Location = new System.Drawing.Point(229, 412);
-            this.info_btn.Name = "info_btn";
-            this.info_btn.Size = new System.Drawing.Size(300, 44);
-            this.info_btn.TabIndex = 9;
-            this.info_btn.Text = "Инфо";
-            this.info_btn.UseVisualStyleBackColor = true;
-            this.info_btn.Click += new System.EventHandler(this.info_btn_Click);
-            // 
-            // exit_btn
-            // 
-            this.exit_btn.Location = new System.Drawing.Point(229, 485);
-            this.exit_btn.Name = "exit_btn";
-            this.exit_btn.Size = new System.Drawing.Size(300, 47);
-            this.exit_btn.TabIndex = 10;
-            this.exit_btn.Text = "Излези";
-            this.exit_btn.UseVisualStyleBackColor = true;
-            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
             // animationTimer
             // 
@@ -224,7 +198,7 @@
             // 
             // logo_img
             // 
-            this.logo_img.BackColor = System.Drawing.Color.Black;
+            this.logo_img.BackColor = System.Drawing.Color.Transparent;
             this.logo_img.BackgroundImage = global::Millionaire.Properties.Resources.logo;
             this.logo_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logo_img.Location = new System.Drawing.Point(229, 27);
@@ -259,32 +233,24 @@
             // doubleBufferedPanel1
             // 
             this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
-            this.doubleBufferedPanel1.Controls.Add(this.doubleBufferedPanel6);
+            this.doubleBufferedPanel1.Controls.Add(this.surrender_label);
             this.doubleBufferedPanel1.Location = new System.Drawing.Point(546, 324);
             this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
             this.doubleBufferedPanel1.Size = new System.Drawing.Size(238, 28);
             this.doubleBufferedPanel1.TabIndex = 50;
             this.doubleBufferedPanel1.Click += new System.EventHandler(this.surrender_btn_Click);
             // 
-            // doubleBufferedPanel6
+            // surrender_label
             // 
-            this.doubleBufferedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.doubleBufferedPanel6.Controls.Add(this.label1);
-            this.doubleBufferedPanel6.Location = new System.Drawing.Point(3, 3);
-            this.doubleBufferedPanel6.Name = "doubleBufferedPanel6";
-            this.doubleBufferedPanel6.Size = new System.Drawing.Size(232, 22);
-            this.doubleBufferedPanel6.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Се откажувам";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.surrender_btn_Click);
+            this.surrender_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.surrender_label.ForeColor = System.Drawing.Color.White;
+            this.surrender_label.Location = new System.Drawing.Point(3, 3);
+            this.surrender_label.Name = "surrender_label";
+            this.surrender_label.Size = new System.Drawing.Size(232, 22);
+            this.surrender_label.TabIndex = 0;
+            this.surrender_label.Text = "Се откажувам";
+            this.surrender_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.surrender_label.Click += new System.EventHandler(this.surrender_btn_Click);
             // 
             // doubleBufferedPanel3
             // 
@@ -1252,6 +1218,84 @@
             this.focusLabel.Size = new System.Drawing.Size(0, 13);
             this.focusLabel.TabIndex = 40;
             // 
+            // doubleBufferedPanel12
+            // 
+            this.doubleBufferedPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.doubleBufferedPanel12.Controls.Add(this.exitLabel);
+            this.doubleBufferedPanel12.Location = new System.Drawing.Point(229, 486);
+            this.doubleBufferedPanel12.Name = "doubleBufferedPanel12";
+            this.doubleBufferedPanel12.Size = new System.Drawing.Size(300, 44);
+            this.doubleBufferedPanel12.TabIndex = 15;
+            this.doubleBufferedPanel12.Click += new System.EventHandler(this.exit_btn_Click);
+            this.doubleBufferedPanel12.MouseEnter += new System.EventHandler(this.doubleBufferedPanel12_MouseEnter);
+            this.doubleBufferedPanel12.MouseLeave += new System.EventHandler(this.doubleBufferedPanel12_MouseLeave);
+            // 
+            // exitLabel
+            // 
+            this.exitLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.exitLabel.ForeColor = System.Drawing.Color.White;
+            this.exitLabel.Location = new System.Drawing.Point(3, 3);
+            this.exitLabel.Name = "exitLabel";
+            this.exitLabel.Size = new System.Drawing.Size(294, 38);
+            this.exitLabel.TabIndex = 13;
+            this.exitLabel.Text = "Излез";
+            this.exitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.exitLabel.Click += new System.EventHandler(this.exit_btn_Click);
+            this.exitLabel.MouseEnter += new System.EventHandler(this.exitLabel_MouseEnter);
+            this.exitLabel.MouseLeave += new System.EventHandler(this.exitLabel_MouseLeave);
+            // 
+            // doubleBufferedPanel9
+            // 
+            this.doubleBufferedPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.doubleBufferedPanel9.Controls.Add(this.infoLabel);
+            this.doubleBufferedPanel9.Location = new System.Drawing.Point(229, 413);
+            this.doubleBufferedPanel9.Name = "doubleBufferedPanel9";
+            this.doubleBufferedPanel9.Size = new System.Drawing.Size(300, 44);
+            this.doubleBufferedPanel9.TabIndex = 14;
+            this.doubleBufferedPanel9.Click += new System.EventHandler(this.info_btn_Click);
+            this.doubleBufferedPanel9.MouseEnter += new System.EventHandler(this.doubleBufferedPanel9_MouseEnter);
+            this.doubleBufferedPanel9.MouseLeave += new System.EventHandler(this.doubleBufferedPanel9_MouseLeave);
+            // 
+            // infoLabel
+            // 
+            this.infoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.infoLabel.ForeColor = System.Drawing.Color.White;
+            this.infoLabel.Location = new System.Drawing.Point(3, 3);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(294, 38);
+            this.infoLabel.TabIndex = 13;
+            this.infoLabel.Text = "Инфо";
+            this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.infoLabel.Click += new System.EventHandler(this.info_btn_Click);
+            this.infoLabel.MouseEnter += new System.EventHandler(this.infoLabel_MouseEnter);
+            this.infoLabel.MouseLeave += new System.EventHandler(this.infoLabel_MouseLeave);
+            // 
+            // doubleBufferedPanel6
+            // 
+            this.doubleBufferedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.doubleBufferedPanel6.Controls.Add(this.newGameLabel);
+            this.doubleBufferedPanel6.Location = new System.Drawing.Point(229, 346);
+            this.doubleBufferedPanel6.Name = "doubleBufferedPanel6";
+            this.doubleBufferedPanel6.Size = new System.Drawing.Size(300, 44);
+            this.doubleBufferedPanel6.TabIndex = 12;
+            this.doubleBufferedPanel6.Click += new System.EventHandler(this.newGame_btn_Click);
+            this.doubleBufferedPanel6.MouseEnter += new System.EventHandler(this.doubleBufferedPanel6_MouseEnter);
+            this.doubleBufferedPanel6.MouseLeave += new System.EventHandler(this.doubleBufferedPanel6_MouseLeave);
+            // 
+            // newGameLabel
+            // 
+            this.newGameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.newGameLabel.ForeColor = System.Drawing.Color.White;
+            this.newGameLabel.Location = new System.Drawing.Point(3, 3);
+            this.newGameLabel.Name = "newGameLabel";
+            this.newGameLabel.Size = new System.Drawing.Size(294, 38);
+            this.newGameLabel.TabIndex = 13;
+            this.newGameLabel.Text = "Нова игра";
+            this.newGameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.newGameLabel.Click += new System.EventHandler(this.newGame_btn_Click);
+            this.newGameLabel.MouseEnter += new System.EventHandler(this.newGameLabel_MouseEnter);
+            this.newGameLabel.MouseLeave += new System.EventHandler(this.newGameLabel_MouseLeave);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1260,9 +1304,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.playPanel);
-            this.Controls.Add(this.exit_btn);
-            this.Controls.Add(this.info_btn);
-            this.Controls.Add(this.newGame_btn);
+            this.Controls.Add(this.doubleBufferedPanel12);
+            this.Controls.Add(this.doubleBufferedPanel9);
+            this.Controls.Add(this.doubleBufferedPanel6);
             this.Controls.Add(this.logo_img);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1273,7 +1317,6 @@
             this.playPanel.ResumeLayout(false);
             this.playPanel.PerformLayout();
             this.doubleBufferedPanel1.ResumeLayout(false);
-            this.doubleBufferedPanel6.ResumeLayout(false);
             this.doubleBufferedPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.moneyPanelBorder.ResumeLayout(false);
@@ -1298,6 +1341,9 @@
             this.panelG.ResumeLayout(false);
             this.panelA.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.doubleBufferedPanel12.ResumeLayout(false);
+            this.doubleBufferedPanel9.ResumeLayout(false);
+            this.doubleBufferedPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1305,9 +1351,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox logo_img;
-        private System.Windows.Forms.Button newGame_btn;
-        private System.Windows.Forms.Button info_btn;
-        private System.Windows.Forms.Button exit_btn;
         private DoubleBufferedPanel playPanel;
         private System.Windows.Forms.Label levelLabel;
         private System.Windows.Forms.Label answerTextB;
@@ -1407,9 +1450,14 @@
         private DoubleBufferedPanel moneyPanelBorder;
         private DoubleBufferedPanel doubleBufferedPanel3;
         private DoubleBufferedPanel doubleBufferedPanel1;
-        private DoubleBufferedPanel doubleBufferedPanel6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label surrender_label;
         private System.Windows.Forms.Label answerTextA;
         private System.Windows.Forms.Label labelA;
+        private DoubleBufferedPanel doubleBufferedPanel6;
+        private System.Windows.Forms.Label newGameLabel;
+        private DoubleBufferedPanel doubleBufferedPanel9;
+        private System.Windows.Forms.Label infoLabel;
+        private DoubleBufferedPanel doubleBufferedPanel12;
+        private System.Windows.Forms.Label exitLabel;
     }
 }
