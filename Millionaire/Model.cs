@@ -97,13 +97,8 @@ namespace Millionaire
             int tmpCorrect = correct;
             if(ans == correct)
             {
-                Console.Write("CORRECT!");
                 level++;
                 if(level < 15) generateNewQuestion();
-            }
-            else
-            {
-                Console.Write("WRONG!");
             }
 
             return ans == tmpCorrect;

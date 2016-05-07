@@ -11,7 +11,7 @@ namespace Millionaire
             string letter = "";
             if (index == 0) letter = "А";
             else if (index == 1) letter = "Б";
-            else if (index == 1) letter = "В";
+            else if (index == 2) letter = "В";
             else letter = "Г";
             text.Text = string.Format("Мислам дека точниот одговор е под {0}: „{1}“ со сигурност: {2}%.", letter, answer, certainty);
         }
