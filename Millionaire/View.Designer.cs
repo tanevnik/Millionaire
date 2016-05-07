@@ -1047,19 +1047,23 @@
             this.panelV.Size = new System.Drawing.Size(395, 44);
             this.panelV.TabIndex = 44;
             this.panelV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelV_MouseClick);
+            this.panelV.MouseLeave += new System.EventHandler(this.panelV_MouseLeave);
+            this.panelV.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelV_MouseMove);
             // 
             // answerTextV
             // 
+            this.answerTextV.AutoSize = true;
             this.answerTextV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextV.ForeColor = System.Drawing.Color.White;
-            this.answerTextV.Location = new System.Drawing.Point(111, 10);
+            this.answerTextV.Location = new System.Drawing.Point(111, 14);
             this.answerTextV.Name = "answerTextV";
-            this.answerTextV.Size = new System.Drawing.Size(248, 22);
+            this.answerTextV.Size = new System.Drawing.Size(61, 15);
             this.answerTextV.TabIndex = 2;
             this.answerTextV.Text = "odgovor 2";
             this.answerTextV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.answerTextV.Click += new System.EventHandler(this.answer2_Click);
+            this.answerTextV.MouseEnter += new System.EventHandler(this.answerTextV_MouseEnter);
             // 
             // labelV
             // 
@@ -1073,6 +1077,7 @@
             this.labelV.Text = "В:";
             this.labelV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelV.Click += new System.EventHandler(this.answer2_Click);
+            this.labelV.MouseEnter += new System.EventHandler(this.labelV_MouseEnter);
             // 
             // panelB
             // 
@@ -1086,19 +1091,23 @@
             this.panelB.Size = new System.Drawing.Size(394, 44);
             this.panelB.TabIndex = 43;
             this.panelB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelB_MouseClick);
+            this.panelB.MouseLeave += new System.EventHandler(this.panelB_MouseLeave);
+            this.panelB.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelB_MouseMove);
             // 
             // answerTextB
             // 
+            this.answerTextB.AutoSize = true;
             this.answerTextB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextB.ForeColor = System.Drawing.Color.White;
-            this.answerTextB.Location = new System.Drawing.Point(66, 10);
+            this.answerTextB.Location = new System.Drawing.Point(66, 14);
             this.answerTextB.Name = "answerTextB";
-            this.answerTextB.Size = new System.Drawing.Size(248, 22);
+            this.answerTextB.Size = new System.Drawing.Size(61, 15);
             this.answerTextB.TabIndex = 1;
             this.answerTextB.Text = "odgovor 1";
             this.answerTextB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.answerTextB.Click += new System.EventHandler(this.answer1_Click);
+            this.answerTextB.MouseEnter += new System.EventHandler(this.answerTextB_MouseEnter);
             // 
             // labelB
             // 
@@ -1112,6 +1121,7 @@
             this.labelB.Text = "Б:";
             this.labelB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelB.Click += new System.EventHandler(this.answer1_Click);
+            this.labelB.MouseEnter += new System.EventHandler(this.labelB_MouseEnter);
             // 
             // panelG
             // 
@@ -1125,19 +1135,23 @@
             this.panelG.Size = new System.Drawing.Size(394, 44);
             this.panelG.TabIndex = 45;
             this.panelG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelG_MouseClick);
+            this.panelG.MouseLeave += new System.EventHandler(this.panelG_MouseLeave);
+            this.panelG.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelG_MouseMove);
             // 
             // answerTextG
             // 
+            this.answerTextG.AutoSize = true;
             this.answerTextG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextG.ForeColor = System.Drawing.Color.White;
-            this.answerTextG.Location = new System.Drawing.Point(66, 10);
+            this.answerTextG.Location = new System.Drawing.Point(66, 14);
             this.answerTextG.Name = "answerTextG";
-            this.answerTextG.Size = new System.Drawing.Size(248, 22);
+            this.answerTextG.Size = new System.Drawing.Size(61, 15);
             this.answerTextG.TabIndex = 1;
             this.answerTextG.Text = "odgovor 3";
             this.answerTextG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.answerTextG.Click += new System.EventHandler(this.answer3_Click);
+            this.answerTextG.MouseEnter += new System.EventHandler(this.answerTextG_MouseEnter);
             // 
             // labelG
             // 
@@ -1151,6 +1165,7 @@
             this.labelG.Text = "Г:";
             this.labelG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelG.Click += new System.EventHandler(this.answer3_Click);
+            this.labelG.MouseEnter += new System.EventHandler(this.labelG_MouseEnter);
             // 
             // panelA
             // 
@@ -1164,19 +1179,23 @@
             this.panelA.Size = new System.Drawing.Size(395, 44);
             this.panelA.TabIndex = 42;
             this.panelA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelA_MouseClick);
+            this.panelA.MouseLeave += new System.EventHandler(this.panelA_MouseLeave);
+            this.panelA.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelA_MouseMove);
             // 
             // answerTextA
             // 
+            this.answerTextA.AutoSize = true;
             this.answerTextA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.answerTextA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.answerTextA.ForeColor = System.Drawing.Color.White;
-            this.answerTextA.Location = new System.Drawing.Point(111, 10);
+            this.answerTextA.Location = new System.Drawing.Point(111, 14);
             this.answerTextA.Name = "answerTextA";
-            this.answerTextA.Size = new System.Drawing.Size(248, 22);
+            this.answerTextA.Size = new System.Drawing.Size(61, 15);
             this.answerTextA.TabIndex = 1;
             this.answerTextA.Text = "odgovor 0";
             this.answerTextA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.answerTextA.Click += new System.EventHandler(this.answer0_Click);
+            this.answerTextA.MouseEnter += new System.EventHandler(this.answerTextA_MouseEnter);
             // 
             // labelA
             // 
@@ -1190,6 +1209,7 @@
             this.labelA.Text = "А:";
             this.labelA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelA.Click += new System.EventHandler(this.answer0_Click);
+            this.labelA.MouseEnter += new System.EventHandler(this.labelA_MouseEnter);
             // 
             // questionLabel
             // 
@@ -1344,9 +1364,13 @@
             this.moneyPanel4.ResumeLayout(false);
             this.moneyPanel3.ResumeLayout(false);
             this.panelV.ResumeLayout(false);
+            this.panelV.PerformLayout();
             this.panelB.ResumeLayout(false);
+            this.panelB.PerformLayout();
             this.panelG.ResumeLayout(false);
+            this.panelG.PerformLayout();
             this.panelA.ResumeLayout(false);
+            this.panelA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.exitButtonBackg.ResumeLayout(false);
             this.infoButtonBackg.ResumeLayout(false);

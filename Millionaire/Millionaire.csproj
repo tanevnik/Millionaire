@@ -105,6 +105,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\_switch.png" />
+    <None Include="Resources\_5050used.png" />
+    <None Include="Resources\_5050inuse.png" />
+    <None Include="Resources\_5050.png" />
     <None Include="Resources\studio3.png" />
     <None Include="Resources\studio2.png" />
     <None Include="Resources\studio1.png" />
@@ -122,6 +126,7 @@
     <None Include="Resources\audience.png" />
     <None Include="Resources\audienceinuse.png" />
     <Content Include="Resources\aud_back.png" />
+    <None Include="Resources\leftAnswerHover.png" />
     <Content Include="Resources\leftAnswerSelect.png" />
     <None Include="Resources\phone.png" />
     <None Include="Resources\phoneinuse.png" />
@@ -134,6 +139,7 @@
     <None Include="Resources\rightAnswer.png" />
     <None Include="Resources\rightAnswerDisabled.png" />
     <None Include="Resources\rightAnswerCorrect.png" />
+    <None Include="Resources\rightAnswerHover.png" />
     <Content Include="Resources\rightAnswerSelect.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

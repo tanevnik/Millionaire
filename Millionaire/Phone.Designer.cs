@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.text = new System.Windows.Forms.Label();
-            this.close = new System.Windows.Forms.Button();
+            this.panel = new Millionaire.DoubleBufferedPanel();
+            this.label = new System.Windows.Forms.Label();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // text
@@ -42,15 +44,30 @@
             this.text.Text = "text";
             this.text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // close
+            // panel
             // 
-            this.close.Location = new System.Drawing.Point(12, 80);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(208, 23);
-            this.close.TabIndex = 1;
-            this.close.Text = "Затвори";
-            this.close.UseVisualStyleBackColor = true;
-            this.close.Click += new System.EventHandler(this.close_Click);
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.panel.Controls.Add(this.label);
+            this.panel.Location = new System.Drawing.Point(10, 78);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(212, 25);
+            this.panel.TabIndex = 2;
+            this.panel.Click += new System.EventHandler(this.close_Click);
+            this.panel.MouseEnter += new System.EventHandler(this.doubleBufferedPanel1_MouseEnter);
+            this.panel.MouseLeave += new System.EventHandler(this.doubleBufferedPanel1_MouseLeave);
+            // 
+            // label
+            // 
+            this.label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(2, 2);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(208, 21);
+            this.label.TabIndex = 0;
+            this.label.Text = "Затвори";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label.Click += new System.EventHandler(this.close_Click);
+            this.label.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             // 
             // Phone
             // 
@@ -58,11 +75,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(232, 113);
             this.ControlBox = false;
-            this.Controls.Add(this.close);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.text);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Phone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -70,6 +88,7 @@
         #endregion
 
         private System.Windows.Forms.Label text;
-        private System.Windows.Forms.Button close;
+        private DoubleBufferedPanel panel;
+        private System.Windows.Forms.Label label;
     }
 }

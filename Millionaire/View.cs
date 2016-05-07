@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Millionaire
@@ -20,6 +21,9 @@ namespace Millionaire
         private int timerTicks;
         private int correctIndex;
         private bool correctAnswer;
+
+        //hover blocker
+        bool blockHover;
 
         public View()
         {
@@ -79,6 +83,8 @@ namespace Millionaire
             moneyLabels[12] = moneyLabel12;
             moneyLabels[13] = moneyLabel13;
             moneyLabels[14] = moneyLabel14;
+
+            blockHover = false;
         }
 
         private void newGame_btn_Click(object sender, EventArgs e)
@@ -326,6 +332,8 @@ namespace Millionaire
 
         public void tryAnswer(int index)
         {
+            Cursor = Cursors.Default;
+            blockHover = true;
             changeBackgroundSelected(index);
             string answer = model.currentQuestion.answer[index];
 
@@ -379,6 +387,7 @@ namespace Millionaire
                 }
             }
             changeBackgroundNormal(index);
+            blockHover = false;
         }
 
         private bool wrongAnswerMessage(string answer, string correct)
@@ -394,14 +403,14 @@ namespace Millionaire
         private bool serrenderAnswerMessage(string correct)
         {
             return MessageBox.Show(
-                string.Format("Точниот одговор на прашањето е „{0}“.\n\nВие освоивте {1} денари.\n\nНова игра ?", correct, model.getMoney(false)), 
+                string.Format("Точниот одговор на прашањето е „{0}“.\n\nВие освоивте {1} денари.\n\nНова игра?", correct, model.getMoney(false)), 
                 "Се откажавте !", 
                 MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private bool finalAnswer(string answer)
         {
-            return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор ?", answer),"Конечен одговор ?", MessageBoxButtons.YesNo) == DialogResult.Yes;
+            return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор?", answer),"Конечен одговор?", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private void surrender_btn_Click(object sender, EventArgs e)
@@ -615,6 +624,133 @@ namespace Millionaire
         private void surrender_label_MouseLeave(object sender, EventArgs e)
         {
             hover_animation_off(surrender_label, doubleBufferedPanel1);
+        }
+
+        private void answerHoverOn(Panel p, Label letter, Label text, bool left)
+        {
+            if (blockHover) return;
+            DrawingControl.SuspendDrawing(p);
+            text.BackColor = Color.FromArgb(45, 41, 42);
+            letter.BackColor = Color.FromArgb(45, 41, 42);
+            if(left) p.BackgroundImage = Properties.Resources.leftAnswerHover;
+            else p.BackgroundImage = Properties.Resources.rightAnswerHover;
+            DrawingControl.ResumeDrawing(p);
+            Cursor = Cursors.Hand;
+        }
+
+        private void answerHoverOff(Panel p, Label letter, Label text, bool left)
+        {
+            if (blockHover) return;
+            DrawingControl.SuspendDrawing(p);
+            if (left) p.BackgroundImage = Properties.Resources.leftAnswer;
+            else p.BackgroundImage = Properties.Resources.rightAnswer;
+            text.BackColor = Color.FromArgb(35, 31, 32);
+            letter.BackColor = Color.FromArgb(35, 31, 32);
+            DrawingControl.ResumeDrawing(p);
+            Cursor = Cursors.Default;
+        }
+
+        private void panelA_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 55 && e.X <= 379) answerHoverOn(panelA, labelA, answerTextA, true);
+            else answerHoverOff(panelA, labelA, answerTextA, true);
+        }
+
+        private void panelA_MouseLeave(object sender, EventArgs e)
+        {
+            answerHoverOff(panelA, labelA, answerTextA, true);
+        }
+
+        private void answerTextA_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelA, labelA, answerTextA, true);
+        }
+
+        private void labelA_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelA, labelA, answerTextA, true);
+        }
+
+        private void panelB_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 14 && e.X <= 337) answerHoverOn(panelB, labelB, answerTextB, false);
+            else answerHoverOff(panelB, labelB, answerTextB, false);
+        }
+
+        private void panelB_MouseLeave(object sender, EventArgs e)
+        {
+            answerHoverOff(panelB, labelB, answerTextB, false);
+        }
+
+        private void labelB_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelB, labelB, answerTextB, false);
+        }
+
+        private void answerTextB_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelB, labelB, answerTextB, false);
+        }
+
+        private void panelV_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 55 && e.X <= 379) answerHoverOn(panelV, labelV, answerTextV, true);
+            else answerHoverOff(panelV, labelV, answerTextV, true);
+        }
+
+        private void panelV_MouseLeave(object sender, EventArgs e)
+        {
+            answerHoverOff(panelV, labelV, answerTextV, true);
+        }
+
+        private void labelV_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelV, labelV, answerTextV, true);
+        }
+
+        private void answerTextV_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelV, labelV, answerTextV, true);
+        }
+
+        private void panelG_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 14 && e.X <= 337) answerHoverOn(panelG, labelG, answerTextG, false);
+            else answerHoverOff(panelG, labelG, answerTextG, false);
+        }
+
+        private void panelG_MouseLeave(object sender, EventArgs e)
+        {
+            answerHoverOff(panelG, labelG, answerTextG, false);
+        }
+
+        private void labelG_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelG, labelG, answerTextG, false);
+        }
+
+        private void answerTextG_MouseEnter(object sender, EventArgs e)
+        {
+            answerHoverOn(panelG, labelG, answerTextG, false);
+        }
+    }
+
+    class DrawingControl
+    {
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, Int32 wMsg, bool wParam, Int32 lParam);
+
+        private const int WM_SETREDRAW = 11;
+
+        public static void SuspendDrawing(Control parent)
+        {
+            SendMessage(parent.Handle, WM_SETREDRAW, false, 0);
+        }
+
+        public static void ResumeDrawing(Control parent)
+        {
+            SendMessage(parent.Handle, WM_SETREDRAW, true, 0);
+            parent.Refresh();
         }
     }
 }
