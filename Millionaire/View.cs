@@ -522,6 +522,7 @@ namespace Millionaire
         //HOVER ANIMATIONS ON MAIN MENU
         private void hover_animation_on(Label l, Panel p)
         {
+            Cursor = Cursors.Hand;
             l.BackColor = Color.FromArgb(45, 41, 42);
             p.BackColor = Color.FromArgb(120, 153, 215);
             //l.ForeColor = Color.Black;
@@ -529,6 +530,7 @@ namespace Millionaire
 
         private void hover_animation_off(Label l, Panel p)
         {
+            Cursor = Cursors.Arrow;
             l.BackColor = Color.FromArgb(35, 31, 32);
             p.BackColor = Color.FromArgb(100, 133, 195);
             //l.ForeColor = Color.White;
@@ -541,6 +543,7 @@ namespace Millionaire
 
         private void newGameButtonBackg_MouseLeave(object sender, EventArgs e)
         {
+            
             hover_animation_off(newGameLabel, newGameButtonBackg);
         }
 
