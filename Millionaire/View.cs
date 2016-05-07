@@ -733,6 +733,16 @@ namespace Millionaire
         {
             answerHoverOn(panelG, labelG, answerTextG, false);
         }
+
+        private void joker_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void joker_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+        }
     }
 
     class DrawingControl

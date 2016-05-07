@@ -43,7 +43,7 @@
             // 
             // doubleBufferedPanel1
             // 
-            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(36)))), ((int)(((byte)(63)))));
             this.doubleBufferedPanel1.Controls.Add(this.messageLabel);
             this.doubleBufferedPanel1.Controls.Add(this.label2);
             this.doubleBufferedPanel1.Location = new System.Drawing.Point(3, 3);
@@ -54,7 +54,7 @@
             // messageLabel
             // 
             this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.messageLabel.ForeColor = System.Drawing.Color.Black;
+            this.messageLabel.ForeColor = System.Drawing.Color.White;
             this.messageLabel.Location = new System.Drawing.Point(0, 92);
             this.messageLabel.Name = "messageLabel";
             this.messageLabel.Size = new System.Drawing.Size(342, 82);
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(342, 31);

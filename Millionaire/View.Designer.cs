@@ -320,6 +320,8 @@
             this.switch_joker.Size = new System.Drawing.Size(55, 35);
             this.switch_joker.TabIndex = 55;
             this.switch_joker.Click += new System.EventHandler(this.switch_joker_Click);
+            this.switch_joker.MouseEnter += new System.EventHandler(this.joker_MouseEnter);
+            this.switch_joker.MouseLeave += new System.EventHandler(this.joker_MouseLeave);
             // 
             // audience_joker
             // 
@@ -330,6 +332,8 @@
             this.audience_joker.Size = new System.Drawing.Size(55, 35);
             this.audience_joker.TabIndex = 54;
             this.audience_joker.Click += new System.EventHandler(this.audience_joker_Click);
+            this.audience_joker.MouseEnter += new System.EventHandler(this.joker_MouseEnter);
+            this.audience_joker.MouseLeave += new System.EventHandler(this.joker_MouseLeave);
             // 
             // phone_joker
             // 
@@ -340,6 +344,8 @@
             this.phone_joker.Size = new System.Drawing.Size(55, 35);
             this.phone_joker.TabIndex = 54;
             this.phone_joker.Click += new System.EventHandler(this.phone_joker_Click);
+            this.phone_joker.MouseEnter += new System.EventHandler(this.joker_MouseEnter);
+            this.phone_joker.MouseLeave += new System.EventHandler(this.joker_MouseLeave);
             // 
             // fifty_joker
             // 
@@ -350,6 +356,8 @@
             this.fifty_joker.Size = new System.Drawing.Size(55, 35);
             this.fifty_joker.TabIndex = 53;
             this.fifty_joker.Click += new System.EventHandler(this.fifty_joker_Click);
+            this.fifty_joker.MouseEnter += new System.EventHandler(this.joker_MouseEnter);
+            this.fifty_joker.MouseLeave += new System.EventHandler(this.joker_MouseLeave);
             // 
             // moneyPanel10
             // 

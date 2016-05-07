@@ -103,6 +103,16 @@ namespace Millionaire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aud_back {
+            get {
+                object obj = ResourceManager.GetObject("aud_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap audience {
             get {
                 object obj = ResourceManager.GetObject("audience", resourceCulture);
@@ -226,6 +236,16 @@ namespace Millionaire.Properties {
         internal static System.Drawing.Bitmap phoneused {
             get {
                 object obj = ResourceManager.GetObject("phoneused", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap question_backg {
+            get {
+                object obj = ResourceManager.GetObject("question_backg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
