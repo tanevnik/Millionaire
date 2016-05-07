@@ -31,13 +31,16 @@
             this.text = new System.Windows.Forms.Label();
             this.panel = new Millionaire.DoubleBufferedPanel();
             this.label = new System.Windows.Forms.Label();
+            this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
             this.panel.SuspendLayout();
+            this.doubleBufferedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // text
             // 
             this.text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text.Location = new System.Drawing.Point(12, 9);
+            this.text.ForeColor = System.Drawing.Color.White;
+            this.text.Location = new System.Drawing.Point(10, 7);
             this.text.Name = "text";
             this.text.Size = new System.Drawing.Size(208, 67);
             this.text.TabIndex = 0;
@@ -48,7 +51,7 @@
             // 
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
             this.panel.Controls.Add(this.label);
-            this.panel.Location = new System.Drawing.Point(10, 78);
+            this.panel.Location = new System.Drawing.Point(8, 77);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(212, 25);
             this.panel.TabIndex = 2;
@@ -69,18 +72,29 @@
             this.label.Click += new System.EventHandler(this.close_Click);
             this.label.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             // 
+            // doubleBufferedPanel1
+            // 
+            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(36)))), ((int)(((byte)(63)))));
+            this.doubleBufferedPanel1.Controls.Add(this.text);
+            this.doubleBufferedPanel1.Controls.Add(this.panel);
+            this.doubleBufferedPanel1.Location = new System.Drawing.Point(2, 2);
+            this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
+            this.doubleBufferedPanel1.Size = new System.Drawing.Size(228, 110);
+            this.doubleBufferedPanel1.TabIndex = 3;
+            // 
             // Phone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 113);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.ClientSize = new System.Drawing.Size(232, 114);
             this.ControlBox = false;
-            this.Controls.Add(this.panel);
-            this.Controls.Add(this.text);
+            this.Controls.Add(this.doubleBufferedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Phone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.panel.ResumeLayout(false);
+            this.doubleBufferedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -90,5 +104,6 @@
         private System.Windows.Forms.Label text;
         private DoubleBufferedPanel panel;
         private System.Windows.Forms.Label label;
+        private DoubleBufferedPanel doubleBufferedPanel1;
     }
 }

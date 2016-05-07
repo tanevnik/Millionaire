@@ -39,5 +39,34 @@ namespace Millionaire
         {
             Close();
         }
+
+        private void hoverOn()
+        {
+            Cursor = Cursors.Hand;
+            label.BackColor = Color.FromArgb(45, 41, 42);
+            panel.BackColor = Color.FromArgb(120, 153, 215);
+        }
+
+        private void hoverOff()
+        {
+            Cursor = Cursors.Default;
+            label.BackColor = Color.FromArgb(35, 31, 32);
+            panel.BackColor = Color.FromArgb(100, 133, 195);
+        }
+
+        private void panel_MouseEnter(object sender, EventArgs e)
+        {
+            hoverOn();
+        }
+
+        private void panel_MouseLeave(object sender, EventArgs e)
+        {
+            hoverOff();
+        }
+
+        private void label_MouseEnter(object sender, EventArgs e)
+        {
+            hoverOn();
+        }
     }
 }
