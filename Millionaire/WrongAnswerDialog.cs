@@ -10,6 +10,7 @@ namespace Millionaire
         public WrongAnswerDialog(string answer, string correct, int prize)
         {
             InitializeComponent();
+            messageLable.Text = string.Format("Одговорот {0} е погрешен, точниот одговор е: {1}.\nВие освоивте {2} денари!\nНова игра?", answer, correct, prize);
             newGame = false;
         }
 

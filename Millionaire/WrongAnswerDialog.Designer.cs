@@ -33,7 +33,7 @@
             this.noLabel = new System.Windows.Forms.Label();
             this.doubleBufferedPanel2 = new Millionaire.DoubleBufferedPanel();
             this.yesLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.messageLable = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel1.SuspendLayout();
             this.doubleBufferedPanel3.SuspendLayout();
@@ -45,7 +45,7 @@
             this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(36)))), ((int)(((byte)(63)))));
             this.doubleBufferedPanel1.Controls.Add(this.doubleBufferedPanel3);
             this.doubleBufferedPanel1.Controls.Add(this.doubleBufferedPanel2);
-            this.doubleBufferedPanel1.Controls.Add(this.label2);
+            this.doubleBufferedPanel1.Controls.Add(this.messageLable);
             this.doubleBufferedPanel1.Controls.Add(this.label1);
             this.doubleBufferedPanel1.Location = new System.Drawing.Point(2, 2);
             this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
@@ -102,23 +102,23 @@
             this.yesLabel.Click += new System.EventHandler(this.yesLabel_Click);
             this.yesLabel.MouseEnter += new System.EventHandler(this.yesLabel_MouseEnter);
             // 
-            // label2
+            // messageLable
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(274, 60);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Одговорот Х е погрешен, точниот одговор е: Х. Вие освоивте Х денари! Нова игра?";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.messageLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.messageLable.ForeColor = System.Drawing.Color.White;
+            this.messageLable.Location = new System.Drawing.Point(10, 39);
+            this.messageLable.Name = "messageLable";
+            this.messageLable.Size = new System.Drawing.Size(274, 78);
+            this.messageLable.TabIndex = 1;
+            this.messageLable.Text = "Одговорот Х е погрешен, точниот одговор е: Х. Вие освоивте Х денари! Нова игра?";
+            this.messageLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(48, 24);
+            this.label1.Location = new System.Drawing.Point(48, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 23);
             this.label1.TabIndex = 0;
@@ -146,7 +146,7 @@
         #endregion
 
         private DoubleBufferedPanel doubleBufferedPanel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label messageLable;
         private System.Windows.Forms.Label label1;
         private DoubleBufferedPanel doubleBufferedPanel3;
         private System.Windows.Forms.Label noLabel;
