@@ -392,7 +392,10 @@ namespace Millionaire
 
         private bool wrongAnswerMessage(string answer, string correct)
         {
-            return MessageBox.Show(string.Format("Одговорот „{0}“ е грешен! Точниот одговор е „{1}“.\n\nВие освоивте {2} денари.\n\nНова игра?", answer, correct, model.getMoney(true)), "Грешен одговор", MessageBoxButtons.YesNo) == DialogResult.Yes;
+            WrongAnswerDialog form = new WrongAnswerDialog(answer, correct, model.getMoney(true));
+            form.ShowDialog();
+            return form.newGame;
+            //return MessageBox.Show(string.Format("Одговорот „{0}“ е грешен! Точниот одговор е „{1}“.\n\nВие освоивте {2} денари.\n\nНова игра?", answer, correct, model.getMoney(true)), "Грешен одговор", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private bool winGameMessage()
