@@ -61,6 +61,12 @@
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Konecen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konecen.Designer.cs">
+      <DependentUpon>Konecen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phone.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CorrectAnswerMessageForm.resx">
       <DependentUpon>CorrectAnswerMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konecen.resx">
+      <DependentUpon>Konecen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phone.resx">
       <DependentUpon>Phone.cs</DependentUpon>

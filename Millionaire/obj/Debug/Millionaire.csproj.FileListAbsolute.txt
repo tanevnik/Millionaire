@@ -35,3 +35,4 @@ C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.CorrectAns
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.CorrectAnswerMessageForm.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Phone.resources
 C:\Users\Nikola\Desktop\Millionaire\Millionaire\obj\Debug\Millionaire.Phone.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Konecen.resources

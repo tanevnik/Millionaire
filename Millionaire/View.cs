@@ -410,7 +410,10 @@ namespace Millionaire
 
         private bool finalAnswer(string answer)
         {
-            return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор?", answer),"Конечен одговор?", MessageBoxButtons.YesNo) == DialogResult.Yes;
+            Konecen form = new Konecen(answer);
+            form.ShowDialog();
+            return form.finalAnswer;
+            //return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор?", answer),"Конечен одговор?", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private void surrender_btn_Click(object sender, EventArgs e)
