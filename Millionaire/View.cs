@@ -24,6 +24,7 @@ namespace Millionaire
 
         //hover blocker
         bool blockHover;
+        bool insideHover;
 
         public View()
         {
@@ -85,6 +86,7 @@ namespace Millionaire
             moneyLabels[14] = moneyLabel14;
 
             blockHover = false;
+            insideHover = false;
         }
 
         private void newGame_btn_Click(object sender, EventArgs e)
@@ -288,10 +290,9 @@ namespace Millionaire
             tryAnswer(3);
         }
 
-        private void showCorrectAnswereMessage(int price, int level)
+        private void showCorrectAnswerMessage(int prize, int level)
         {
-            CorrectAnswerMessageForm form = new CorrectAnswerMessageForm();
-            form.showMessage(price, level);
+            CorrectAnswerMessageForm form = new CorrectAnswerMessageForm(prize, level);
             form.ShowDialog();
         }
 
@@ -345,7 +346,7 @@ namespace Millionaire
                     //correct answer
                     if (model.level < 15)
                     {
-                        showCorrectAnswereMessage(model.getMoney(false), model.level);
+                        showCorrectAnswerMessage(model.getMoney(false), model.level);
                         updateView();
                     }
                     else
@@ -658,12 +659,21 @@ namespace Millionaire
 
         private void panelA_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.X >= 55 && e.X <= 379) answerHoverOn(panelA, labelA, answerTextA, true);
-            else answerHoverOff(panelA, labelA, answerTextA, true);
+            if (e.X >= 55 && e.X <= 379 && insideHover == false)
+            {
+                insideHover = true;
+                answerHoverOn(panelA, labelA, answerTextA, true);
+            }
+            else if ((e.X < 55 || e.X > 379) && insideHover == true)
+            {
+                insideHover = false;
+                answerHoverOff(panelA, labelA, answerTextA, true);
+            }
         }
 
         private void panelA_MouseLeave(object sender, EventArgs e)
         {
+            insideHover = false;
             answerHoverOff(panelA, labelA, answerTextA, true);
         }
 
@@ -679,12 +689,21 @@ namespace Millionaire
 
         private void panelB_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.X >= 14 && e.X <= 337) answerHoverOn(panelB, labelB, answerTextB, false);
-            else answerHoverOff(panelB, labelB, answerTextB, false);
+            if (e.X >= 14 && e.X <= 337 && insideHover == false)
+            {
+                insideHover = true;
+                answerHoverOn(panelB, labelB, answerTextB, false);
+            }
+            else if ((e.X < 14 || e.X > 337) && insideHover == true)
+            {
+                insideHover = false;
+                answerHoverOff(panelB, labelB, answerTextB, false);
+            }
         }
 
         private void panelB_MouseLeave(object sender, EventArgs e)
         {
+            insideHover = false;
             answerHoverOff(panelB, labelB, answerTextB, false);
         }
 
@@ -700,12 +719,21 @@ namespace Millionaire
 
         private void panelV_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.X >= 55 && e.X <= 379) answerHoverOn(panelV, labelV, answerTextV, true);
-            else answerHoverOff(panelV, labelV, answerTextV, true);
+            if (e.X >= 55 && e.X <= 379 && insideHover == false)
+            {
+                insideHover = true;
+                answerHoverOn(panelV, labelV, answerTextV, true);
+            }
+            else if ((e.X < 55 || e.X > 379) && insideHover == true)
+            {
+                insideHover = false;
+                answerHoverOff(panelV, labelV, answerTextV, true);
+            }
         }
 
         private void panelV_MouseLeave(object sender, EventArgs e)
         {
+            insideHover = false;
             answerHoverOff(panelV, labelV, answerTextV, true);
         }
 
@@ -721,12 +749,21 @@ namespace Millionaire
 
         private void panelG_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.X >= 14 && e.X <= 337) answerHoverOn(panelG, labelG, answerTextG, false);
-            else answerHoverOff(panelG, labelG, answerTextG, false);
+            if (e.X >= 14 && e.X <= 337 && insideHover == false)
+            {
+                insideHover = true;
+                answerHoverOn(panelG, labelG, answerTextG, false);
+            }
+            else if ((e.X < 14 || e.X > 337) && insideHover == true)
+            {
+
+                answerHoverOff(panelG, labelG, answerTextG, false);
+            }
         }
 
         private void panelG_MouseLeave(object sender, EventArgs e)
         {
+            insideHover = false;
             answerHoverOff(panelG, labelG, answerTextG, false);
         }
 
