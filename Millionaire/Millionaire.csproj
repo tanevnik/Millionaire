@@ -64,6 +64,12 @@
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Konecen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CorrectAnswerMessageForm.resx">
       <DependentUpon>CorrectAnswerMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Konecen.resx">
       <DependentUpon>Konecen.cs</DependentUpon>
@@ -175,6 +184,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\logo.png" />
+    <None Include="Resources\logo-large-500x500_2.png" />
     <Content Include="Resources\question_backg.png" />
     <None Include="Resources\rightAnswer.png" />
     <None Include="Resources\rightAnswerDisabled.png" />

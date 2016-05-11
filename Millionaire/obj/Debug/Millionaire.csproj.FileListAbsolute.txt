@@ -15,3 +15,4 @@ C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.P
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.WrongAnswerDialog.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.CustomDialog.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Info.resources

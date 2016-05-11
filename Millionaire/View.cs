@@ -24,7 +24,7 @@ namespace Millionaire
         private int correctIndex;
         private bool correctAnswer;
 
-        //hover blocker
+        //hover variables
         bool blockHover;
         bool insideHover;
 
@@ -112,6 +112,7 @@ namespace Millionaire
             circles[13] = circle13;
         }
 
+        //MAIN MENU BUTTONS
         private void newGame_btn_Click(object sender, EventArgs e)
         {
             newGame();
@@ -119,7 +120,9 @@ namespace Millionaire
 
         private void info_btn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(string.Format("Кој сака да биде милионер ?\nИзработија:\nДавид Симеоновски\nНикола Танев"), "Кој сака да биде милионер ?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Info window = new Info();
+            window.ShowDialog();
+            hover_animation_off(infoLabel, infoButtonBackg); //remove hover
         }
 
         private void exit_btn_Click(object sender, EventArgs e)
@@ -127,11 +130,13 @@ namespace Millionaire
             Close();
         }
 
+        //STARTING A NEW GAME
         private void newGame()
         {
             //Starts a new game
             model = new Model();
             animationTimer.Enabled = false; //stop any animation running
+            hover_animation_off(surrender_label, doubleBufferedPanel1); //remove hover on surrender button
             updateView();
             playPanel.Show();
             imageTimer.Enabled = true;
@@ -147,18 +152,14 @@ namespace Millionaire
             switch_joker.BackgroundImage = Properties.Resources._switch;
         }
 
+        //UPDATE ALL ELEMENTS OF THE GAME (called every time there's a change of the game state)
         private void updateView()
         {
-            //updates all elements in the view.
-
             //update question
             enableAllButtons();
             Question q = model.currentQuestion;
             questionLabel.Text = q.question;
-            answerTextA.Text = q.answer[0];
-            answerTextB.Text = q.answer[1];
-            answerTextV.Text = q.answer[2];
-            answerTextG.Text = q.answer[3];
+            for (int i = 0; i < 4; i++) getAnswerTextLabel(i).Text = q.answer[i];
 
             //update jokers
             if (model.fifty_spent) fifty_joker.Enabled = false;
@@ -184,6 +185,7 @@ namespace Millionaire
             levelLabel.Text = "" + (model.level + 1);
         }
 
+        //UPDATES THE MONEYPANEL ACCORDING TO THE GAME STATE
         private void updateMoneyPanel()
         {
             for (int i = 0; i < 15; i++)
@@ -203,6 +205,7 @@ namespace Millionaire
             moneyLevelLabels[14].ForeColor = Color.White;
             moneyLabels[14].ForeColor = Color.White;
 
+            //highlight the current question
             moneyPanels[model.level].BackColor = Color.FromArgb(248, 155, 28);
             moneyLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
             moneyLevelLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
@@ -221,6 +224,7 @@ namespace Millionaire
             }
         }
 
+        //HELPER FUNCTIONS FOR FAST ACCESS OF THE ANSWER COMPONENTS
         private Label getLetterLabel(int index)
         {
             //returns the letter label for the given index
@@ -248,6 +252,7 @@ namespace Millionaire
             else return panelG;
         }
 
+        //DISABLE BUTTON FUNCTION USED FOR 50-50 JOKER
         private void disableButton(int index)
         {
             //disables the button with the given index (from 0 to 3 inclusive)
@@ -258,6 +263,7 @@ namespace Millionaire
             getPanel(index).Enabled = false;
         }
 
+        //ENABLE ALL BUTTONS FUNCTION USED FOR RESETING THE ANSWERS AFTER THE USE OF 50-50 JOKER
         private void enableAllButtons()
         {
             //enables all answers
@@ -269,6 +275,7 @@ namespace Millionaire
             labelG.Text = "Г:";
         }
 
+        //ANSWER BACKGROUND CHANGING FUNCTIONS USED FOR ANSWER ANIMATIONS
         private void changeBackgroundNormal(int index)
         {
             //change backround of answer to normal (unselected)
@@ -302,32 +309,55 @@ namespace Millionaire
             getAnswerTextLabel(index).ForeColor = Color.Black;
         }
 
-        private void answer0_Click(object sender, EventArgs e)
+        //ON CLICK EVENTS FOR CHOOSING AN ANSWER
+        private void answerA_Click(object sender, EventArgs e)
         {
             tryAnswer(0);
         }
 
-        private void answer1_Click(object sender, EventArgs e)
+        private void panelA_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 55 && e.X <= 379) tryAnswer(0);
+        }
+
+        private void answerB_Click(object sender, EventArgs e)
         {
             tryAnswer(1);
         }
 
-        private void answer2_Click(object sender, EventArgs e)
+        private void panelB_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 14 && e.X <= 337) tryAnswer(1);
+        }
+
+        private void answerV_Click(object sender, EventArgs e)
         {
             tryAnswer(2);
         }
 
-        private void answer3_Click(object sender, EventArgs e)
+        private void panelV_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 55 && e.X <= 379) tryAnswer(2);
+        }
+
+        private void answerG_Click(object sender, EventArgs e)
         {
             tryAnswer(3);
         }
 
+        private void panelG_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.X >= 14 && e.X <= 337) tryAnswer(3);
+        }
+
+        //DIALOG BOX USED TO TELL THE PLAYER THAT THEIR ANSWER IS CORRECT
         private void showCorrectAnswerMessage(string prize, int level)
         {
             CorrectAnswerMessageForm form = new CorrectAnswerMessageForm(prize, level);
             form.ShowDialog();
         }
 
+        //ANIMATION FUNCTIONS USED TO ANIMATE THE RIGHT ANSWER AFTER CHOOSING AN ANSWER
         private void animateCorrect(int index)
         {
             correctIndex = index;
@@ -363,6 +393,7 @@ namespace Millionaire
             if (timerTicks == 0) animationTimer.Stop();
         }
 
+        //FUNCTION FOR DETERMINING IF THE ANSWER IS RIGHT, AND DISPLAYING IT TO THE PLAYER
         public void tryAnswer(int index)
         {
             Cursor = Cursors.Default;
@@ -401,8 +432,10 @@ namespace Millionaire
             blockHover = false;
         }
 
+        //DIALOG BOXES
         private bool wrongAnswerMessage(string answer, string correct)
         {
+            //dialog box shown when the chosen answer is wrong
             WrongAnswerDialog form = new WrongAnswerDialog(answer, correct, model.getMoney(true));
             form.ShowDialog();
             return form.newGame;
@@ -410,6 +443,7 @@ namespace Millionaire
 
         private bool winGameMessage()
         {
+            //dialog box shown when the player answers all 15 questions correct
             CustomDialog message = new CustomDialog("", "", true);
             message.ShowDialog();
             return message.newGame;
@@ -417,6 +451,7 @@ namespace Millionaire
 
         private bool serrenderAnswerMessage(string correct)
         {
+            //dialog box shown after the player surrenders
             CustomDialog message = new CustomDialog(correct, model.getMoney(false), false);
             message.ShowDialog();
             return message.newGame;
@@ -424,11 +459,13 @@ namespace Millionaire
 
         private bool finalAnswer(string answer)
         {
+            //dialog box asking the player to confirm their answer
             Konecen form = new Konecen(answer);
             form.ShowDialog();
             return form.finalAnswer;
         }
 
+        //SURRENDER ON CLICK EVENT
         private void surrender_btn_Click(object sender, EventArgs e)
         {
             SurrenderDialog form = new SurrenderDialog();
@@ -450,6 +487,7 @@ namespace Millionaire
             }
         }
 
+        //JOKER ON CLICK EVENTS
         private void fifty_joker_Click(object sender, EventArgs e)
         {
             fifty_joker.BackgroundImage = Properties.Resources._5050inuse;
@@ -489,6 +527,7 @@ namespace Millionaire
             updateView();
         }
 
+        //TIMERS USED TO ANIMATE THE JOKER CLICK 
         private void timer5050_Tick(object sender, EventArgs e)
         {
             fifty_joker.BackgroundImage = Properties.Resources._5050used;
@@ -513,6 +552,7 @@ namespace Millionaire
             timerSwitch.Stop();
         }
 
+        //TIMER USED FOR SHUFFLING BETWEEN THE IMAGES IN THE IMAGE PANEL
         private void imageTimer_Tick(object sender, EventArgs e)
         {
             //changes the current image
@@ -523,33 +563,12 @@ namespace Millionaire
             pictureBox.BackgroundImage = images[rand];
         }
 
-        private void panelA_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.X >= 55 && e.X <= 379) tryAnswer(0);
-        }
-
-        private void panelB_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.X >= 14 && e.X <= 337) tryAnswer(1);
-        }
-
-        private void panelV_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.X >= 55 && e.X <= 379) tryAnswer(2);
-        }
-
-        private void panelG_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.X >= 14 && e.X <= 337) tryAnswer(3);
-        }
-
         //HOVER ANIMATIONS ON MAIN MENU
         private void hover_animation_on(Label l, Panel p)
         {
             Cursor = Cursors.Hand;
             l.BackColor = Color.FromArgb(45, 41, 42);
             p.BackColor = Color.FromArgb(120, 153, 215);
-            //l.ForeColor = Color.Black;
         }
 
         private void hover_animation_off(Label l, Panel p)
@@ -557,90 +576,50 @@ namespace Millionaire
             Cursor = Cursors.Arrow;
             l.BackColor = Color.FromArgb(35, 31, 32);
             p.BackColor = Color.FromArgb(100, 133, 195);
-            //l.ForeColor = Color.White;
         }
 
-        private void newGameButtonBackg_MouseEnter(object sender, EventArgs e)
+        private void newGameHoverOn(object sender, EventArgs e)
         {
             hover_animation_on(newGameLabel, newGameButtonBackg);
         }
 
-        private void newGameButtonBackg_MouseLeave(object sender, EventArgs e)
-        {
-            
-            hover_animation_off(newGameLabel, newGameButtonBackg);
-        }
-
-        private void newGameLabel_MouseEnter(object sender, EventArgs e)
-        {
-            hover_animation_on(newGameLabel, newGameButtonBackg);
-        }
-
-        private void newGameLabel_MouseLeave(object sender, EventArgs e)
+        private void newGameHoverOff(object sender, EventArgs e)
         {
             hover_animation_off(newGameLabel, newGameButtonBackg);
         }
 
-        private void infoButtonBackg_MouseEnter(object sender, EventArgs e)
+        private void infoHoverOn(object sender, EventArgs e)
         {
             hover_animation_on(infoLabel, infoButtonBackg);
         }
 
-        private void infoButtonBackg_MouseLeave(object sender, EventArgs e)
+        private void infoHoverOff(object sender, EventArgs e)
         {
             hover_animation_off(infoLabel, infoButtonBackg);
         }
 
-        private void infoLabel_MouseEnter(object sender, EventArgs e)
-        {
-            hover_animation_on(infoLabel, infoButtonBackg);
-        }
-
-        private void infoLabel_MouseLeave(object sender, EventArgs e)
-        {
-            hover_animation_off(infoLabel, infoButtonBackg);
-        }
-
-        private void exitButtonBackg_MouseEnter(object sender, EventArgs e)
+        private void exitHoverOn(object sender, EventArgs e)
         {
             hover_animation_on(exitLabel, exitButtonBackg);
         }
 
-        private void exitButtonBackg_MouseLeave(object sender, EventArgs e)
+        private void exitHoverOff(object sender, EventArgs e)
         {
             hover_animation_off(exitLabel, exitButtonBackg);
         }
 
-        private void exitLabel_MouseEnter(object sender, EventArgs e)
-        {
-            hover_animation_on(exitLabel, exitButtonBackg);
-        }
-
-        private void exitLabel_MouseLeave(object sender, EventArgs e)
-        {
-            hover_animation_off(exitLabel, exitButtonBackg);
-        }
-
-        private void doubleBufferedPanel1_MouseEnter(object sender, EventArgs e)
+        //HOVER EVENTS FOR SURRENDER BUTTON
+        private void surrenderHoverOn(object sender, EventArgs e)
         {
             hover_animation_on(surrender_label, doubleBufferedPanel1);
         }
 
-        private void doubleBufferedPanel1_MouseLeave(object sender, EventArgs e)
+        private void surrenderHoverOff(object sender, EventArgs e)
         {
             hover_animation_off(surrender_label, doubleBufferedPanel1);
         }
 
-        private void surrender_label_MouseEnter(object sender, EventArgs e)
-        {
-            hover_animation_on(surrender_label, doubleBufferedPanel1);
-        }
-
-        private void surrender_label_MouseLeave(object sender, EventArgs e)
-        {
-            hover_animation_off(surrender_label, doubleBufferedPanel1);
-        }
-
+        //HOVER ANIMATIONS FOR THE ANSWERS
         private void answerHoverOn(Panel p, Label letter, Label text, bool left)
         {
             if (blockHover) return;
@@ -685,12 +664,7 @@ namespace Millionaire
             answerHoverOff(panelA, labelA, answerTextA, true);
         }
 
-        private void answerTextA_MouseEnter(object sender, EventArgs e)
-        {
-            answerHoverOn(panelA, labelA, answerTextA, true);
-        }
-
-        private void labelA_MouseEnter(object sender, EventArgs e)
+        private void answerA_HoverOn(object sender, EventArgs e)
         {
             answerHoverOn(panelA, labelA, answerTextA, true);
         }
@@ -715,12 +689,7 @@ namespace Millionaire
             answerHoverOff(panelB, labelB, answerTextB, false);
         }
 
-        private void labelB_MouseEnter(object sender, EventArgs e)
-        {
-            answerHoverOn(panelB, labelB, answerTextB, false);
-        }
-
-        private void answerTextB_MouseEnter(object sender, EventArgs e)
+        private void answerB_HoverOn(object sender, EventArgs e)
         {
             answerHoverOn(panelB, labelB, answerTextB, false);
         }
@@ -745,12 +714,7 @@ namespace Millionaire
             answerHoverOff(panelV, labelV, answerTextV, true);
         }
 
-        private void labelV_MouseEnter(object sender, EventArgs e)
-        {
-            answerHoverOn(panelV, labelV, answerTextV, true);
-        }
-
-        private void answerTextV_MouseEnter(object sender, EventArgs e)
+        private void answerV_HoverOn(object sender, EventArgs e)
         {
             answerHoverOn(panelV, labelV, answerTextV, true);
         }
@@ -775,12 +739,7 @@ namespace Millionaire
             answerHoverOff(panelG, labelG, answerTextG, false);
         }
 
-        private void labelG_MouseEnter(object sender, EventArgs e)
-        {
-            answerHoverOn(panelG, labelG, answerTextG, false);
-        }
-
-        private void answerTextG_MouseEnter(object sender, EventArgs e)
+        private void answerG_HoverOn(object sender, EventArgs e)
         {
             answerHoverOn(panelG, labelG, answerTextG, false);
         }
@@ -796,6 +755,7 @@ namespace Millionaire
         }
     }
 
+    //HELPER CLASS USED TO SUPPRESS DRAWING OF COMPONENTS FOR SMOOTHER TRANSITIONS
     class DrawingControl
     {
         [DllImport("user32.dll")]

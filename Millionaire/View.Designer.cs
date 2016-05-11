@@ -253,8 +253,8 @@
             this.doubleBufferedPanel1.Size = new System.Drawing.Size(238, 28);
             this.doubleBufferedPanel1.TabIndex = 50;
             this.doubleBufferedPanel1.Click += new System.EventHandler(this.surrender_btn_Click);
-            this.doubleBufferedPanel1.MouseEnter += new System.EventHandler(this.doubleBufferedPanel1_MouseEnter);
-            this.doubleBufferedPanel1.MouseLeave += new System.EventHandler(this.doubleBufferedPanel1_MouseLeave);
+            this.doubleBufferedPanel1.MouseEnter += new System.EventHandler(this.surrenderHoverOn);
+            this.doubleBufferedPanel1.MouseLeave += new System.EventHandler(this.surrenderHoverOff);
             // 
             // surrender_label
             // 
@@ -267,8 +267,7 @@
             this.surrender_label.Text = "Се откажувам";
             this.surrender_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.surrender_label.Click += new System.EventHandler(this.surrender_btn_Click);
-            this.surrender_label.MouseEnter += new System.EventHandler(this.surrender_label_MouseEnter);
-            this.surrender_label.MouseLeave += new System.EventHandler(this.surrender_label_MouseLeave);
+            this.surrender_label.MouseEnter += new System.EventHandler(this.surrenderHoverOn);
             // 
             // doubleBufferedPanel3
             // 
@@ -1252,8 +1251,8 @@
             this.answerTextV.TabIndex = 2;
             this.answerTextV.Text = "odgovor 2";
             this.answerTextV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.answerTextV.Click += new System.EventHandler(this.answer2_Click);
-            this.answerTextV.MouseEnter += new System.EventHandler(this.answerTextV_MouseEnter);
+            this.answerTextV.Click += new System.EventHandler(this.answerV_Click);
+            this.answerTextV.MouseEnter += new System.EventHandler(this.answerV_HoverOn);
             // 
             // labelV
             // 
@@ -1266,8 +1265,8 @@
             this.labelV.TabIndex = 1;
             this.labelV.Text = "В:";
             this.labelV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelV.Click += new System.EventHandler(this.answer2_Click);
-            this.labelV.MouseEnter += new System.EventHandler(this.labelV_MouseEnter);
+            this.labelV.Click += new System.EventHandler(this.answerV_Click);
+            this.labelV.MouseEnter += new System.EventHandler(this.answerV_HoverOn);
             // 
             // panelB
             // 
@@ -1296,8 +1295,8 @@
             this.answerTextB.TabIndex = 1;
             this.answerTextB.Text = "odgovor 1";
             this.answerTextB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.answerTextB.Click += new System.EventHandler(this.answer1_Click);
-            this.answerTextB.MouseEnter += new System.EventHandler(this.answerTextB_MouseEnter);
+            this.answerTextB.Click += new System.EventHandler(this.answerB_Click);
+            this.answerTextB.MouseEnter += new System.EventHandler(this.answerB_HoverOn);
             // 
             // labelB
             // 
@@ -1310,8 +1309,8 @@
             this.labelB.TabIndex = 0;
             this.labelB.Text = "Б:";
             this.labelB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelB.Click += new System.EventHandler(this.answer1_Click);
-            this.labelB.MouseEnter += new System.EventHandler(this.labelB_MouseEnter);
+            this.labelB.Click += new System.EventHandler(this.answerB_Click);
+            this.labelB.MouseEnter += new System.EventHandler(this.answerB_HoverOn);
             // 
             // panelG
             // 
@@ -1340,8 +1339,8 @@
             this.answerTextG.TabIndex = 1;
             this.answerTextG.Text = "odgovor 3";
             this.answerTextG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.answerTextG.Click += new System.EventHandler(this.answer3_Click);
-            this.answerTextG.MouseEnter += new System.EventHandler(this.answerTextG_MouseEnter);
+            this.answerTextG.Click += new System.EventHandler(this.answerG_Click);
+            this.answerTextG.MouseEnter += new System.EventHandler(this.answerG_HoverOn);
             // 
             // labelG
             // 
@@ -1354,8 +1353,8 @@
             this.labelG.TabIndex = 0;
             this.labelG.Text = "Г:";
             this.labelG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelG.Click += new System.EventHandler(this.answer3_Click);
-            this.labelG.MouseEnter += new System.EventHandler(this.labelG_MouseEnter);
+            this.labelG.Click += new System.EventHandler(this.answerG_Click);
+            this.labelG.MouseEnter += new System.EventHandler(this.answerG_HoverOn);
             // 
             // panelA
             // 
@@ -1384,8 +1383,8 @@
             this.answerTextA.TabIndex = 1;
             this.answerTextA.Text = "odgovor 0";
             this.answerTextA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.answerTextA.Click += new System.EventHandler(this.answer0_Click);
-            this.answerTextA.MouseEnter += new System.EventHandler(this.answerTextA_MouseEnter);
+            this.answerTextA.Click += new System.EventHandler(this.answerA_Click);
+            this.answerTextA.MouseEnter += new System.EventHandler(this.answerA_HoverOn);
             // 
             // labelA
             // 
@@ -1398,8 +1397,8 @@
             this.labelA.TabIndex = 0;
             this.labelA.Text = "А:";
             this.labelA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelA.Click += new System.EventHandler(this.answer0_Click);
-            this.labelA.MouseEnter += new System.EventHandler(this.labelA_MouseEnter);
+            this.labelA.Click += new System.EventHandler(this.answerA_Click);
+            this.labelA.MouseEnter += new System.EventHandler(this.answerA_HoverOn);
             // 
             // questionLabel
             // 
@@ -1441,8 +1440,8 @@
             this.exitButtonBackg.Size = new System.Drawing.Size(300, 44);
             this.exitButtonBackg.TabIndex = 15;
             this.exitButtonBackg.Click += new System.EventHandler(this.exit_btn_Click);
-            this.exitButtonBackg.MouseEnter += new System.EventHandler(this.exitButtonBackg_MouseEnter);
-            this.exitButtonBackg.MouseLeave += new System.EventHandler(this.exitButtonBackg_MouseLeave);
+            this.exitButtonBackg.MouseEnter += new System.EventHandler(this.exitHoverOn);
+            this.exitButtonBackg.MouseLeave += new System.EventHandler(this.exitHoverOff);
             // 
             // exitLabel
             // 
@@ -1456,8 +1455,7 @@
             this.exitLabel.Text = "Излез";
             this.exitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.exitLabel.Click += new System.EventHandler(this.exit_btn_Click);
-            this.exitLabel.MouseEnter += new System.EventHandler(this.exitLabel_MouseEnter);
-            this.exitLabel.MouseLeave += new System.EventHandler(this.exitLabel_MouseLeave);
+            this.exitLabel.MouseEnter += new System.EventHandler(this.exitHoverOn);
             // 
             // infoButtonBackg
             // 
@@ -1468,8 +1466,8 @@
             this.infoButtonBackg.Size = new System.Drawing.Size(300, 44);
             this.infoButtonBackg.TabIndex = 14;
             this.infoButtonBackg.Click += new System.EventHandler(this.info_btn_Click);
-            this.infoButtonBackg.MouseEnter += new System.EventHandler(this.infoButtonBackg_MouseEnter);
-            this.infoButtonBackg.MouseLeave += new System.EventHandler(this.infoButtonBackg_MouseLeave);
+            this.infoButtonBackg.MouseEnter += new System.EventHandler(this.infoHoverOn);
+            this.infoButtonBackg.MouseLeave += new System.EventHandler(this.infoHoverOff);
             // 
             // infoLabel
             // 
@@ -1483,8 +1481,7 @@
             this.infoLabel.Text = "Инфо";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.infoLabel.Click += new System.EventHandler(this.info_btn_Click);
-            this.infoLabel.MouseEnter += new System.EventHandler(this.infoLabel_MouseEnter);
-            this.infoLabel.MouseLeave += new System.EventHandler(this.infoLabel_MouseLeave);
+            this.infoLabel.MouseEnter += new System.EventHandler(this.infoHoverOn);
             // 
             // newGameButtonBackg
             // 
@@ -1495,8 +1492,8 @@
             this.newGameButtonBackg.Size = new System.Drawing.Size(300, 44);
             this.newGameButtonBackg.TabIndex = 12;
             this.newGameButtonBackg.Click += new System.EventHandler(this.newGame_btn_Click);
-            this.newGameButtonBackg.MouseEnter += new System.EventHandler(this.newGameButtonBackg_MouseEnter);
-            this.newGameButtonBackg.MouseLeave += new System.EventHandler(this.newGameButtonBackg_MouseLeave);
+            this.newGameButtonBackg.MouseEnter += new System.EventHandler(this.newGameHoverOn);
+            this.newGameButtonBackg.MouseLeave += new System.EventHandler(this.newGameHoverOff);
             // 
             // newGameLabel
             // 
@@ -1510,8 +1507,7 @@
             this.newGameLabel.Text = "Нова игра";
             this.newGameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.newGameLabel.Click += new System.EventHandler(this.newGame_btn_Click);
-            this.newGameLabel.MouseEnter += new System.EventHandler(this.newGameLabel_MouseEnter);
-            this.newGameLabel.MouseLeave += new System.EventHandler(this.newGameLabel_MouseLeave);
+            this.newGameLabel.MouseEnter += new System.EventHandler(this.newGameHoverOn);
             // 
             // View
             // 
