@@ -1,6 +1,6 @@
 ﻿namespace Millionaire
 {
-    partial class Konecen
+    partial class SurrenderedMessage
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,8 @@
             this.noLabel = new System.Windows.Forms.Label();
             this.doubleBufferedPanel2 = new Millionaire.DoubleBufferedPanel();
             this.yesLabel = new System.Windows.Forms.Label();
-            this.text = new System.Windows.Forms.Label();
+            this.messageLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel1.SuspendLayout();
             this.doubleBufferedPanel3.SuspendLayout();
             this.doubleBufferedPanel2.SuspendLayout();
@@ -41,24 +42,26 @@
             // 
             // doubleBufferedPanel1
             // 
-            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(40)))), ((int)(((byte)(71)))));
+            this.doubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(36)))), ((int)(((byte)(63)))));
             this.doubleBufferedPanel1.Controls.Add(this.doubleBufferedPanel3);
             this.doubleBufferedPanel1.Controls.Add(this.doubleBufferedPanel2);
-            this.doubleBufferedPanel1.Controls.Add(this.text);
+            this.doubleBufferedPanel1.Controls.Add(this.messageLabel);
+            this.doubleBufferedPanel1.Controls.Add(this.label1);
             this.doubleBufferedPanel1.Location = new System.Drawing.Point(2, 2);
             this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
-            this.doubleBufferedPanel1.Size = new System.Drawing.Size(296, 120);
-            this.doubleBufferedPanel1.TabIndex = 4;
+            this.doubleBufferedPanel1.Size = new System.Drawing.Size(294, 159);
+            this.doubleBufferedPanel1.TabIndex = 5;
             this.doubleBufferedPanel1.MouseEnter += new System.EventHandler(this.reset_hover);
+            this.doubleBufferedPanel1.MouseLeave += new System.EventHandler(this.reset_hover);
             // 
             // doubleBufferedPanel3
             // 
-            this.doubleBufferedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(113)))), ((int)(((byte)(170)))));
+            this.doubleBufferedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(183)))));
             this.doubleBufferedPanel3.Controls.Add(this.noLabel);
-            this.doubleBufferedPanel3.Location = new System.Drawing.Point(154, 80);
+            this.doubleBufferedPanel3.Location = new System.Drawing.Point(152, 120);
             this.doubleBufferedPanel3.Name = "doubleBufferedPanel3";
             this.doubleBufferedPanel3.Size = new System.Drawing.Size(132, 30);
-            this.doubleBufferedPanel3.TabIndex = 4;
+            this.doubleBufferedPanel3.TabIndex = 5;
             this.doubleBufferedPanel3.Click += new System.EventHandler(this.no_Click);
             this.doubleBufferedPanel3.MouseEnter += new System.EventHandler(this.doubleBufferedPanel3_MouseEnter);
             this.doubleBufferedPanel3.MouseLeave += new System.EventHandler(this.doubleBufferedPanel3_MouseLeave);
@@ -78,12 +81,12 @@
             // 
             // doubleBufferedPanel2
             // 
-            this.doubleBufferedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(113)))), ((int)(((byte)(170)))));
+            this.doubleBufferedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(183)))));
             this.doubleBufferedPanel2.Controls.Add(this.yesLabel);
-            this.doubleBufferedPanel2.Location = new System.Drawing.Point(10, 80);
+            this.doubleBufferedPanel2.Location = new System.Drawing.Point(10, 120);
             this.doubleBufferedPanel2.Name = "doubleBufferedPanel2";
             this.doubleBufferedPanel2.Size = new System.Drawing.Size(132, 30);
-            this.doubleBufferedPanel2.TabIndex = 3;
+            this.doubleBufferedPanel2.TabIndex = 4;
             this.doubleBufferedPanel2.Click += new System.EventHandler(this.yes_Click);
             this.doubleBufferedPanel2.MouseEnter += new System.EventHandler(this.doubleBufferedPanel2_MouseEnter);
             this.doubleBufferedPanel2.MouseLeave += new System.EventHandler(this.doubleBufferedPanel2_MouseLeave);
@@ -101,29 +104,43 @@
             this.yesLabel.Click += new System.EventHandler(this.yes_Click);
             this.yesLabel.MouseEnter += new System.EventHandler(this.doubleBufferedPanel2_MouseEnter);
             // 
-            // text
+            // messageLabel
             // 
-            this.text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text.ForeColor = System.Drawing.Color.White;
-            this.text.Location = new System.Drawing.Point(10, 7);
-            this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(276, 67);
-            this.text.TabIndex = 0;
-            this.text.Text = "Дали X е вашиот конечен одговор?";
-            this.text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.text.MouseEnter += new System.EventHandler(this.reset_hover);
+            this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.messageLabel.ForeColor = System.Drawing.Color.White;
+            this.messageLabel.Location = new System.Drawing.Point(10, 39);
+            this.messageLabel.Name = "messageLabel";
+            this.messageLabel.Size = new System.Drawing.Size(274, 77);
+            this.messageLabel.TabIndex = 1;
+            this.messageLabel.Text = "Точниот одговор на прашањето е Х. Вие освоивте Х денари. Нова игра?";
+            this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.messageLabel.MouseEnter += new System.EventHandler(this.reset_hover);
+            this.messageLabel.MouseLeave += new System.EventHandler(this.reset_hover);
             // 
-            // Konecen
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(0, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(294, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Се откажавте!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseEnter += new System.EventHandler(this.reset_hover);
+            this.label1.MouseLeave += new System.EventHandler(this.reset_hover);
+            // 
+            // SurrenderedMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(113)))), ((int)(((byte)(170)))));
-            this.ClientSize = new System.Drawing.Size(300, 124);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(109)))), ((int)(((byte)(183)))));
+            this.ClientSize = new System.Drawing.Size(298, 163);
             this.Controls.Add(this.doubleBufferedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Konecen";
+            this.Name = "SurrenderedMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Конечен одговор?";
+            this.Text = "SurrenderedMessage";
             this.MouseEnter += new System.EventHandler(this.reset_hover);
             this.MouseLeave += new System.EventHandler(this.reset_hover);
             this.doubleBufferedPanel1.ResumeLayout(false);
@@ -136,10 +153,11 @@
         #endregion
 
         private DoubleBufferedPanel doubleBufferedPanel1;
-        private System.Windows.Forms.Label text;
         private DoubleBufferedPanel doubleBufferedPanel3;
         private System.Windows.Forms.Label noLabel;
         private DoubleBufferedPanel doubleBufferedPanel2;
         private System.Windows.Forms.Label yesLabel;
+        private System.Windows.Forms.Label messageLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

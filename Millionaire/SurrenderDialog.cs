@@ -4,28 +4,27 @@ using System.Windows.Forms;
 
 namespace Millionaire
 {
-    public partial class WrongAnswerDialog : Form
+    public partial class SurrenderDialog : Form
     {
-        public bool newGame;
+        public bool confirm;
 
-        public WrongAnswerDialog(string answer, string correct, int prize)
+        public SurrenderDialog()
         {
             InitializeComponent();
-            messageLabel.Text = string.Format("Одговорот {0} е погрешен, точниот одговор е: {1}.\nВие освоивте {2} денари!\nНова игра?", answer, correct, prize);
-            newGame = false;
+            confirm = false;
         }
 
-        private void yes_Click(object sender, System.EventArgs e)
-        {
-            newGame = true;
-            Close();
-        }
-
-        private void no_Click(object sender, System.EventArgs e)
+        private void no_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        private void yes_Click(object sender, EventArgs e)
+        {
+            confirm = true;
+            Close();
+        }
+        
         //BUTTON HOVER
         private void hoverOn(Label l, Panel p)
         {

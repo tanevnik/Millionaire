@@ -14,28 +14,18 @@ namespace Millionaire
             finalAnswer = false;
         }
 
-        private void yesLabel_Click(object sender, EventArgs e)
+        private void yes_Click(object sender, EventArgs e)
         {
             finalAnswer = true;
             Close();
         }
 
-        private void doubleBufferedPanel2_Click(object sender, EventArgs e)
-        {
-            finalAnswer = true;
-            Close();
-        }
-
-        private void doubleBufferedPanel3_Click(object sender, EventArgs e)
+        private void no_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void noLabel_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        //BUTTON HOVER
         private void hoverOn(Label l, Panel p)
         {
             Cursor = Cursors.Hand;
@@ -52,6 +42,7 @@ namespace Millionaire
 
         private void doubleBufferedPanel2_MouseEnter(object sender, EventArgs e)
         {
+            hoverOff(noLabel, doubleBufferedPanel3);
             hoverOn(yesLabel, doubleBufferedPanel2);
         }
 
@@ -60,13 +51,9 @@ namespace Millionaire
             hoverOff(yesLabel, doubleBufferedPanel2);
         }
 
-        private void yesLabel_MouseEnter(object sender, EventArgs e)
-        {
-            hoverOn(yesLabel, doubleBufferedPanel2);
-        }
-
         private void doubleBufferedPanel3_MouseEnter(object sender, EventArgs e)
         {
+            hoverOff(yesLabel, doubleBufferedPanel2);
             hoverOn(noLabel, doubleBufferedPanel3);
         }
 
@@ -75,9 +62,10 @@ namespace Millionaire
             hoverOff(noLabel, doubleBufferedPanel3);
         }
 
-        private void noLabel_MouseEnter(object sender, EventArgs e)
+        private void reset_hover(object sender, EventArgs e)
         {
-            hoverOn(noLabel, doubleBufferedPanel3);
+            hoverOff(noLabel, doubleBufferedPanel3);
+            hoverOff(yesLabel, doubleBufferedPanel2);
         }
     }
 }

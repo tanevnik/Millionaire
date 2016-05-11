@@ -108,6 +108,7 @@ namespace Millionaire
         {
             //Starts a new game
             model = new Model();
+            animationTimer.Enabled = false; //stop any animation running
             updateView();
             playPanel.Show();
             imageTimer.Enabled = true;
@@ -229,8 +230,7 @@ namespace Millionaire
         {
             //enables all answers
             panelA.Enabled = panelB.Enabled = panelV.Enabled = panelG.Enabled = true;
-            panelA.BackgroundImage = panelV.BackgroundImage = Properties.Resources.leftAnswer;
-            panelB.BackgroundImage = panelG.BackgroundImage = Properties.Resources.rightAnswer;
+            for(int i = 0; i<4; i++) changeBackgroundNormal(i);
             labelA.Text = "А:";
             labelB.Text = "Б:";
             labelV.Text = "В:";
@@ -352,19 +352,8 @@ namespace Millionaire
                     else
                     {
                         //win the game
-                        bool newGameBool = false;
-                        if (winGameMessage())
-                        {
-                            //player wants new game
-                            newGameBool = true;
-
-                        }
-
-                        //reset the correct button first
-                        changeBackgroundNormal(model.correct);
-
-                        if (newGameBool) newGame();
-                        else playPanel.Hide();
+                        if (winGameMessage()) newGame(); //player wants new game
+                        else playPanel.Hide(); //player doesn't want new game, return to main menu
                     }
                 }
                 else
@@ -372,19 +361,8 @@ namespace Millionaire
                     //wrong answer
                     animateWrong(model.correct);
 
-                    bool newGameBool = false;
-                    if (wrongAnswerMessage(answer, model.currentQuestion.answer[model.correct]))
-                    {
-                        //player wants new game
-                        newGameBool = true;
-                        
-                    }
-
-                    //reset the correct button first
-                    changeBackgroundNormal(model.correct);
-                    
-                    if(newGameBool) newGame();
-                    else playPanel.Hide();
+                    if (wrongAnswerMessage(answer, model.currentQuestion.answer[model.correct])) newGame(); //player wants new game
+                    else playPanel.Hide(); //player doesn't want new game, return to main menu
                 }
             }
             changeBackgroundNormal(index);
@@ -396,7 +374,6 @@ namespace Millionaire
             WrongAnswerDialog form = new WrongAnswerDialog(answer, correct, model.getMoney(true));
             form.ShowDialog();
             return form.newGame;
-            //return MessageBox.Show(string.Format("Одговорот „{0}“ е грешен! Точниот одговор е „{1}“.\n\nВие освоивте {2} денари.\n\nНова игра?", answer, correct, model.getMoney(true)), "Грешен одговор", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private bool winGameMessage()
@@ -406,10 +383,9 @@ namespace Millionaire
 
         private bool serrenderAnswerMessage(string correct)
         {
-            return MessageBox.Show(
-                string.Format("Точниот одговор на прашањето е „{0}“.\n\nВие освоивте {1} денари.\n\nНова игра?", correct, model.getMoney(false)), 
-                "Се откажавте !", 
-                MessageBoxButtons.YesNo) == DialogResult.Yes;
+            SurrenderedMessage message = new SurrenderedMessage(correct, model.getMoney(false));
+            message.ShowDialog();
+            return message.newGame;
         }
 
         private bool finalAnswer(string answer)
@@ -417,16 +393,15 @@ namespace Millionaire
             Konecen form = new Konecen(answer);
             form.ShowDialog();
             return form.finalAnswer;
-            //return MessageBox.Show(string.Format("Дали „{0}“ е вашиот конечен одговор?", answer),"Конечен одговор?", MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         private void surrender_btn_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Дали навистина сакате да се откажете ?", 
-                "Се откажувате ?", 
-                MessageBoxButtons.YesNo, 
-                MessageBoxIcon.Information) == DialogResult.Yes)
+            SurrenderDialog form = new SurrenderDialog();
+            form.ShowDialog();
+            if (form.confirm)
             {
+                animateWrong(correctIndex); // highlight the correct answer
 
                 if (serrenderAnswerMessage(model.currentQuestion.answer[model.correct]))
                 {
@@ -439,7 +414,6 @@ namespace Millionaire
                     playPanel.Hide();
                 }
             }
-
         }
 
         private void fifty_joker_Click(object sender, EventArgs e)

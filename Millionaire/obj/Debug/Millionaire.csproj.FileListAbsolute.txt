@@ -52,3 +52,5 @@ C:\Users\Nikola\Desktop\milioner\Millionaire\obj\Debug\Millionaire.View.resource
 C:\Users\Nikola\Desktop\milioner\Millionaire\obj\Debug\Millionaire.Properties.Resources.resources
 C:\Users\Nikola\Desktop\milioner\Millionaire\obj\Debug\Millionaire.WrongAnswerDialog.resources
 C:\Users\Nikola\Desktop\milioner\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.SurrenderDialog.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.SurrenderedMessage.resources

@@ -4,14 +4,14 @@ using System.Windows.Forms;
 
 namespace Millionaire
 {
-    public partial class WrongAnswerDialog : Form
+    public partial class SurrenderedMessage : Form
     {
         public bool newGame;
 
-        public WrongAnswerDialog(string answer, string correct, int prize)
+        public SurrenderedMessage(string correct, int money)
         {
             InitializeComponent();
-            messageLabel.Text = string.Format("Одговорот {0} е погрешен, точниот одговор е: {1}.\nВие освоивте {2} денари!\nНова игра?", answer, correct, prize);
+            messageLabel.Text = string.Format("Точниот одговор на прашањето е: {0}. Вие освоивте {1} денари.\nНова игра?", correct, money);
             newGame = false;
         }
 

@@ -73,6 +73,18 @@
     <Compile Include="Phone.Designer.cs">
       <DependentUpon>Phone.cs</DependentUpon>
     </Compile>
+    <Compile Include="SurrenderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SurrenderDialog.Designer.cs">
+      <DependentUpon>SurrenderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SurrenderedMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SurrenderedMessage.Designer.cs">
+      <DependentUpon>SurrenderedMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phone.resx">
       <DependentUpon>Phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SurrenderDialog.resx">
+      <DependentUpon>SurrenderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SurrenderedMessage.resx">
+      <DependentUpon>SurrenderedMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>

@@ -76,12 +76,9 @@ namespace Millionaire
         {
             if (tickCounter == 30) ((Timer)sender).Dispose();
 
-            Console.WriteLine(tickCounter);
             tickCounter++;
 
             for (int i = 0; i < 4; i++) current[i] += increment[i];
-
-            Console.WriteLine(current[0] + " " + current[1] + " " + current[2] + " " + current[3]);
 
             DrawingControl.SuspendDrawing(panel1);
             bar0.Location = new Point(bar0.Location.X, defaultY + (int)(maxBarHeight - current[0]));
@@ -94,7 +91,6 @@ namespace Millionaire
             bar3.Height = (int) current[3];
             DrawingControl.ResumeDrawing(panel1);
             Invalidate();
-
         }
     }
 }

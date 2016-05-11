@@ -1,6 +1,6 @@
 ﻿namespace Millionaire
 {
-    partial class Konecen
+    partial class SurrenderDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -48,8 +48,8 @@
             this.doubleBufferedPanel1.Location = new System.Drawing.Point(2, 2);
             this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
             this.doubleBufferedPanel1.Size = new System.Drawing.Size(296, 120);
-            this.doubleBufferedPanel1.TabIndex = 4;
-            this.doubleBufferedPanel1.MouseEnter += new System.EventHandler(this.reset_hover);
+            this.doubleBufferedPanel1.TabIndex = 5;
+            this.doubleBufferedPanel1.MouseHover += new System.EventHandler(this.reset_hover);
             // 
             // doubleBufferedPanel3
             // 
@@ -109,11 +109,11 @@
             this.text.Name = "text";
             this.text.Size = new System.Drawing.Size(276, 67);
             this.text.TabIndex = 0;
-            this.text.Text = "Дали X е вашиот конечен одговор?";
+            this.text.Text = "Дали навистина сакате да се откажете?";
             this.text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.text.MouseEnter += new System.EventHandler(this.reset_hover);
             // 
-            // Konecen
+            // SurrenderDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,11 +121,11 @@
             this.ClientSize = new System.Drawing.Size(300, 124);
             this.Controls.Add(this.doubleBufferedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Konecen";
+            this.Name = "SurrenderDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Конечен одговор?";
-            this.MouseEnter += new System.EventHandler(this.reset_hover);
+            this.Text = "SurrenderDialog";
             this.MouseLeave += new System.EventHandler(this.reset_hover);
+            this.MouseHover += new System.EventHandler(this.reset_hover);
             this.doubleBufferedPanel1.ResumeLayout(false);
             this.doubleBufferedPanel3.ResumeLayout(false);
             this.doubleBufferedPanel2.ResumeLayout(false);
@@ -136,10 +136,10 @@
         #endregion
 
         private DoubleBufferedPanel doubleBufferedPanel1;
-        private System.Windows.Forms.Label text;
         private DoubleBufferedPanel doubleBufferedPanel3;
         private System.Windows.Forms.Label noLabel;
         private DoubleBufferedPanel doubleBufferedPanel2;
         private System.Windows.Forms.Label yesLabel;
+        private System.Windows.Forms.Label text;
     }
 }
