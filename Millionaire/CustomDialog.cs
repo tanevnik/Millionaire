@@ -4,15 +4,25 @@ using System.Windows.Forms;
 
 namespace Millionaire
 {
-    public partial class SurrenderedMessage : Form
+    public partial class CustomDialog : Form
     {
         public bool newGame;
 
-        public SurrenderedMessage(string correct, string prize)
+        public CustomDialog(string correct, string prize, bool winGame)
         {
             InitializeComponent();
-            messageLabel.Text = string.Format("Точниот одговор на прашањето е: {0}. Вие освоивте {1} денари.\nНова игра?", correct, prize);
-            newGame = false;
+            if (!winGame)
+            {
+                messageLabel.Text = string.Format("Точниот одговор на прашањето е: {0}. Вие освоивте {1} денари.\nНова игра?", correct, prize);
+                newGame = false;
+            }
+            else
+            {
+                Text = "Браво!";
+                label1.Text = "Браво";
+                label1.ForeColor = Color.LimeGreen;
+                messageLabel.Text = "Точно одговоривте на сите 15 прашања, и освовте 4 милиони денари!\nНова игра?";
+            }
         }
 
         private void yes_Click(object sender, System.EventArgs e)

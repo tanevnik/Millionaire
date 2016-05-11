@@ -1,6 +1,6 @@
 ﻿namespace Millionaire
 {
-    partial class SurrenderedMessage
+    partial class CustomDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SurrenderedMessage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomDialog));
             this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel3 = new Millionaire.DoubleBufferedPanel();
             this.noLabel = new System.Windows.Forms.Label();

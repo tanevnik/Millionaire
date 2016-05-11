@@ -10,8 +10,8 @@ C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.C
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Konecen.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Phone.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.SurrenderDialog.resources
-C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.SurrenderedMessage.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.View.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Properties.Resources.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.WrongAnswerDialog.resources
 C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.CustomDialog.resources

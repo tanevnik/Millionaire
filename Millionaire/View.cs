@@ -410,12 +410,14 @@ namespace Millionaire
 
         private bool winGameMessage()
         {
-            return MessageBox.Show("Вие одговоривте точно 15 прашања, и освовте 4 милиони денари!\n\nНова игра?", "ЧЕСТИТКИ!", MessageBoxButtons.YesNo) == DialogResult.Yes;
+            CustomDialog message = new CustomDialog("", "", true);
+            message.ShowDialog();
+            return message.newGame;
         }
 
         private bool serrenderAnswerMessage(string correct)
         {
-            SurrenderedMessage message = new SurrenderedMessage(correct, model.getMoney(false));
+            CustomDialog message = new CustomDialog(correct, model.getMoney(false), false);
             message.ShowDialog();
             return message.newGame;
         }
