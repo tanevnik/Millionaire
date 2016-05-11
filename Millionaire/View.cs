@@ -9,9 +9,11 @@ namespace Millionaire
     {
         private Model model;
 
+        //moneyPanel components
         private Panel[] moneyPanels;
         private Label[] moneyLevelLabels;
         private Label[] moneyLabels;
+        private Label[] circles;
 
         //studio images
         Bitmap[] images = { Properties.Resources.studio1, Properties.Resources.studio2, Properties.Resources.studio3 };
@@ -34,6 +36,14 @@ namespace Millionaire
             Random r = new Random();
             pictureBox.BackgroundImage = images[r.Next(images.Length)];
 
+            initializeMoneyPanel();
+
+            blockHover = false;
+            insideHover = false;
+        }
+
+        private void initializeMoneyPanel()
+        {
             moneyPanels = new Panel[15];
             moneyPanels[0] = moneyPanel0;
             moneyPanels[1] = moneyPanel1;
@@ -85,8 +95,21 @@ namespace Millionaire
             moneyLabels[13] = moneyLabel13;
             moneyLabels[14] = moneyLabel14;
 
-            blockHover = false;
-            insideHover = false;
+            circles = new Label[14];
+            circles[0] = circle0;
+            circles[1] = circle1;
+            circles[2] = circle2;
+            circles[3] = circle3;
+            circles[4] = circle4;
+            circles[5] = circle5;
+            circles[6] = circle6;
+            circles[7] = circle7;
+            circles[8] = circle8;
+            circles[9] = circle9;
+            circles[10] = circle10;
+            circles[11] = circle11;
+            circles[12] = circle12;
+            circles[13] = circle13;
         }
 
         private void newGame_btn_Click(object sender, EventArgs e)
@@ -169,6 +192,7 @@ namespace Millionaire
                 moneyPanels[i].BackColor = Color.FromArgb(35, 31, 32);
                 moneyLabels[i].BackColor = Color.FromArgb(35, 31, 32);
                 moneyLevelLabels[i].BackColor = Color.FromArgb(35, 31, 32);
+                if(i<14) circles[i].BackColor = Color.FromArgb(35, 31, 32);
                 moneyLevelLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
                 moneyLabels[i].ForeColor = Color.FromArgb(248, 155, 28);
             }
@@ -182,10 +206,18 @@ namespace Millionaire
             moneyPanels[model.level].BackColor = Color.FromArgb(248, 155, 28);
             moneyLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
             moneyLevelLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
+            circles[model.level].BackColor = Color.FromArgb(248, 155, 28);
             if ((model.level + 1) % 5 != 0) // checks if the current level is 5, 10 or 15
             {
                 moneyLevelLabels[model.level].ForeColor = Color.Black;
                 moneyLabels[model.level].ForeColor = Color.Black;
+            }
+
+            //show circles for answered questions
+            for(int i = 0; i<13; i++)
+            {
+                if (i < model.level) circles[i].Text = "●";
+                else circles[i].Text = "";
             }
         }
 
