@@ -214,7 +214,7 @@ namespace Millionaire
             }
 
             //show circles for answered questions
-            for(int i = 0; i<13; i++)
+            for(int i = 0; i<=13; i++)
             {
                 if (i < model.level) circles[i].Text = "●";
                 else circles[i].Text = "";
