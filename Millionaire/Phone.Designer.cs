@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Phone));
             this.text = new System.Windows.Forms.Label();
             this.panel = new Millionaire.DoubleBufferedPanel();
             this.label = new System.Windows.Forms.Label();
@@ -90,9 +91,11 @@
             this.ClientSize = new System.Drawing.Size(232, 114);
             this.ControlBox = false;
             this.Controls.Add(this.doubleBufferedPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Phone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Пријател";
             this.panel.ResumeLayout(false);
             this.doubleBufferedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

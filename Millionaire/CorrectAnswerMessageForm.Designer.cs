@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CorrectAnswerMessageForm));
             this.closeTimer = new System.Windows.Forms.Timer(this.components);
             this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
             this.messageLabel = new System.Windows.Forms.Label();
@@ -81,11 +82,13 @@
             this.ClientSize = new System.Drawing.Size(348, 204);
             this.ControlBox = false;
             this.Controls.Add(this.doubleBufferedPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CorrectAnswerMessageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Точен одговор";
             this.doubleBufferedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

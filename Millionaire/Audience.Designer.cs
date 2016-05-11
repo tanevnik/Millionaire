@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Audience));
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
-            this.panel = new Millionaire.DoubleBufferedPanel();
-            this.label = new System.Windows.Forms.Label();
             this.panel1 = new Millionaire.DoubleBufferedPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,9 +45,11 @@
             this.bar0 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel = new Millionaire.DoubleBufferedPanel();
+            this.label = new System.Windows.Forms.Label();
             this.doubleBufferedPanel1.SuspendLayout();
-            this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer
@@ -65,31 +66,6 @@
             this.doubleBufferedPanel1.Name = "doubleBufferedPanel1";
             this.doubleBufferedPanel1.Size = new System.Drawing.Size(186, 254);
             this.doubleBufferedPanel1.TabIndex = 7;
-            // 
-            // panel
-            // 
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
-            this.panel.Controls.Add(this.label);
-            this.panel.Location = new System.Drawing.Point(13, 221);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(160, 25);
-            this.panel.TabIndex = 6;
-            this.panel.Click += new System.EventHandler(this.close_Click);
-            this.panel.MouseEnter += new System.EventHandler(this.panel_MouseEnter);
-            this.panel.MouseLeave += new System.EventHandler(this.panel_MouseLeave);
-            // 
-            // label
-            // 
-            this.label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(2, 2);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(156, 21);
-            this.label.TabIndex = 0;
-            this.label.Text = "Затвори";
-            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label.Click += new System.EventHandler(this.close_Click);
-            this.label.MouseEnter += new System.EventHandler(this.label_MouseEnter);
             // 
             // panel1
             // 
@@ -235,6 +211,31 @@
             this.label11.Text = "A";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel
+            // 
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(133)))), ((int)(((byte)(195)))));
+            this.panel.Controls.Add(this.label);
+            this.panel.Location = new System.Drawing.Point(13, 221);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(160, 25);
+            this.panel.TabIndex = 6;
+            this.panel.Click += new System.EventHandler(this.close_Click);
+            this.panel.MouseEnter += new System.EventHandler(this.panel_MouseEnter);
+            this.panel.MouseLeave += new System.EventHandler(this.panel_MouseLeave);
+            // 
+            // label
+            // 
+            this.label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(2, 2);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(156, 21);
+            this.label.TabIndex = 0;
+            this.label.Text = "Затвори";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label.Click += new System.EventHandler(this.close_Click);
+            this.label.MouseEnter += new System.EventHandler(this.label_MouseEnter);
+            // 
             // Audience
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,12 +245,14 @@
             this.ControlBox = false;
             this.Controls.Add(this.doubleBufferedPanel1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Audience";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Публика";
             this.doubleBufferedPanel1.ResumeLayout(false);
-            this.panel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

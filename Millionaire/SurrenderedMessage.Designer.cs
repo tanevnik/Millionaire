@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SurrenderedMessage));
             this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel3 = new Millionaire.DoubleBufferedPanel();
             this.noLabel = new System.Windows.Forms.Label();
@@ -138,9 +139,10 @@
             this.ClientSize = new System.Drawing.Size(298, 163);
             this.Controls.Add(this.doubleBufferedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SurrenderedMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SurrenderedMessage";
+            this.Text = "Се откажавте";
             this.MouseEnter += new System.EventHandler(this.reset_hover);
             this.MouseLeave += new System.EventHandler(this.reset_hover);
             this.doubleBufferedPanel1.ResumeLayout(false);

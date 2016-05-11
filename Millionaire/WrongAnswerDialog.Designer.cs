@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WrongAnswerDialog));
             this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel3 = new Millionaire.DoubleBufferedPanel();
             this.noLabel = new System.Windows.Forms.Label();
@@ -138,6 +139,7 @@
             this.ClientSize = new System.Drawing.Size(298, 180);
             this.Controls.Add(this.doubleBufferedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WrongAnswerDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Грешен одговор";

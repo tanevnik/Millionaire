@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SurrenderDialog));
             this.doubleBufferedPanel1 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel3 = new Millionaire.DoubleBufferedPanel();
             this.noLabel = new System.Windows.Forms.Label();
@@ -121,9 +122,10 @@
             this.ClientSize = new System.Drawing.Size(300, 124);
             this.Controls.Add(this.doubleBufferedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SurrenderDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SurrenderDialog";
+            this.Text = "Се откажувате?";
             this.MouseLeave += new System.EventHandler(this.reset_hover);
             this.MouseHover += new System.EventHandler(this.reset_hover);
             this.doubleBufferedPanel1.ResumeLayout(false);
