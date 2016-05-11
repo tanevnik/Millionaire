@@ -8,7 +8,7 @@ namespace Millionaire
         List<Question>[] database = new List<Question>[15]; //za sekoe nivo po edna lista so prasanja 
         public int level; //int od 0 do 14, so sekoe tocno odgovoreno prasanje se zgolemuva
         public int questionID; //ID na prasanjeto vo databazata
-        int[] money = {500, 1000, 2000, 3000, 5000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000, 2000000, 4000000};
+        string[] money = {"500", "1.000", "2.000", "3.000", "5.000", "8.000", "16.000", "32.000", "64.000", "125.000", "250.000", "500.000", "1.000.000", "2.000.000", "4 МИЛИОНИ"};
 
         public Question currentQuestion; //tekovnoto prasanje vo igrata
         public int correct; //int od 0 do 3 koe oznacuva na koja pozicija se naogja tocniot odgovor
@@ -104,7 +104,7 @@ namespace Millionaire
             return ans == tmpCorrect;
         }
 
-        public int getMoney(bool lose)
+        public string getMoney(bool lose)
         {
             //returns the earned money
             if (lose)
@@ -117,12 +117,12 @@ namespace Millionaire
                 {
                     return money[4]; //zagarantirana suma za 5to prasanje
                 }
-                else return 0;
+                else return "0";
             }
             else
             {
                 //se otkazal
-                if (level == 0) return 0; //se otkazal na 1vo prasanje
+                if (level == 0) return "0"; //se otkazal na 1vo prasanje
                 return money[level - 1];
             }
         }

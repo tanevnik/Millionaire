@@ -290,7 +290,7 @@ namespace Millionaire
             tryAnswer(3);
         }
 
-        private void showCorrectAnswerMessage(int prize, int level)
+        private void showCorrectAnswerMessage(string prize, int level)
         {
             CorrectAnswerMessageForm form = new CorrectAnswerMessageForm(prize, level);
             form.ShowDialog();

@@ -5,7 +5,7 @@ namespace Millionaire
 {
     public partial class CorrectAnswerMessageForm : Form
     {
-        public CorrectAnswerMessageForm(int prize, int level)
+        public CorrectAnswerMessageForm(string prize, int level)
         {
             InitializeComponent();
             if (level == 5 || level == 10)

@@ -8,10 +8,10 @@ namespace Millionaire
     {
         public bool newGame;
 
-        public SurrenderedMessage(string correct, int money)
+        public SurrenderedMessage(string correct, string prize)
         {
             InitializeComponent();
-            messageLabel.Text = string.Format("Точниот одговор на прашањето е: {0}. Вие освоивте {1} денари.\nНова игра?", correct, money);
+            messageLabel.Text = string.Format("Точниот одговор на прашањето е: {0}. Вие освоивте {1} денари.\nНова игра?", correct, prize);
             newGame = false;
         }
 
