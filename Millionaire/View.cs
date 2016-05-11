@@ -435,7 +435,7 @@ namespace Millionaire
             form.ShowDialog();
             if (form.confirm)
             {
-                animateWrong(correctIndex); // highlight the correct answer
+                animateWrong(model.correct); // highlight the correct answer
 
                 if (serrenderAnswerMessage(model.currentQuestion.answer[model.correct]))
                 {
