@@ -206,7 +206,7 @@ namespace Millionaire
             moneyPanels[model.level].BackColor = Color.FromArgb(248, 155, 28);
             moneyLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
             moneyLevelLabels[model.level].BackColor = Color.FromArgb(248, 155, 28);
-            circles[model.level].BackColor = Color.FromArgb(248, 155, 28);
+            if (model.level < 14) circles[model.level].BackColor = Color.FromArgb(248, 155, 28);
             if ((model.level + 1) % 5 != 0) // checks if the current level is 5, 10 or 15
             {
                 moneyLevelLabels[model.level].ForeColor = Color.Black;

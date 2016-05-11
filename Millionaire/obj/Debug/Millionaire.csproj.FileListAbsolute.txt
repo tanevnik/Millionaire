@@ -1,0 +1,17 @@
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.exe
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\prasanja.txt
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.exe
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\bin\Debug\Millionaire.pdb
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Audience.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.CorrectAnswerMessageForm.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Konecen.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Phone.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.SurrenderDialog.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.SurrenderedMessage.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.View.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.Properties.Resources.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.WrongAnswerDialog.resources
+C:\Users\David\Desktop\MILIONER!\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.Cache
