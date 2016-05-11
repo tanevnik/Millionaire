@@ -49,16 +49,19 @@
             this.phone_joker = new Millionaire.DoubleBufferedPanel();
             this.fifty_joker = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel10 = new Millionaire.DoubleBufferedPanel();
+            this.circle10 = new System.Windows.Forms.Label();
             this.moneyLabel10 = new System.Windows.Forms.Label();
             this.moneyLevelLabel10 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel29 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel30 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel11 = new Millionaire.DoubleBufferedPanel();
+            this.circle11 = new System.Windows.Forms.Label();
             this.moneyLabel11 = new System.Windows.Forms.Label();
             this.moneyLevelLabel11 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel32 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel33 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel12 = new Millionaire.DoubleBufferedPanel();
+            this.circle12 = new System.Windows.Forms.Label();
             this.moneyLabel12 = new System.Windows.Forms.Label();
             this.moneyLevelLabel12 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel35 = new Millionaire.DoubleBufferedPanel();
@@ -69,9 +72,11 @@
             this.doubleBufferedPanel38 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel39 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel13 = new Millionaire.DoubleBufferedPanel();
+            this.circle13 = new System.Windows.Forms.Label();
             this.moneyLabel13 = new System.Windows.Forms.Label();
             this.moneyLevelLabel13 = new System.Windows.Forms.Label();
             this.moneyPanel5 = new Millionaire.DoubleBufferedPanel();
+            this.circle5 = new System.Windows.Forms.Label();
             this.moneyLabel5 = new System.Windows.Forms.Label();
             this.moneyLevelLabel5 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel16 = new Millionaire.DoubleBufferedPanel();
@@ -83,39 +88,47 @@
             this.doubleBufferedPanel13 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel14 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel6 = new Millionaire.DoubleBufferedPanel();
+            this.circle6 = new System.Windows.Forms.Label();
             this.moneyLabel6 = new System.Windows.Forms.Label();
             this.moneyLevelLabel6 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel19 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel20 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel1 = new Millionaire.DoubleBufferedPanel();
+            this.circle1 = new System.Windows.Forms.Label();
             this.moneyLabel1 = new System.Windows.Forms.Label();
             this.moneyLevelLabel1 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel10 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel11 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel7 = new Millionaire.DoubleBufferedPanel();
+            this.circle7 = new System.Windows.Forms.Label();
             this.moneyLabel7 = new System.Windows.Forms.Label();
             this.moneyLevelLabel7 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel22 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel23 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel2 = new Millionaire.DoubleBufferedPanel();
+            this.circle2 = new System.Windows.Forms.Label();
             this.moneyLabel2 = new System.Windows.Forms.Label();
             this.moneyLevelLabel2 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel7 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel8 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel9 = new Millionaire.DoubleBufferedPanel();
+            this.circle9 = new System.Windows.Forms.Label();
             this.moneyLabel9 = new System.Windows.Forms.Label();
             this.moneyLevelLabel9 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel25 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel26 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel8 = new Millionaire.DoubleBufferedPanel();
+            this.circle8 = new System.Windows.Forms.Label();
             this.moneyLabel8 = new System.Windows.Forms.Label();
             this.moneyLevelLabel8 = new System.Windows.Forms.Label();
             this.moneyPanel4 = new Millionaire.DoubleBufferedPanel();
+            this.circle4 = new System.Windows.Forms.Label();
             this.moneyLabel4 = new System.Windows.Forms.Label();
             this.moneyLevelLabel4 = new System.Windows.Forms.Label();
             this.doubleBufferedPanel4 = new Millionaire.DoubleBufferedPanel();
             this.doubleBufferedPanel5 = new Millionaire.DoubleBufferedPanel();
             this.moneyPanel3 = new Millionaire.DoubleBufferedPanel();
+            this.circle3 = new System.Windows.Forms.Label();
             this.moneyLabel3 = new System.Windows.Forms.Label();
             this.moneyLevelLabel3 = new System.Windows.Forms.Label();
             this.levelLabel = new System.Windows.Forms.Label();
@@ -140,19 +153,6 @@
             this.infoLabel = new System.Windows.Forms.Label();
             this.newGameButtonBackg = new Millionaire.DoubleBufferedPanel();
             this.newGameLabel = new System.Windows.Forms.Label();
-            this.circle1 = new System.Windows.Forms.Label();
-            this.circle2 = new System.Windows.Forms.Label();
-            this.circle3 = new System.Windows.Forms.Label();
-            this.circle4 = new System.Windows.Forms.Label();
-            this.circle5 = new System.Windows.Forms.Label();
-            this.circle6 = new System.Windows.Forms.Label();
-            this.circle7 = new System.Windows.Forms.Label();
-            this.circle8 = new System.Windows.Forms.Label();
-            this.circle9 = new System.Windows.Forms.Label();
-            this.circle10 = new System.Windows.Forms.Label();
-            this.circle11 = new System.Windows.Forms.Label();
-            this.circle12 = new System.Windows.Forms.Label();
-            this.circle13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_img)).BeginInit();
             this.playPanel.SuspendLayout();
             this.doubleBufferedPanel1.SuspendLayout();
@@ -386,6 +386,17 @@
             this.moneyPanel10.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel10.TabIndex = 52;
             // 
+            // circle10
+            // 
+            this.circle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle10.ForeColor = System.Drawing.Color.White;
+            this.circle10.Location = new System.Drawing.Point(77, 1);
+            this.circle10.Name = "circle10";
+            this.circle10.Size = new System.Drawing.Size(16, 14);
+            this.circle10.TabIndex = 49;
+            this.circle10.Text = "●";
+            this.circle10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel10
             // 
             this.moneyLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -435,6 +446,17 @@
             this.moneyPanel11.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel11.TabIndex = 51;
             // 
+            // circle11
+            // 
+            this.circle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle11.ForeColor = System.Drawing.Color.White;
+            this.circle11.Location = new System.Drawing.Point(77, 1);
+            this.circle11.Name = "circle11";
+            this.circle11.Size = new System.Drawing.Size(16, 14);
+            this.circle11.TabIndex = 49;
+            this.circle11.Text = "●";
+            this.circle11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel11
             // 
             this.moneyLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -483,6 +505,17 @@
             this.moneyPanel12.Name = "moneyPanel12";
             this.moneyPanel12.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel12.TabIndex = 50;
+            // 
+            // circle12
+            // 
+            this.circle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle12.ForeColor = System.Drawing.Color.White;
+            this.circle12.Location = new System.Drawing.Point(77, 1);
+            this.circle12.Name = "circle12";
+            this.circle12.Size = new System.Drawing.Size(16, 14);
+            this.circle12.TabIndex = 49;
+            this.circle12.Text = "●";
+            this.circle12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // moneyLabel12
             // 
@@ -578,6 +611,17 @@
             this.moneyPanel13.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel13.TabIndex = 48;
             // 
+            // circle13
+            // 
+            this.circle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle13.ForeColor = System.Drawing.Color.White;
+            this.circle13.Location = new System.Drawing.Point(77, 1);
+            this.circle13.Name = "circle13";
+            this.circle13.Size = new System.Drawing.Size(16, 14);
+            this.circle13.TabIndex = 49;
+            this.circle13.Text = "●";
+            this.circle13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel13
             // 
             this.moneyLabel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -612,6 +656,17 @@
             this.moneyPanel5.Name = "moneyPanel5";
             this.moneyPanel5.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel5.TabIndex = 47;
+            // 
+            // circle5
+            // 
+            this.circle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle5.ForeColor = System.Drawing.Color.White;
+            this.circle5.Location = new System.Drawing.Point(77, 1);
+            this.circle5.Name = "circle5";
+            this.circle5.Size = new System.Drawing.Size(16, 14);
+            this.circle5.TabIndex = 48;
+            this.circle5.Text = "●";
+            this.circle5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // moneyLabel5
             // 
@@ -723,6 +778,17 @@
             this.moneyPanel6.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel6.TabIndex = 46;
             // 
+            // circle6
+            // 
+            this.circle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle6.ForeColor = System.Drawing.Color.White;
+            this.circle6.Location = new System.Drawing.Point(77, 1);
+            this.circle6.Name = "circle6";
+            this.circle6.Size = new System.Drawing.Size(16, 14);
+            this.circle6.TabIndex = 48;
+            this.circle6.Text = "●";
+            this.circle6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel6
             // 
             this.moneyLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -774,6 +840,17 @@
             this.moneyPanel1.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel1.TabIndex = 41;
             // 
+            // circle1
+            // 
+            this.circle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle1.ForeColor = System.Drawing.Color.White;
+            this.circle1.Location = new System.Drawing.Point(77, 1);
+            this.circle1.Name = "circle1";
+            this.circle1.Size = new System.Drawing.Size(16, 14);
+            this.circle1.TabIndex = 45;
+            this.circle1.Text = "●";
+            this.circle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel1
             // 
             this.moneyLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -823,6 +900,17 @@
             this.moneyPanel7.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel7.TabIndex = 45;
             // 
+            // circle7
+            // 
+            this.circle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle7.ForeColor = System.Drawing.Color.White;
+            this.circle7.Location = new System.Drawing.Point(77, 1);
+            this.circle7.Name = "circle7";
+            this.circle7.Size = new System.Drawing.Size(16, 14);
+            this.circle7.TabIndex = 48;
+            this.circle7.Text = "●";
+            this.circle7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel7
             // 
             this.moneyLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -871,6 +959,17 @@
             this.moneyPanel2.Name = "moneyPanel2";
             this.moneyPanel2.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel2.TabIndex = 40;
+            // 
+            // circle2
+            // 
+            this.circle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle2.ForeColor = System.Drawing.Color.White;
+            this.circle2.Location = new System.Drawing.Point(77, 1);
+            this.circle2.Name = "circle2";
+            this.circle2.Size = new System.Drawing.Size(16, 14);
+            this.circle2.TabIndex = 46;
+            this.circle2.Text = "●";
+            this.circle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // moneyLabel2
             // 
@@ -922,6 +1021,17 @@
             this.moneyPanel9.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel9.TabIndex = 44;
             // 
+            // circle9
+            // 
+            this.circle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle9.ForeColor = System.Drawing.Color.White;
+            this.circle9.Location = new System.Drawing.Point(77, 1);
+            this.circle9.Name = "circle9";
+            this.circle9.Size = new System.Drawing.Size(16, 14);
+            this.circle9.TabIndex = 48;
+            this.circle9.Text = "●";
+            this.circle9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel9
             // 
             this.moneyLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -967,6 +1077,17 @@
             this.moneyPanel8.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel8.TabIndex = 43;
             // 
+            // circle8
+            // 
+            this.circle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle8.ForeColor = System.Drawing.Color.White;
+            this.circle8.Location = new System.Drawing.Point(77, 1);
+            this.circle8.Name = "circle8";
+            this.circle8.Size = new System.Drawing.Size(16, 14);
+            this.circle8.TabIndex = 48;
+            this.circle8.Text = "●";
+            this.circle8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // moneyLabel8
             // 
             this.moneyLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
@@ -1002,6 +1123,17 @@
             this.moneyPanel4.Name = "moneyPanel4";
             this.moneyPanel4.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel4.TabIndex = 39;
+            // 
+            // circle4
+            // 
+            this.circle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle4.ForeColor = System.Drawing.Color.White;
+            this.circle4.Location = new System.Drawing.Point(77, 1);
+            this.circle4.Name = "circle4";
+            this.circle4.Size = new System.Drawing.Size(16, 14);
+            this.circle4.TabIndex = 47;
+            this.circle4.Text = "●";
+            this.circle4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // moneyLabel4
             // 
@@ -1047,6 +1179,17 @@
             this.moneyPanel3.Name = "moneyPanel3";
             this.moneyPanel3.Size = new System.Drawing.Size(236, 18);
             this.moneyPanel3.TabIndex = 38;
+            // 
+            // circle3
+            // 
+            this.circle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.circle3.ForeColor = System.Drawing.Color.White;
+            this.circle3.Location = new System.Drawing.Point(77, 1);
+            this.circle3.Name = "circle3";
+            this.circle3.Size = new System.Drawing.Size(16, 14);
+            this.circle3.TabIndex = 46;
+            this.circle3.Text = "●";
+            this.circle3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // moneyLabel3
             // 
@@ -1370,149 +1513,6 @@
             this.newGameLabel.MouseEnter += new System.EventHandler(this.newGameLabel_MouseEnter);
             this.newGameLabel.MouseLeave += new System.EventHandler(this.newGameLabel_MouseLeave);
             // 
-            // circle1
-            // 
-            this.circle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle1.ForeColor = System.Drawing.Color.White;
-            this.circle1.Location = new System.Drawing.Point(77, 1);
-            this.circle1.Name = "circle1";
-            this.circle1.Size = new System.Drawing.Size(16, 14);
-            this.circle1.TabIndex = 45;
-            this.circle1.Text = "●";
-            this.circle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle2
-            // 
-            this.circle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle2.ForeColor = System.Drawing.Color.White;
-            this.circle2.Location = new System.Drawing.Point(77, 1);
-            this.circle2.Name = "circle2";
-            this.circle2.Size = new System.Drawing.Size(16, 14);
-            this.circle2.TabIndex = 46;
-            this.circle2.Text = "●";
-            this.circle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle3
-            // 
-            this.circle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle3.ForeColor = System.Drawing.Color.White;
-            this.circle3.Location = new System.Drawing.Point(77, 1);
-            this.circle3.Name = "circle3";
-            this.circle3.Size = new System.Drawing.Size(16, 14);
-            this.circle3.TabIndex = 46;
-            this.circle3.Text = "●";
-            this.circle3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle4
-            // 
-            this.circle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle4.ForeColor = System.Drawing.Color.White;
-            this.circle4.Location = new System.Drawing.Point(77, 1);
-            this.circle4.Name = "circle4";
-            this.circle4.Size = new System.Drawing.Size(16, 14);
-            this.circle4.TabIndex = 47;
-            this.circle4.Text = "●";
-            this.circle4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle5
-            // 
-            this.circle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle5.ForeColor = System.Drawing.Color.White;
-            this.circle5.Location = new System.Drawing.Point(77, 1);
-            this.circle5.Name = "circle5";
-            this.circle5.Size = new System.Drawing.Size(16, 14);
-            this.circle5.TabIndex = 48;
-            this.circle5.Text = "●";
-            this.circle5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle6
-            // 
-            this.circle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle6.ForeColor = System.Drawing.Color.White;
-            this.circle6.Location = new System.Drawing.Point(77, 1);
-            this.circle6.Name = "circle6";
-            this.circle6.Size = new System.Drawing.Size(16, 14);
-            this.circle6.TabIndex = 48;
-            this.circle6.Text = "●";
-            this.circle6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle7
-            // 
-            this.circle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle7.ForeColor = System.Drawing.Color.White;
-            this.circle7.Location = new System.Drawing.Point(77, 1);
-            this.circle7.Name = "circle7";
-            this.circle7.Size = new System.Drawing.Size(16, 14);
-            this.circle7.TabIndex = 48;
-            this.circle7.Text = "●";
-            this.circle7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle8
-            // 
-            this.circle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle8.ForeColor = System.Drawing.Color.White;
-            this.circle8.Location = new System.Drawing.Point(77, 1);
-            this.circle8.Name = "circle8";
-            this.circle8.Size = new System.Drawing.Size(16, 14);
-            this.circle8.TabIndex = 48;
-            this.circle8.Text = "●";
-            this.circle8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle9
-            // 
-            this.circle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle9.ForeColor = System.Drawing.Color.White;
-            this.circle9.Location = new System.Drawing.Point(77, 1);
-            this.circle9.Name = "circle9";
-            this.circle9.Size = new System.Drawing.Size(16, 14);
-            this.circle9.TabIndex = 48;
-            this.circle9.Text = "●";
-            this.circle9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle10
-            // 
-            this.circle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle10.ForeColor = System.Drawing.Color.White;
-            this.circle10.Location = new System.Drawing.Point(77, 1);
-            this.circle10.Name = "circle10";
-            this.circle10.Size = new System.Drawing.Size(16, 14);
-            this.circle10.TabIndex = 49;
-            this.circle10.Text = "●";
-            this.circle10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle11
-            // 
-            this.circle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle11.ForeColor = System.Drawing.Color.White;
-            this.circle11.Location = new System.Drawing.Point(77, 1);
-            this.circle11.Name = "circle11";
-            this.circle11.Size = new System.Drawing.Size(16, 14);
-            this.circle11.TabIndex = 49;
-            this.circle11.Text = "●";
-            this.circle11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle12
-            // 
-            this.circle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle12.ForeColor = System.Drawing.Color.White;
-            this.circle12.Location = new System.Drawing.Point(77, 1);
-            this.circle12.Name = "circle12";
-            this.circle12.Size = new System.Drawing.Size(16, 14);
-            this.circle12.TabIndex = 49;
-            this.circle12.Text = "●";
-            this.circle12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // circle13
-            // 
-            this.circle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.circle13.ForeColor = System.Drawing.Color.White;
-            this.circle13.Location = new System.Drawing.Point(77, 1);
-            this.circle13.Name = "circle13";
-            this.circle13.Size = new System.Drawing.Size(16, 14);
-            this.circle13.TabIndex = 49;
-            this.circle13.Text = "●";
-            this.circle13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1527,6 +1527,7 @@
             this.Controls.Add(this.logo_img);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "View";
             this.Text = "Кој сака да биде милионер";

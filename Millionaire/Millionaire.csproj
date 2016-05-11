@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -163,6 +166,7 @@
     <None Include="Resources\audienceinuse.png" />
     <Content Include="Resources\aud_back.png" />
     <None Include="Resources\leftAnswerHover.png" />
+    <None Include="Resources\icon.ico" />
     <Content Include="Resources\leftAnswerSelect.png" />
     <None Include="Resources\phone.png" />
     <None Include="Resources\phoneinuse.png" />
