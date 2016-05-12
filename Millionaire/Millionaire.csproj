@@ -153,6 +153,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\Surrender.wav" />
+    <None Include="Resources\Win_game.wav" />
     <None Include="Resources\_switch.png" />
     <None Include="Resources\_5050used.png" />
     <None Include="Resources\_5050inuse.png" />
@@ -185,9 +187,17 @@
     <None Include="Audio\Surrender.wav" />
     <None Include="Audio\Win_game.wav" />
     <None Include="bin\Debug\prasanja.txt" />
+    <None Include="Resources\Atmosphere.wav" />
     <Content Include="Resources\aud_back.png" />
     <None Include="Resources\leftAnswerHover.png" />
     <None Include="Resources\icon.ico" />
+    <None Include="Resources\Joker_switch.wav" />
+    <None Include="Resources\Final_ans.wav" />
+    <None Include="Resources\Incorrect_ans.wav" />
+    <None Include="Resources\Joker_audience.wav" />
+    <None Include="Resources\Correct_ans.wav" />
+    <None Include="Resources\Joker_phone.wav" />
+    <None Include="Resources\Joker_fifty.wav" />
     <Content Include="Resources\leftAnswerSelect.png" />
     <None Include="Resources\phone.png" />
     <None Include="Resources\phoneinuse.png" />
@@ -197,6 +207,7 @@
     </Content>
     <None Include="Resources\logo.png" />
     <None Include="Resources\logo-large-500x500_2.png" />
+    <None Include="Resources\logo_large_500x500_2.png" />
     <Content Include="Resources\question_backg.png" />
     <None Include="Resources\rightAnswer.png" />
     <None Include="Resources\rightAnswerDisabled.png" />
