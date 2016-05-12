@@ -42,7 +42,8 @@ namespace Millionaire
 
             //read and parse the questions from the file
             char[] separator = {'~'};
-            string[] lines = System.IO.File.ReadAllLines(@"prasanja.txt");
+            string resource_data = Properties.Resources.prasanja;
+            string[] lines = resource_data.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
             foreach(string line in lines)
             {
                 //parsing the lines

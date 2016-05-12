@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -27,6 +28,9 @@ namespace Millionaire
         //hover variables
         bool blockHover;
         bool insideHover;
+
+        //sound player
+        SoundPlayer snd;
 
         public View()
         {
@@ -116,6 +120,7 @@ namespace Millionaire
         private void newGame_btn_Click(object sender, EventArgs e)
         {
             newGame();
+            hover_animation_off(newGameLabel, newGameButtonBackg); //remove hover
         }
 
         private void info_btn_Click(object sender, EventArgs e)
@@ -137,6 +142,7 @@ namespace Millionaire
             model = new Model();
             animationTimer.Enabled = false; //stop any animation running
             hover_animation_off(surrender_label, doubleBufferedPanel1); //remove hover on surrender button
+            playMusic();
             updateView();
             playPanel.Show();
             imageTimer.Enabled = true;
@@ -150,6 +156,13 @@ namespace Millionaire
             phone_joker.BackgroundImage = Properties.Resources.phone;
             switch_joker.Enabled = true;
             switch_joker.BackgroundImage = Properties.Resources._switch;
+        }
+
+        //METHOD USED TO START PLAYING BACKGROUND MUSIC
+        private void playMusic()
+        {
+            snd = new SoundPlayer(Properties.Resources.Atmosphere);
+            snd.PlayLooping();
         }
 
         //UPDATE ALL ELEMENTS OF THE GAME (called every time there's a change of the game state)
@@ -362,7 +375,7 @@ namespace Millionaire
         {
             correctIndex = index;
             correctAnswer = true;
-            timerTicks = 9; //needs to be set to odd number
+            timerTicks = 5; //needs to be set to odd number
             animationTimer.Start(); //starts the animation
         }
 
@@ -405,28 +418,46 @@ namespace Millionaire
             {
                 if (model.tryAnswer(index))
                 {
-                    animateCorrect(index);
                     //correct answer
+                    animateCorrect(index);
                     if (model.level < 15)
                     {
+                        snd = new SoundPlayer(Properties.Resources.Correct_ans);
+                        snd.Play();
                         showCorrectAnswerMessage(model.getMoney(false), model.level);
+                        playMusic();
                         updateView();
                     }
                     else
                     {
                         //win the game
+                        snd = new SoundPlayer(Properties.Resources.Win_game);
+                        snd.Play();
                         if (winGameMessage()) newGame(); //player wants new game
-                        else playPanel.Hide(); //player doesn't want new game, return to main menu
+                        else {
+                            snd.Stop();
+                            playPanel.Hide(); //player doesn't want new game, return to main menu
+                        }
                     }
                 }
                 else
                 {
                     //wrong answer
                     animateWrong(model.correct);
+                    snd = new SoundPlayer(Properties.Resources.Incorrect_ans);
+                    snd.Play();
 
                     if (wrongAnswerMessage(answer, model.currentQuestion.answer[model.correct])) newGame(); //player wants new game
-                    else playPanel.Hide(); //player doesn't want new game, return to main menu
+                    else {
+                        snd.Stop();
+                        playPanel.Hide(); //player doesn't want new game, return to main menu
+                    }
                 }
+            }
+            else
+            {
+                //reset music
+                playMusic();
             }
             changeBackgroundNormal(index);
             blockHover = false;
@@ -460,6 +491,9 @@ namespace Millionaire
         private bool finalAnswer(string answer)
         {
             //dialog box asking the player to confirm their answer
+            //change audio
+            snd = new SoundPlayer(Properties.Resources.Final_ans);
+            snd.Play();
             Konecen form = new Konecen(answer);
             form.ShowDialog();
             return form.finalAnswer;
@@ -473,6 +507,8 @@ namespace Millionaire
             if (form.confirm)
             {
                 animateWrong(model.correct); // highlight the correct answer
+                snd = new SoundPlayer(Properties.Resources.Surrender);
+                snd.Play();
 
                 if (serrenderAnswerMessage(model.currentQuestion.answer[model.correct]))
                 {
@@ -483,8 +519,10 @@ namespace Millionaire
                 {
                     //player doesn't want new game
                     playPanel.Hide();
+                    snd.Stop();
                 }
             }
+            else hover_animation_off(surrender_label, doubleBufferedPanel1); //reset the hover
         }
 
         //JOKER ON CLICK EVENTS
@@ -492,14 +530,35 @@ namespace Millionaire
         {
             fifty_joker.BackgroundImage = Properties.Resources._5050inuse;
             timer5050.Start();
+
+            snd = new SoundPlayer(Properties.Resources.Joker_fifty);
+            snd.Play();
+            Timer sec = new Timer(); //1 sec timer used to reset the music after the joker sound effect
+            sec.Interval = 1000;
+            sec.Tick += Sec_Tick;
+            sec.Start();
+
             model.joker_fifty();
             updateView();
+        }
+
+        private void Sec_Tick(object sender, EventArgs e)
+        {
+            playMusic(); //reset the music
+            ((Timer)sender).Dispose(); //kill the timer
         }
 
         private void audience_joker_Click(object sender, EventArgs e)
         {
             audience_joker.BackgroundImage = Properties.Resources.audienceinuse;
             timerAudience.Start();
+
+            snd = new SoundPlayer(Properties.Resources.Joker_audience);
+            snd.Play();
+            Timer sec = new Timer(); //1 sec timer used to reset the music after the joker sound effect
+            sec.Interval = 1000;
+            sec.Tick += Sec_Tick1;
+            sec.Start();
 
             int[] votes = model.joker_audience();
 
@@ -508,23 +567,47 @@ namespace Millionaire
             updateView();
         }
 
+        private void Sec_Tick1(object sender, EventArgs e)
+        {
+            playMusic(); //reset the music
+            ((Timer)sender).Dispose(); //kill the timer
+        }
+
         private void phone_joker_Click(object sender, EventArgs e)
         {
             phone_joker.BackgroundImage = Properties.Resources.phoneinuse;            
             timerPhone.Start();
 
+            snd = new SoundPlayer(Properties.Resources.Joker_phone);
+            snd.PlayLooping();
+
             int[] phone = model.joker_phone();
             Phone view = new Phone(phone[0], model.currentQuestion.answer[phone[0]], phone[1]);
             view.ShowDialog();
             updateView();
+            playMusic();
         }
 
         private void switch_joker_Click(object sender, EventArgs e)
         {
             switch_joker.BackgroundImage = Properties.Resources.switchinuse;
             timerSwitch.Start();
+
+            snd = new SoundPlayer(Properties.Resources.Joker_switch);
+            snd.Play();
+            Timer sec = new Timer(); //1 sec timer used to reset the music after the joker sound effect
+            sec.Interval = 1000;
+            sec.Tick += Sec_Tick2;
+            sec.Start();
+
             model.joker_switch();
             updateView();
+        }
+
+        private void Sec_Tick2(object sender, EventArgs e)
+        {
+            playMusic(); //reset the music
+            ((Timer)sender).Dispose(); //kill the timer
         }
 
         //TIMERS USED TO ANIMATE THE JOKER CLICK 

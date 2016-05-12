@@ -101,6 +101,15 @@ namespace Millionaire.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Atmosphere {
+            get {
+                return ResourceManager.GetStream("Atmosphere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap aud_back {
@@ -151,12 +160,75 @@ namespace Millionaire.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Correct_ans {
+            get {
+                return ResourceManager.GetStream("Correct_ans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Final_ans {
+            get {
+                return ResourceManager.GetStream("Final_ans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon icon {
             get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Incorrect_ans {
+            get {
+                return ResourceManager.GetStream("Incorrect_ans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Joker_audience {
+            get {
+                return ResourceManager.GetStream("Joker_audience", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Joker_fifty {
+            get {
+                return ResourceManager.GetStream("Joker_fifty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Joker_phone {
+            get {
+                return ResourceManager.GetStream("Joker_phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Joker_switch {
+            get {
+                return ResourceManager.GetStream("Joker_switch", resourceCulture);
             }
         }
         
@@ -261,6 +333,21 @@ namespace Millionaire.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0~Кога чувствувате потреба од утеха, ви треба рамо за...~плачење~бришење~смеење~носење
+        ///0~Кога чувствувате потреба од утеха, ви треба рамо за...~плачење~бришење~смеење~носење
+        ///0~Колку надворешни ретровизори вообичаено има еден автомобил?~2~4~6~8
+        ///0~Која река тече под Камениот мост во Скопје?~Вардар~Треска~Беласица~Пчиња
+        ///0~За некој кој цврсто спие, се вели дека не го будат ни...~топови~торнада~торпеда~топузи
+        ///0~Колку агли има еден пентагон?~5~4~6~7
+        ///0~Ајфеловата кула се наоѓа во...~Париз~Лондон~Москва~Барсе [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string prasanja {
+            get {
+                return ResourceManager.GetString("prasanja", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap question_backg {
@@ -351,6 +438,15 @@ namespace Millionaire.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Surrender {
+            get {
+                return ResourceManager.GetStream("Surrender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap switchinuse {
@@ -367,6 +463,15 @@ namespace Millionaire.Properties {
             get {
                 object obj = ResourceManager.GetObject("switchused", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Win_game {
+            get {
+                return ResourceManager.GetStream("Win_game", resourceCulture);
             }
         }
     }
