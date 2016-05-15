@@ -120,10 +120,29 @@ TODO
 Поголемиот дел од кодот за контролирање на front-end логиката, односно контролирање на визуелните елементи се наоѓа во класата View.cs, но дел од елементите си имаат свои посебни класи како на пример диалог прозорите кои се појавуваат за време на играњето. Целиот визуелен приказ на играта е постигнат со манипулирање на веќе готовите компоненти од Windows forms како што се Panel, Label, PictureBox, итн. Интерфејсот на играта може да го поделиме на три поголеми делови: Image Area (горе лево и во средина), Money Panel (горе десно) и Answer Area (доле).
 
 ####3.2.1 Answer Area
-TODO
+
+<p align="center">
+  <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/questionAndAnsweres.png?raw=true">
+</p>
+
+Делот со елементи за приказ на прашањето и одговорите е структурирано на следниот начин:
+  1. PictureBox во кој е поставена слика за естетика врз која е поставена лабела во која се испишува текстот на прашањето
+  ![question](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/questionText.png?raw=true)
+  2. За приказ на понудените одговори на прашањето користени се панели во која е поставена позадина врз која е поставена лабела во која се испишува текстот на одговорот.
+  <p align="center">
+    <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/answerePanel.png?raw=true">
+  </p>
 
 ####3.2.2 Money Panel
-TODO
+<p align="center">
+    <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/moneyPanle.png?raw=true">
+</p>
+
+Панелот за приказ на паричните суми и означување на моементалното прашање е структуриран така што наредени се 15 панели еден под друг, врз кои се поставени лабели со текст за редниот број, крукче кое означува дали прашањето е одговорено и сумата која ја носи прашањето. Означувањето на моементалното прашање се врши на тој начин што се менува само позадинската боја на соодветниот панел и промена на бојата на текстот за да има контраст. Со секој точен одговор се извршува означување на наредниот панел т.е панелот над него, стариот панел се враќа во првобитната состојба со таа разлика што сега се прикажува и малото крукче.
 
 ####3.2.3 Image Area
-TODO
+<p align="center">
+    <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/picturePanel.png?raw=true">
+</p>
+
+Во централниот дел на формата поставен е pictureBox во кој на временски интервал од 9 секунди се менуваат различни слики од студиото.
