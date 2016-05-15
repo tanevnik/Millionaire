@@ -27,10 +27,10 @@
 Играта се состои од 15 прашања со три загарантирани суми на 5-тото од 5.000ден и 10-тото прашање од 125.000ден и главната награда на 15-тото прашање од <b>4 МИЛИОНИ ДЕНАРИ</b>. <br>
 Натпреварувачот одговара на секое прашање кое има по 4 понудени одговори од кои само еден е точен. За секој точен одговор, натпреварувачот ја добива сумата која ја носи прашањето и се искачува ниво повисоко до целта на 15-тото прашање. Доколку наптреварувачот одговори неточно на поставеното прашање, тој ја завршува играта и ја заработува последната загарантирана сума. Натпреварувачот има можност да се откаже од понатамошно играње и да замине со сумата која дотогаш ја има освоено.<br>
 
-[50/50]: https://github.com/tanevnik/remote-repo/tree/master/DocumentImages/ff.png "50/50"
-[callFriend]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Повикај пријател"
-[askAudience]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Прашај ја публиката"
-[change]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Промени го прашањето"
+[50/50]: https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/_5050.png?raw=true "50/50"
+[Повикај пријател]: https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/phone.png?raw=true "Повикај пријател"
+[Прашај ја публиката]: https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/audience.png?raw=true "Прашај ја публиката"
+[Промени го прашањето]: https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/_switch.png?raw=true "Промени го прашањето"
 
 По пат може да ни помогнат 4 џокери:
 * ![ff](https://github.com/tanevnik/Millionaire/blob/develop/Millionaire/Resources/_5050.png?raw=true "50/50") <br> <b>50/50</b> - системот отстранува 2 неточни одговори <br> <br>
