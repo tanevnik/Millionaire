@@ -33,22 +33,22 @@
 [Промени го прашањето]: https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/_switch.png?raw=true "Промени го прашањето"
 
 По пат може да ни помогнат 4 џокери:
-* ![ff](https://github.com/tanevnik/Millionaire/blob/develop/Millionaire/Resources/_5050.png?raw=true "50/50") <br> <b>50/50</b> - системот отстранува 2 неточни одговори <br> <br>
-* ![cf](https://github.com/tanevnik/Millionaire/blob/develop/Millionaire/Resources/phone.png?raw=true "Повикај пријател") <br> <b>Повикај пријател</b> - добивате 30 секунди телефонски повик на некој ваш познаник да ви помогне за прашањето <br> <br>
-* ![au](https://github.com/tanevnik/Millionaire/blob/develop/Millionaire/Resources/audience.png?raw=true "Прашај ја публиката") <br> <b>Прашај ја публиката</b> - публиката со гласање се изјаснува за точниот одговор на прашањето <br> <br> 
-* ![cq](https://github.com/tanevnik/Millionaire/blob/develop/Millionaire/Resources/_switch.png?raw=true "Промени го прашањето") <br> <b>Промени го прашањето</b> - замена на тековното прашање со ново прашање <br> 
+* ![ff](https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/_5050.png?raw=true "50/50") <br> <b>50/50</b> - системот отстранува 2 неточни одговори <br> <br>
+* ![cf](https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/phone.png?raw=true "Повикај пријател") <br> <b>Повикај пријател</b> - добивате 30 секунди телефонски повик на некој ваш познаник да ви помогне за прашањето <br> <br>
+* ![au](https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/audience.png?raw=true "Прашај ја публиката") <br> <b>Прашај ја публиката</b> - публиката со гласање се изјаснува за точниот одговор на прашањето <br> <br> 
+* ![cq](https://github.com/tanevnik/Millionaire/blob/master/Millionaire/Resources/_switch.png?raw=true "Промени го прашањето") <br> <b>Промени го прашањето</b> - замена на тековното прашање со ново прашање <br> 
 
 ###2.2 Нова игра
 Новата игра се започнува едноставно со кликнување на копчето од главното мени за нова игра со почеток од прво прашање и овозможени сите 4 џокери.
 
-![home](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/homeScreen.png?raw=true)  |  ![mane](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/mainScreen.png?raw=true)
+![home](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/homeScreen.png?raw=true)  |  ![mane](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/mainScreen.png?raw=true)
 :-------------------------:|:-------------------------:
 
 
 ###2.3 Одговарање на прашање
 На прашањата се одговара едноставно со кликнување на еден од четирите понудени одговори и при тоа потребно е да се потврди дека тоа е конечниот одговор.
 
-![home](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/selectAnswere.png?raw=true)
+![home](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/selectAnswere.png?raw=true)
 
 
 ###2.4 Користење на џокери
@@ -56,22 +56,22 @@
 
 50/50                      |  Прашај ја публиката
 :-------------------------:|:-------------------------:
-![home](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/fiftyFifty.png?raw=true)  |  ![mane](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/audiance.png?raw=true)
+![home](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/fiftyFifty.png?raw=true)  |  ![mane](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/audiance.png?raw=true)
 Системот на случаен начин отстранува 2 неточни одговори и остануваат само еден точен и еден неточен одговор | Публиката преку систем на гласање се изјаснува за тоа кој одговор смета дека е точен и резултатите му се прикажуваат на натпреварувачот
 
 Повикај пријател           |  Промени прашање
 :-------------------------:|:-------------------------:
-![call](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/friend.png?raw=true)  |  ![switch](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/change.png?raw=true)
+![call](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/friend.png?raw=true)  |  ![switch](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/change.png?raw=true)
 Натпреварувачот добива телефонско јавување на било кој познаник да му го постави тековното прашање и да побара помош од него | Тековното прашање се заменува со ново прашање
 
 ###2.5 Откажување
 Во случај кога натпреварувачот не сака да оговара на даденото прашање, има можност да се откаже од играта и да си замине со дотогаш освоената сума на пари
 
-![serender](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/serender1.png?raw=true)
+![surrender](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/serender1.png?raw=true)
 
 Натпреварувачот треба да ја потврди негоавата одлука како конечна и да заврши со играта !
 
-![serender](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/serender2.png?raw=true)
+![surrender](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/serender2.png?raw=true)
 
 
 
@@ -145,27 +145,27 @@ public bool tryAnswer(int ans)
 ####3.2.1 Answer Area
 
 <p align="center">
-  <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/questionAndAnsweres.png?raw=true">
+  <img src="https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/questionAndAnsweres.png?raw=true">
 </p>
 
 Делот со елементи за приказ на прашањето и одговорите е структурирано на следниот начин:
   1. PictureBox во кој е поставена слика за естетика врз која е поставена лабела во која се испишува текстот на прашањето
-  ![question](https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/questionText.png?raw=true)
+  ![question](https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/questionText.png?raw=true)
   2. За приказ на понудените одговори на прашањето користени се панели во која е поставена позадина врз која е поставена лабела во која се испишува текстот на одговорот.
   <p align="center">
-    <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/answerePanel.png?raw=true">
+    <img src="https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/answerePanel.png?raw=true">
   </p>
 
 ####3.2.2 Money Panel
 <p align="center">
-    <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/moneyPanle.png?raw=true">
+    <img src="https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/moneyPanle.png?raw=true">
 </p>
 
 Панелот за приказ на паричните суми и означување на моементалното прашање е структуриран така што наредени се 15 панели еден под друг, врз кои се поставени лабели со текст за редниот број, крукче кое означува дали прашањето е одговорено и сумата која ја носи прашањето. Означувањето на моементалното прашање се врши на тој начин што се менува само позадинската боја на соодветниот панел и промена на бојата на текстот за да има контраст. Со секој точен одговор се извршува означување на наредниот панел т.е панелот над него, стариот панел се враќа во првобитната состојба со таа разлика што сега се прикажува и малото крукче.
 
 ####3.2.3 Image Area
 <p align="center">
-    <img src="https://github.com/tanevnik/Millionaire/blob/develop/DocumentationImages/picturePanel.png?raw=true">
+    <img src="https://github.com/tanevnik/Millionaire/blob/master/DocumentationImages/picturePanel.png?raw=true">
 </p>
 
 Во централниот дел на формата поставен е pictureBox во кој на временски интервал од 9 секунди се менуваат различни слики од студиото.
