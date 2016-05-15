@@ -96,13 +96,15 @@ namespace Millionaire
         public bool tryAnswer(int ans)
         {
             int tmpCorrect = correct;
-            if(ans == correct)
+            if (ans == correct)
             {
+                //correct answer
                 level++;
-                if(level < 15) generateNewQuestion();
+                if (level < 15) generateNewQuestion();
+                return true;
             }
-
-            return ans == tmpCorrect;
+            //incorrect answer
+            return false;
         }
 
         public string getMoney(bool lose)
