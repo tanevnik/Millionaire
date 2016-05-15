@@ -175,17 +175,6 @@
     <None Include="Resources\audienceused.png" />
     <None Include="Resources\audience.png" />
     <None Include="Resources\audienceinuse.png" />
-    <None Include="Audio\Atmosphere.wav" />
-    <None Include="Audio\Final_ans.wav" />
-    <None Include="Audio\Correct_ans.wav" />
-    <None Include="Audio\Incorrect_ans.wav" />
-    <None Include="Audio\Joker_fifty.wav" />
-    <None Include="Audio\Joker_audience.wav" />
-    <None Include="Audio\Joker_phone.wav" />
-    <None Include="Audio\Joker_swap.wav" />
-    <None Include="Audio\Joker_switch.wav" />
-    <None Include="Audio\Surrender.wav" />
-    <None Include="Audio\Win_game.wav" />
     <None Include="bin\Debug\prasanja.txt" />
     <None Include="Resources\Atmosphere.wav" />
     <Content Include="Resources\aud_back.png" />
